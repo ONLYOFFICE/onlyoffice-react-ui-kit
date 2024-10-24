@@ -2,10 +2,12 @@
   "name": "onlyoffice-advent-announce",
   "version": "1.0.0",
   "description": "ONLYOFFICE advent announce component for React projects",
-  "author": "Ascensio System SIA",
   "license": "Apache-2.0",
-  "main": "./dist/oo-advent-announce.js",
   "homepage": "https://www.onlyoffice.com",
+  "author": "Ascensio System SIA <integration@onlyoffice.com> (https://www.onlyoffice.com)",
+  "maintainers": [
+    "Ascensio System SIA <integration@onlyoffice.com> (https://www.onlyoffice.com)"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ONLYOFFICE/onlyoffice-advent-announce.git"
@@ -13,6 +15,10 @@
   "bugs": {
     "url": "https://github.com/ONLYOFFICE/onlyoffice-advent-announce/issues"
   },
+  "keywords": [
+    "onlyoffice"
+  ],
+  "main": "./dist/oo-advent-announce.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && npm run build-babel && npm run copy-locales && npm run copy-images && npm run compile-styles",
@@ -45,8 +51,5 @@
     "rimraf": "^6.0.1",
     "sass": "^1.80.3",
     "storybook": "8.3.6"
-  },
-  "keywords": [
-    "onlyoffice"
-  ]
+  }
 }
