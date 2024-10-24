@@ -1,5 +1,5 @@
 {
-  "name": "onlyoffice-advent-announce",
+  "name": "@onlyoffice/advent-announce",
   "version": "1.0.0",
   "description": "ONLYOFFICE advent announce component for React projects",
   "license": "Apache-2.0",
