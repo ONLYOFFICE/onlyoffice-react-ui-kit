@@ -1,0 +1,99 @@
+.oo-advent-announce {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 56px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  background-image: url("./images/banner-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #1B181F;
+
+  @media screen and (max-width: 1024px) {
+    height: 48px;
+    background-image: url("./images/banner-bg-mobile.svg");
+  }
+
+  &.ru {
+    .oo-advent-announce-text {
+      max-width: 726px;
+    }
+  }
+
+  &.ar {
+    direction: initial;
+  }
+}
+
+.oo-advent-announce-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 38px 0 10px;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  width: max-content;
+  max-width: 860px;
+  height: 100%;
+  color: #FFFFFF;
+  text-decoration: none;
+  z-index: 10;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    left: -63px;
+    width: 64px;
+    height: 64px;
+    background-image: url("./images/docs-8-2-pdf.svg");
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &:after {
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url("./images/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  b {
+    font-weight: 800;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 38px 0 0;
+  }
+}
+
+.oo-advent-announce-text-desktop {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.oo-advent-announce-text-mobile {
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
