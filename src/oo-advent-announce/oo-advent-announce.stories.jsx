@@ -17,7 +17,6 @@
 import React from "react";
 import "../styles.scss"
 import { OOAdventAnnounce } from "./oo-advent-announce";
-import "./oo-advent-announce.scss";
 
 export default {
   title: "Advent announce",
