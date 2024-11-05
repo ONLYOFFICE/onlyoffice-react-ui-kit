@@ -32,6 +32,14 @@
     background-image: url("./images/banner-bg-mobile.svg");
   }
 
+  &.es {
+    .oo-advent-announce-text {
+      @media screen and (max-width: 375px) {
+        max-width: 160px;
+      }
+    }
+  }
+
   &.ru {
     .oo-advent-announce-text {
       max-width: 726px;
