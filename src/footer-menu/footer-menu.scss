@@ -1,0 +1,369 @@
+/*
+* (c) Copyright Ascensio System SIA 2024
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+.oo-fm {
+  box-sizing: border-box;
+  position: relative;
+  padding: 56px 32px 60px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1184px;
+  overflow: hidden;
+
+  &.ar {
+    direction: rtl;
+    unicode-bidi: embed;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 56px 40px 64px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    padding: 16px 16px 64px;
+  }
+}
+
+.oo-fm-apps {
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 0;
+  }
+}
+
+.oo-fm-apps-title {
+  display: inline-flex;
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.oo-fm-apps-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  &.ar {
+    li {
+      &:not(:last-child) {
+        margin-right: initial;
+        margin-left: 16px;
+      }
+    }
+
+    .oo-fm-apps-item {
+      &:before {
+        margin-right: initial;
+        margin-left: 8px;
+
+        @media screen and (max-width: 600px) {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  li {
+    margin-bottom: 16px;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.oo-fm-apps-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding: 12px 16px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #444444;
+  background-color: #F9F9F9;
+  transition: background-color 0.3s;
+  text-decoration: none;
+
+  &:before {
+    content: "";
+    display: flex;
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 969px) {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin: 0;
+    }
+  }
+
+  &.oo-fm-apps-item--windows {
+    &:before {
+      background-image: url("./images/windows.svg");
+    }
+  }
+
+  &.oo-fm-apps-item--linux {
+    &:before {
+      background-image: url("./images/linux.svg");
+    }
+  }
+
+  &.oo-fm-apps-item--macos {
+    &:before {
+      width: 42px;
+      background-image: url("./images/macos.svg");
+    }
+  }
+
+  &.oo-fm-apps-item--android {
+    &:before {
+      width: 42px;
+      background-image: url("./images/android.svg");
+    }
+  }
+
+  &.oo-fm-apps-item--ios {
+    &:before {
+      width: 41px;
+      background-image: url("./images/ios.svg");
+    }
+  }
+
+  &:hover {
+    background-color: #F5F5F5;
+  }
+
+  @media screen and (max-width: 969px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 600px) {
+    border-radius: initial;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: initial;
+  }
+}
+
+.oo-fm-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 240px 1fr;
+  column-gap: 32px;
+
+  &.zh,
+  &.zh-hans {
+    grid-template-columns: repeat(4, 1fr);
+  
+    @media screen and (max-width: 969px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 969px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+.oo-fm-item-group {
+  position: relative;
+
+  @media screen and (max-width: 969px) {
+    grid-column: span 2;
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      grid-column: span 3;
+    }
+  }
+}
+
+.oo-fm-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  grid-column: span 5;
+  border-top: 1px solid #e2e2e2;
+  margin-top: 24px;
+  padding-top: 40px;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: initial;
+  }
+
+  @media screen and (max-width: 969px) {
+    grid-column: span 4;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: block;
+    grid-column: initial;
+    gap: initial;
+    padding: 0;
+    margin-top: 0;
+    border-top: 0;
+  }
+}
+
+.oo-fm-link {
+  color: #333333;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+  transition: color 0.2s, border 0.5s;
+
+  &[href*="/call-back-form.aspx"] {
+    font-weight: 700;
+  }
+
+  &:hover {
+    color: #FF6F3D;
+  }
+
+  &.oo-fm-link--contact {
+    overflow: initial;
+    color: #FF6F3D;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.oo-fm-link-text {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  color: #444444;
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.oo-fm-follow {
+  @media screen and (max-width: 600px) {
+    padding: 56px 0 0;
+  }
+}
+
+.oo-fm-follow-heading {
+  margin: 0;
+  padding: 0 0 16px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: #333333;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.oo-fm-copyright-block {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  line-height: 26px;
+  color: #444444;
+  text-align: right;
+
+  &.zh,
+  &.zh-hans {
+    span {
+      @media screen and (max-width: 600px) {
+        display: inline-block;
+      }
+    }
+  }
+
+  span {
+    &:first-child {
+      @media screen and (max-width: 1024px) {
+        margin-right: 3px;
+      }
+
+      @media screen and (max-width: 600px) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      display: block;
+      font-size: 12px;
+      line-height: 26px;
+      color: #444444;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+    margin: 32px 0 0;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 8px;
+    line-height: 18px;
+    color: #AAAAAA;
+    text-align: center;
+  }
+}
+
+.oo-fm-copyright {
+  color: #AAAAAA;
+  font-size: 13px;
+  line-height: 1.4em;
+
+  @media screen and (max-width: 600px) {
+    padding: 10px 0 50px 0;
+    font-size: 13px;
+    line-height: 26px;
+  }
+}

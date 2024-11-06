@@ -1,0 +1,270 @@
+/*
+* (c) Copyright Ascensio System SIA 2024
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+.oo-fm-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  &.ja {
+    gap: 12px;
+
+    @media screen and (max-width: 1024px) {
+      gap: 18px;
+    }
+
+    @media screen and (max-width: 600px) {
+      gap: 16px;
+    }
+  }
+
+  &.zh,
+  &.zh-hans {
+    gap: 8px;
+
+    @media screen and (max-width: 1024px) {
+      gap: 18px;
+    }
+
+    @media screen and (max-width: 600px) {
+      gap: 16px;
+    }
+  }
+
+  &.ja,
+  &.zh,
+  &.zh-hans {
+    @media screen and (max-width: 600px) {
+      column-gap: 20px;
+    }
+
+    @media screen and (max-width: 539px) {
+      column-gap: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+  }
+}
+
+.oo-fm-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  width: 40px;
+  height: 40px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+.oo-fm-social-link-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/social-icons.svg");
+  background-repeat: no-repeat;
+
+  &.oo-fm-social-link-icon--subscribe-mail {
+    background-position-x: -434px;
+  }
+
+  &.oo-fm-social-link-icon--blog {
+    background-position-x: -200px;
+  }
+
+  &.oo-fm-social-link-icon--twitter {
+    background-position-x: -40px;
+  }
+
+  &.oo-fm-social-link-icon--note {
+    width: 28px;
+    background-image: url("../../images/note.svg");
+    background-position: center;
+    background-size: contain;
+  }
+
+  &.oo-fm-social-link-icon--qiita {
+    background-image: url("../../images/qiita.svg");
+    background-position: center;
+    background-size: contain;
+  }
+
+  &.oo-fm-social-link-icon--discord {
+    background-image: url("../../images/discord.svg");
+    background-position: center;
+    background-size: contain;
+  }
+
+  &.oo-fm-social-link-icon--youtube {
+    background-position-x: -120px;
+  }
+
+  &.oo-fm-social-link-icon--tiktok {
+    background-image: url("../../images/tiktok.svg");
+    background-position: center;
+  }
+
+  &.oo-fm-social-link-icon--github {
+    background-position-x: -320px;
+  }
+
+  &.oo-fm-social-link-icon--linkedin {
+    background-position-x: -80px;
+  }
+
+  &.oo-fm-social-link-icon--facebook {
+    background-position-x: 0;
+  }
+
+  &.oo-fm-social-link-icon--medium {
+    background-position-x: -240px;
+  }
+
+  &.oo-fm-social-link-icon--fosstodon {
+    background-position-x: -397px;
+  }
+
+  &.oo-fm-social-link-icon--telegram {
+    background-image: url("../../images/telegram.svg");
+    background-position: center;
+  }
+
+  &.oo-fm-social-link-icon--vk {
+    background-position-x: -160px;
+  }
+
+  &.oo-fm-social-link-icon--instagram {
+    background-position-x: -280px;
+  }
+
+  &.oo-fm-social-link-icon--kuaishou {
+    background-position-x: -554px;
+  }
+
+  &.oo-fm-social-link-icon--xiaohongshu {
+    background-position-x: -634px;
+  }
+
+  &.oo-fm-social-link-icon--csdn {
+    background-position-x: -674px;
+  }
+
+  &.oo-fm-social-link-icon--toutiao {
+    background-position-x: -594px;
+  }
+
+  &.oo-fm-social-link-icon--bilibili {
+    background-position-x: -714px;
+  }
+}
+
+.oo-fm-icon-item {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .oo-fm-popup-qr-code {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.oo-fm-wdgt-wechat {
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-position: center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-color: #f9f9f9;
+  filter: grayscale(1);
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+.oo-fm-wdgt-wechat {
+  background-image: url("../../images/social-wechat.png");
+}
+
+.oo-fm-popup-qr-code {
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  color: #333;
+  font-size: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 0.02em;
+  margin: 0;
+  opacity: 0;
+  padding: 20px;
+  position: absolute;
+  box-shadow: 0 0 14px rgb(0 0 0 / 20%);
+  text-align: center;
+  transition: 0.55s opacity, 0.55s visibility;
+  visibility: hidden;
+  width: 160px;
+
+  p {
+    margin: 0;
+  }
+
+  &.oo-fm-popup-qr-code--wechat {
+    top: -270px;
+    height: 218px;
+    background-image: url("../../images/qrcode-for-wechat.jpg");
+
+    @media screen and (max-width: 758px) {
+      left: initial;
+      right: 0;
+      transform: initial;
+    }
+
+    @media screen and (max-width: 699px) {
+      left: 50%;
+      right: initial;
+      transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 391px) {
+      left: 0;
+      transform: initial;
+    }
+
+    @media screen and (max-width: 328px) {
+      left: 50%;
+      right: initial;
+      transform: translateX(-50%);
+    }
+  }
+}

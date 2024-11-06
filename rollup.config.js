@@ -5,15 +5,20 @@ import json from "@rollup/plugin-json";
 import { terser } from "rollup-plugin-terser";
 import copy from "rollup-plugin-copy";
 import postcss from "rollup-plugin-postcss";
+import postcssUrl from "postcss-url";
 
-export default {
-  input: "src/oo-advent-announce/oo-advent-announce.jsx",
-  output: [
-    {
-      file: "dist/oo-advent-announce.js",
-      format: "cjs"
-    },
-  ],
+const components = [
+  { name: "advent-announce", input: "src/advent-announce/advent-announce.jsx" },
+  { name: "footer-menu", input: "src/footer-menu/footer-menu.jsx" },
+  { name: "header-menu", input: "src/header-menu/header-menu.jsx" },
+];
+
+export default components.map((component) => ({
+  input: component.input,
+  output: {
+    file: `dist/${component.name}/index.js`,
+    format: "cjs",
+  },
   plugins: [
     resolve(),
     commonjs(),
@@ -24,15 +29,25 @@ export default {
     }),
     json(),
     postcss({
+      plugins: [
+        postcssUrl({
+          url: (asset) => {
+            if (asset.url.startsWith("../../images")) {
+              return asset.url.replace("../../images", "./images");
+            }
+            return asset.url;
+          },
+        }),
+      ],
       extract: true,
       minimize: true,
     }),
     copy({
       targets: [
-        { src: "src/oo-advent-announce/images/*", dest: "dist/images" },
+        { src: `src/${component.name.toLowerCase()}/images/*`, dest: `dist/${component.name}/images` },
       ],
     }),
     terser(),
   ],
-  external: ["react", "react-dom"],
-};
+  external: ["react", "react-dom", "next"],
+}));
