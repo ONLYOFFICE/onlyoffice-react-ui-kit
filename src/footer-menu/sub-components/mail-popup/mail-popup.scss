@@ -32,11 +32,11 @@
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
 
   &.show {
     opacity: 1;
     visibility: initial;
+    transition: opacity 0.3s, visibility 0.3s;
   }
 }
 
