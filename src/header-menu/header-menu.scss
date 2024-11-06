@@ -810,6 +810,10 @@
       width: auto;
       min-width: 264px;
 
+      &:first-child {
+        width: max-content;
+      }
+
       @media screen and (max-width: 1024px) {
         width: initial;
         min-width: initial;
