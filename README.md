@@ -35,7 +35,7 @@ function MyApp() {
 **API**
 **Props**
 | Name | Description | Type | Default |
-| ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- |
 | `locale` | Locale that should be used. Supported values: `"en"`, `"fr"`, `"de"`, `"es"`, `"pt"`, `"pt-br"`, `"it"`, `"cs"`, `"ja"`, `"zh"`, `"zh-hans"`, `"el"`, `"hi"`, `"ar"`, `"sr"`, `"hy"`, `"ru"`. | `string` | `"en"` |
 
 ### HeaderMenu
@@ -58,7 +58,7 @@ function MyApp() {
 **API**
 **Props**
 | Name | Description | Type | Default |
-| ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- |
 | `locale` | Locale that should be used. Supported values: `"en"`, `"fr"`, `"de"`, `"es"`, `"pt"`, `"pt-br"`, `"it"`, `"cs"`, `"ja"`, `"zh"`, `"zh-hans"`, `"el"`, `"hi"`, `"ar"`, `"sr"`, `"hy"`, `"ru"`. | `string` | `"en"` |
 | `isOpen` | Controls the visibility of the header menu on mobile devices. Set to true to open the menu and false to close it. | `boolean` | `false` |
 
