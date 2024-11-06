@@ -670,6 +670,7 @@
     }
   }
 
+  &.pt,
   &.pt-br,
   &.el {
     .oo-hm-item--get-onlyoffice {
@@ -686,8 +687,13 @@
   }
 
   .oo-hm-item--enterprise {
+    position: relative;
+
     .oo-hm-items-wrapper {
+      left: calc(50% + 148px);
+
       @media screen and (max-width: 1024px) {
+        left: initial;
         height: 100%;
       }
     }
@@ -754,25 +760,21 @@
         margin: 0;
       }
     }
+
+    @media screen and (max-width: 1024px) {
+      position: initial;
+    }
   }
 
   .oo-hm-item--developers {
     position: relative;
 
     .oo-hm-items-wrapper {
+      left: calc(50% + 32px);
+
       @media screen and (max-width: 1024px) {
+        left: initial;
         height: 100%;
-      }
-    }
-
-    .oo-hm-item-wrapper {
-      display: block;
-
-      @media screen and (max-width: 1024px) {
-        box-sizing: border-box;
-        display: flex;
-        padding: 0;
-        height: calc(100% - 60px);
       }
     }
 
@@ -780,7 +782,10 @@
       display: grid;
 
       @media screen and (max-width: 1024px) {
+        box-sizing: border-box;
         display: flex;
+        padding: 0;
+        height: calc(100% - 60px);
       }
     }
 
