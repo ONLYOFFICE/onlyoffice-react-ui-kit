@@ -38,8 +38,19 @@
   "Request a call": "اطلب مكالمة",
   "Follow us on": "تابعنا عبر",
   "All rights reserved": "كل الحقوق محفوظة",
+  "Don't Miss an Update!": "إلغاء عامل التصفية",
+  "Get the latest ONLYOFFICE news delivered to your inbox": "تلقى آخر أخبار ONLYOFFICE في الصندوق الوارد الخاص بك",
+  "First name": "الاسم",
+  "First name is empty": "الاسم فارغ",
+  "Your email": "بريدك الإلكتروني",
   "Email is empty": "البريد الإلكتروني فارغ",
   "Email is incorrect": "البريد الإلكتروني غير صحيح",
-  "Subscribe": "يشترك",
-  "We sent an email message with confirmation to your email address.": ".لقد أرسلنا رسالة بريد إلكتروني تحتوي على تأكيد إلى عنوان بريدك الإلكتروني"
+  "Subscribe": "الاشتراك",
+  "We sent an email message with confirmation to your email address.": "لقد أرسلنا رسالة عبر البريد الإلكتروني تحتوي على تأكيد عنوان بريدك الإلكتروني.",
+  "Templates": "القوالب",
+  "PDF form templates": "قوالب نموذج PDF",
+  "Text document templates": "قوالب المستندات النصية",
+  "Spreadsheet templates": "قوالب الجداول",
+  "Presentation templates": "قوالب العروض التقديمية",
+  "Converters": "أدوات التحويل"
 }
