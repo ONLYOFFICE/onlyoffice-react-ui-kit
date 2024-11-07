@@ -239,6 +239,14 @@
     }
 
     .oo-hm-item--enterprise {
+      .oo-hm-items-wrapper {
+        left: calc(50% - 148px);
+
+        @media screen and (max-width: 1024px) {
+          left: initial;
+        }
+      }
+
       .oo-hm-item-wrapper-bottom {
         .oo-hm-item-link {
           &:not(:last-child) {
@@ -255,6 +263,14 @@
     }
 
     .oo-hm-item--developers {
+      .oo-hm-items-wrapper {
+        left: calc(50% - 32px);
+
+        @media screen and (max-width: 1024px) {
+          left: initial;
+        }
+      }
+
       .oo-hm-item-label {
         &::after {
           margin-left: initial;
