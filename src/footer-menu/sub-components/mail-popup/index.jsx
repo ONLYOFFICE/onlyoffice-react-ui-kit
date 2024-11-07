@@ -102,36 +102,36 @@ const MailPopup = ({ t, locale, popupIsOpen, setPopupIsOpen, mailApiUrl, mailApi
   };
 
   return (
-    <div onClick={() => handleCloseForm()} className={`mail-popup ${popupIsOpen ? "show" : ""}`}>
-      <div className="mail-popup-container">
-        <div className="mail-popup-wrapper">
-          <div onClick={(e) => e.stopPropagation()} className="mail-popup-body">
-            <div className="mail-popup-header">
-              <div className={`mail-popup-title ${locale}`}>{t("Don't Miss an Update!")}</div>
-              <button onClick={() => handleCloseForm()} className="mail-popup-close-btn"></button>
+    <div onClick={() => handleCloseForm()} className={`oo-fm-mail-popup ${popupIsOpen ? "show" : ""}`}>
+      <div className="oo-fm-mail-popup-container">
+        <div className="oo-fm-mail-popup-wrapper">
+          <div onClick={(e) => e.stopPropagation()} className="oo-fm-mail-popup-body">
+            <div className="oo-fm-mail-popup-header">
+              <div className={`oo-fm-mail-popup-title ${locale}`}>{t("Don't Miss an Update!")}</div>
+              <button onClick={() => handleCloseForm()} className="oo-fm-mail-popup-close-btn"></button>
             </div>
             {formComplete ? (
-              <div className="mail-popup-success">
-                <div className="mail-popup-success-text">{t("We sent an email message with confirmation to your email address.")}</div>
-                <button onClick={() => handleCloseForm()} className="mail-popup-success-btn">OK</button>
+              <div className="oo-fm-mail-popup-success">
+                <div className="oo-fm-mail-popup-success-text">{t("We sent an email message with confirmation to your email address.")}</div>
+                <button onClick={() => handleCloseForm()} className="oo-fm-mail-popup-success-btn">OK</button>
               </div>
             ) : (
-              <div className="mail-popup-form">
-                <div className="mail-popup-text">{t("Get the latest ONLYOFFICE news delivered to your inbox")}</div>
-                <form onSubmit={handleFormSubmit} className="mail-popup-inputs">
-                  <div className="mail-popup-input-wrapper">
-                    <input onChange={handleNameInput} className={`mail-popup-input ${firstNameError ? "error" : ""}`} value={firstName} name="firstName" placeholder={t("First name")} />
+              <div className="oo-fm-mail-popup-form">
+                <div className="oo-fm-mail-popup-text">{t("Get the latest ONLYOFFICE news delivered to your inbox")}</div>
+                <form onSubmit={handleFormSubmit} className="oo-fm-mail-popup-inputs">
+                  <div className="oo-fm-mail-popup-input-wrapper">
+                    <input onChange={handleNameInput} className={`oo-fm-mail-popup-input ${firstNameError ? "error" : ""}`} value={firstName} name="firstName" placeholder={t("First name")} />
                     {firstNameError && (
-                      <div className="error-text">{t("First name is empty")}</div>
+                      <div className="oo-fm-mail-popup-error-text">{t("First name is empty")}</div>
                     )}
                   </div>
-                  <div className="mail-popup-input-wrapper">
-                    <input onChange={handleEmailInput} className={`mail-popup-input ${emailError ? "error" : ""}`} value={email} name="email" placeholder={t("Your email")} />
+                  <div className="oo-fm-mail-popup-input-wrapper">
+                    <input onChange={handleEmailInput} className={`oo-fm-mail-popup-input ${emailError ? "error" : ""}`} value={email} name="email" placeholder={t("Your email")} />
                     {emailError && (
-                      <div className="error-text">{emailErrorText}</div>
+                      <div className="oo-fm-mail-popup-error-text">{emailErrorText}</div>
                     )}
                   </div>
-                  <button className={`mail-popup-btn ${isLoading ? "loading" : ""}`} disabled={isLoading && true}>{t("Subscribe")}</button>
+                  <button className={`oo-fm-mail-popup-btn ${isLoading ? "loading" : ""}`} disabled={isLoading && true}>{t("Subscribe")}</button>
                 </form>
               </div>
             )}
