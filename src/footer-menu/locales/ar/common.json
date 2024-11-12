@@ -1,7 +1,7 @@
 {
   "For Windows": "خاص بنظام تشغيل ويندوز",
   "For Linux": "خاص بنظام تشغيل لينيكس",
-  "For macOS": "خاص بنظام تشغيل macOS",
+  "For macOS": "لmacOS",
   "Convert text files": "تحويل الملفات النصية",
   "Convert spreadsheets": "تحويل جداول البيانات",
   "Convert presentations": "تحويل العروض التقديمية",
@@ -52,5 +52,9 @@
   "Text document templates": "قوالب المستندات النصية",
   "Spreadsheet templates": "قوالب الجداول",
   "Presentation templates": "قوالب العروض التقديمية",
-  "Converters": "أدوات التحويل"
+  "Converters": "أدوات التحويل",
+  "Get free apps": "أحصل على التطبيقات المجانية",
+  "For iOS": "لiOS",
+  "For Android": "لAndroid",
+  "OK": "نعم"
 }
