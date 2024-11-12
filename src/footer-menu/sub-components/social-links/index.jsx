@@ -32,8 +32,8 @@ const SocialLinks = ({ t, blogHrefLang, currentLocale, handlerSetModal }) => {
         </Link>
       </li>
       <li>
-        <Link className="oo-fm-social-link" href={t("https://twitter.com/ONLY_OFFICE")} title={t("Follow us on Twitter")} target="_blank" rel="noreferrer noopener">
-          <span className="oo-fm-social-link-icon oo-fm-social-link-icon--twitter" title={t("Twitter")}></span>
+        <Link className="oo-fm-social-link" href={t("XSocialLink")} title={t("Follow us on X")} target="_blank" rel="noreferrer noopener">
+          <span className="oo-fm-social-link-icon oo-fm-social-link-icon--x" title={t("X")}></span>
         </Link>
       </li>
       {currentLocale === "ja" && (
@@ -61,7 +61,7 @@ const SocialLinks = ({ t, blogHrefLang, currentLocale, handlerSetModal }) => {
         </Link>
       </li>
       <li>
-        <Link className="oo-fm-social-link" href={t("https://www.tiktok.com/@only_office")} title={t("Follow us on TikTok")} target="_blank" rel="noreferrer noopener">
+        <Link className="oo-fm-social-link" href={t("TikTokSocialLink")} title={t("Follow us on TikTok")} target="_blank" rel="noreferrer noopener">
           <span className="oo-fm-social-link-icon oo-fm-social-link-icon--tiktok" title={t("TikTok")}></span>
         </Link>
       </li>
@@ -71,7 +71,7 @@ const SocialLinks = ({ t, blogHrefLang, currentLocale, handlerSetModal }) => {
         </Link>
       </li>
       <li>
-        <Link className="oo-fm-social-link" href={t("https://www.linkedin.com/company/ascensio-system-sia/")} title={t("Follow us on LinkedIn")} target="_blank" rel="noreferrer noopener">
+        <Link className="oo-fm-social-link" href={t("LinkedInSocialLink")} title={t("Follow us on LinkedIn")} target="_blank" rel="noreferrer noopener">
           <span className="oo-fm-social-link-icon oo-fm-social-link-icon--linkedin" title={t("LinkedIn")}></span>
         </Link>
       </li>
@@ -103,7 +103,7 @@ const SocialLinks = ({ t, blogHrefLang, currentLocale, handlerSetModal }) => {
       )}
       {(currentLocale !== "zh" && currentLocale !== "zh-hans") && (
         <li>
-          <Link className="oo-fm-social-link" href="https://t.me/onlyofficeofficial" title={t("Follow us on Telegram")} target="_blank" rel="noreferrer noopener">
+          <Link className="oo-fm-social-link" href={t("TelegramSocialLink")} title={t("Follow us on Telegram")} target="_blank" rel="noreferrer noopener">
             <span className="oo-fm-social-link-icon oo-fm-social-link-icon--telegram" title={t("Telegram")}></span>
           </Link>
         </li>
