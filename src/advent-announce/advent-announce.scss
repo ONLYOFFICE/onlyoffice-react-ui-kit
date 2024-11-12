@@ -47,7 +47,37 @@
   }
 
   &.ar {
-    direction: initial;
+    .oo-advent-announce-text {
+      padding: 0 10px 0 38px;
+
+      &:before {
+        left: 0;
+        width: 23px;
+        height: 23px;
+        background-image: url("./images/arrow-right.svg");
+        background-repeat: no-repeat;
+        transform: translateY(-50%) rotate(180deg);
+
+        @media screen and (max-width: 1024px) {
+          display: block;
+        }
+      }
+    
+      &:after {
+        right: -63px;
+        width: 64px;
+        height: 64px;
+        background-image: url("./images/docs-8-2-pdf.svg");
+
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        padding: 0 0 0 38px;
+      }
+    }
   }
 }
 
