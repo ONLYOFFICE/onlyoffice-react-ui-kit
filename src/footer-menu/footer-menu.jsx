@@ -29,7 +29,7 @@ const FooterMenu = ({ locale, mailApiUrl, mailApiType }) => {
   const currentYear = date.getFullYear();
   const hrefLang = `https://www.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "zh-hans": "/zh", "pt-br": "/pt" }[currentLocale] ?? `/${currentLocale}`}`;
 
-  const oformsHrefLang = `https://www.oforms.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "cs": "", "zh-hans": "/zh", "pt-br": "/pt" }[currentLocale] ?? `/${currentLocale}`}`;
+  const templatesHrefLang = `https://templates.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "cs": "", "zh-hans": "/zh", "pt-br": "/pt" }[currentLocale] ?? `/${currentLocale}`}`;
   const blogHrefLang = `https://www.onlyoffice.com/blog${{ "en": "", "ru": "", "zh": "/zh-hans", "pt": "/pt-br"}[currentLocale] ?? `/${currentLocale}`}`;
 
   const [popupIsOpen, setPopupIsOpen] = useState(false);
@@ -52,10 +52,10 @@ const FooterMenu = ({ locale, mailApiUrl, mailApiType }) => {
       <div className={`oo-fm-items ${currentLocale}`}>
         <div className="oo-fm-item-group">
           <FooterItem locale={locale} heading={t("Templates")}>
-            <Link className="oo-fm-link" href={`${oformsHrefLang}/pdf-form-templates`}>{t("PDF form templates")}</Link>
-            <Link className="oo-fm-link" href={`${oformsHrefLang}/document-templates`}>{t("Text document templates")}</Link>
-            <Link className="oo-fm-link" href={`${oformsHrefLang}/spreadsheet-templates`}>{t("Spreadsheet templates")}</Link>
-            <Link className="oo-fm-link" href={`${oformsHrefLang}/presentation-templates`}>{t("Presentation templates")}</Link>
+            <Link className="oo-fm-link" href={`${templatesHrefLang}/pdf-form-templates`}>{t("PDF form templates")}</Link>
+            <Link className="oo-fm-link" href={`${templatesHrefLang}/document-templates`}>{t("Text document templates")}</Link>
+            <Link className="oo-fm-link" href={`${templatesHrefLang}/spreadsheet-templates`}>{t("Spreadsheet templates")}</Link>
+            <Link className="oo-fm-link" href={`${templatesHrefLang}/presentation-templates`}>{t("Presentation templates")}</Link>
           </FooterItem>
           <FooterItem locale={locale} heading={t("Converters")}>
             <Link className="oo-fm-link" href={`${hrefLang}/text-file-converter.aspx`}>{t("Convert text files")}</Link>
