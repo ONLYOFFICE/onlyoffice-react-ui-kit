@@ -17,10 +17,17 @@
 import React from "react";
 import Link from "next/link";
 import MenuItem from "../../menu-item/index.jsx";
+import "./partners-menu.scss";
 
-const PartnersMenu = ({ t, hrefLang, navHidden, setNavHidden }) => {
+const PartnersMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMenu }) => {
   return (
-    <MenuItem className="oo-hm-item--partners" heading={t("Partners")} navHidden={navHidden} setNavHidden={setNavHidden}>
+    <MenuItem
+      className="oo-hm-item--partners"
+      heading={t("Partners")}
+      navHidden={navHidden}
+      setNavHidden={setNavHidden}
+      registerCloseMenu={registerCloseMenu}
+    >
       <div className="oo-hm-item-wrapper">
         <div className="oo-hm-item-box">
           <Link className="oo-hm-item-link oo-hm-item-link--resellers" href={`${hrefLang}/resellers.aspx`}>{t("Resellers")}</Link>

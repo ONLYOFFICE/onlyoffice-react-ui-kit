@@ -1,0 +1,316 @@
+/*
+* (c) Copyright Ascensio System SIA 2024
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+.oo-hm {
+  &.de {
+    .oo-hm-item--products {
+      .oo-hm-item-box {
+        &:nth-child(1) {
+          width: 288px;
+
+          @media screen and (max-width: 1024px) {
+            width: initial;
+          }
+        }
+
+        &:nth-child(3) {
+          width: 280px;
+
+          @media screen and (max-width: 1024px) {
+            min-width: initial;
+          }
+        }
+      }
+    }
+  }
+
+  &.fr {
+    .oo-hm-item--products {
+      .oo-hm-item-box {
+        &:nth-child(1) {
+          width: 316px;
+
+          @media screen and (max-width: 1024px) {
+            width: initial;
+          }
+        }
+      }
+    }
+  }
+
+  &.ja {
+    .oo-hm-item--products {
+      .oo-hm-item-box {
+        &:nth-child(3) {
+          width: 294px;
+
+          @media screen and (max-width: 1024px) {
+            width: initial;
+          }
+        }
+      }
+    }
+  }
+
+  &.pt,
+  &.pt-br {
+    .oo-hm-item--products {
+      .oo-hm-item-box {
+        &:nth-child(1) {
+          width: 282px;
+
+          @media screen and (max-width: 1024px) {
+            width: initial;
+          }
+        }
+      }
+    }
+  }
+
+  &.ru {
+    .oo-hm-item--products {
+      .oo-hm-item-box {
+        &:nth-child(1) {
+          width: 304px;
+
+          @media screen and (max-width: 1024px) {
+            width: initial;
+          }
+        }
+      }
+    }
+  }
+
+  .oo-hm-item--products {
+    .oo-hm-mobile-tab {
+      display: none;
+    }
+
+    &.tab-active {
+      .oo-hm-mobile-heading,
+      .oo-hm-item-box-buttons {
+        display: none;
+      }
+
+      .oo-hm-mobile-tab {
+        display: block;
+      }
+    }
+
+    .oo-hm-item-label {
+      padding: 0;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .oo-hm-item-box-buttons {
+      display: none;
+
+      @media screen and (max-width: 1024px) {
+        display: block;
+      }
+    }
+
+    .oo-hm-item-box-button {
+      padding: 16px 40px 16px 24px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      color: #444444;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      @media screen and (max-width: 430px) {
+        font-size: 16px;
+      }
+    }
+
+    .oo-hm-item-box {
+      &:nth-child(1),
+      &:nth-child(2) {
+        width: 280px;
+
+        @media screen and (max-width: 1024px) {
+          width: initial;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 272px;
+
+        @media screen and (max-width: 1024px) {
+          width: initial;
+        }
+      }
+
+      &:last-child:not(.oo-hm-item-box--bg-gray) {
+        @media screen and (max-width: 1024px) {
+          padding: 24px;
+        }
+      }
+
+      &.oo-hm-item-box--bg-gray {
+        .oo-hm-item-link {
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+        }
+
+        @media screen and (max-width: 1024px) {
+          display: none;
+          margin: 0;
+          background-color: transparent;
+        }
+      }
+
+      &.active {
+        @media screen and (max-width: 1024px) {
+          display: block;
+        }
+      }
+
+      .oo-hm-item-link {
+        font-size: 13px;
+        font-weight: 600;
+
+        &:not(:last-child) {
+          margin-bottom: 4px;
+
+          @media screen and (max-width: 1024px) {
+            margin-bottom: 12px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+        padding: 24px;
+      }
+    }
+
+    .oo-hm-item-box-wrap {
+      margin-top: 16px;
+
+      &.oo-hm-item-box-wrap--mt {
+        @media screen and (max-width: 1024px) {
+          margin-top: 24px;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+
+        @media screen and (max-width: 1024px) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .oo-hm-item-link {
+        font-size: 16px;
+        font-weight: 700;
+
+        &::before {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          font-size: 18px;
+        }
+      }
+
+      .oo-hm-item-box-text {
+        padding: 0;
+        color: #666666;
+        cursor: initial;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        margin-top: 0;
+      }
+    }
+
+    .oo-hm-item-box-icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 24px);
+      gap: 12px;
+      margin-top: 12px;
+
+      .oo-hm-item-link {
+        padding: 0;
+        width: 24px;
+        height: 24px;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        gap: 8px;
+        margin-top: 16px;
+      }
+    }
+
+    .oo-hm-item-link {
+      &::before {
+        @media screen and (max-width: 1024px) {
+          top: 0;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        padding: 0 0 0 36px;
+      }
+    }
+
+    .oo-hm-items-wrapper {
+      @media screen and (max-width: 1024px) {
+        height: 100%;
+      }
+    }
+
+    .oo-hm-item-wrapper {
+      display: block;
+      width: max-content;
+
+      @media screen and (max-width: 1024px) {
+        box-sizing: border-box;
+        display: flex;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        height: calc(100% - 60px);
+      }
+    }
+  }
+}

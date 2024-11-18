@@ -17,12 +17,19 @@
 import React from "react";
 import Link from "next/link";
 import MenuItem from "../../menu-item/index.jsx";
+import "./resources-menu.scss";
 
-const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden }) => {
-  const blogHrefLang = `https://www.onlyoffice.com/blog${{ "en": "", "ru": "", "zh": "/zh-hans", "pt": "/pt-br"}[currentLocale] ?? `/${currentLocale}`}`;
+const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, registerCloseMenu }) => {
+  const blogHrefLang = `https://www.onlyoffice.com/blog${{ "en": "", "ru": "", "zh": "/zh-hans", "pt": "/pt-br" }[currentLocale] ?? `/${currentLocale}`}`;
 
   return (
-    <MenuItem className="oo-hm-item--resources" heading={t("Resources")} navHidden={navHidden} setNavHidden={setNavHidden}>
+    <MenuItem
+      className="oo-hm-item--resources"
+      heading={t("Resources")}
+      navHidden={navHidden}
+      setNavHidden={setNavHidden}
+      registerCloseMenu={registerCloseMenu}
+    >
       <div className="oo-hm-item-wrapper">
         <div className="oo-hm-item-box oo-hm-item-box--with-border">
           <div className="oo-hm-item-label">{t("About us")}</div>

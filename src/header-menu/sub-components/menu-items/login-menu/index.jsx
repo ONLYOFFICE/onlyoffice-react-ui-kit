@@ -17,10 +17,17 @@
 import React from "react";
 import Link from "next/link";
 import MenuItem from "../../menu-item/index.jsx";
+import "./login-menu.scss";
 
-const LoginMenu = ({ t, hrefLang, navHidden, setNavHidden }) => {
+const LoginMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMenu }) => {
   return (
-    <MenuItem className="oo-hm-item--nav-login" heading={t("Login")} navHidden={navHidden} setNavHidden={setNavHidden}>
+    <MenuItem
+      className="oo-hm-item--login"
+      heading={t("Login")}
+      navHidden={navHidden}
+      setNavHidden={setNavHidden}
+      registerCloseMenu={registerCloseMenu}
+    >
       <div className="oo-hm-item-wrapper">
         <div className="oo-hm-item-wrapper-box">
           <Link className="oo-hm-item-link oo-hm-item-link--docs-cloud" href={`${hrefLang}/docs-cloud-signin.aspx`}>{t("Docs Cloud")}</Link>

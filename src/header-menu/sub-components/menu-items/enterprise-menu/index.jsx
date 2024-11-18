@@ -17,10 +17,17 @@
 import React from "react";
 import Link from "next/link";
 import MenuItem from "../../menu-item/index.jsx";
+import "./enterprise-menu.scss";
 
-const EnterpriseMenu = ({ t, hrefLang, navHidden, setNavHidden }) => {
+const EnterpriseMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMenu }) => {
   return (
-    <MenuItem className="oo-hm-item--enterprise" heading={t("Enterprise")} navHidden={navHidden} setNavHidden={setNavHidden}>
+    <MenuItem
+      className="oo-hm-item--enterprise"
+      heading={t("Enterprise")}
+      navHidden={navHidden}
+      setNavHidden={setNavHidden}
+      registerCloseMenu={registerCloseMenu}
+    >
       <div className="oo-hm-item-wrapper">
         <div className="oo-hm-item-wrapper-box">
           <div className="oo-hm-item-box oo-hm-item-box--with-border">
@@ -31,7 +38,7 @@ const EnterpriseMenu = ({ t, hrefLang, navHidden, setNavHidden }) => {
           </div>
           <div className="oo-hm-item-box">
             <div className="oo-hm-item-label">{t("DocSpace Enterprise")}</div>
-            <Link className="oo-hm-item-link oo-hm-item-link--docs-developer" href={`${hrefLang}/docspace-enterprise.aspx`}>{t("Why DocSpace Enterprise")}</Link>
+            <Link className="oo-hm-item-link oo-hm-item-link--docspace" href={`${hrefLang}/docspace-enterprise.aspx`}>{t("Why DocSpace Enterprise")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--pricing" href={`${hrefLang}/docspace-prices.aspx`}>{t("Pricing")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download-docspace.aspx`}>{t("Get it now")}</Link>
           </div>

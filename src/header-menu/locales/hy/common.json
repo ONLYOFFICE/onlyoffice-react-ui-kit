@@ -1,7 +1,5 @@
 {
   "Products": "Պրոդուկտներ",
-  "Doc editors to integrate into your business platform": "Փաստաթղթերի խմբագիրներ՝ ձեր բիզնես հարթակում ինտեգրելու համար",
-  "Customizable rooms for document collaboration": "Հարմարեցված սենյակներ փաստաթղթերի համագործակցության համար",
   "Business platform to manage your team activities": "Բիզնես հարթակ՝ ձեր թիմային գործունեությունը կառավարելու համար",
   "Document editor": "Փաստաթղթերի խմբագիր",
   "Spreadsheet editor": "Աղյուսակաթերթի  խմբագիր",
@@ -13,10 +11,6 @@
   "Public rooms": "Հանրային սենյակներ",
   "Custom rooms": "Հարմարեցված սենյակներ",
   "Markdown editor": "Markdown խմբագիր",
-  "Documents": "Փաստաթղթեր",
-  "Projects": "Պրոյեկտներ",
-  "Mails": "Նամակներ",
-  "Calendar": "Օրացույց",
   "Connectors": "Կցիչներ",
   "Marketplace": "Շուկա",
   "AI assistant": "AI օգնական",

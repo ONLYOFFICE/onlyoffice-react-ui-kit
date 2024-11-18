@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import locales from "./locales/index.jsx";
 import ProductsMenu from "./sub-components/menu-items/products-menu/index.jsx";
 import EnterpriseMenu from "./sub-components/menu-items/enterprise-menu/index.jsx";
@@ -27,27 +27,56 @@ import LoginMenu from "./sub-components/menu-items/login-menu/index.jsx";
 import "./header-menu.scss";
 
 const HeaderMenu = ({ locale, loginMenuMobile, isOpen }) => {
-  const currentLocale = locale || "en";
-  const windowCheck = typeof window !== "undefined" && window.innerWidth <= 1024;
   const [navHidden, setNavHidden] = useState(false);
+  const navRef = useRef(null);
+  const closeMenusRef = useRef([]);
+
+  const currentLocale = locale || "en";
+  const euLocale = (currentLocale === "de" || currentLocale === "fr" || currentLocale === "it");
+  const windowCheck = typeof window !== "undefined" && window.innerWidth <= 1024;
   const hrefLang = `https://www.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "zh-hans": "/zh", "pt-br": "/pt"}[currentLocale] ?? `/${currentLocale}`}`;
   const t = (key) => locales[currentLocale === "zh-hans" ? "zh" : currentLocale === "pt-br" ? "pt" : currentLocale][key] || locales.en[key] || key;
   const commonProps = { t, hrefLang, navHidden, setNavHidden };
 
+  useEffect(() => {
+    if (windowCheck && isOpen) {
+      const handleClickOutside = (e) => {
+        if (navRef.current && !navRef.current.contains(e.target)) {
+          setNavHidden(false);
+          closeMenusRef.current.forEach(closeMenu => closeMenu());
+        }
+      };
+
+      window.addEventListener("touchstart", handleClickOutside);
+
+      return () => {
+        window.removeEventListener("touchstart", handleClickOutside);
+      };
+    }
+  }, [isOpen]);
+
+  const registerCloseMenu = (closeMenu) => {
+    closeMenusRef.current.push(closeMenu);
+  };
+
   return (
-    <nav className={`oo-hm ${currentLocale} ${windowCheck && navHidden ? "hidden" : ""} ${isOpen ? "is-open" : ""}`}>
+    <nav ref={navRef} className={`oo-hm ${currentLocale} ${windowCheck && navHidden ? "hidden" : ""} ${isOpen ? "is-open" : ""}`}>
       <div className="oo-hm-wrapper">
         <ul className="oo-hm-items">
-          <ProductsMenu currentLocale={currentLocale} {...commonProps} />
-          <EnterpriseMenu {...commonProps} />
-          <DevelopersMenu {...commonProps} />
-          <GetOnlyofficeMenu {...commonProps} />
-          <PricingMenu {...commonProps} />
-          <PartnersMenu {...commonProps} />
-          <ResourcesMenu currentLocale={currentLocale} {...commonProps} />
-
+          <ProductsMenu currentLocale={currentLocale} registerCloseMenu={registerCloseMenu} {...commonProps} />
+          <EnterpriseMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
+          <DevelopersMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
+          {!euLocale &&
+            <GetOnlyofficeMenu euLocale={euLocale} registerCloseMenu={registerCloseMenu} {...commonProps} />
+          }
+          <PricingMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
+          <PartnersMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
+          <ResourcesMenu currentLocale={currentLocale} registerCloseMenu={registerCloseMenu} {...commonProps} />
+          {euLocale &&
+            <GetOnlyofficeMenu euLocale={euLocale} registerCloseMenu={registerCloseMenu} {...commonProps} />
+          }
           {loginMenuMobile && (
-            <LoginMenu {...commonProps} />
+            <LoginMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
           )}
         </ul>
         <a className="oo-hm-phone-mobile" href="tel:+37163399867">

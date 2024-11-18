@@ -103,6 +103,11 @@
       font-weight: 700;
       text-align: initial;
     }
+
+    @media screen and (max-width: 430px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   .oo-hm-items-wrapper {

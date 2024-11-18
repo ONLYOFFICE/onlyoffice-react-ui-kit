@@ -17,10 +17,17 @@
 import React from "react";
 import Link from "next/link";
 import MenuItem from "../../menu-item/index.jsx";
+import "./pricing-menu.scss";
 
-const PricingMenu = ({ t, hrefLang, navHidden, setNavHidden }) => {
+const PricingMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMenu }) => {
   return (
-    <MenuItem className="oo-hm-item--pricing" heading={t("Pricing")} navHidden={navHidden} setNavHidden={setNavHidden}>
+    <MenuItem
+      className="oo-hm-item--pricing"
+      heading={t("Pricing")}
+      navHidden={navHidden}
+      setNavHidden={setNavHidden}
+      registerCloseMenu={registerCloseMenu}
+    >
       <div className="oo-hm-item-wrapper">
         <div className="oo-hm-item-wrapper-box">
           <div className="oo-hm-item-box">

@@ -17,17 +17,26 @@
 import React from "react";
 import Link from "next/link";
 import MenuItem from "../../menu-item/index.jsx";
+import "./developers-menu.scss";
 
-const DevelopersMenu = ({ t, hrefLang, navHidden, setNavHidden }) => {
+const DevelopersMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMenu }) => {
   return (
-    <MenuItem className="oo-hm-item--developers" heading={t("Developers")} navHidden={navHidden} setNavHidden={setNavHidden}>
+    <MenuItem
+      className="oo-hm-item--developers"
+      heading={t("Developers")}
+      navHidden={navHidden}
+      setNavHidden={setNavHidden}
+      registerCloseMenu={registerCloseMenu}
+    >
       <div className="oo-hm-item-wrapper">
         <div className="oo-hm-item-box">
           <Link className="oo-hm-item-label" href={`${hrefLang}/for-developers.aspx`}>{t("All solutions")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--docs-developer" href={`${hrefLang}/developer-edition.aspx`}>{t("Why Docs Developer")}</Link>
-          {/* <Link className="oo-hm-item-box-link" href={`${hrefLang}/automation-api.aspx`}>{t("Automation API")}</Link> */}
+          <Link className="oo-hm-item-box-link" href={`${hrefLang}/automation-api.aspx`}>{t("Automation API")}</Link>
           <Link className="oo-hm-item-box-link" href={`${hrefLang}/conversion-api.aspx`}>{t("Conversion API")}</Link>
           <Link className="oo-hm-item-box-link" href={`${hrefLang}/document-builder.aspx`}>{t("Document Builder")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--pricing" href={`${hrefLang}/developer-edition-prices.aspx`}>{t("Pricing")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download-docs.aspx?from=downloadintegrationmenu#docs-developer`}>{t("Get it now")}</Link>
         </div>
         <div className="oo-hm-item-box oo-hm-item-box--bg-gray">
           <Link className="oo-hm-item-block" href={`${hrefLang}/see-it-in-action.aspx`}>

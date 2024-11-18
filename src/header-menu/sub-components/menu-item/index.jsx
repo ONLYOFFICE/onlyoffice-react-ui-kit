@@ -17,7 +17,7 @@
 import React, { useState, useEffect } from "react";
 import "./menu-item.scss";
 
-const MenuItem = ({ children, heading, navHidden, setNavHidden, className }) => {
+const MenuItem = ({ children, heading, navHidden, setNavHidden, className, registerCloseMenu }) => {
   const windowCheck = typeof window !== "undefined" && window.innerWidth <= 1024;
   const [showMenu, setShowMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -39,6 +39,12 @@ const MenuItem = ({ children, heading, navHidden, setNavHidden, className }) => 
         setNavHidden(false);
       }
     };
+
+    registerCloseMenu(() => {
+      setNavHidden(false);
+      setShowMobileMenu(false);
+      setShowMenu(false);
+    });
 
     window.addEventListener("resize", resizeWindow);
 
