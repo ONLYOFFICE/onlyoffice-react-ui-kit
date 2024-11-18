@@ -34,6 +34,8 @@ export default components.map((component) => ({
           url: (asset) => {
             if (asset.url.startsWith("../../images")) {
               return asset.url.replace("../../images", "./images");
+            } else if (asset.url.startsWith("../../../images")) {
+              return asset.url.replace("../../../images", "./images");
             }
             return asset.url;
           },
