@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0
+* header-menu
+  - Update Products and Developers menu
+  - Update Get ONLYOFFICE menu in German, French, Italian
+
 ## 1.2.0
 * Add translations for Arabic
 * advent-announce
