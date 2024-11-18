@@ -106,7 +106,9 @@
       }
 
       .oo-hm-mobile-tab {
-        display: block;
+        @media screen and (max-width: 1024px) {
+          display: block;
+        }
       }
     }
 
@@ -194,6 +196,16 @@
 
           @media screen and (max-width: 1024px) {
             margin-bottom: 12px;
+          }
+        }
+
+        &.oo-hm-item-link--docs {
+          &:not(:last-child) {
+            margin-bottom: 12px;
+
+            @media screen and (max-width: 1024px) {
+              margin-bottom: 24px;
+            }
           }
         }
       }
