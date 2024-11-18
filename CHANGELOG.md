@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1
+* header-menu
+  - Update styles for Products, Partners, Pricing menu
+
 ## 1.3.0
 * header-menu
   - Update Products and Developers menu
