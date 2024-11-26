@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.1
+- Fix styles for Arabic
+
 ## 1.4.0
 * advent-announce
   - ONLYOFFICE DocSpace 3.0 released
