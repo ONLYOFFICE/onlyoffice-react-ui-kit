@@ -4,9 +4,10 @@
 * advent-announce
   - ONLYOFFICE DocSpace 3.0 released
 * header-menu
+  - Replace "Document Editor" with "Document editors" in Products > DocSpace menu
   - Update Developers menu
   - Update Get ONLYOFFICE menu (except Italian, French, German)
-  - replace links for download pages
+  - Replace links for download pages
 * footer-menu
   - Change Discord link
 
