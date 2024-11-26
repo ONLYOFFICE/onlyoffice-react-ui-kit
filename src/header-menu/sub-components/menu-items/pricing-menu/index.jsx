@@ -40,6 +40,7 @@ const PricingMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMenu }
             <div className="oo-hm-item-box-wrapper">
               <div className="oo-hm-item-label">{t("For developers")}</div>
               <Link className="oo-hm-item-link oo-hm-item-link--docs-developer" href={`${hrefLang}/developer-edition-prices.aspx`}>{t("Docs Developer")}</Link>
+              <Link className="oo-hm-item-link oo-hm-item-link--pricing-docspace-developer" href={`${hrefLang}/docspace-developer-prices.aspx`}>{t("DocSpace Developer")}</Link>
             </div>
             <div className="oo-hm-item-box-wrapper">
               <div className="oo-hm-item-label">{t("For home use")}</div>
