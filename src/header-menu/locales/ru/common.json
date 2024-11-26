@@ -30,10 +30,7 @@
   "All solutions": "Все решения",
   "Why Docs Developer": "Почему Docs Developer",
   "Automation API": "API автоматизации",
-  "Schedule free demo": "Запланировать бесплатную демонстрацию",
   "Conversion API": "API для конвертации",
-  "See it in action!": "Как это работает?",
-  "Curious to know what the interface looks like and try the main functionality without registration?": "Хотите узнать, как выглядит интерфейс, и протестировать основные функциональные возможности без регистрации?",
   "Get ONLYOFFICE": "Получить ONLYOFFICE",
   "For business": "Для бизнеса",
   "Sign in": "Войти",
@@ -77,10 +74,10 @@
   "Training courses": "Курсы по ONLYOFFICE",
   "Webinars": "Вебинары",
   "Blog": "Блог",
+  "ONLYOFFICE DocSpace 3.0 released: updated user types, Virtual Data rooms, OAuth2.0, improved room & file management, and more": "Выпущен ONLYOFFICE DocSpace 3.0: обновленные типы пользователей, виртуальные комнаты данных, OAuth 2.0, улучшенное управление комнатами и файлами и многое другое",
+  "25 November 2024": "25 ноября 2024",
   "ONLYOFFICE Docs 8.2 released: PDF collaborative editing, revamped interface, optimized performance, and more": "Выпущен ONLYOFFICE Docs 8.2: совместное редактирование PDF-файлов, обновленный интерфейс, оптимизированные функциональные характеристики и многое другое",
   "17 October 2024": "17 октября 2024",
-  "Collaborate on documents within Zoom meetings: ONLYOFFICE DocSpace app for Zoom available": "Работайте над документами совместно в ходе Zoom-сессий: доступно приложение ONLYOFFICE DocSpace для Zoom",
-  "27 February 2024": "27 февраля 2024",
   "Login": "Логин",
   "What is ONLYOFFICE DocSpace": "Что такое ONLYOFFICE DocSpace",
   "Zoom meeting rooms": "Конференц-комнаты",
@@ -95,5 +92,8 @@
   "For docs, sheets, slides, PDFs": "Для текстовых документов, электронных таблиц, презентаций, PDF-файлов",
   "Templates": "Шаблоны",
   "Document editors integrated into secure room-based DMS": "Редакторы документов интегрированы в безопасную систему управления документами на основе комнат",
-  "Document editors to integrate into your business platform": "Редакторы документов для интеграции в вашу бизнес-платформу"
+  "Document editors to integrate into your business platform": "Редакторы документов для интеграции в вашу бизнес-платформу",
+  "Launch demo": "Запустить демонстрацию",
+  "Free apps": "Бесплатные приложения",
+  "Why DocSpace Developer": "Почему DocSpace Developer"
 }

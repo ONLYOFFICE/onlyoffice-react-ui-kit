@@ -64,8 +64,8 @@ const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, re
           <Link className="oo-hm-item-link oo-hm-item-link--blog" href={blogHrefLang}>{t("Blog")}</Link>
           <Link className="oo-hm-item-block" href={t("blogLink1")}>
             <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-1"></div>
-            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE Docs 8.2 released: PDF collaborative editing, revamped interface, optimized performance, and more")}</div>
-            <div className="oo-hm-item-blog-date">{t("17 October 2024")}</div>
+            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE DocSpace 3.0 released: updated user types, Virtual Data rooms, OAuth2.0, improved room & file management, and more")}</div>
+            <div className="oo-hm-item-blog-date">{t("25 November 2024")}</div>
           </Link>
           {(currentLocale === "zh" || currentLocale === "zh-hans") ? (
             <>
@@ -78,8 +78,8 @@ const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, re
           ) : (
             <Link className="oo-hm-item-block" href={t("blogLink2")}>
               <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-2"></div>
-              <div className="oo-hm-item-blog-title">{t("Collaborate on documents within Zoom meetings: ONLYOFFICE DocSpace app for Zoom available")}</div>
-              <div className="oo-hm-item-blog-date">{t("27 February 2024")}</div>
+              <div className="oo-hm-item-blog-title">{t("ONLYOFFICE Docs 8.2 released: PDF collaborative editing, revamped interface, optimized performance, and more")}</div>
+              <div className="oo-hm-item-blog-date">{t("17 October 2024")}</div>
             </Link>
           )}
         </div>

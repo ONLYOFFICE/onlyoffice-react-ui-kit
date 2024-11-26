@@ -226,11 +226,7 @@
       }
 
       &:not(:last-child) {
-        margin-bottom: 12px;
-
-        @media screen and (max-width: 1024px) {
-          margin-bottom: 16px;
-        }
+        margin-bottom: 16px;
       }
 
       .oo-hm-item-link {

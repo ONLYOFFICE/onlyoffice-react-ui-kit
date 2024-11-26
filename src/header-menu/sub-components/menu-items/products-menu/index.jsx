@@ -113,9 +113,9 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
             <div className="oo-hm-item-box-wrap oo-hm-item-box-wrap--mt">
               <div className="oo-hm-item-link oo-hm-item-link--mobile">{t("ONLYOFFICE Documents")}</div>
               <div className="oo-hm-item-box-text">{t("Free mobile apps for Android and iOS")}</div>
-              <ul className="oo-hm-item-apps-list-2">
-                <li><Link className="oo-hm-item-app-link-2 oo-hm-item-app-link--android" href={`${hrefLang}/office-for-android.aspx`}></Link></li>
-                <li><Link className="oo-hm-item-app-link-2 oo-hm-item-app-link--ios" href={`${hrefLang}/office-for-ios.aspx`}></Link></li>
+              <ul className="oo-hm-item-apps-list">
+                <li><Link className="oo-hm-item-app-link oo-hm-item-app-link--android" href={`${hrefLang}/office-for-android.aspx`}></Link></li>
+                <li><Link className="oo-hm-item-app-link oo-hm-item-app-link--ios" href={`${hrefLang}/office-for-ios.aspx`}></Link></li>
               </ul>
             </div>
             <div className="oo-hm-item-box-wrap oo-hm-item-box-wrap--mt">

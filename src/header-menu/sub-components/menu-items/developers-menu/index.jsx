@@ -29,25 +29,24 @@ const DevelopersMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMen
       registerCloseMenu={registerCloseMenu}
     >
       <div className="oo-hm-item-wrapper">
-        <div className="oo-hm-item-box">
+        <div className="oo-hm-item-box oo-hm-item-box--with-border">
           <Link className="oo-hm-item-label" href={`${hrefLang}/for-developers.aspx`}>{t("All solutions")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--docs-developer" href={`${hrefLang}/developer-edition.aspx`}>{t("Why Docs Developer")}</Link>
           <Link className="oo-hm-item-box-link" href={`${hrefLang}/automation-api.aspx`}>{t("Automation API")}</Link>
           <Link className="oo-hm-item-box-link" href={`${hrefLang}/conversion-api.aspx`}>{t("Conversion API")}</Link>
           <Link className="oo-hm-item-box-link" href={`${hrefLang}/document-builder.aspx`}>{t("Document Builder")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--pricing" href={`${hrefLang}/developer-edition-prices.aspx`}>{t("Pricing")}</Link>
-          <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download-docs.aspx?from=downloadintegrationmenu#docs-developer`}>{t("Get it now")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--launch-demo" href={`${hrefLang}/see-it-in-action.aspx?developer=edition`}>{t("Launch demo")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download-developer.aspx#docs-developer`}>{t("Get it now")}</Link>
         </div>
-        <div className="oo-hm-item-box oo-hm-item-box--bg-gray">
-          <Link className="oo-hm-item-block" href={`${hrefLang}/see-it-in-action.aspx`}>
-            <div className="oo-hm-item-block-title">{t("See it in action!")}</div>
-            <div className="oo-hm-item-block-img oo-hm-item-block-img--see-it-in-action"></div>
-            <div className="oo-hm-item-block-text">{t("Curious to know what the interface looks like and try the main functionality without registration?")}</div>
-          </Link>
+        <div className="oo-hm-item-box">
+          <div className="oo-hm-item-label">{t("DocSpace Developer")}</div>
+          <Link className="oo-hm-item-link oo-hm-item-link--why-docspace-developer" href={`${hrefLang}/docspace-developer.aspx`}>{t("Why DocSpace Developer")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--pricing" href={`${hrefLang}/docspace-developer-pricing.aspx`}>{t("Pricing")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download-developer.aspx#docspace-developer`}>{t("Get it now")}</Link>
         </div>
         <div className="oo-hm-item-wrapper-bottom">
           <Link className="oo-hm-item-link oo-hm-item-link--api-documentation" href="https://api.onlyoffice.com/">{t("API Docs")}</Link>
-          <Link className="oo-hm-item-link oo-hm-item-link--schedule-free-demo" href={`${hrefLang}/demo-order.aspx`}>{t("Schedule free demo")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--contact-sales" href={`mailto:sales@onlyoffice.com?subject=${t("ONLYOFFICE%20Docs%20Enterprise%20request")}`}>{t("Contact sales")}</Link>
         </div>
       </div>

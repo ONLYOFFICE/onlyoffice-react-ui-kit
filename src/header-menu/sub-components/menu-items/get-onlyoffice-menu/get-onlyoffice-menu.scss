@@ -35,18 +35,32 @@
     }
   }
 
-  &.pt,
-  &.pt-br,
-  &.el {
+  &.ja {
     .oo-hm-item--get-onlyoffice {
       &.oo-hm-item--get-onlyoffice-default {
         .oo-hm-item-box {
-          width: 100%;
-          min-width: 264px;
+          &:last-child {
+            max-width: 294px;
 
-          &:first-child {
-            width: 100%;
-            min-width: 264px;
+            @media screen and (max-width: 1024px) {
+              max-width: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ru {
+    .oo-hm-item--get-onlyoffice {
+      &.oo-hm-item--get-onlyoffice-default {
+        .oo-hm-item-box {
+          &:last-child {
+            max-width: 340px;
+
+            @media screen and (max-width: 1024px) {
+              max-width: initial;
+            }
           }
         }
       }
@@ -209,7 +223,7 @@
     &.oo-hm-item--get-onlyoffice-default {
       .oo-hm-item-wrapper-box {
         @media screen and (max-width: 1024px) {
-          padding: 24px;
+          padding: 24px 24px 0;
         }
       }
 
@@ -223,6 +237,59 @@
             width: 100%;
             min-width: 100%;
             max-width: 100%;
+          }
+        }
+
+        &.oo-hm-item-box--bg-gray {
+          width: max-content;
+          max-width: 272px;
+
+          .oo-hm-item-box-wrap {
+            &:not(:last-child) {
+              margin-bottom: 16px;
+
+              @media screen and (max-width: 1024px) {
+                margin-bottom: 24px;
+              }
+            }
+      
+            .oo-hm-item-link {
+              font-size: 16px;
+              font-weight: 700;
+      
+              &::before {
+                top: 50%;
+                transform: translateY(-50%);
+              }
+      
+              &:not(:last-child) {
+                margin-bottom: 8px;
+              }
+      
+              @media screen and (max-width: 1024px) {
+                font-size: 18px;
+              }
+            }
+      
+            .oo-hm-item-box-text {
+              padding: 0;
+              color: #666666;
+              cursor: initial;
+      
+              &:not(:last-child) {
+                margin-bottom: 8px;
+              }
+      
+              @media screen and (max-width: 1024px) {
+                font-size: 14px;
+                line-height: 21px;
+              }
+            }
+          }
+
+          @media screen and (max-width: 1024px) {
+            width: initial;
+            max-width: initial;
           }
         }
       }

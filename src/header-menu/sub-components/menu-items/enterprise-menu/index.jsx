@@ -34,13 +34,13 @@ const EnterpriseMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMen
             <div className="oo-hm-item-label">{t("Docs Enterprise")}</div>
             <Link className="oo-hm-item-link oo-hm-item-link--docs-enterprise" href={`${hrefLang}/docs-enterprise.aspx`}>{t("Why Docs Enterprise")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--pricing" href={`${hrefLang}/docs-enterprise-prices.aspx`}>{t("Pricing")}</Link>
-            <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download-docs.aspx`}>{t("Get it now")}</Link>
+            <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download.aspx#docs-enterprise`}>{t("Get it now")}</Link>
           </div>
           <div className="oo-hm-item-box">
             <div className="oo-hm-item-label">{t("DocSpace Enterprise")}</div>
             <Link className="oo-hm-item-link oo-hm-item-link--docspace" href={`${hrefLang}/docspace-enterprise.aspx`}>{t("Why DocSpace Enterprise")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--pricing" href={`${hrefLang}/docspace-prices.aspx`}>{t("Pricing")}</Link>
-            <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download-docspace.aspx`}>{t("Get it now")}</Link>
+            <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download.aspx#docspace-enterprise`}>{t("Get it now")}</Link>
           </div>
         </div>
         <div className="oo-hm-item-wrapper-bottom">

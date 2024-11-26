@@ -41,7 +41,7 @@
   &.zh-hans {
     .oo-hm-item-block-img {
       &.oo-hm-item-block-img--blog-1 {
-        background-image: url("./images/menu-blog-1-1-zh.jpg");
+        background-image: url("./images/menu-blog-1-zh.png");
       }
     }
   }
@@ -143,36 +143,7 @@
       padding: 4px 0 0 4px;
     }
 
-    .oo-hm-item-apps {
-      &:not(:last-child) {
-        margin-right: initial;
-        margin-left: 32px;
-
-        @media screen and (max-width: 1024px) {
-          margin-right: initial;
-          margin-left: 0;
-        }
-      }
-
-      .oo-hm-item-label {
-        margin: 0 0 0 16px;
-
-        @media screen and (max-width: 1024px) {
-          margin: 0 0 16px 0;
-        }
-      }
-    }
-
     .oo-hm-item-apps-list {
-      li {
-        &:not(:last-child) {
-          margin-right: initial;
-          margin-left: 16px;
-        }
-      }
-    }
-
-    .oo-hm-item-apps-list-2 {
       li {
         &:not(:last-child) {
           margin-right: initial;
@@ -306,7 +277,7 @@
       flex-direction: column;
       justify-content: initial;
       align-items: initial;
-      min-height: calc(100% - 60px);
+      min-height: calc(100% - 56px);
     }
   }
 
@@ -530,49 +501,6 @@
     }
   }
 
-  .oo-hm-item-apps {
-    display: flex;
-    align-items: center;
-
-    &:not(:last-child) {
-      margin-right: 32px;
-
-      @media screen and (max-width: 1024px) {
-        margin-right: 0;
-      }
-    }
-
-    .oo-hm-item-label {
-      padding: 4px 0 0 0;
-      margin: 0 16px 0 0;
-
-      @media screen and (max-width: 1024px) {
-        margin: 0 0 16px;
-      }
-    }
-
-    @media screen and (max-width: 1024px) {
-      align-items: initial;
-      flex-direction: column;
-    }
-  }
-
-  .oo-hm-item-apps-list {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
-    li {
-      display: inline-flex;
-
-      &:not(:last-child) {
-        margin-right: 16px;
-      }
-    }
-  }
-
   .oo-hm-item-app-link {
     display: inline-flex;
     width: 32px;
@@ -601,7 +529,7 @@
     }
   }
 
-  .oo-hm-item-apps-list-2 {
+  .oo-hm-item-apps-list {
     display: flex;
     align-items: center;
     margin: 0;
@@ -617,12 +545,12 @@
     }
   }
 
-  .oo-hm-item-app-link-2 {
+  .oo-hm-item-app-link {
     display: inline-flex;
     width: 28px;
     min-width: 28px;
     height: 28px;
-    background-image: url("./images/platforms-2.svg");
+    background-image: url("./images/platforms.svg");
 
     &.oo-hm-item-app-link--windows {
       background-position: 0;
@@ -771,6 +699,10 @@
   .oo-hm-item-box-wrapper {
     &:not(:last-child) {
       margin-bottom: 16px;
+
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -1164,7 +1096,7 @@
       }
     }
 
-    &.oo-hm-item-link--schedule-free-demo {
+    &.oo-hm-item-link--launch-demo {
       &:before {
         background-position-y: -2650px;
       }
@@ -1344,6 +1276,13 @@
       }
     }
 
+    &.oo-hm-item-link--why-docspace-developer,
+    &.oo-hm-item-link--docspace-developer {
+      &:before {
+        background-position-y: -3016px;
+      }
+    }
+
     &.oo-hm-item-link--blog {
       padding-left: 0;
 
@@ -1475,17 +1414,13 @@
       background-image: url("./images/events.svg");
     }
 
-    &.oo-hm-item-block-img--see-it-in-action {
-      background-image: url("./images/menu-see-it-in-act.png");
-    }
-
     &.oo-hm-item-block-img--blog-1 {
-      background-image: url("./images/menu-blog-1-1.png");
-      background-size: cover;
+      background-image: url("./images/menu-blog-1.png");
     }
 
     &.oo-hm-item-block-img--blog-2 {
-      background-image: url("./images/menu-blog-2-1.png");
+      background-image: url("./images/menu-blog-2.png");
+      background-size: cover;
     }
 
     &.oo-hm-item-block-img--zh-dev-img {
