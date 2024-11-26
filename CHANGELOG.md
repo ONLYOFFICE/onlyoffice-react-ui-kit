@@ -1,7 +1,12 @@
 # Changelog
 
+## 1.4.2
+* footer-menu
+  - Fix translation "Pour les ensaignants" » "Pour les enseignants" for French subsite
+
 ## 1.4.1
-- Fix styles for Arabic
+* advent-announce
+  - Fix styles for Arabic
 
 ## 1.4.0
 * advent-announce
