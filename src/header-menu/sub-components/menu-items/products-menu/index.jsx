@@ -59,7 +59,7 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
               <Link className="oo-hm-item-link oo-hm-item-link--docspace" href={`${hrefLang}/docspace.aspx`}>{t("What is ONLYOFFICE DocSpace")}</Link>
               <div className="oo-hm-item-box-text">{t("Document editors integrated into secure room-based DMS")}</div>
             </div>
-            <Link className="oo-hm-item-link oo-hm-item-link--docs" href={`${hrefLang}/office-suite.aspx`}>{t("Document editor")}</Link>
+            <Link className="oo-hm-item-link oo-hm-item-link--docs" href={`${hrefLang}/office-suite.aspx`}>{t("Document editors")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--collaboration-rooms" href={`${hrefLang}/collaboration-rooms.aspx`}>{t("Collaboration rooms")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--meeting-rooms" href={`${hrefLang}/office-for-zoom.aspx`}>{t("Zoom meeting rooms")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--public-rooms" href={`${hrefLang}/public-rooms.aspx`}>{t("Public rooms")}</Link>
