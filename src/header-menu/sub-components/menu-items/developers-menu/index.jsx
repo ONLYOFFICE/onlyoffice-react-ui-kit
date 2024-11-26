@@ -42,7 +42,7 @@ const DevelopersMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMen
         <div className="oo-hm-item-box">
           <div className="oo-hm-item-label">{t("DocSpace Developer")}</div>
           <Link className="oo-hm-item-link oo-hm-item-link--why-docspace-developer" href={`${hrefLang}/docspace-developer.aspx`}>{t("Why DocSpace Developer")}</Link>
-          <Link className="oo-hm-item-link oo-hm-item-link--pricing" href={`${hrefLang}/docspace-developer-pricing.aspx`}>{t("Pricing")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--pricing" href={`${hrefLang}/docspace-developer-prices.aspx`}>{t("Pricing")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--get-in-now" href={`${hrefLang}/download-developer.aspx#docspace-developer`}>{t("Get it now")}</Link>
         </div>
         <div className="oo-hm-item-wrapper-bottom">

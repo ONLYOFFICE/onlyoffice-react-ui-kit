@@ -35,6 +35,48 @@
     }
   }
 
+  &.fr, &.ja {
+    .oo-hm-item--developers {
+      .oo-hm-item-box {
+        &:nth-child(2) {
+          min-width: 280px;
+
+          @media screen and (max-width: 1024px) {
+            min-width: initial;
+          }
+        }
+      }
+    }
+  }
+
+  &.pt, &.pt-br {
+    .oo-hm-item--developers {
+      .oo-hm-item-box {
+        &:nth-child(2) {
+          min-width: 290px;
+
+          @media screen and (max-width: 1024px) {
+            min-width: initial;
+          }
+        }
+      }
+    }
+  }
+
+  &.ru {
+    .oo-hm-item--developers {
+      .oo-hm-item-box {
+        &:nth-child(2) {
+          min-width: 270px;
+
+          @media screen and (max-width: 1024px) {
+            min-width: initial;
+          }
+        }
+      }
+    }
+  }
+
   .oo-hm-item--developers {
     position: relative;
 
