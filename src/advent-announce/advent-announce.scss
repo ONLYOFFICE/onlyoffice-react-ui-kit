@@ -22,62 +22,31 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-image: url("./images/banner-bg.svg");
+  background-color: #11C5EE;
+  background-image: url("./images/desktop-bg.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #1B181F;
-
-  @media screen and (max-width: 1024px) {
-    height: 48px;
-    background-image: url("./images/banner-bg-mobile.svg");
-  }
-
-  &.es {
-    .oo-advent-announce-text {
-      @media screen and (max-width: 375px) {
-        max-width: 160px;
-      }
-    }
-  }
 
   &.ru {
     .oo-advent-announce-text {
-      max-width: 726px;
+      br {
+        display: block;
+      }
     }
   }
 
-  &.ar {
+  &.fr, &.de, &.es, &.ja {
     .oo-advent-announce-text {
-      padding: 0 10px 0 38px;
-
-      &:before {
-        left: 0;
-        width: 23px;
-        height: 23px;
-        background-image: url("./images/arrow-right.svg");
-        background-repeat: no-repeat;
-        transform: translateY(-50%) rotate(180deg);
-
-        @media screen and (max-width: 1024px) {
-          display: block;
-        }
-      }
-    
-      &:after {
-        right: -63px;
-        width: 64px;
-        height: 64px;
-        background-image: url("./images/docs-8-2-pdf.svg");
-
-        @media screen and (max-width: 1024px) {
-          display: none;
-        }
-      }
-
-      @media screen and (max-width: 1024px) {
-        padding: 0 0 0 38px;
+      @media screen and (max-width: 375px) {
+        max-width: 216px;
       }
     }
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: 48px;
+    background-image: url("./images/mobile-bg.svg");
+    background-size: cover;
   }
 }
 
@@ -87,13 +56,10 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 0 38px 0 10px;
   font-size: 14px;
   line-height: 19px;
   letter-spacing: 0.01em;
   text-align: center;
-  width: max-content;
-  max-width: 860px;
   height: 100%;
   color: #FFFFFF;
   text-decoration: none;
@@ -102,39 +68,66 @@
   &:after,
   &:before {
     content: "";
-    position: absolute;
-    top: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    transform: translateY(-50%);
+    background-size: contain;
   }
 
   &:before {
-    left: -63px;
-    width: 64px;
-    height: 64px;
-    background-image: url("./images/docs-8-2-pdf.svg");
+    margin-right: 24px;
+    width: 72px;
+    min-width: 72px;
+    height: 56px;
+    background-image: url("./images/docspace-3-0.svg");
 
     @media screen and (max-width: 1024px) {
-      display: none;
+      margin-right: 10px;
+      width: 68px;
+      min-width: 68px;
+      height: 60px;
+      background-image: url("./images/docspace-3-0-mobile.svg");
+    }
+
+    @media screen and (max-width: 460px) {
+      content: none;
     }
   }
 
   &:after {
-    right: 0;
+    margin-left: 20px;
     width: 22px;
+    min-width: 22px;
     height: 22px;
     background-image: url("./images/arrow-right.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+
+    @media screen and (max-width: 1024px) {
+      margin-left: 6px;
+    }
   }
-  
+
   b {
-    font-weight: 800;
+    color: #9AECFF;
+  }
+
+  span {
+    margin: 0 8px;
+
+    @media screen and (max-width: 1024px) {
+      margin: 0;
+      color: #9AECFF;
+    }
+  }
+
+  br {
+    display: none;
+
+    @media screen and (max-width: 1440px) {
+      display: block;
+    }
   }
 
   @media screen and (max-width: 1024px) {
-    padding: 0 38px 0 0;
+    font-weight: 700;
   }
 }
 
