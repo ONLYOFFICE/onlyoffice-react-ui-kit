@@ -51,7 +51,7 @@ const SocialLinks = ({ t, blogHrefLang, currentLocale, handlerSetModal }) => {
         </>
       )}
       <li>
-        <Link className="oo-fm-social-link" href="https://discord.gg/pDuWma6uM7" title={t("Follow us on Discord")} target="_blank" rel="noreferrer noopener">
+        <Link className="oo-fm-social-link" href="https://discord.gg/Hcgtf5n4uF" title={t("Follow us on Discord")} target="_blank" rel="noreferrer noopener">
           <span className="oo-fm-social-link-icon oo-fm-social-link-icon--discord" title={t("Discord")}></span>
         </Link>
       </li>
