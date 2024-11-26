@@ -43,6 +43,10 @@
     }
   }
 
+  &.ar {
+    direction: initial;
+  }
+
   @media screen and (max-width: 1024px) {
     height: 48px;
     background-image: url("./images/mobile-bg.svg");
