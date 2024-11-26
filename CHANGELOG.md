@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.3
+* header-menu
+  - Add DocSpace Developer for Pricing menu
+
 ## 1.4.2
 * footer-menu
   - Fix translation "Pour les ensaignants" » "Pour les enseignants" for French subsite
