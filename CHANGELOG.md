@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.4
+* header-menu
+  - Fix "all connectors" icon in Products menu
+  - Update link for Contact sales in Enterprise and Developers menu
+
 ## 1.4.3
 * header-menu
   - Add DocSpace Developer for Pricing menu
