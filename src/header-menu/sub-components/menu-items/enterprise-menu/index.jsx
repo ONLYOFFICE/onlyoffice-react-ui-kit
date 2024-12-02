@@ -44,7 +44,7 @@ const EnterpriseMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMen
           </div>
         </div>
         <div className="oo-hm-item-wrapper-bottom">
-          <Link className="oo-hm-item-link oo-hm-item-link--contact-sales" href={`mailto:sales@onlyoffice.com?subject=${t("ONLYOFFICE%20Docs%20Enterprise%20request")}`}>{t("Contact sales")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--contact-sales" href={`mailto:sales@onlyoffice.com?subject=${t("ONLYOFFICE%20Enterprise%20Request")}`}>{t("Contact sales")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--request-demo" href={`${hrefLang}/demo-order.aspx`}>{t("Request demo")}</Link>
         </div>
       </div>
