@@ -47,7 +47,7 @@ const DevelopersMenu = ({ t, hrefLang, navHidden, setNavHidden, registerCloseMen
         </div>
         <div className="oo-hm-item-wrapper-bottom">
           <Link className="oo-hm-item-link oo-hm-item-link--api-documentation" href="https://api.onlyoffice.com/">{t("API Docs")}</Link>
-          <Link className="oo-hm-item-link oo-hm-item-link--contact-sales" href={`mailto:sales@onlyoffice.com?subject=${t("ONLYOFFICE%20Developer%20Request")}`}>{t("Contact sales")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--contact-sales" href={`mailto:sales@onlyoffice.com?subject=${t("ONLYOFFICE%20Developer%20request")}`}>{t("Contact sales")}</Link>
         </div>
       </div>
     </MenuItem>

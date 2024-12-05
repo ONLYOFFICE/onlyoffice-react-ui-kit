@@ -32,7 +32,6 @@
   "DocSpace Enterprise": "协作空间-企业版",
   "Why DocSpace Enterprise": "为什么选择协作空间企业版",
   "Contact sales": "联系销售",
-  "ONLYOFFICE%20Docs%20Enterprise%20request": "申请%20ONLYOFFICE%20文档企业版",
   "Request demo": "预约演示",
   "Developers": "开发者",
   "All solutions": "所有解决方案",
@@ -121,5 +120,7 @@
   "Free apps": "免费应用程序",
   "DocSpace Developer": "开发者版协作空间",
   "Why DocSpace Developer": "为什么选择开发者版协作空间",
-  "Document editors": "文档编辑器"
+  "Document editors": "文档编辑器",
+  "ONLYOFFICE%20Developer%20request": "申请%20ONLYOFFICE%20开发者版",
+  "ONLYOFFICE%20Enterprise%20request": "申请%20ONLYOFFICE%20企业版"
 }

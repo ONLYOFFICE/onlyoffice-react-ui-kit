@@ -25,7 +25,6 @@
   "Pricing": "価格",
   "Get it now": "今すぐ入手",
   "Why DocSpace Enterprise": "DocSpace Enterpriseを選ぶ理由",
-  "ONLYOFFICE%20Docs%20Enterprise%20request": "ONLYOFFICE%20Docsエンタープライズ版を申し込む",
   "Contact sales": "営業部へのお問い合わせ",
   "Request demo": "デモのリクエスト",
   "Developers": "開発者向け",
@@ -105,5 +104,7 @@
   "Launch demo": "デモ版を起動する",
   "Free apps": "無料アプリ",
   "Why DocSpace Developer": "DocSpace Developerを選ぶ理由",
-  "Document editors": "ドキュメントエディタ"
+  "Document editors": "ドキュメントエディタ",
+  "ONLYOFFICE%20Developer%20request": "ONLYOFFICE%20デベロッパー版 を購読する",
+  "ONLYOFFICE%20Enterprise%20request": "ONLYOFFICE%20エンタープライズ版を申し込む"
 }

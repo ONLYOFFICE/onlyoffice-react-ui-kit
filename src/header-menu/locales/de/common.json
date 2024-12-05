@@ -26,7 +26,6 @@
   "Pricing": "Preise",
   "Get it now": "Jetzt erhalten",
   "Why DocSpace Enterprise": "Warum DocSpace Enterprise",
-  "ONLYOFFICE%20Docs%20Enterprise%20request": "ONLYOFFICE%20Docs%20Enterprise-Anfrage",
   "Contact sales": "Kontakt zum Vertriebsteam",
   "Request demo": "Demo anfordern",
   "Developers": "Entwickler",
@@ -99,5 +98,7 @@
   "Launch demo": "Demo starten",
   "Free apps": "Kostenlose Apps",
   "Why DocSpace Developer": "Warum DocSpace Developer",
-  "Document editors": "Dokumenteditoren"
+  "Document editors": "Dokumenteditoren",
+  "ONLYOFFICE%20Developer%20request": "ONLYOFFICE%20Developer-Anfrage",
+  "ONLYOFFICE%20Enterprise%20request": "ONLYOFFICE%20Enterprise-Anfrage"
 }
