@@ -44,7 +44,27 @@
   }
 
   &.ar {
-    direction: initial;
+    direction: rtl;
+
+    .oo-advent-announce-text:before {
+      margin-right: initial;
+      margin-left: 24px;
+
+      @media screen and (max-width: 1024px) {
+        margin-left: 10px;
+      }
+    }
+
+    .oo-advent-announce-text:after {
+      margin-left: initial;
+      margin-right: 20px;
+      transform: rotate(180deg);
+      background-size: initial;
+
+      @media screen and (max-width: 1024px) {
+        margin-right: 6px;
+      }
+    }
   }
 
   @media screen and (max-width: 1024px) {
