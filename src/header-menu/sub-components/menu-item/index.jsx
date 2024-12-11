@@ -55,13 +55,13 @@ const MenuItem = ({ children, heading, navHidden, setNavHidden, className, regis
 
   return (
     <li
-      onMouseLeave={() => setShowMenu(false)}
+      onMouseLeave={() => window.innerWidth > 1024 && setShowMenu(false)}
       className={`oo-hm-item ${windowCheck && showMobileMenu ? "active" : ""} ${className ? className : ""}`}
     >
       <button
         className={`oo-hm-item-heading ${showMenu ? "active": ""}`}
         onClick={toggleMenu}
-        onMouseEnter={() => setShowMenu(true)}
+        onMouseEnter={() => window.innerWidth > 1024 && setShowMenu(true)}
       >
         {heading}
       </button>
