@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.0
+* Add translations for Arabic
+* advent-announce
+  - Update styles for Arabic
+
 ## 1.4.4
 * header-menu
   - Fix "all connectors" icon in Products menu
