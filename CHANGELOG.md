@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.1
+* header-menu
+  - Fix translation for Arabic
+
 ## 1.5.0
 * Add translations for Arabic
 * advent-announce
