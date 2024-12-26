@@ -183,7 +183,20 @@
           cursor: initial;
 
           @media screen and (max-width: 1024px) {
-            content: none;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 24px;
+            display: inline-flex;
+            width: 24px;
+            height: 24px;
+            background-image: url("../../../images/download.svg");
+            transform: translateY(-50%);
+            cursor: pointer;
+          }
+
+          @media screen and (max-width: 430px) {
+            left: 16px;
           }
         }
       }

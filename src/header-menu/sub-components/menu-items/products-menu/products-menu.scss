@@ -30,7 +30,7 @@
           width: 280px;
 
           @media screen and (max-width: 1024px) {
-            min-width: initial;
+            width: initial;
           }
         }
       }
@@ -123,6 +123,7 @@
 
     .oo-hm-mobile-tab {
       display: none;
+      text-transform: uppercase;
     }
 
     &.tab-active {
