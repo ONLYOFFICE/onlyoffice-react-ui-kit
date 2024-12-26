@@ -42,14 +42,12 @@
 
   .oo-hm-item-heading {
     border: none;
-    padding: 28px 20px;
+    padding: 25px 12px;
     font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 22px;
     color: #444444;
-    letter-spacing: 0.04em;
     width: 100%;
-    text-transform: uppercase;
     background-color: transparent;
     cursor: pointer;
 
@@ -92,21 +90,22 @@
     }
 
     @media screen and (max-width: 1300px) {
-      padding: 28px 10px;
+      padding: 25px 8px;
     }
 
     @media screen and (max-width: 1024px) {
       position: relative;
       padding: 16px 40px 16px 24px;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 24px;
       font-weight: 700;
       text-align: initial;
     }
 
     @media screen and (max-width: 430px) {
-      font-size: 16px;
-      line-height: 22px;
+      padding: 14px 40px 14px 24px;
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 

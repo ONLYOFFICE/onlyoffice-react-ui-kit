@@ -37,6 +37,8 @@ const MenuItem = ({ children, heading, navHidden, setNavHidden, className, regis
       if (window.innerWidth > 1024) {
         setShowMobileMenu(false);
         setNavHidden(false);
+      } else if (window.innerWidth <= 1024) {
+        setShowMenu(false);
       }
     };
 

@@ -18,10 +18,15 @@
   &.ar {
     .oo-hm-item--enterprise {
       .oo-hm-items-wrapper {
-        left: calc(50% - 148px);
-
+        left: initial;
+        right: -12px;
+  
+        @media screen and (max-width: 1300px) {
+          right: -8px;
+        }
+    
         @media screen and (max-width: 1024px) {
-          left: initial;
+          right: initial;
         }
       }
 
@@ -44,7 +49,12 @@
     position: relative;
 
     .oo-hm-items-wrapper {
-      left: calc(50% + 148px);
+      left: -12px;
+      transform: initial;
+
+      @media screen and (max-width: 1300px) {
+        left: -8px;
+      }
 
       @media screen and (max-width: 1024px) {
         left: initial;

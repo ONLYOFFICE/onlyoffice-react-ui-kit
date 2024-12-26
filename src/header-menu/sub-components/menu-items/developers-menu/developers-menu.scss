@@ -18,10 +18,16 @@
   &.ar {
     .oo-hm-item--developers {
       .oo-hm-items-wrapper {
-        left: calc(50% - 32px);
+        left: initial;
+        right: -12px;
   
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1300px) {
           left: initial;
+          right: -8px;
+        }
+    
+        @media screen and (max-width: 1024px) {
+          right: initial;
         }
       }
 
@@ -81,7 +87,12 @@
     position: relative;
 
     .oo-hm-items-wrapper {
-      left: calc(50% + 32px);
+      left: -12px;
+      transform: initial;
+
+      @media screen and (max-width: 1300px) {
+        left: -8px;
+      }
   
       @media screen and (max-width: 1024px) {
         left: initial;
@@ -96,6 +107,7 @@
         box-sizing: border-box;
         display: flex;
         padding: 0;
+        height: calc(100% - 60px);
       }
     }
   

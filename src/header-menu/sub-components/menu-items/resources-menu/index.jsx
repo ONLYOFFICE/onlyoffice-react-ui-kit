@@ -67,21 +67,11 @@ const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, re
             <div className="oo-hm-item-blog-title">{t("ONLYOFFICE DocSpace 3.0 released: updated user types, Virtual Data rooms, OAuth2.0, improved room & file management, and more")}</div>
             <div className="oo-hm-item-blog-date">{t("25 November 2024")}</div>
           </Link>
-          {(currentLocale === "zh" || currentLocale === "zh-hans") ? (
-            <>
-              <Link className="oo-hm-item-link oo-hm-item-link--zh-dev" href="https://onlyoffice.com/zh/plugin-developer-competiton.aspx">比赛</Link>
-              <Link className="oo-hm-item-block" href="https://onlyoffice.com/zh/plugin-developer-competiton.aspx">
-                <div className="oo-hm-item-block-img oo-hm-item-block-img--zh-dev-img"></div>
-                <div className="oo-hm-item-blog-title">2024 插件开发大赛：为 ONLYOFFICE 开发插件，赢取万元奖金！</div>
-              </Link>
-            </>
-          ) : (
-            <Link className="oo-hm-item-block" href={t("blogLink2")}>
-              <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-2"></div>
-              <div className="oo-hm-item-blog-title">{t("ONLYOFFICE Docs 8.2 released: PDF collaborative editing, revamped interface, optimized performance, and more")}</div>
-              <div className="oo-hm-item-blog-date">{t("17 October 2024")}</div>
-            </Link>
-          )}
+          <Link className="oo-hm-item-block" href={t("blogLink2")}>
+            <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-2"></div>
+            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE Docs 8.2 released: PDF collaborative editing, revamped interface, optimized performance, and more")}</div>
+            <div className="oo-hm-item-blog-date">{t("17 October 2024")}</div>
+          </Link>
         </div>
       </div>
     </MenuItem>

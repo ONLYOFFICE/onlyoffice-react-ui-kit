@@ -18,6 +18,8 @@
   position: relative;
   margin: 0 auto;
   padding: 0;
+  width: 100%;
+  max-width: 1105px;
   height: 72px;
   z-index: 2;
 
@@ -43,42 +45,10 @@
       &.oo-hm-item-block-img--blog-1 {
         background-image: url("./images/menu-blog-1-zh.png");
       }
-    }
-  }
 
-  &.el {
-    .oo-hm-item-heading {
-      padding: 28px 12px;
-
-      @media screen and (max-width: 1300px) {
-        padding: 28px 6px;
+      &.oo-hm-item-block-img--blog-2 {
+        background-image: url("./images/menu-blog-2-zh.jpg");
       }
-
-      @media screen and (max-width: 1024px) {
-        padding: 16px 40px 16px 24px;
-      }
-    }
-
-    @media screen and (max-width: 1300px) {
-      max-width: 812px;
-    }
-  }
-
-  &.hy {
-    .oo-hm-item-heading {
-      padding: 28px 12px;
-
-      @media screen and (max-width: 1300px) {
-        padding: 28px 6px;
-      }
-
-      @media screen and (max-width: 1024px) {
-        padding: 16px 40px 16px 24px;
-      }
-    }
-
-    @media screen and (max-width: 1300px) {
-      max-width: 800px;
     }
   }
 
@@ -112,6 +82,10 @@
 
         @media screen and (max-width: 1024px) {
           padding: 16px 24px 16px 40px;
+        }
+
+        @media screen and (max-width: 430px) {
+          padding: 14px 24px 14px 40px;
         }
       }
     }
@@ -215,26 +189,9 @@
       }
     }
 
-    .oo-hm-item-box-links {
-      margin-left: initial;
-      margin-right: 36px;
-    }
-
     .oo-hm-item-box-link {
       margin-left: initial;
       margin-right: 36px;
-
-      &.oo-hm-item-box-link--left {
-        margin: 0 0 0 7px;
-      }
-
-      &.oo-hm-item-box-link--right {
-        margin: 0 7px 0 0;
-
-        @media screen and (max-width: 430px) {
-          margin: 7px 0 0 0;
-        }
-      }
     }
 
     .oo-hm-phone-mobile {
@@ -268,7 +225,6 @@
 
   .oo-hm-items {
     display: flex;
-    justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -277,7 +233,7 @@
       flex-direction: column;
       justify-content: initial;
       align-items: initial;
-      min-height: calc(100% - 56px);
+      min-height: calc(100% - 60px);
     }
   }
 
@@ -301,14 +257,11 @@
       font-size: 18px;
       font-weight: 700;
       line-height: 22px;
+      letter-spacing: 0.02em;
       width: 100%;
       color: #333333;
       background-color: #f6f6f6;
       text-decoration: none;
-    }
-
-    @media screen and (max-width: 430px) {
-      padding: 16px 24px;
     }
   }
 
@@ -319,12 +272,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     border: none;
     border-bottom: 1px solid #f2f2f2;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 0.04em;
-    line-height: 24px;
+    line-height: 27px;
     margin: 0;
     padding: 4px 32px;
     width: 100%;
@@ -332,7 +285,6 @@
     min-height: 60px;
     color: #ff6f3d;
     background-color: #ffffff;
-    text-transform: uppercase;
     text-align: center;
     cursor: pointer;
     z-index: 10;
@@ -351,6 +303,11 @@
       top: 50%;
       transform: translateY(-50%) rotate(180deg);
       transition: 0.1s linear;
+    }
+
+    @media screen and (max-width: 430px) {
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 
@@ -508,18 +465,6 @@
     height: 32px;
     background-image: url("./images/platforms.svg");
 
-    &.oo-hm-item-app-link--windows {
-      background-position: 0 -52px;
-    }
-
-    &.oo-hm-item-app-link--macos {
-      background-position: -52px -52px;
-    }
-
-    &.oo-hm-item-app-link--linux {
-      background-position: -104px -52px;
-    }
-
     &.oo-hm-item-app-link--android {
       background-position: -154px -52px;
     }
@@ -551,18 +496,6 @@
     min-width: 28px;
     height: 28px;
     background-image: url("./images/platforms.svg");
-
-    &.oo-hm-item-app-link--windows {
-      background-position: 0;
-    }
-
-    &.oo-hm-item-app-link--macos {
-      background-position: -80px;
-    }
-
-    &.oo-hm-item-app-link--linux {
-      background-position: -40px;
-    }
 
     &.oo-hm-item-app-link--android {
       background-position: -121px;
@@ -692,8 +625,7 @@
     padding-left: 36px;
     font-size: 13px;
     line-height: 17px;
-    color: #333333;
-    cursor: pointer;
+    color: #666666;
   }
 
   .oo-hm-item-box-wrapper {
@@ -706,12 +638,6 @@
     }
   }
 
-  .oo-hm-item-box-inner {
-    &:not(:last-child) {
-      margin-bottom: 12px;
-    }
-  }
-
   .oo-hm-item-box-link {
     display: flex;
     margin-left: 36px;
@@ -721,19 +647,6 @@
     color: #444444;
     text-decoration: none;
 
-    &.oo-hm-item-box-link--left {
-      margin: 0 7px 0 0;
-    }
-
-    &.oo-hm-item-box-link--right {
-      margin: 0 0 0 7px;
-
-      @media screen and (max-width: 430px) {
-        margin: 7px 0 0 0;
-        width: 100%;
-      }
-    }
-
     &:hover {
       color: #ff6f3d;
     }
@@ -741,25 +654,6 @@
     @media screen and (max-width: 1024px) {
       font-size: 14px;
       line-height: 24px;
-    }
-  }
-
-  .oo-hm-item-box-links {
-    display: flex;
-    align-items: center;
-    margin-left: 36px;
-    margin-bottom: 4px;
-    font-size: 13px;
-    line-height: 21px;
-
-    @media screen and (max-width: 1024px) {
-      margin-bottom: 8px;
-      font-size: 14px;
-      line-height: 24px;
-    }
-
-    @media screen and (max-width: 430px) {
-      flex-wrap: wrap;
     }
   }
 
@@ -1084,12 +978,6 @@
       }
     }
 
-    &.oo-hm-item-link--document-builder {
-      &:before {
-        background-position-y: -832px;
-      }
-    }
-
     &.oo-hm-item-link--api-documentation {
       &:before {
         background-position-y: -884px;
@@ -1105,18 +993,6 @@
     &.oo-hm-item-link--connectors {
       &:before {
         background-position-y: -1196px;
-      }
-    }
-
-    &.oo-hm-item-link--docspace-community {
-      &:before {
-        background-position-y: -2704px;
-      }
-    }
-
-    &.oo-hm-item-link--code-on-github {
-      &:before {
-        background-position-y: -936px;
       }
     }
 
@@ -1277,7 +1153,6 @@
     }
 
     &.oo-hm-item-link--why-docspace-developer,
-    &.oo-hm-item-link--docspace-developer,
     &.oo-hm-item-link--pricing-docspace-developer {
       &:before {
         background-position-y: -3016px;
@@ -1296,46 +1171,44 @@
       }
     }
 
-    &.oo-hm-item-link--zh-dev {
-      padding-left: 0;
-
+    &.oo-hm-item-link--virtual-data-rooms {
       &:before {
-        content: none;
-      }
-
-      @media screen and (max-width: 1024px) {
-        margin-bottom: 16px;
+        background-position-y: -2990px;
       }
     }
 
-    &.oo-hm-item-link--workspace,
-    &.oo-hm-item-link--workspace-cloud {
+    &.oo-hm-item-link--workspace {
       &:before {
         background-position-y: -26px;
       }
     }
 
-    &.oo-hm-item-link--docspace,
-    &.oo-hm-item-link--docspace-cloud {
+    &.oo-hm-item-link--docspace {
       &:before {
         background-position-y: -1170px;
       }
     }
 
-    &.oo-hm-item-link--docs-cloud {
+    &.oo-hm-item-link--enterprise-servers {
       &:before {
-        background-position-y: -782px;
+        background-position-y: -1378px;
+      }
+    }
+
+    &.oo-hm-item-link--developer-servers {
+      &:before {
+        background-position-y: -2678px;
+      }
+    }
+
+    &.oo-hm-item-link--desktop-mobile-apps {
+      &:before {
+        background-position-y: -156px;
       }
     }
 
     @media screen and (max-width: 1024px) {
       padding: 4px 0 4px 36px;
-    }
-  }
-
-  .oo-hm-item-link-2 {
-    &:not(:last-child) {
-      margin-bottom: 8px;
     }
   }
 
@@ -1423,10 +1296,6 @@
       background-image: url("./images/menu-blog-2.png");
       background-size: cover;
     }
-
-    &.oo-hm-item-block-img--zh-dev-img {
-      background-image: url("./images/menu-banner-zh.svg");
-    }
   }
 
   .oo-hm-item-block-text {
@@ -1460,10 +1329,6 @@
     font-size: 13px;
     line-height: 21px;
     color: #808080;
-  }
-
-  @media screen and (max-width: 1300px) {
-    max-width: 756px;
   }
 
   @media screen and (max-width: 1024px) {

@@ -19,20 +19,19 @@ import locales from "./locales/index.jsx";
 import ProductsMenu from "./sub-components/menu-items/products-menu/index.jsx";
 import EnterpriseMenu from "./sub-components/menu-items/enterprise-menu/index.jsx";
 import DevelopersMenu from "./sub-components/menu-items/developers-menu/index.jsx";
-import GetOnlyofficeMenu from "./sub-components/menu-items/get-onlyoffice-menu/index.jsx";
 import PricingMenu from "./sub-components/menu-items/pricing-menu/index.jsx";
 import PartnersMenu from "./sub-components/menu-items/partners-menu/index.jsx";
 import ResourcesMenu from "./sub-components/menu-items/resources-menu/index.jsx";
-import LoginMenu from "./sub-components/menu-items/login-menu/index.jsx";
+import DownloadMenu from "./sub-components/menu-items/download-menu/index.jsx";
+import LoginSignupMenu from "./sub-components/menu-items/login-signup-menu/index.jsx";
 import "./header-menu.scss";
 
-const HeaderMenu = ({ locale, loginMenuMobile, isOpen }) => {
+const HeaderMenu = ({ locale, isOpen }) => {
   const [navHidden, setNavHidden] = useState(false);
   const navRef = useRef(null);
   const closeMenusRef = useRef([]);
 
   const currentLocale = locale || "en";
-  const euLocale = (currentLocale === "de" || currentLocale === "fr" || currentLocale === "it");
   const windowCheck = typeof window !== "undefined" && window.innerWidth <= 1024;
   const hrefLang = `https://www.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "zh-hans": "/zh", "pt-br": "/pt"}[currentLocale] ?? `/${currentLocale}`}`;
   const t = (key) => locales[currentLocale === "zh-hans" ? "zh" : currentLocale === "pt-br" ? "pt" : currentLocale][key] || locales.en[key] || key;
@@ -66,18 +65,11 @@ const HeaderMenu = ({ locale, loginMenuMobile, isOpen }) => {
           <ProductsMenu currentLocale={currentLocale} registerCloseMenu={registerCloseMenu} {...commonProps} />
           <EnterpriseMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
           <DevelopersMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
-          {!euLocale &&
-            <GetOnlyofficeMenu euLocale={euLocale} registerCloseMenu={registerCloseMenu} {...commonProps} />
-          }
           <PricingMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
           <PartnersMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
           <ResourcesMenu currentLocale={currentLocale} registerCloseMenu={registerCloseMenu} {...commonProps} />
-          {euLocale &&
-            <GetOnlyofficeMenu euLocale={euLocale} registerCloseMenu={registerCloseMenu} {...commonProps} />
-          }
-          {loginMenuMobile && (
-            <LoginMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
-          )}
+          <DownloadMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
+          <LoginSignupMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
         </ul>
         <a className="oo-hm-phone-mobile" href="tel:+37163399867">
           +371 633 998 67

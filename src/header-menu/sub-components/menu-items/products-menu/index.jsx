@@ -23,7 +23,7 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
   const [activeTab, setActiveTab] = useState(null);
   const [mobileTab, setMobileTab] = useState(false);
 
-  const templatesHrefLang = `https://templates.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "cs": "", "zh-hans": "/zh", "pt-br": "/pt" }[currentLocale] ?? `/${currentLocale}`}`;
+  const templatesHrefLang = `https://templates.onlyoffice.com${{ "en": "", "el": "", "hi": "", "sr": "", "hy": "", "cs": "", "ru": "", "zh-hans": "/zh", "pt-br": "/pt" }[currentLocale] ?? `/${currentLocale}`}`;
   const appDirectoryHrefLang = `https://www.onlyoffice.com/app-directory${{ "en": "", "ar": "", "cs": "", "el": "", "hi": "", "hy": "", "it": "", "pt": "", "pt-br": "", "sr": "", "zh-hans": "/zh" }[currentLocale] ?? `/${currentLocale}`}`;
 
   useEffect(() => {
@@ -65,6 +65,7 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
             <Link className="oo-hm-item-link oo-hm-item-link--public-rooms" href={`${hrefLang}/public-rooms.aspx`}>{t("Public rooms")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--custom-rooms" href={`${hrefLang}/custom-rooms.aspx`}>{t("Custom rooms")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--form-filling-rooms" href={`${hrefLang}/form-filling-rooms.aspx`}>{t("Form filling rooms")}</Link>
+            <Link className="oo-hm-item-link oo-hm-item-link--virtual-data-rooms" href={`${hrefLang}/virtual-data-rooms.aspx`}>{t("Virtual data rooms")}</Link>
             <div className="oo-hm-item-box-wrap oo-hm-item-box-wrap--mt">
               <Link className="oo-hm-item-link oo-hm-item-link--connectors" href={`${hrefLang}/all-connectors.aspx`}>{t("DocSpace connectors")}</Link>
               <div className="oo-hm-item-box-icons">
@@ -132,7 +133,7 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
           <Link className="oo-hm-item-link oo-hm-item-link--templates" href={templatesHrefLang}>{t("Templates")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--marketplace" href={appDirectoryHrefLang}>{t("Marketplace")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--security" href={`${hrefLang}/security.aspx`}>{t("Security")}</Link>
-          <Link className="oo-hm-item-link oo-hm-item-link--ai-assistant" href={`${appDirectoryHrefLang}/openai`}>{t("AI assistant")}</Link>
+          <Link className="oo-hm-item-link oo-hm-item-link--ai-assistant" href={`${hrefLang}/ai-assistants.aspx`}>{t("AI assistant")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--for-desktop" href={`${hrefLang}/accessibility.aspx`}>{t("Accessibility")}</Link>
           <Link className="oo-hm-item-link oo-hm-item-link--sustainability" href={t("SustainabilityLink")}>{t("Sustainability")}</Link>
         </div>
