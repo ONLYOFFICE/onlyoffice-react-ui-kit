@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.0
+* header-menu
+  - Remove "Get ONLYOFFICE" menu
+  - Remove "Login" menu on mobile
+  - Add "Download", "Login | Sing up" menu
+  - Add "Virtual data rooms", replace "AI assistant" link in Products menu
+  - Replace blog "2024 插件开发大赛" with "Docs 8.2" in Resources menu in Chinese
+
 ## 1.5.1
 * header-menu
   - Fix translation for Arabic
