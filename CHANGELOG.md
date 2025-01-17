@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.0
+* advent-announce
+  - Add New Year banner for Chinese
+
 ## 1.6.0
 * header-menu
   - Remove "Get ONLYOFFICE" menu
