@@ -67,6 +67,48 @@
     }
   }
 
+  &.zh,
+  &.zh-hans {
+    background-image: url("./images/desktop-decor-bg-zh.png"), url("./images/desktop-bg-zh.svg");
+    background-color: transparent;
+    background-position: calc(50% - 15px), center;
+    background-repeat: no-repeat, repeat;
+    background-size: 1090px auto, auto;
+
+    .oo-advent-announce-text {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+
+      &::before {
+        content: none;
+      }
+
+      &::after {
+        margin-left: 0;
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        background-image: url("./images/arrow-right-zh.svg");
+
+        @media screen and (max-width: 1024px) {
+          margin-left: 0;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+
+    @media screen and (max-width: 592px) {
+      background-image: url("./images/mobile-decor-bg-zh.svg"), url("./images/desktop-bg-zh.svg");
+      background-position: calc(50% - 194px) -128px, center;
+      background-size: auto, auto;
+    }
+  }
+
   @media screen and (max-width: 1024px) {
     height: 48px;
     background-image: url("./images/mobile-bg.svg");
