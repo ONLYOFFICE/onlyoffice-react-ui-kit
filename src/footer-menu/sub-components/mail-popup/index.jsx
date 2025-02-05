@@ -1,5 +1,5 @@
 /*
-* (c) Copyright Ascensio System SIA 2024
+* (c) Copyright Ascensio System SIA 2024-2025
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -74,7 +74,7 @@ const MailPopup = ({ t, locale, popupIsOpen, setPopupIsOpen, mailApiUrl, mailApi
             type: mailApiType
           })
         });
-        
+
         if (response.status === 200) {
           setFormComplete(true);
           setIsLoading(false);
@@ -94,7 +94,7 @@ const MailPopup = ({ t, locale, popupIsOpen, setPopupIsOpen, mailApiUrl, mailApi
 
     setValidEmail(false);
     setValidFirstName(false);
-    setPopupIsOpen(false); 
+    setPopupIsOpen(false);
     setEmail("");
     setFirstName("");
     setEmailError(false);

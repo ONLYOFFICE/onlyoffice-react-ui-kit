@@ -1,5 +1,5 @@
 /*
-* (c) Copyright Ascensio System SIA 2024
+* (c) Copyright Ascensio System SIA 2024-2025
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -109,11 +109,11 @@ const SocialLinks = ({ t, blogHrefLang, currentLocale, handlerSetModal }) => {
         </li>
       )}
       {currentLocale === "ru" && (
-         <li>
-         <Link className="oo-fm-social-link" href="https://vk.com/onlyoffice" title={t("Следите за нашими новостями Вконтакте")} target="_blank" rel="noreferrer noopener">
-           <span className="oo-fm-social-link-icon oo-fm-social-link-icon--vk" title={t("Instagram")}></span>
-         </Link>
-       </li>
+        <li>
+          <Link className="oo-fm-social-link" href="https://vk.com/onlyoffice" title={t("Следите за нашими новостями Вконтакте")} target="_blank" rel="noreferrer noopener">
+            <span className="oo-fm-social-link-icon oo-fm-social-link-icon--vk" title={t("Instagram")}></span>
+          </Link>
+        </li>
       )}
       {(currentLocale !== "zh" && currentLocale !== "zh-hans") && (
         <li>

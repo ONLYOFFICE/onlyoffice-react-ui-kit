@@ -1,5 +1,5 @@
 /*
-* (c) Copyright Ascensio System SIA 2024
+* (c) Copyright Ascensio System SIA 2024-2025
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -231,7 +231,9 @@
   position: absolute;
   box-shadow: 0 0 14px rgb(0 0 0 / 20%);
   text-align: center;
-  transition: 0.55s opacity, 0.55s visibility;
+  transition:
+    0.55s opacity,
+    0.55s visibility;
   visibility: hidden;
   width: 160px;
 

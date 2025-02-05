@@ -1,5 +1,5 @@
 /*
-* (c) Copyright Ascensio System SIA 2024
+* (c) Copyright Ascensio System SIA 2024-2025
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@
   @media screen and (max-width: 1024px) {
     padding: 56px 40px 64px;
   }
-  
+
   @media screen and (max-width: 600px) {
     padding: 16px 16px 64px;
   }
@@ -101,7 +101,7 @@
   font-size: 13px;
   line-height: 20px;
   color: #444444;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   transition: background-color 0.3s;
   text-decoration: none;
 
@@ -157,7 +157,7 @@
   }
 
   &:hover {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
   }
 
   @media screen and (max-width: 969px) {
@@ -181,7 +181,7 @@
   &.zh,
   &.zh-hans {
     grid-template-columns: repeat(4, 1fr);
-  
+
     @media screen and (max-width: 969px) {
       grid-template-columns: repeat(6, 1fr);
     }
@@ -241,19 +241,21 @@
   font-size: 13px;
   line-height: 18px;
   text-decoration: none;
-  transition: color 0.2s, border 0.5s;
+  transition:
+    color 0.2s,
+    border 0.5s;
 
   &[href*="/call-back-form.aspx"] {
     font-weight: 700;
   }
 
   &:hover {
-    color: #FF6F3D;
+    color: #ff6f3d;
   }
 
   &.oo-fm-link--contact {
     overflow: initial;
-    color: #FF6F3D;
+    color: #ff6f3d;
     text-decoration: underline;
 
     &:hover {
@@ -351,13 +353,13 @@
     justify-content: center;
     margin: 32px 0 8px;
     line-height: 18px;
-    color: #AAAAAA;
+    color: #aaaaaa;
     text-align: center;
   }
 }
 
 .oo-fm-copyright {
-  color: #AAAAAA;
+  color: #aaaaaa;
   font-size: 13px;
   line-height: 1.4em;
 

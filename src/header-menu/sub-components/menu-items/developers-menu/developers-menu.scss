@@ -1,5 +1,5 @@
 /*
-* (c) Copyright Ascensio System SIA 2024
+* (c) Copyright Ascensio System SIA 2024-2025
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -20,12 +20,12 @@
       .oo-hm-items-wrapper {
         left: initial;
         right: -12px;
-  
+
         @media screen and (max-width: 1300px) {
           left: initial;
           right: -8px;
         }
-    
+
         @media screen and (max-width: 1024px) {
           right: initial;
         }
@@ -41,7 +41,8 @@
     }
   }
 
-  &.fr, &.ja {
+  &.fr,
+  &.ja {
     .oo-hm-item--developers {
       .oo-hm-item-box {
         &:nth-child(2) {
@@ -55,7 +56,8 @@
     }
   }
 
-  &.pt, &.pt-br {
+  &.pt,
+  &.pt-br {
     .oo-hm-item--developers {
       .oo-hm-item-box {
         &:nth-child(2) {
@@ -93,16 +95,16 @@
       @media screen and (max-width: 1300px) {
         left: -8px;
       }
-  
+
       @media screen and (max-width: 1024px) {
         left: initial;
         height: 100%;
       }
     }
-  
+
     .oo-hm-item-wrapper {
       display: grid;
-  
+
       @media screen and (max-width: 1024px) {
         box-sizing: border-box;
         display: flex;
@@ -110,7 +112,7 @@
         height: calc(100% - 60px);
       }
     }
-  
+
     .oo-hm-item-label {
       &::after {
         content: "";
@@ -123,20 +125,20 @@
         background-repeat: no-repeat;
         background-position: center;
       }
-  
+
       &:hover {
         color: #ff6f3d;
-  
+
         &:after {
           background-image: url("../../../images/chevron-right-red-small.svg");
         }
       }
     }
-  
+
     .oo-hm-item-box {
       width: auto;
       min-width: 264px;
-  
+
       &:first-child {
         width: max-content;
 
@@ -162,37 +164,37 @@
         width: initial;
         min-width: initial;
       }
-  
+
       &.oo-hm-item-box--bg-gray {
         @media screen and (max-width: 1024px) {
           margin: 0;
           order: 3;
         }
       }
-  
+
       .oo-hm-item-box-link {
         &:not(:last-child) {
           margin-bottom: 4px;
         }
       }
     }
-  
+
     .oo-hm-item-link {
       &.oo-hm-item-link--docs-developer {
         margin-bottom: 8px;
       }
-  
+
       &.oo-hm-item-link--pricing {
         margin-top: 12px;
       }
     }
-  
+
     .oo-hm-item-wrapper-bottom {
       grid-column: span 2;
       align-items: center;
       justify-content: end;
       white-space: nowrap;
-  
+
       @media screen and (max-width: 1024px) {
         grid-column: initial;
         align-items: initial;
@@ -201,7 +203,7 @@
         order: 2;
       }
     }
-  
+
     @media screen and (max-width: 1024px) {
       position: initial;
     }

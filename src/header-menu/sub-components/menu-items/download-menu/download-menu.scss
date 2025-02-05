@@ -1,5 +1,5 @@
 /*
-* (c) Copyright Ascensio System SIA 2024
+* (c) Copyright Ascensio System SIA 2024-2025
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -15,13 +15,14 @@
 */
 
 .oo-hm {
-  &.es, &.fr {
+  &.es,
+  &.fr {
     .oo-hm-item.oo-hm-item--download {
       .oo-hm-item-box {
         width: max-content;
         min-width: 352px;
         max-width: 368px;
-  
+
         @media screen and (max-width: 1024px) {
           width: initial;
           min-width: initial;
@@ -31,13 +32,14 @@
     }
   }
 
-  &.pt, &.pt-br {
+  &.pt,
+  &.pt-br {
     .oo-hm-item.oo-hm-item--download {
       .oo-hm-item-box {
         width: max-content;
         min-width: 352px;
         max-width: 372px;
-  
+
         @media screen and (max-width: 1024px) {
           width: initial;
           min-width: initial;
@@ -53,7 +55,7 @@
         width: max-content;
         min-width: 352px;
         max-width: 418px;
-  
+
         @media screen and (max-width: 1024px) {
           width: initial;
           min-width: initial;
@@ -77,7 +79,7 @@
       .oo-hm-items-wrapper {
         left: initial;
         right: 0;
-    
+
         @media screen and (max-width: 1024px) {
           right: initial;
         }
@@ -109,7 +111,7 @@
         @media screen and (max-width: 1024px) {
           padding: 16px 56px 16px 48px;
         }
-  
+
         @media screen and (max-width: 430px) {
           padding: 14px 48px 14px 40px;
         }
@@ -147,8 +149,8 @@
       font-size: 14px;
       font-weight: 600;
       line-height: 20px;
-      color: #FFFFFF;
-      background-color: #FF6F3D;
+      color: #ffffff;
+      background-color: #ff6f3d;
       transition: background-color 0.3s;
 
       &::before {
@@ -211,7 +213,7 @@
       }
 
       &:hover {
-        background-color: #FF865C;
+        background-color: #ff865c;
       }
 
       @media screen and (max-width: 1024px) {
