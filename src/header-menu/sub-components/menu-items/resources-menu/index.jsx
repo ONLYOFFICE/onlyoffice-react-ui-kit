@@ -70,8 +70,8 @@ const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, re
           </Link>
           <Link className="oo-hm-item-block" href={t("blogLink2")}>
             <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-2"></div>
-            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE Docs 8.2 released: PDF collaborative editing, revamped interface, optimized performance, and more")}</div>
-            <div className="oo-hm-item-blog-date">{t("17 October 2024")}</div>
+            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE Docs 8.3 released: PDF stamps, enhanced format support, Merge Shapes, and more")}</div>
+            <div className="oo-hm-item-blog-date">{t("5 February 2025")}</div>
           </Link>
         </div>
       </div>
