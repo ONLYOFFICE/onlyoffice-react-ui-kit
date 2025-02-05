@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.8.0
+* advent-announce
+  - ONLYOFFICE Docs 8.3 released
+* header-menu
+  - Products: change some Docs connectors for Chinese (add Alfresco and Seafile)
+  - Log in | Sign up: remove dropdown, add https://www.onlyoffice.com/docspace-registration.aspx link to the button
+  - Resources: fix helpcenter links in German, French, Spanish, Russian, Italian
+
 ## 1.7.0
 * advent-announce
   - Add New Year banner for Chinese
