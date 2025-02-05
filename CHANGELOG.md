@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.1
+* header-menu
+  - Resources: update 2nd blog to "ONLYOFFICE Docs 8.3 released: PDF stamps, enhanced format support, Merge Shapes, and more"
+
 ## 1.8.0
 * advent-announce
   - ONLYOFFICE Docs 8.3 released
