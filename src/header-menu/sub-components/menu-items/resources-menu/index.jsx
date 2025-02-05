@@ -21,6 +21,7 @@ import "./resources-menu.scss";
 
 const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, registerCloseMenu }) => {
   const blogHrefLang = `https://www.onlyoffice.com/blog${{ "en": "", "ru": "", "zh": "/zh-hans", "pt": "/pt-br" }[currentLocale] ?? `/${currentLocale}`}`;
+  const helpcenterHrefLang = `https://helpcenter.onlyoffice.com${["de", "fr", "es", "ru", "it"].includes(currentLocale) ? `/${currentLocale}` : ""}`;
 
   return (
     <MenuItem
@@ -47,14 +48,14 @@ const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, re
           <div className="oo-hm-item-box-wrapper">
             <div className="oo-hm-item-label">{t("Collaborate")}</div>
             <Link className="oo-hm-item-link oo-hm-item-link--for-contributers" href={`${hrefLang}/contribute.aspx`}>{t("For contributers")}</Link>
-            <Link className="oo-hm-item-link oo-hm-item-link--for-translators" href="https://helpcenter.onlyoffice.com/guides/become-translator.aspx">{t("For translators")}</Link>
+            <Link className="oo-hm-item-link oo-hm-item-link--for-translators" href={`${helpcenterHrefLang}/guides/become-translator.aspx`}>{t("For translators")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--for-influencers" href={`${hrefLang}/influencer-program.aspx`}>{t("For influencers")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--vacancies" href={`${hrefLang}/vacancies.aspx`}>{t("Vacancies")}</Link>
           </div>
           <div className="oo-hm-item-box-wrapper">
             <div className="oo-hm-item-label">{t("Get help")}</div>
             <Link className="oo-hm-item-link oo-hm-item-link--forum" href="https://forum.onlyoffice.com/">{t("Forum")}</Link>
-            <Link className="oo-hm-item-link oo-hm-item-link--help-center" href="https://helpcenter.onlyoffice.com/index.aspx">{t("Help Center")}</Link>
+            <Link className="oo-hm-item-link oo-hm-item-link--help-center" href={`${helpcenterHrefLang}/index.aspx`}>{t("Help Center")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--training-courses" href={`${hrefLang}/training-courses.aspx`}>{t("Training courses")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--webinars" href={`${hrefLang}/webinars.aspx`}>{t("Webinars")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--white-papers" href={`${hrefLang}/whitepapers.aspx`}>{t("White papers")}</Link>

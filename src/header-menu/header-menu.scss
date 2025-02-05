@@ -848,7 +848,19 @@
 
     &.oo-hm-item-link--pipedrive {
       &:before {
-        background-image: url("./images/pipedrive.svg");
+        background-position-y: -3042px;
+      }
+    }
+
+    &.oo-hm-item-link--alfresco {
+      &:before {
+        background-position-y: -3068px;
+      }
+    }
+
+    &.oo-hm-item-link--seafile {
+      &:before {
+        background-position-y: -3094px;
       }
     }
 

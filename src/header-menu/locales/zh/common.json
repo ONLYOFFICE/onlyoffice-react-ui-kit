@@ -121,5 +121,6 @@
   "Linux, Windows, macOS, Android, iOS": "Linux、Windows、macOS、Android、iOS",
   "Sign up": "注册",
   "Document editors & storage": "文档编辑器 & 存储",
-  "Document editors only": "仅文档编辑器"
+  "Document editors only": "仅文档编辑器",
+  "API Docs": "API 文档"
 }

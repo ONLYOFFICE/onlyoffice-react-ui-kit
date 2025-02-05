@@ -15,82 +15,9 @@
 */
 
 .oo-hm {
-  &.de, &.fr, &.ja {
-    .oo-hm-item.oo-hm-item--login-signup {
-      .oo-hm-item-box {
-        width: max-content;
-        min-width: 236px;
-        max-width: 262px;
-  
-        @media screen and (max-width: 1024px) {
-          width: initial;
-          min-width: initial;
-          max-width: initial;
-        }
-      }
-    }
-  }
-
-  &.es {
-    .oo-hm-item.oo-hm-item--login-signup {
-      .oo-hm-item-box {
-        width: max-content;
-        min-width: 236px;
-        max-width: 286px;
-  
-        @media screen and (max-width: 1024px) {
-          width: initial;
-          min-width: initial;
-          max-width: initial;
-        }
-      }
-    }
-  }
-
-  &.it {
-    .oo-hm-item.oo-hm-item--login-signup {
-      .oo-hm-item-box {
-        width: max-content;
-        min-width: 236px;
-        max-width: 300px;
-  
-        @media screen and (max-width: 1024px) {
-          width: initial;
-          min-width: initial;
-          max-width: initial;
-        }
-      }
-    }
-  }
-
-  &.pt, &.pt-br {
-    .oo-hm-item.oo-hm-item--login-signup {
-      .oo-hm-item-box {
-        width: max-content;
-        min-width: 236px;
-        max-width: 272px;
-  
-        @media screen and (max-width: 1024px) {
-          width: initial;
-          min-width: initial;
-          max-width: initial;
-        }
-      }
-    }
-  }
-
   &.ar {
     .oo-hm-item.oo-hm-item--login-signup {
-      .oo-hm-items-wrapper {
-        left: initial;
-        right: 0;
-    
-        @media screen and (max-width: 1024px) {
-          right: initial;
-        }
-      }
-
-      .oo-hm-item-heading {
+      .oo-hm-login-signup-link {
         &::before {
           @media screen and (max-width: 1024px) {
             left: 24px;
@@ -116,32 +43,16 @@
         @media screen and (max-width: 1024px) {
           padding: 16px 56px 16px 48px;
         }
-  
+
         @media screen and (max-width: 430px) {
           padding: 14px 48px 14px 40px;
-        }
-      }
-
-      .oo-hm-item-box-wrap {
-        .oo-hm-item-box-text {
-          @media screen and (max-width: 1024px) {
-            padding: 3px 36px 3px 0;
-          }
         }
       }
     }
   }
 
-  .oo-hm-item--login-signup {
-    position: relative;
-
-    &.active {
-      @media screen and (max-width: 1024px) {
-        position: initial;
-      }
-    }
-
-    .oo-hm-item-heading {
+  .oo-hm-item.oo-hm-item--login-signup {
+    .oo-hm-login-signup-link {
       position: relative;
       display: flex;
       align-items: center;
@@ -151,7 +62,7 @@
       font-weight: 600;
       line-height: 20px;
       letter-spacing: 0.04em;
-      color: #FFFFFF;
+      color: #ffffff;
       background-color: #444444;
       transition: background-color 0.3s;
 
@@ -236,61 +147,6 @@
         padding: 14px 40px 14px 48px;
         font-size: 18px;
         line-height: 24px;
-      }
-    }
-
-    .oo-hm-mobile-heading {
-      span {
-        @media screen and (max-width: 1024px) {
-          margin: 0 4px;
-        }
-      }
-    }
-
-    .oo-hm-items-wrapper {
-      top: calc(99% + 16px);
-      left: 0;
-      transform: initial;
-
-      @media screen and (max-width: 1024px) {
-        top: 0;
-      }
-    }
-
-    .oo-hm-item-box {
-      box-sizing: border-box;
-      width: 236px;
-
-      @media screen and (max-width: 1024px) {
-        width: initial;
-      }
-    }
-
-    .oo-hm-item-label {
-      margin-bottom: 16px;
-
-      @media screen and (max-width: 1024px) {
-        display: none;
-      }
-    }
-
-    .oo-hm-item-box-wrap {
-      &:not(:last-child) {
-        margin-bottom: 16px;
-      }
-
-      .oo-hm-item-link {
-        &:not(:last-child) {
-          margin-bottom: 8px;
-        }
-      }
-
-      .oo-hm-item-box-text {
-        padding: 0;
-
-        @media screen and (max-width: 1024px) {
-          padding: 3px 0 3px 36px;
-        }
       }
     }
   }

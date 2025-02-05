@@ -94,14 +94,29 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
             <div className="oo-hm-item-box-wrap oo-hm-item-box-wrap--mt">
               <Link className="oo-hm-item-link oo-hm-item-link--connectors" href={`${hrefLang}/all-connectors.aspx`}>{t("Docs connectors")}</Link>
               <div className="oo-hm-item-box-icons">
-                <Link className="oo-hm-item-link oo-hm-item-link--box" href={`${hrefLang}/office-for-box.aspx`}></Link>
-                <Link className="oo-hm-item-link oo-hm-item-link--confluence" href={`${hrefLang}/office-for-confluence.aspx`}></Link>
-                <Link className="oo-hm-item-link oo-hm-item-link--dropbox" href={`${hrefLang}/office-for-dropbox.aspx`}></Link>
-                <Link className="oo-hm-item-link oo-hm-item-link--moodle" href={`${hrefLang}/office-for-moodle.aspx`}></Link>
-                <Link className="oo-hm-item-link oo-hm-item-link--nextcloud" href={`${hrefLang}/office-for-nextcloud.aspx`}></Link>
-                <Link className="oo-hm-item-link oo-hm-item-link--odoo" href={`${hrefLang}/office-for-odoo.aspx`}></Link>
-                <Link className="oo-hm-item-link oo-hm-item-link--owncloud" href={`${hrefLang}/office-for-owncloud.aspx`}></Link>
-                <Link className="oo-hm-item-link oo-hm-item-link--see-more" href={`${hrefLang}/all-connectors.aspx`}></Link>
+                {currentLocale === "zh" || currentLocale === "zh-hans" ? (
+                  <>
+                    <Link className="oo-hm-item-link oo-hm-item-link--alfresco" href={`${hrefLang}/office-for-alfresco.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--confluence" href={`${hrefLang}/office-for-confluence.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--moodle" href={`${hrefLang}/office-for-moodle.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--nextcloud" href={`${hrefLang}/office-for-nextcloud.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--odoo" href={`${hrefLang}/office-for-odoo.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--seafile" href={`${hrefLang}/all-connectors.aspx#seafile`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--wordpress" href={`${hrefLang}/office-for-wordpress.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--see-more" href={`${hrefLang}/all-connectors.aspx`}></Link>
+                  </>
+                ) : (
+                  <>
+                    <Link className="oo-hm-item-link oo-hm-item-link--box" href={`${hrefLang}/office-for-box.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--confluence" href={`${hrefLang}/office-for-confluence.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--dropbox" href={`${hrefLang}/office-for-dropbox.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--moodle" href={`${hrefLang}/office-for-moodle.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--nextcloud" href={`${hrefLang}/office-for-nextcloud.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--odoo" href={`${hrefLang}/office-for-odoo.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--owncloud" href={`${hrefLang}/office-for-owncloud.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--see-more" href={`${hrefLang}/all-connectors.aspx`}></Link>
+                  </>
+                )}
               </div>
             </div>
           </div>

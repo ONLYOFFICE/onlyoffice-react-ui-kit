@@ -23,7 +23,7 @@ import PricingMenu from "./sub-components/menu-items/pricing-menu/index.jsx";
 import PartnersMenu from "./sub-components/menu-items/partners-menu/index.jsx";
 import ResourcesMenu from "./sub-components/menu-items/resources-menu/index.jsx";
 import DownloadMenu from "./sub-components/menu-items/download-menu/index.jsx";
-import LoginSignupMenu from "./sub-components/menu-items/login-signup-menu/index.jsx";
+import LoginSignupLink from "./sub-components/menu-items/login-signup-link/index.jsx";
 import "./header-menu.scss";
 
 const HeaderMenu = ({ locale, isOpen }) => {
@@ -33,7 +33,7 @@ const HeaderMenu = ({ locale, isOpen }) => {
 
   const currentLocale = locale || "en";
   const windowCheck = typeof window !== "undefined" && window.innerWidth <= 1024;
-  const hrefLang = `https://www.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "zh-hans": "/zh", "pt-br": "/pt"}[currentLocale] ?? `/${currentLocale}`}`;
+  const hrefLang = `https://www.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "zh-hans": "/zh", "pt-br": "/pt" }[currentLocale] ?? `/${currentLocale}`}`;
   const t = (key) => locales[currentLocale === "zh-hans" ? "zh" : currentLocale === "pt-br" ? "pt" : currentLocale][key] || locales.en[key] || key;
   const commonProps = { t, hrefLang, navHidden, setNavHidden };
 
@@ -69,7 +69,7 @@ const HeaderMenu = ({ locale, isOpen }) => {
           <PartnersMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
           <ResourcesMenu currentLocale={currentLocale} registerCloseMenu={registerCloseMenu} {...commonProps} />
           <DownloadMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
-          <LoginSignupMenu registerCloseMenu={registerCloseMenu} {...commonProps} />
+          <LoginSignupLink t={t} hrefLang={hrefLang} />
         </ul>
         <a className="oo-hm-phone-mobile" href="tel:+37163399867">
           +371 633 998 67
