@@ -2,6 +2,7 @@
 
 ## 1.8.1
 * header-menu
+  - Products: fix "Créateur de livres électroniquesroniques" to "Créateur de livres électroniques" in French
   - Resources: update 2nd blog to "ONLYOFFICE Docs 8.3 released: PDF stamps, enhanced format support, Merge Shapes, and more"
 
 ## 1.8.0
