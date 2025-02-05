@@ -22,97 +22,71 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #11C5EE;
+  background-color: #171248;
   background-image: url("./images/desktop-bg.svg");
   background-repeat: no-repeat;
   background-position: center;
 
+  &.de {
+    .oo-advent-announce-text-desktop {
+      max-width: 856px;
+    }
+  }
+
+  &.es {
+    .oo-advent-announce-text-desktop {
+      max-width: 846px;
+    }
+  }
+
+  &.fr,
+  &.ja {
+    .oo-advent-announce-text-desktop {
+      max-width: 808px;
+    }
+  }
+
   &.ru {
-    .oo-advent-announce-text {
-      br {
-        display: block;
-      }
+    .oo-advent-announce-text-desktop {
+      max-width: 754px;
     }
   }
 
-  &.fr, &.de, &.es, &.ja {
-    .oo-advent-announce-text {
-      @media screen and (max-width: 375px) {
-        max-width: 216px;
-      }
+  &.pt,
+  &.pt-br {
+    .oo-advent-announce-text-desktop {
+      max-width: 800px;
     }
   }
 
-  &.ar {
-    direction: rtl;
-
-    .oo-advent-announce-text:before {
-      margin-right: initial;
-      margin-left: 24px;
-
-      @media screen and (max-width: 1024px) {
-        margin-left: 10px;
-      }
-    }
-
-    .oo-advent-announce-text:after {
-      margin-left: initial;
-      margin-right: 20px;
-      transform: rotate(180deg);
-      background-size: initial;
-
-      @media screen and (max-width: 1024px) {
-        margin-right: 6px;
-      }
-    }
-  }
-
+  &.it,
   &.zh,
   &.zh-hans {
-    background-image: url("./images/desktop-decor-bg-zh.png"), url("./images/desktop-bg-zh.svg");
-    background-color: #BD0000;
-    background-position: calc(50% - 15px), center;
-    background-repeat: no-repeat, repeat;
-    background-size: 1090px auto, auto;
+    .oo-advent-announce-text-desktop {
+      max-width: 100%;
+    }
+  }
 
-    .oo-advent-announce-text {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 22px;
-
-      &::before {
-        content: none;
-      }
-
-      &::after {
-        margin-left: 0;
-        width: 24px;
-        min-width: 24px;
-        height: 24px;
-        background-image: url("./images/arrow-right-zh.svg");
-
-        @media screen and (max-width: 1024px) {
-          margin-left: 0;
-        }
-      }
-
-      @media screen and (max-width: 1024px) {
-        font-size: 14px;
-        line-height: 19px;
+  &.de,
+  &.es {
+    .oo-advent-announce-text-mobile {
+      @media screen and (max-width: 350px) {
+        max-width: 160px;
       }
     }
+  }
 
-    @media screen and (max-width: 592px) {
-      background-image: url("./images/mobile-decor-bg-zh.svg"), url("./images/desktop-bg-zh.svg");
-      background-position: calc(50% - 194px) -128px, center;
-      background-size: auto, auto;
+  &.ja {
+    .oo-advent-announce-text-mobile {
+      @media screen and (max-width: 390px) {
+        max-width: 160px;
+      }
     }
   }
 
   @media screen and (max-width: 1024px) {
     height: 48px;
     background-image: url("./images/mobile-bg.svg");
-    background-size: cover;
   }
 }
 
@@ -127,7 +101,7 @@
   letter-spacing: 0.01em;
   text-align: center;
   height: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   z-index: 10;
 
@@ -140,55 +114,29 @@
   }
 
   &:before {
-    margin-right: 24px;
-    width: 72px;
-    min-width: 72px;
-    height: 56px;
-    background-image: url("./images/docspace-3-0.svg");
+    margin-right: 12px;
+    width: 62px;
+    min-width: 62px;
+    height: 36px;
+    background-image: url("./images/docs-8-3.svg");
 
     @media screen and (max-width: 1024px) {
-      margin-right: 10px;
-      width: 68px;
-      min-width: 68px;
-      height: 60px;
-      background-image: url("./images/docspace-3-0-mobile.svg");
-    }
-
-    @media screen and (max-width: 460px) {
-      content: none;
+      margin-right: 8px;
+      width: 42px;
+      min-width: 42px;
+      height: 24px;
     }
   }
 
   &:after {
-    margin-left: 20px;
-    width: 22px;
-    min-width: 22px;
-    height: 22px;
+    margin-left: 4px;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
     background-image: url("./images/arrow-right.svg");
 
     @media screen and (max-width: 1024px) {
-      margin-left: 6px;
-    }
-  }
-
-  b {
-    color: #9AECFF;
-  }
-
-  span {
-    margin: 0 8px;
-
-    @media screen and (max-width: 1024px) {
-      margin: 0;
-      color: #9AECFF;
-    }
-  }
-
-  br {
-    display: none;
-
-    @media screen and (max-width: 1440px) {
-      display: block;
+      margin-left: 2px;
     }
   }
 
@@ -198,6 +146,8 @@
 }
 
 .oo-advent-announce-text-desktop {
+  max-width: 738px;
+
   @media screen and (max-width: 1024px) {
     display: none;
   }
