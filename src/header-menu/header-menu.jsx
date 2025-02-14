@@ -46,10 +46,10 @@ const HeaderMenu = ({ locale, isOpen }) => {
         }
       };
 
-      window.addEventListener("touchstart", handleClickOutside);
+      window.addEventListener("click", handleClickOutside);
 
       return () => {
-        window.removeEventListener("touchstart", handleClickOutside);
+        window.removeEventListener("click", handleClickOutside);
       };
     }
   }, [isOpen]);

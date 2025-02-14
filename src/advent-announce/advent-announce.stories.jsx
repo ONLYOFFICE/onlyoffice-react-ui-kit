@@ -23,7 +23,7 @@ export default {
   component: AdventAnnounce,
   argTypes: {
     locale: {
-      options: ["ar", "cs", "de", "el", "en", "es", "fr", "hi", "hy", "it", "ja", "pt", "pt-br", "ru", "sr", "zh", "zh-hans"],
+      options: ["ar", "cs", "de", "el", "en", "es", "fr", "hi", "hy", "it", "ja", "pt", "pt-br", "ru", "sr", "zh", "zh-hans", "nl"],
       control: { type: "select" },
     },
   },

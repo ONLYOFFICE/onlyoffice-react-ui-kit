@@ -29,8 +29,8 @@ const FooterMenu = ({ locale, mailApiUrl, mailApiType }) => {
   const currentYear = date.getFullYear();
   const hrefLang = `https://www.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "zh-hans": "/zh", "pt-br": "/pt" }[currentLocale] ?? `/${currentLocale}`}`;
 
-  const templatesHrefLang = `https://templates.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "cs": "", "zh-hans": "/zh", "pt-br": "/pt" }[currentLocale] ?? `/${currentLocale}`}`;
-  const blogHrefLang = `https://www.onlyoffice.com/blog${{ "en": "", "ru": "", "zh": "/zh-hans", "pt": "/pt-br" }[currentLocale] ?? `/${currentLocale}`}`;
+  const templatesHrefLang = `https://templates.onlyoffice.com${{ "en": "", "el": "", "hi": "", "ar": "", "sr": "", "hy": "", "cs": "", "zh-hans": "/zh", "pt-br": "/pt", "nl": "" }[currentLocale] ?? `/${currentLocale}`}`;
+  const blogHrefLang = `https://www.onlyoffice.com/blog${{ "en": "", "ru": "", "zh": "/zh-hans", "pt": "/pt-br", "nl": "" }[currentLocale] ?? `/${currentLocale}`}`;
 
   const [popupIsOpen, setPopupIsOpen] = useState(false);
   const handlerSetModal = () => {
