@@ -20,7 +20,7 @@ import MenuItem from "../../menu-item/index.jsx";
 import "./resources-menu.scss";
 
 const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, registerCloseMenu }) => {
-  const blogHrefLang = `https://www.onlyoffice.com/blog${{ "en": "", "ru": "", "zh": "/zh-hans", "pt": "/pt-br" }[currentLocale] ?? `/${currentLocale}`}`;
+  const blogHrefLang = `https://www.onlyoffice.com/blog${{ "en": "", "ru": "", "zh": "/zh-hans", "pt": "/pt-br", "nl": "" }[currentLocale] ?? `/${currentLocale}`}`;
   const helpcenterHrefLang = `https://helpcenter.onlyoffice.com${["de", "fr", "es", "ru", "it"].includes(currentLocale) ? `/${currentLocale}` : ""}`;
 
   return (

@@ -23,8 +23,8 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
   const [activeTab, setActiveTab] = useState(null);
   const [mobileTab, setMobileTab] = useState(false);
 
-  const templatesHrefLang = `https://templates.onlyoffice.com${{ "en": "", "el": "", "hi": "", "sr": "", "hy": "", "cs": "", "ru": "", "zh-hans": "/zh", "pt-br": "/pt" }[currentLocale] ?? `/${currentLocale}`}`;
-  const appDirectoryHrefLang = `https://www.onlyoffice.com/app-directory${{ "en": "", "ar": "", "cs": "", "el": "", "hi": "", "hy": "", "it": "", "pt": "", "pt-br": "", "sr": "", "zh-hans": "/zh" }[currentLocale] ?? `/${currentLocale}`}`;
+  const templatesHrefLang = `https://templates.onlyoffice.com${{ "en": "", "el": "", "hi": "", "sr": "", "hy": "", "cs": "", "ru": "", "zh-hans": "/zh", "pt-br": "/pt", "nl": "" }[currentLocale] ?? `/${currentLocale}`}`;
+  const appDirectoryHrefLang = `https://www.onlyoffice.com/app-directory${{ "en": "", "ar": "", "cs": "", "el": "", "hi": "", "hy": "", "it": "", "pt": "", "pt-br": "", "sr": "", "zh-hans": "/zh", "nl": "" }[currentLocale] ?? `/${currentLocale}`}`;
 
   useEffect(() => {
     setMobileTab(false);
