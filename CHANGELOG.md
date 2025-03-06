@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.9.0
+* Add Dutch language
+
 ## 1.8.1
 * header-menu
   - Products: fix "Créateur de livres électroniquesroniques" to "Créateur de livres électroniques" in French
