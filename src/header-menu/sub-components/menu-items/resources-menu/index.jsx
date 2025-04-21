@@ -65,8 +65,8 @@ const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, re
           <Link className="oo-hm-item-link oo-hm-item-link--blog" href={blogHrefLang}>{t("Blog")}</Link>
           <Link className="oo-hm-item-block" href={t("blogLink1")}>
             <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-1"></div>
-            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE DocSpace 3.0 released: updated user types, Virtual Data rooms, OAuth2.0, improved room & file management, and more")}</div>
-            <div className="oo-hm-item-blog-date">{t("25 November 2024")}</div>
+            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE DocSpace 3.1 released: role-based form filling in VDR, room templates, improved guest management, and more")}</div>
+            <div className="oo-hm-item-blog-date">{t("21 April 2025")}</div>
           </Link>
           <Link className="oo-hm-item-block" href={t("blogLink2")}>
             <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-2"></div>
