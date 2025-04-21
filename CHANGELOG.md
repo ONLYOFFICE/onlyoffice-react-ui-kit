@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.10.0
+* advent-announce
+  - ONLYOFFICE DocSpace 3.1 released
+* header-menu
+  - Resources: update 1st blog to "ONLYOFFICE DocSpace 3.1 released"
+
 ## 1.9.0
 * Add Dutch language
 
