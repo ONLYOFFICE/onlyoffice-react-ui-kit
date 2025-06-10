@@ -22,26 +22,72 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #000000;
+  background-color: #1b283d;
   background-image: url("./images/desktop-bg.jpg");
-  background-size: auto 56px;
+  background-size: auto 104px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position-x: calc(50% - 251px);
 
-  &.fr,
-  &.de,
-  &.pt,
-  &.pt-br {
-    .oo-advent-announce-text-mobile {
-      @media screen and (max-width: 375px) {
-        max-width: 170px;
-      }
+  &.de {
+    .oo-advent-announce-text {
+      max-width: 902px;
+    }
+  }
+
+  &.es {
+    .oo-advent-announce-text {
+      max-width: 868px;
+    }
+  }
+
+  &.fr {
+    .oo-advent-announce-text {
+      max-width: 928px;
+    }
+  }
+
+  &.it {
+    .oo-advent-announce-text {
+      max-width: 872px;
+    }
+  }
+
+  &.ja {
+    .oo-advent-announce-text {
+      max-width: 836px;
+    }
+  }
+
+  &.pt {
+    .oo-advent-announce-text {
+      max-width: 938px;
+    }
+  }
+
+  &.ru {
+    .oo-advent-announce-text {
+      max-width: 918px;
+    }
+  }
+
+  &.sr {
+    .oo-advent-announce-text {
+      max-width: 926px;
+    }
+  }
+
+  &.zh,
+  &.zh-hans {
+    .oo-advent-announce-text {
+      max-width: 100%;
     }
   }
 
   @media screen and (max-width: 1024px) {
     height: 48px;
-    background-image: url("./images/mobile-bg.jpg");
+    background-image: url("./images/mobile-bg.svg");
+    background-size: auto 60px;
+    background-position: calc(50% + 183px) bottom;
   }
 }
 
@@ -53,8 +99,8 @@
   margin: 0 auto;
   font-size: 14px;
   line-height: 19px;
-  letter-spacing: 0.01em;
   text-align: center;
+  max-width: 897px;
   height: 100%;
   color: #ffffff;
   text-decoration: none;
@@ -69,36 +115,35 @@
   }
 
   &:before {
-    margin-right: 8px;
-    width: 64px;
-    min-width: 64px;
-    height: 56px;
-    background-image: url("./images/docspace-3-1.svg");
+    margin-right: 12px;
+    width: 60px;
+    min-width: 60px;
+    height: 30px;
+    background-image: url("./images/docs-9-0.svg");
 
     @media screen and (max-width: 1024px) {
-      width: 36px;
-      min-width: 36px;
-      height: 32px;
+      margin-right: 8px;
+      width: 48px;
+      min-width: 48px;
+      height: 24px;
     }
   }
 
   &:after {
-    margin-left: 4px;
+    margin-left: 12px;
     width: 24px;
     min-width: 24px;
     height: 24px;
-    background-image: url("./images/arrow-right.svg");
+    background-image: url("./images/arrow-right-orange.svg");
 
     @media screen and (max-width: 1024px) {
       margin-left: 2px;
+      background-image: url("./images/arrow-right.svg");
     }
   }
 
   @media screen and (max-width: 1024px) {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 18px;
-    letter-spacing: initial;
+    font-weight: 700;
   }
 }
 
