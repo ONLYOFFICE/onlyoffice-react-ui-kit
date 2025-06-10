@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.11.0
+* advent-announce
+  - Meet ONLYOFFICE Docs 9.0
+* header-menu
+  - Resources: replace Docs 8.3 with Docs 9.0
+
 ## 1.10.0
 * advent-announce
   - ONLYOFFICE DocSpace 3.1 released
