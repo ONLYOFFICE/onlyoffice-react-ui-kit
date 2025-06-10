@@ -65,13 +65,13 @@ const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, re
           <Link className="oo-hm-item-link oo-hm-item-link--blog" href={blogHrefLang}>{t("Blog")}</Link>
           <Link className="oo-hm-item-block" href={t("blogLink1")}>
             <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-1"></div>
-            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE DocSpace 3.1 released: role-based form filling in VDR, room templates, improved guest management, and more")}</div>
-            <div className="oo-hm-item-blog-date">{t("21 April 2025")}</div>
+            <div className="oo-hm-item-blog-title">{t("Meet ONLYOFFICE Docs 9.0: new interface, Diagram Viewer, .md support, AI-powered sheets — register for the webinar on June 18, 2PM CEST")}</div>
+            <div className="oo-hm-item-blog-date">{t("18 June 2025")}</div>
           </Link>
           <Link className="oo-hm-item-block" href={t("blogLink2")}>
             <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-2"></div>
-            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE Docs 8.3 released: PDF stamps, enhanced format support, Merge Shapes, and more")}</div>
-            <div className="oo-hm-item-blog-date">{t("5 February 2025")}</div>
+            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE DocSpace 3.1 released: role-based form filling in VDR, room templates, improved guest management, and more")}</div>
+            <div className="oo-hm-item-blog-date">{t("21 April 2025")}</div>
           </Link>
         </div>
       </div>
