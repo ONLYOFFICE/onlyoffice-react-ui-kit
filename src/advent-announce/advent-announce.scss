@@ -30,49 +30,56 @@
 
   &.de {
     .oo-advent-announce-text {
-      max-width: 902px;
+      max-width: 870px;
+
+      @media screen and (max-width: 375px) {
+        font-size: 13px;
+      }
     }
   }
 
   &.es {
     .oo-advent-announce-text {
-      max-width: 868px;
-    }
-  }
-
-  &.fr {
-    .oo-advent-announce-text {
-      max-width: 928px;
+      max-width: 962px;
     }
   }
 
   &.it {
     .oo-advent-announce-text {
-      max-width: 872px;
+      max-width: 956px;
     }
   }
 
   &.ja {
     .oo-advent-announce-text {
-      max-width: 836px;
+      max-width: 100%;
+
+      @media screen and (max-width: 375px) {
+        font-size: 13px;
+      }
     }
   }
 
-  &.pt {
+  &.pt,
+  &.pt-br {
     .oo-advent-announce-text {
-      max-width: 938px;
+      max-width: 870px;
     }
   }
 
   &.ru {
     .oo-advent-announce-text {
-      max-width: 918px;
+      max-width: 928px;
+
+      @media screen and (max-width: 375px) {
+        font-size: 13px;
+      }
     }
   }
 
   &.sr {
     .oo-advent-announce-text {
-      max-width: 926px;
+      max-width: 788px;
     }
   }
 
@@ -87,7 +94,7 @@
     height: 48px;
     background-image: url("./images/mobile-bg.svg");
     background-size: auto 60px;
-    background-position: calc(50% + 183px) bottom;
+    background-position: calc(50% + 224px) bottom;
   }
 }
 
@@ -100,7 +107,7 @@
   font-size: 14px;
   line-height: 19px;
   text-align: center;
-  max-width: 897px;
+  max-width: 892px;
   height: 100%;
   color: #ffffff;
   text-decoration: none;
@@ -134,11 +141,10 @@
     width: 24px;
     min-width: 24px;
     height: 24px;
-    background-image: url("./images/arrow-right-orange.svg");
+    background-image: url("./images/arrow-right.svg");
 
     @media screen and (max-width: 1024px) {
       margin-left: 2px;
-      background-image: url("./images/arrow-right.svg");
     }
   }
 
