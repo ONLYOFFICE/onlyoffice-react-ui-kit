@@ -67,13 +67,11 @@
   "Training courses": "Курсы по ONLYOFFICE",
   "Webinars": "Вебинары",
   "Blog": "Блог",
-  "Meet ONLYOFFICE Docs 9.0: new interface, Diagram Viewer, .md support, AI-powered sheets — register for the webinar on June 18, 2PM CEST": "ONLYOFFICE Docs 9.0: новый интерфейс, средство просмотра диаграмм, поддержка .md, таблицы с функциями ИИ — регистрируйтесь на вебинар 18 июня, 14:00 CEST",
-  "18 June 2025": "18 июня 2025",
-  "blogLink1": "https://www.onlyoffice.com/ru/webinars.aspx",
+  "ONLYOFFICE Docs 9.0 released: flawless interface, Diagram Viewer, support for .md files, AI-powered sheets & macros, and more": "Выпущен ONLYOFFICE Docs 9.0: безупречный интерфейс, просмотрщик диаграмм, поддержка файлов в формате .md, таблицы и макросы на основе ИИ и многое другое",
+  "18 June 2025": "18 июня 2025 года",
   "ONLYOFFICE DocSpace 3.1 released: role-based form filling in VDR, room templates, improved guest management, and more": "Выпущен ONLYOFFICE DocSpace 3.1: заполнение форм на основе ролей в Виртуальных комнатах данных, шаблоны комнат, улучшенное управление гостями и многое другое",
-  "21 April 2025": "21 апреля 2025",
+  "21 April 2025": "21 апреля 2025 года",
   "What is ONLYOFFICE DocSpace": "Что такое ONLYOFFICE DocSpace",
-  "Zoom meeting rooms": "Конференц-комнаты",
   "DocSpace connectors": "Коннекторы DocSpace",
   "What is ONLYOFFICE Docs": "Что такое ONLYOFFICE Docs",
   "Docs connectors": "Коннекторы Docs",
@@ -101,5 +99,6 @@
   "Login": "Вход",
   "Sign up": "Регистрация",
   "Document editors & storage": "Редакторы документов и хранилище",
-  "Document editors only": "Только редакторы документов"
+  "Document editors only": "Только редакторы документов",
+  "Diagram Viewer": "Просмотрщик диаграмм"
 }

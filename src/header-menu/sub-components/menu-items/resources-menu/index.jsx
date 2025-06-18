@@ -65,7 +65,7 @@ const ResourcesMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, re
           <Link className="oo-hm-item-link oo-hm-item-link--blog" href={blogHrefLang}>{t("Blog")}</Link>
           <Link className="oo-hm-item-block" href={t("blogLink1")}>
             <div className="oo-hm-item-block-img oo-hm-item-block-img--blog-1"></div>
-            <div className="oo-hm-item-blog-title">{t("Meet ONLYOFFICE Docs 9.0: new interface, Diagram Viewer, .md support, AI-powered sheets — register for the webinar on June 18, 2PM CEST")}</div>
+            <div className="oo-hm-item-blog-title">{t("ONLYOFFICE Docs 9.0 released: flawless interface, Diagram Viewer, support for .md files, AI-powered sheets & macros, and more")}</div>
             <div className="oo-hm-item-blog-date">{t("18 June 2025")}</div>
           </Link>
           <Link className="oo-hm-item-block" href={t("blogLink2")}>

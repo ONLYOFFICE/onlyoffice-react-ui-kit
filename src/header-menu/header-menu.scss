@@ -774,6 +774,12 @@
       }
     }
 
+    &.oo-hm-item-link--diagram-viewer {
+      &:before {
+        background-position-y: -3172px;
+      }
+    }
+
     &.oo-hm-item-link--markdown-editor {
       &:before {
         background-position-y: -1846px;
@@ -840,6 +846,12 @@
       }
     }
 
+    &.oo-hm-item-link--telegram {
+      &:before {
+        background-position-y: -3120px;
+      }
+    }
+
     &.oo-hm-item-link--drupal {
       &:before {
         background-position-y: -2626px;
@@ -849,6 +861,12 @@
     &.oo-hm-item-link--pipedrive {
       &:before {
         background-position-y: -3042px;
+      }
+    }
+
+    &.oo-hm-item-link--moodle {
+      &:before {
+        background-position-y: -2288px;
       }
     }
 

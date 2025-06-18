@@ -64,14 +64,13 @@
   "Training courses": "Corsi di formazione",
   "Webinars": "Webinar",
   "White papers": "Libri bianchi",
-  "Meet ONLYOFFICE Docs 9.0: new interface, Diagram Viewer, .md support, AI-powered sheets — register for the webinar on June 18, 2PM CEST": "Scopri ONLYOFFICE Docs 9.0: nuova interfaccia, Visualizzatore di Diagrammi, supporto .md e fogli potenziati dall'AI - registrati al webinar del 18 giugno, ore 14:00 CEST",
+  "ONLYOFFICE Docs 9.0 released: flawless interface, Diagram Viewer, support for .md files, AI-powered sheets & macros, and more": "ONLYOFFICE Docs 9.0 è arrivato: interfaccia impeccabile, Visualizzatore di diagrammi, supporto per file .md, fogli e macro con AI e molto altro",
   "18 June 2025": "18 giugno 2025",
   "ONLYOFFICE DocSpace 3.1 released: role-based form filling in VDR, room templates, improved guest management, and more": "Rilasciato ONLYOFFICE DocSpace 3.1: compilazione dei moduli basata sui ruoli in VDR, modelli di stanza, gestione migliorata degli ospiti e altro ancora",
   "21 April 2025": "21 aprile 2025",
-  "blogLink1": "https://www.onlyoffice.com/it/webinars.aspx",
+  "blogLink1": "https://www.onlyoffice.com/blog/it/2025/06/disponibile-onlyoffice-docs-9-0",
   "blogLink2": "https://www.onlyoffice.com/blog/it/2025/04/onlyoffice-docspace-3-1",
   "What is ONLYOFFICE DocSpace": "Cos'è ONLYOFFICE DocSpace",
-  "Zoom meeting rooms": "Sale riunioni",
   "DocSpace connectors": "Connettori per DocSpace",
   "What is ONLYOFFICE Docs": "Cos'è ONLYOFFICE Docs",
   "Docs connectors": "Connettori per Docs",
@@ -99,5 +98,6 @@
   "Login": "Effettua il login",
   "Sign up": "Registrati",
   "Document editors & storage": "Editor di documenti e spazio di archiviazione",
-  "Document editors only": "Solo editor di documenti"
+  "Document editors only": "Solo editor di documenti",
+  "Diagram Viewer": "Visualizzatore di diagrammi"
 }

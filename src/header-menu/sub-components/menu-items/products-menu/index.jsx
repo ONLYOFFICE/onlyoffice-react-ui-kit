@@ -61,7 +61,7 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
             </div>
             <Link className="oo-hm-item-link oo-hm-item-link--docs" href={`${hrefLang}/office-suite.aspx`}>{t("Document editors")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--collaboration-rooms" href={`${hrefLang}/collaboration-rooms.aspx`}>{t("Collaboration rooms")}</Link>
-            <Link className="oo-hm-item-link oo-hm-item-link--meeting-rooms" href={`${hrefLang}/office-for-zoom.aspx`}>{t("Zoom meeting rooms")}</Link>
+            <Link className="oo-hm-item-link oo-hm-item-link--meeting-rooms" href={`${hrefLang}/office-for-zoom.aspx`}>{t("Meeting rooms")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--public-rooms" href={`${hrefLang}/public-rooms.aspx`}>{t("Public rooms")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--custom-rooms" href={`${hrefLang}/custom-rooms.aspx`}>{t("Custom rooms")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--form-filling-rooms" href={`${hrefLang}/form-filling-rooms.aspx`}>{t("Form filling rooms")}</Link>
@@ -74,6 +74,7 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
                 <Link className="oo-hm-item-link oo-hm-item-link--wordpress" href={`${hrefLang}/office-for-wordpress.aspx`}></Link>
                 <Link className="oo-hm-item-link oo-hm-item-link--drupal" href={`${hrefLang}/office-for-drupal.aspx`}></Link>
                 <Link className="oo-hm-item-link oo-hm-item-link--pipedrive" href={`${hrefLang}/office-for-pipedrive.aspx`}></Link>
+                <Link className="oo-hm-item-link oo-hm-item-link--moodle" href={`${hrefLang}/office-for-moodle.aspx`}></Link>
                 <Link className="oo-hm-item-link oo-hm-item-link--see-more" href={`${hrefLang}/all-connectors.aspx`}></Link>
               </div>
             </div>
@@ -90,6 +91,7 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
             <Link className="oo-hm-item-link oo-hm-item-link--pdf-editor" href={`${hrefLang}/pdf-editor.aspx?docs=download`}>{t("PDF editor")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--form-creator" href={`${hrefLang}/form-creator.aspx?docs=download`}>{t("Form creator")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--e-book-creator" href={`${hrefLang}/e-book.aspx?docs=download`}>{t("E-book creator")}</Link>
+            <Link className="oo-hm-item-link oo-hm-item-link--diagram-viewer" href={`${hrefLang}/diagram-viewer.aspx`}>{t("Diagram Viewer")}</Link>
             <Link className="oo-hm-item-link oo-hm-item-link--collaboration-features" href={`${hrefLang}/seamless-collaboration.aspx?docs=download`}>{t("Collaboration features")}</Link>
             <div className="oo-hm-item-box-wrap oo-hm-item-box-wrap--mt">
               <Link className="oo-hm-item-link oo-hm-item-link--connectors" href={`${hrefLang}/all-connectors.aspx`}>{t("Docs connectors")}</Link>
@@ -103,6 +105,7 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
                     <Link className="oo-hm-item-link oo-hm-item-link--odoo" href={`${hrefLang}/office-for-odoo.aspx`}></Link>
                     <Link className="oo-hm-item-link oo-hm-item-link--seafile" href={`${hrefLang}/all-connectors.aspx#seafile`}></Link>
                     <Link className="oo-hm-item-link oo-hm-item-link--wordpress" href={`${hrefLang}/office-for-wordpress.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--telegram" href={`${hrefLang}/office-for-telegram.aspx`}></Link>
                     <Link className="oo-hm-item-link oo-hm-item-link--see-more" href={`${hrefLang}/all-connectors.aspx`}></Link>
                   </>
                 ) : (
@@ -114,6 +117,7 @@ const ProductsMenu = ({ currentLocale, t, hrefLang, navHidden, setNavHidden, reg
                     <Link className="oo-hm-item-link oo-hm-item-link--nextcloud" href={`${hrefLang}/office-for-nextcloud.aspx`}></Link>
                     <Link className="oo-hm-item-link oo-hm-item-link--odoo" href={`${hrefLang}/office-for-odoo.aspx`}></Link>
                     <Link className="oo-hm-item-link oo-hm-item-link--owncloud" href={`${hrefLang}/office-for-owncloud.aspx`}></Link>
+                    <Link className="oo-hm-item-link oo-hm-item-link--telegram" href={`${hrefLang}/office-for-telegram.aspx`}></Link>
                     <Link className="oo-hm-item-link oo-hm-item-link--see-more" href={`${hrefLang}/all-connectors.aspx`}></Link>
                   </>
                 )}

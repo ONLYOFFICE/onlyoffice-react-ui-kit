@@ -66,14 +66,13 @@
   "Help Center": "Centro de ajuda",
   "Training courses": "Cursos de treinamento",
   "Webinars": "Seminários on-line",
-  "Meet ONLYOFFICE Docs 9.0: new interface, Diagram Viewer, .md support, AI-powered sheets — register for the webinar on June 18, 2PM CEST": "Conheça o ONLYOFFICE Docs 9.0: nova interface, Visualizador de Diagramas, suporte a .md, planilhas com tecnologia de IA — inscreva-se no webinar em 18 de junho, às 14h (CEST)",
-  "18 June 2025": "18 junho 2025",
+  "ONLYOFFICE Docs 9.0 released: flawless interface, Diagram Viewer, support for .md files, AI-powered sheets & macros, and more": "Lançamento do ONLYOFFICE Docs 9.0: interface impecável, Visualizador de Diagramas, suporte para arquivos .md, planilhas e macros com tecnologia de IA e muito mais",
+  "18 June 2025": "18 de junho de 2025",
   "ONLYOFFICE DocSpace 3.1 released: role-based form filling in VDR, room templates, improved guest management, and more": "Lançamento do ONLYOFFICE DocSpace 3.1: preenchimento de formulários baseado em funções no VDR, modelos de salas, gerenciamento aprimorado de hóspedes e muito mais",
-  "21 April 2025": "21 abril 2025",
-  "blogLink1": "https://www.onlyoffice.com/pt/webinars.aspx",
+  "21 April 2025": "21 de abril de 2025",
+  "blogLink1": "https://www.onlyoffice.com/blog/pt-br/2025/06/disponivel-onlyoffice-docs-9-0",
   "blogLink2": "https://www.onlyoffice.com/blog/pt-br/2025/04/lancamento-do-onlyoffice-docspace-3-1",
   "What is ONLYOFFICE DocSpace": "O que é ONLYOFFICE DocSpace",
-  "Zoom meeting rooms": "Sala de reuniões",
   "DocSpace connectors": "Conectores DocSpace",
   "What is ONLYOFFICE Docs": "O que é ONLYOFFICE Docs",
   "Docs connectors": "Conectores Docs",
@@ -100,5 +99,6 @@
   "Login": "Fazer login",
   "Sign up": "Registrar-se",
   "Document editors & storage": "Editores e armazenamento de documentos",
-  "Document editors only": "Somente editores de documentos"
+  "Document editors only": "Somente editores de documentos",
+  "Diagram Viewer": "Visualizador de Diagramas"
 }
