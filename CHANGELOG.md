@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.12.0
+* advent-announce
+  - ONLYOFFICE Docs 9.0 released
+* header-menu
+  - Products:
+    + Replace Zoom meeting rooms with Meeting Rooms
+    + add Moodle to ONLYOFFICE DocSpace > DocSpace connectors
+    + add Diagram Viewer to ONLYOFFICE Docs > What is ONLYOFFICE Docs
+    + add Telegram to ONLYOFFICE Docs > Docs connectors
+  - Resources: replace Blog "Meet ONLYOFFICE Docs 9.0" with "ONLYOFFICE Docs 9.0 released"
+
 ## 1.11.0
 * advent-announce
   - Meet ONLYOFFICE Docs 9.0
