@@ -1,0 +1,173 @@
+/*
+ * (c) Copyright Ascensio System SIA 2024-2025
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.oo-language-selector {
+  position: relative;
+  height: 24px;
+}
+
+.oo-language-selector-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  width: 37px;
+  height: 24px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &.oo-language-selector-btn--theme-white {
+    .oo-language-selector-icon-stroke {
+      stroke: #ffffff;
+    }
+
+    .oo-language-selector-icon-fill {
+      fill: #ffffff;
+    }
+  }
+
+  &.oo-language-selector-btn--open {
+    .oo-language-selector-icon-stroke {
+      stroke: #ff6f3d;
+    }
+
+    .oo-language-selector-icon-fill {
+      fill: #ff6f3d;
+    }
+
+    .oo-language-selector-icon-arrow {
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background-color: transparent;
+    }
+  }
+}
+
+.oo-language-selector-icon-arrow {
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.oo-language-selector-list {
+  position: absolute;
+  top: calc(100% + 24px);
+  left: -21px;
+  border-radius: 0 0 9px 9px;
+  margin: 0;
+  padding: 8px 0;
+  list-style-type: none;
+  background-color: #ffffff;
+  box-shadow: 0px 20px 50px 0px rgba(85, 85, 85, 0.15);
+
+  &:before {
+    display: block;
+    position: absolute;
+    width: 0;
+    content: "";
+    height: 1px;
+    background-color: #ff6f3d;
+    transition: width 0.2s ease-in-out;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #ff6f3d;
+    transition: width 0.2s ease-in-out;
+    z-index: 1;
+  }
+
+  &.ar {
+    left: initial;
+    right: -21px;
+
+    .oo-language-selector-list-link span {
+      margin-right: initial;
+      margin-left: 8px;
+    }
+
+    @media screen and (max-width: 1420px) {
+      left: 0;
+      right: initial;
+    }
+  }
+
+  &.oo-language-selector-list--open {
+    &:before {
+      animation: menuLineLeft 0.3s forwards ease-in-out;
+    }
+
+    &:after {
+      animation: menuLineRight 0.3s forwards ease-in-out;
+    }
+  }
+
+  @media screen and (max-width: 1420px) {
+    left: initial;
+    right: 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    top: calc(100% + 12px);
+  }
+}
+
+.oo-language-selector-list-link {
+  display: flex;
+  padding: 8px 24px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #666666;
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  span {
+    margin-right: 8px;
+    font-weight: 700;
+    color: #444444;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &.oo-language-selector-list-link--active {
+    font-weight: 600;
+    color: #ff6f3d;
+
+    span {
+      color: #ff6f3d;
+    }
+  }
+}

@@ -1,0 +1,186 @@
+/*
+ * (c) Copyright Ascensio System SIA 2024-2025
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.oo-menu-item--download {
+  position: relative;
+  margin-right: 8px;
+
+  &.ar {
+    margin-right: initial;
+    margin-left: 8px;
+
+    .oo-menu-item-wrapper {
+      left: initial;
+      right: 0;
+    }
+
+    .oo-menu-item-btn {
+      &::before {
+        @media screen and (max-width: 1024px) {
+          left: initial;
+          right: 24px;
+        }
+      }
+
+      &::after {
+        @media screen and (max-width: 1024px) {
+          content: "";
+          right: initial;
+          left: 24px;
+          top: 16px;
+          transform: rotate(180deg);
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        padding: 16px 56px 16px 48px;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-left: initial;
+    }
+  }
+
+  &.es,
+  &.fr,
+  &.pt,
+  &.pt-br,
+  &.ru {
+    .oo-header-menu-item {
+      width: max-content;
+      min-width: 352px;
+      max-width: 420px;
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .oo-header-menu-item {
+    min-width: 352px;
+    max-width: 352px;
+
+    @media screen and (max-width: 1024px) {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .oo-menu-item-wrapper {
+    top: calc(99% + 16px);
+    left: 0;
+    transform: none;
+
+    @media screen and (max-width: 1024px) {
+      top: 0;
+    }
+  }
+
+  .oo-header-menu-item:not(:first-child):not([class*="--bg-gray"]):not([class*="active"]) {
+    @media screen and (max-width: 1024px) {
+      padding: 24px;
+    }
+  }
+
+  .oo-menu-item-btn {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    background-color: #ff6f3d;
+    transition: background-color 0.2s;
+    cursor: pointer;
+
+    &::before {
+      @media screen and (max-width: 1024px) {
+        content: "";
+        position: absolute;
+        left: 24px;
+        top: 50%;
+        width: 24px;
+        height: 24px;
+        background-image: url("../../images/download.svg");
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+
+    &::after {
+      @media screen and (max-width: 1024px) {
+        content: "";
+        position: absolute;
+        right: 24px;
+        top: 16px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../../images/arrow-right-white.svg");
+        background-repeat: no-repeat;
+        transform: initial;
+      }
+
+      @media screen and (max-width: 430px) {
+        top: 12px;
+      }
+    }
+
+    &.oo-menu-item-btn--open {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 16px;
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      background-color: #ff865c;
+    }
+
+    @media screen and (max-width: 1024px) {
+      position: relative;
+      margin: 0 0 8px;
+      padding: 16px 48px 16px 56px;
+      border-radius: initial;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    @media screen and (max-width: 430px) {
+      padding: 12px 48px 12px 56px;
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    position: initial;
+  }
+}

@@ -1,0 +1,232 @@
+/*
+ * (c) Copyright Ascensio System SIA 2024-2025
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.oo-header-menu {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+
+  &.ar {
+    margin-left: auto;
+    margin-right: initial;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    margin-right: initial;
+    width: 100%;
+  }
+}
+
+.oo-header-menu-d-flex {
+  display: flex;
+}
+
+.oo-header-menu-mob-flex-column {
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.oo-header-menu-mob-height {
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 60px);
+  }
+}
+
+.oo-header-menu-mob-height-without-header {
+  height: calc(100% - 60px);
+}
+
+.oo-header-menu-item {
+  box-sizing: border-box;
+  padding: 24px;
+  width: 100%;
+  min-width: 312px;
+  max-width: 312px;
+
+  &:not(:first-child):not([class*="--bg-gray"]):not([class*="active"]) {
+    @media screen and (max-width: 1024px) {
+      padding: 0 24px 24px;
+    }
+  }
+
+  &.oo-header-menu-item--with-border {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      border-right: 1px solid #ebebeb;
+      max-width: 1px;
+      height: calc(100% - 48px);
+      transform: translateY(-50%);
+
+      @media screen and (max-width: 1024px) {
+        content: none;
+      }
+    }
+  }
+
+  &.oo-header-menu-item--bg-gray {
+    background-color: #f8f9f9;
+
+    @media screen and (max-width: 1024px) {
+      margin-top: auto;
+      padding: 32px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.oo-header-menu-bottom {
+  display: flex;
+  border-top: 1px solid #e2e2e2;
+  padding: 12px 24px;
+
+  &.oo-header-menu-bottom--end {
+    justify-content: flex-end;
+
+    @media screen and (max-width: 1024px) {
+      justify-content: initial;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    margin-top: auto;
+    padding: 24px;
+  }
+}
+
+.oo-header-menu-app-link {
+  display: inline-flex;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  background-image: url("../../images/platforms.svg");
+
+  &.oo-header-menu-app-link--android {
+    background-position: -121px;
+  }
+
+  &.oo-header-menu-app-link--ios {
+    background-position: -161px;
+  }
+}
+
+.oo-header-menu-block {
+  display: block;
+  text-decoration: none;
+
+  .oo-menu-link {
+    &:hover {
+      color: #ff6f3d;
+    }
+  }
+
+  .oo-header-menu-block-date {
+    color: #808080;
+  }
+
+  .oo-menu-text:not(.oo-header-menu-block-date) {
+    transition: color 0.2s;
+
+    &:hover {
+      color: #ff6f3d;
+    }
+  }
+}
+
+.oo-header-menu-img {
+  width: 180px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.oo-header-menu-mr-24 {
+  margin-right: 24px;
+}
+
+.oo-header-menu-mr-12 {
+  margin-right: 12px;
+}
+
+.oo-header-menu-mr-8 {
+  margin-right: 8px;
+}
+
+.oo-header-menu-mb-16 {
+  margin-bottom: 16px;
+}
+
+.oo-header-menu-mb-12 {
+  margin-bottom: 12px;
+}
+
+.oo-header-menu-mb-8 {
+  margin-bottom: 8px;
+}
+
+.oo-header-menu-mb-4 {
+  margin-bottom: 4px;
+}
+
+.oo-header-menu-mob-mr-0 {
+  @media screen and (max-width: 1024px) {
+    margin-right: 0;
+  }
+}
+
+.oo-header-menu-mob-mr-8 {
+  @media screen and (max-width: 1024px) {
+    margin-right: 8px;
+  }
+}
+
+.oo-header-menu-mob-mb-24 {
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 24px;
+  }
+}
+
+.oo-header-menu-mob-mb-16 {
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 16px;
+  }
+}
+
+.oo-header-menu-mob-mb-12 {
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 12px;
+  }
+}
+
+.oo-header-menu-mob-mb-8 {
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 8px;
+  }
+}

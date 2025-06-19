@@ -5,8 +5,9 @@ This repository contains the ONLYOFFICE [React](https://react.dev/) components, 
 ## Features
 
 The `onlyoffice-react-ui-kit` package includes the following React components:
+
 - **onlyoffice-react-ui-kit/advent-announce**: Displays the current banner, providing users with important announcements and updates.
-- **onlyoffice-react-ui-kit/header-menu**: Renders the current menu in the header, allowing users to navigate easily throughout the application.
+- **onlyoffice-react-ui-kit/header**: Renders the current header, allowing users to navigate easily throughout the application.
 - **onlyoffice-react-ui-kit/footer-menu**: Displays the current menu in the footer, providing navigation links to different sections of the site and ensuring users have access to important information at the bottom of the page.
 
 ## Installation
@@ -17,16 +18,17 @@ Add onlyoffice-react-ui-kit to your project by executing `npm install onlyoffice
 
 Here's an example of basic usage for each component:
 
-### AdventAnnounce
+### OOAdventAnnounce
+
 ```jsx
 import React from "react";
-import { AdventAnnounce } from "onlyoffice-react-ui-kit/advent-announce";
+import { OOAdventAnnounce } from "onlyoffice-react-ui-kit/advent-announce";
 import "onlyoffice-react-ui-kit/advent-announce/css";
 
 function MyApp() {
   return (
     <div>
-      <AdventAnnounce locale="en" />
+      <OOAdventAnnounce locale="en" />
     </div>
   );
 }
@@ -38,18 +40,37 @@ function MyApp() {
 | ------------- | ------------- | ------------- | ------------- |
 | `locale` | Locale that should be used. Supported values: `"en"`, `"fr"`, `"de"`, `"es"`, `"pt"`, `"pt-br"`, `"it"`, `"cs"`, `"ja"`, `"zh"`, `"zh-hans"`, `"el"`, `"hi"`, `"ar"`, `"sr"`, `"hy"`, `"ru"`, `"nl"`. | `string` | `"en"` |
 
-### HeaderMenu
+### OOHeader
+
 ```jsx
 import React, { useState } from "react";
-import { HeaderMenu } from "onlyoffice-react-ui-kit/header-menu";
-import "onlyoffice-react-ui-kit/header-menu/css";
+import { OOHeader } from "onlyoffice-react-ui-kit/header";
+import "onlyoffice-react-ui-kit/header/css";
 
 function MyApp() {
-  const [isOpen, setIsOpen] = useState(false);
+  const languages = [
+    { shortKey: "en", name: "English" },
+    { shortKey: "fr", name: "Français" },
+    { shortKey: "de", name: "German" },
+    { shortKey: "es", name: "Español" },
+    { shortKey: "pt", name: "Português" },
+    { shortKey: "it", name: "Italiano" },
+    { shortKey: "cs", name: "Čeština" },
+    { shortKey: "nl", name: "Nederlands" },
+    { shortKey: "ja", name: "日本語" },
+    { shortKey: "zh", name: "中文" },
+    { shortKey: "ru", name: "Русский" },
+  ];
 
   return (
     <div>
-      <HeaderMenu locale="en" isOpen={isOpen} />
+      <OOHeader
+        locale="en"
+        languageSelector={{
+          languages: languages,
+          href: "/",
+        }}
+      />
     </div>
   );
 }
@@ -63,6 +84,7 @@ function MyApp() {
 | `isOpen` | Controls the visibility of the header menu on mobile devices. Set to true to open the menu and false to close it. | `boolean` | `false` |
 
 ### FooterMenu
+
 ```jsx
 import React from "react";
 import { FooterMenu } from "onlyoffice-react-ui-kit/footer-menu";
@@ -88,10 +110,13 @@ function MyApp() {
 ## Storybook
 
 ### Build Storybook:
+
 ```
 npm run build-storybook
 ```
+
 ### Start Storybook:
+
 ```
 npm run storybook
 ```

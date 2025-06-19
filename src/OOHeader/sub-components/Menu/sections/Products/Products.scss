@@ -1,0 +1,331 @@
+/*
+ * (c) Copyright Ascensio System SIA 2024-2025
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.oo-menu-item--products {
+  position: relative;
+
+  .oo-menu-item-wrapper {
+    left: -20px;
+    transform: initial;
+
+    @media screen and (max-width: 1084px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.ar {
+    .oo-menu-item-wrapper {
+      left: initial;
+      right: -20px;
+      transform: initial;
+
+      @media screen and (max-width: 1084px) {
+        right: initial;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &.fr {
+    .oo-header-menu-item {
+      &:first-child {
+        min-width: 364px;
+        max-width: 364px;
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &.de {
+    .oo-header-menu-item {
+      &:first-child {
+        min-width: 336px;
+        max-width: 336px;
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      &:last-child {
+        min-width: 328px;
+        max-width: 328px;
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &.pt,
+  &.pt-br {
+    .oo-header-menu-item {
+      &:first-child {
+        min-width: 332px;
+        max-width: 332px;
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      &:last-child {
+        min-width: 336px;
+        max-width: 336px;
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &.ja {
+    .oo-header-menu-item {
+      &:last-child {
+        min-width: 342px;
+        max-width: 342px;
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &.ru {
+    .oo-header-menu-item {
+      &:first-child {
+        min-width: 352px;
+        max-width: 352px;
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &.oo-menu-item--hide {
+    .oo-menu-item-btn-heading {
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  .oo-header-menu-item {
+    &:first-child,
+    &:nth-child(2) {
+      min-width: 328px;
+      max-width: 328px;
+
+      @media screen and (max-width: 1024px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &:last-child {
+      min-width: 320px;
+      max-width: 320px;
+
+      @media screen and (max-width: 1024px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .oo-header-menu-item--bg-gray {
+    @media screen and (max-width: 1024px) {
+      padding: 32px 24px;
+      background-color: transparent;
+    }
+  }
+
+  @media screen and (max-width: 1084px) {
+    position: initial;
+  }
+}
+
+.oo-menu-item-box-heading {
+  display: none;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  border: none;
+  border-bottom: 1px solid #f2f2f2;
+  margin: 0;
+  padding: 4px 32px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 60px;
+  min-height: 60px;
+  color: #ff6f3d;
+  background-color: #fff;
+  z-index: 10;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url("../../../../images/arrow-red.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transform: translateY(-50%) rotate(180deg);
+    transition: 0.1s linear;
+  }
+
+  &.oo-menu-item-box-heading--show {
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &.ar {
+    &::before {
+      @media screen and (max-width: 1024px) {
+        left: initial;
+        right: 14px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.oo-header-menu-item-box-buttons {
+  display: none;
+
+  &.oo-header-menu-item-box-buttons--hide {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.oo-header-menu-item-box-button {
+  position: relative;
+  border: none;
+  padding: 16px 40px 16px 24px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 24px;
+  color: #444;
+  width: 100%;
+  text-align: initial;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    display: inline-flex;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    background-image: url("../../../../images/arrow-gray.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+
+  &.oo-header-menu-item-box-button--mobile-active {
+    @media screen and (max-width: 1024px) {
+      background-color: #f9f9f9;
+    }
+  }
+
+  &.ar {
+    padding: 16px 24px 16px 40px;
+
+    &::after {
+      right: initial;
+      left: 16px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &:hover {
+    @media screen and (max-width: 1024px) {
+      background-color: #f9f9f9;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    transition: background-color 0.2s;
+  }
+
+  @media screen and (max-width: 430px) {
+    font-size: 16px;
+  }
+}
+
+.oo-header-menu-item-box-item {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
+  &.active {
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.oo-menu-item-box-label {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
