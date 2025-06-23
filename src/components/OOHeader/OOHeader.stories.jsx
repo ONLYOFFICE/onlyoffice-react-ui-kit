@@ -50,22 +50,22 @@ export default {
 
 const Template = (args) => {
   const languages = [
-    { key: "ar", locale: "ar",  name: "عربي", href: "/" },
-    { key: "cs", locale: "cs", name: "Čeština", href: "/" },
-    { key: "de", locale: "de", name: "Deutsch", href: "/" },
-    { key: "el", locale: "el", name: "Ελληνικά", href: "/" },
-    { key: "en", locale: "en", name: "English", href: "/" },
-    { key: "es", locale: "es", name: "Español", href: "/" },
-    { key: "fr", locale: "fr", name: "Français", href: "/" },
-    { key: "hi", locale: "hi", name: "हिन्दी", href: "/" },
-    { key: "hy", locale: "hy",name: "Հայերեն", href: "/" },
-    { key: "it", locale: "it", name: "Italiano", href: "/" },
-    { key: "ja", locale: "ja", key: "ja", name: "日本語", href: "/" },
-    { key: "nl", locale: "nl", name: "Nederlands", href: "/" },
-    { key: "pt", locale: "pt-br", name: "Português", href: "/" },
-    { key: "ru", locale: "ru", name: "Русский", href: "/" },
-    { key: "sr", locale: "sr",name: "Srpski", href: "/" },
-    { key: "zh", locale: "zh-hans", name: "中文", href: "/" },
+    { key: "ar", shortKey: "ar", name: "عربي", href: "/" },
+    { key: "cs", shortKey: "cs", name: "Čeština", href: "/" },
+    { key: "de", shortKey: "de", name: "Deutsch", href: "/" },
+    { key: "el", shortKey: "el", name: "Ελληνικά", href: "/" },
+    { key: "en", shortKey: "en", name: "English", href: "/" },
+    { key: "es", shortKey: "es", name: "Español", href: "/" },
+    { key: "fr", shortKey: "fr", name: "Français", href: "/" },
+    { key: "hi", shortKey: "hi", name: "हिन्दी", href: "/" },
+    { key: "hy", shortKey: "hy",name: "Հայերեն", href: "/" },
+    { key: "it", shortKey: "it", name: "Italiano", href: "/" },
+    { key: "ja", shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+    { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
+    { key: "pt-br", shortKey: "pt", name: "Português", href: "/" },
+    { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
+    { key: "sr", shortKey: "sr",name: "Srpski", href: "/" },
+    { key: "zh-hans", shortKey: "zh", name: "中文", href: "/" },
   ];
 
   return (

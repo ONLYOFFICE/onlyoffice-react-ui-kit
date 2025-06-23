@@ -123,14 +123,14 @@ const LanguageSelector = ({ locale, theme, languages }) => {
             isOpen && "oo-language-selector-list--open",
           )}
         >
-          {languages.map(({ key, href, locale, name }) => (
-            <li key={key}>
+          {languages.map(({ href, shortKey, key, name }) => (
+            <li key={shortKey}>
               <Link
                 className={clsx("oo-language-selector-list-link", {
-                  "oo-language-selector-list-link--active": locale === key,
+                  "oo-language-selector-list-link--active": locale === shortKey,
                 })}
                 href={href}
-                locale={locale}
+                locale={shortKey}
               >
                 <span>{key}</span>
                 {name}

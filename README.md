@@ -49,22 +49,22 @@ import "onlyoffice-react-ui-kit/header/css";
 
 function MyApp() {
   const languages = [
-    { key: "ar", locale: "ar",  name: "عربي", href: "/" },
-    { key: "cs", locale: "cs", name: "Čeština", href: "/" },
-    { key: "de", locale: "de", name: "Deutsch", href: "/" },
-    { key: "el", locale: "el", name: "Ελληνικά", href: "/" },
-    { key: "en", locale: "en", name: "English", href: "/" },
-    { key: "es", locale: "es", name: "Español", href: "/" },
-    { key: "fr", locale: "fr", name: "Français", href: "/" },
-    { key: "hi", locale: "hi", name: "हिन्दी", href: "/" },
-    { key: "hy", locale: "hy",name: "Հայերեն", href: "/" },
-    { key: "it", locale: "it", name: "Italiano", href: "/" },
-    { key: "ja", locale: "ja", key: "ja", name: "日本語", href: "/" },
-    { key: "nl", locale: "nl", name: "Nederlands", href: "/" },
-    { key: "pt", locale: "pt-br", name: "Português", href: "/" },
-    { key: "ru", locale: "ru", name: "Русский", href: "/" },
-    { key: "sr", locale: "sr",name: "Srpski", href: "/" },
-    { key: "zh", locale: "zh-hans", name: "中文", href: "/" },
+    { key: "ar", shortKey: "ar", name: "عربي", href: "/" },
+    { key: "cs", shortKey: "cs", name: "Čeština", href: "/" },
+    { key: "de", shortKey: "de", name: "Deutsch", href: "/" },
+    { key: "el", shortKey: "el", name: "Ελληνικά", href: "/" },
+    { key: "en", shortKey: "en", name: "English", href: "/" },
+    { key: "es", shortKey: "es", name: "Español", href: "/" },
+    { key: "fr", shortKey: "fr", name: "Français", href: "/" },
+    { key: "hi", shortKey: "hi", name: "हिन्दी", href: "/" },
+    { key: "hy", shortKey: "hy",name: "Հայերեն", href: "/" },
+    { key: "it", shortKey: "it", name: "Italiano", href: "/" },
+    { key: "ja", shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+    { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
+    { key: "pt-br", shortKey: "pt", name: "Português", href: "/" },
+    { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
+    { key: "sr", shortKey: "sr",name: "Srpski", href: "/" },
+    { key: "zh-hans", shortKey: "zh", name: "中文", href: "/" },
   ];
 
   return (
@@ -83,7 +83,7 @@ function MyApp() {
 | Name | Description | Type | Default |
 | ------------- | ------------- | ------------- | ------------- |
 | `locale` | Locale that should be used. Supported values: `"en"`, `"fr"`, `"de"`, `"es"`, `"pt"`, `"pt-br"`, `"it"`, `"cs"`, `"ja"`, `"zh"`, `"zh-hans"`, `"el"`, `"hi"`, `"ar"`, `"sr"`, `"hy"`, `"ru"`, `"nl"`. | `string` | `"en"` |
-| `languages` | Controls the visibility and content of the language selector. Should contain { languages: [ [key: string, locale: string, name: string, href: string], ... ] }. | `object` | `undefined` |
+| `languages` | Controls the visibility and content of the language selector. Should contain { languages: [ [key: string, shortKey: string, name: string, href: string], ... ] }. | `object` | `undefined` |
 | `search` | Enables and configures a search input in the header. Should be an object like { show: boolean, variant: "main" | "blog", value: string, onChange: () => void;, onSubmit: () => void; }. | `object` | `undefined` |
 | `hasPhone` | Whether to display a phone selector block. | `boolean` | `false` |
 | `highlight` | Highlights specific menu elements. Should be an object like { buttonId: string, linkId: string }, where values are DOM element IDs to apply highlight styles to. | `object` | `undefined` |
@@ -101,22 +101,22 @@ import "onlyoffice-react-ui-kit/footer/css";
 
 function MyApp() {
   const languages = [
-    { key: "ar", locale: "ar",  name: "عربي", href: "/" },
-    { key: "cs", locale: "cs", name: "Čeština", href: "/" },
-    { key: "de", locale: "de", name: "Deutsch", href: "/" },
-    { key: "el", locale: "el", name: "Ελληνικά", href: "/" },
-    { key: "en", locale: "en", name: "English", href: "/" },
-    { key: "es", locale: "es", name: "Español", href: "/" },
-    { key: "fr", locale: "fr", name: "Français", href: "/" },
-    { key: "hi", locale: "hi", name: "हिन्दी", href: "/" },
-    { key: "hy", locale: "hy",name: "Հայերեն", href: "/" },
-    { key: "it", locale: "it", name: "Italiano", href: "/" },
-    { key: "ja", locale: "ja", key: "ja", name: "日本語", href: "/" },
-    { key: "nl", locale: "nl", name: "Nederlands", href: "/" },
-    { key: "pt", locale: "pt-br", name: "Português", href: "/" },
-    { key: "ru", locale: "ru", name: "Русский", href: "/" },
-    { key: "sr", locale: "sr",name: "Srpski", href: "/" },
-    { key: "zh", locale: "zh-hans", name: "中文", href: "/" },
+    { shortKey: "ar", name: "عربي", href: "/" },
+    { shortKey: "cs", name: "Čeština", href: "/" },
+    { shortKey: "de", name: "Deutsch", href: "/" },
+    { shortKey: "el", name: "Ελληνικά", href: "/" },
+    { shortKey: "en", name: "English", href: "/" },
+    { shortKey: "es", name: "Español", href: "/" },
+    { shortKey: "fr", name: "Français", href: "/" },
+    { shortKey: "hi", name: "हिन्दी", href: "/" },
+    { shortKey: "hy",name: "Հայերեն", href: "/" },
+    { shortKey: "it", name: "Italiano", href: "/" },
+    { shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+    { shortKey: "nl", name: "Nederlands", href: "/" },
+    { shortKey: "pt", name: "Português", href: "/" },
+    { shortKey: "ru", name: "Русский", href: "/" },
+    { shortKey: "sr",name: "Srpski", href: "/" },
+    { shortKey: "zh", name: "中文", href: "/" },
   ];
 
   return (
@@ -137,7 +137,7 @@ function MyApp() {
 | Name | Description | Type | Default |
 | ------------- | ------------- | ------------- | ------------- |
 | `locale` | Locale that should be used. Supported values: `"en"`, `"fr"`, `"de"`, `"es"`, `"pt"`, `"pt-br"`, `"it"`, `"cs"`, `"ja"`, `"zh"`, `"zh-hans"`, `"el"`, `"hi"`, `"ar"`, `"sr"`, `"hy"`, `"ru"`, `"nl"`. | `string` | `"en"` |
-| `languages` | Controls the visibility and content of the language selector. Should contain { languages: [ [key: string, locale: string, name: string, href: string], ... ] }. | `object` | `undefined` |
+| `languages` | Controls the visibility and content of the language selector. Should contain { languages: [ [key: string, shortKey: string, name: string, href: string], ... ] }. | `object` | `undefined` |
 | `base` | Base configuration for internal links. Should be an object like { url: string, withAspx: boolean }. | `object` | `undefined` |
 | `mailApiUrl` | The URL for the email subscription API endpoint. Required for submitting the form data from the modal. | `string` | `null` |
 | `mailApiType` | Type identifier for the email API | `number` | `null` |

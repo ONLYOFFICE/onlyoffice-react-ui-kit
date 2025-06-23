@@ -50,22 +50,22 @@ export default {
 
 const Template = (args) => {
   const languages = [
-    { key: "ar", locale: "ar",  name: "عربي", href: "/" },
-    { key: "cs", locale: "cs", name: "Čeština", href: "/" },
-    { key: "de", locale: "de", name: "Deutsch", href: "/" },
-    { key: "el", locale: "el", name: "Ελληνικά", href: "/" },
-    { key: "en", locale: "en", name: "English", href: "/" },
-    { key: "es", locale: "es", name: "Español", href: "/" },
-    { key: "fr", locale: "fr", name: "Français", href: "/" },
-    { key: "hi", locale: "hi", name: "हिन्दी", href: "/" },
-    { key: "hy", locale: "hy",name: "Հայերեն", href: "/" },
-    { key: "it", locale: "it", name: "Italiano", href: "/" },
-    { key: "ja", locale: "ja", key: "ja", name: "日本語", href: "/" },
-    { key: "nl", locale: "nl", name: "Nederlands", href: "/" },
-    { key: "pt", locale: "pt-br", name: "Português", href: "/" },
-    { key: "ru", locale: "ru", name: "Русский", href: "/" },
-    { key: "sr", locale: "sr",name: "Srpski", href: "/" },
-    { key: "zh", locale: "zh-hans", name: "中文", href: "/" },
+    { shortKey: "ar", name: "عربي", href: "/" },
+    { shortKey: "cs", name: "Čeština", href: "/" },
+    { shortKey: "de", name: "Deutsch", href: "/" },
+    { shortKey: "el", name: "Ελληνικά", href: "/" },
+    { shortKey: "en", name: "English", href: "/" },
+    { shortKey: "es", name: "Español", href: "/" },
+    { shortKey: "fr", name: "Français", href: "/" },
+    { shortKey: "hi", name: "हिन्दी", href: "/" },
+    { shortKey: "hy",name: "Հայերեն", href: "/" },
+    { shortKey: "it", name: "Italiano", href: "/" },
+    { shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+    { shortKey: "nl", name: "Nederlands", href: "/" },
+    { shortKey: "pt", name: "Português", href: "/" },
+    { shortKey: "ru", name: "Русский", href: "/" },
+    { shortKey: "sr",name: "Srpski", href: "/" },
+    { shortKey: "zh", name: "中文", href: "/" },
   ];
 
   return (

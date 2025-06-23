@@ -74,16 +74,16 @@ const LanguageSelector = ({ locale, languages }) => {
           ref={listRef}
           className={clsx("oo-footer-language-selector-list", locale)}
         >
-          {languages.map(({ key, href, name }) => (
-            <li key={key}>
+          {languages.map(({ shortKey, href, name }) => (
+            <li key={shortKey}>
               <Link
                 className={clsx(
                   "oo-footer-language-selector-link",
-                  key === locale &&
+                  shortKey === locale &&
                     "oo-footer-language-selector-link--active",
                 )}
                 href={href}
-                locale={key}
+                locale={shortKey}
               >
                 {name}
               </Link>
