@@ -74,7 +74,7 @@ const LanguageSelector = ({ locale, languages }) => {
           ref={listRef}
           className={clsx("oo-footer-language-selector-list", locale)}
         >
-          {languages.map(({ key, name, href }) => (
+          {languages.map(({ key, href, name }) => (
             <li key={key}>
               <Link
                 className={clsx(
