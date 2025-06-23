@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.13.0
+* advent-announce
+  - Rename AdventAnnounce to OOAdventAnnounce
+* header
+  - Rename HeaderMenu to OOHeader
+  - Replace menu with full header component
+* footer
+  - Rename FooterMenu to OOFooter
+  - Add links to Templates, Converters, For Educations
+  - Add "For non-profits", "Security" sections
+  - Add language selector
+  - Change round social icons to square with rounding
+
 ## 1.12.0
 * advent-announce
   - ONLYOFFICE Docs 9.0 released
