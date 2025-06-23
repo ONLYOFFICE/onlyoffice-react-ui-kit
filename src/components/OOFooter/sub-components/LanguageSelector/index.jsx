@@ -61,7 +61,7 @@ const LanguageSelector = ({ locale, languages }) => {
       >
         <span>
           {
-            languages.find((lang) => lang.shortKey === locale)
+            languages.find((lang) => lang.key === locale)
               ?.name
           }
         </span>
