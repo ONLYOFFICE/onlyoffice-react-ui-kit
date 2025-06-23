@@ -30,7 +30,6 @@
     unicode-bidi: embed;
 
     &.oo-header--active {
-      .oo-advent-announce,
       .oo-header-hamburger,
       .oo-header-logo,
       .oo-header-icons {
@@ -96,7 +95,6 @@
   &.oo-header--active {
     overflow: hidden;
 
-    .oo-advent-announce,
     .oo-header-hamburger,
     .oo-header-logo,
     .oo-header-icons {

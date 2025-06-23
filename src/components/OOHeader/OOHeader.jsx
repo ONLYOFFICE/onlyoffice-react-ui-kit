@@ -58,6 +58,7 @@ const OOHeader = ({
         setIsMobile(false);
         setOpenMobileMenu(false);
         document.documentElement.style.overflow = "";
+        document.querySelector(".oo-advent-announce")?.classList.remove("oo-advent-announce--active");
         setShowOverlay(false);
       }
     };
@@ -67,6 +68,7 @@ const OOHeader = ({
 
     return () => {
       document.documentElement.style.overflow = "";
+      document.querySelector(".oo-advent-announce")?.classList.remove("oo-advent-announce--active");
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -77,6 +79,7 @@ const OOHeader = ({
     if (openMobileMenu) {
       setOpenMobileMenu(false);
       document.documentElement.style.overflow = "";
+      document.querySelector(".oo-advent-announce")?.classList.remove("oo-advent-announce--active");
     }
 
     if (search?.show && showSearch && search.variant === "main") {
@@ -100,6 +103,7 @@ const OOHeader = ({
             setOpenMobileMenu(true);
             setShowOverlay(true);
             document.documentElement.style.overflow = "hidden";
+            document.querySelector(".oo-advent-announce")?.classList.add("oo-advent-announce--active");
           }}
           className={clsx(
             "oo-header-hamburger",
