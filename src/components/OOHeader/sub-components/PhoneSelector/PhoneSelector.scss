@@ -1,0 +1,172 @@
+/*
+ * (c) Copyright Ascensio System SIA 2024-2025
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.oo-phone-selector {
+  position: relative;
+  margin-right: 16px;
+  height: 24px;
+
+  &.ar {
+    margin-right: initial;
+    margin-left: 16px;
+  }
+
+  @media screen and (max-width: 1555px) {
+    position: initial;
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.oo-phone-selector-btn {
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &.oo-phone-selector-btn--theme-white {
+    svg path {
+      fill: #ffffff;
+    }
+  }
+
+  &.oo-phone-selector-btn--open {
+    svg path {
+      fill: #ff6f3d;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background-color: transparent;
+    }
+  }
+}
+
+.oo-phone-selector-wrapper {
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(100% + 24px);
+  left: 0;
+  display: grid;
+  row-gap: 16px;
+  border-radius: 0 0 9px 9px;
+  margin: 0;
+  padding: 32px;
+  width: 255px;
+  background-color: #ffffff;
+  box-shadow: 0px 20px 50px 0px rgba(85, 85, 85, 0.15);
+
+  &:before {
+    display: block;
+    position: absolute;
+    width: 0;
+    content: "";
+    height: 1px;
+    background-color: #ff6f3d;
+    transition: width 0.2s ease-in-out;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+
+    @media screen and (max-width: 1024px) {
+      content: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #ff6f3d;
+    transition: width 0.2s ease-in-out;
+    z-index: 1;
+
+    @media screen and (max-width: 1024px) {
+      content: none;
+    }
+  }
+
+  &.ar {
+    left: initial;
+    right: 0;
+
+    @media screen and (max-width: 1555px) {
+      left: 0;
+      right: initial;
+    }
+  }
+
+  &.oo-phone-selector-wrapper--open {
+    &:before {
+      animation: menuLineLeft 0.3s forwards ease-in-out;
+    }
+
+    &:after {
+      animation: menuLineRight 0.3s forwards ease-in-out;
+    }
+  }
+
+  @media screen and (max-width: 1555px) {
+    top: 100%;
+    left: initial;
+    right: 0;
+  }
+}
+
+.oo-phone-selector-text {
+  padding: 4px 4px 0 0;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.oo-phone-selector-label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #333333;
+  text-decoration: none;
+}
+
+.oo-phone-selector-link {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  color: #ff6f3d;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

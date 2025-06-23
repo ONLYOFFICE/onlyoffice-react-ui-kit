@@ -1,5 +1,5 @@
 /*
- * (c) Copyright Ascensio System SIA 2024
+ * (c) Copyright Ascensio System SIA 2024-2025
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,6 +14,21 @@
  * limitations under the License.
  */
 
-export { OOAdventAnnounce } from "./components/OOAdventAnnounce/OOAdventAnnounce.jsx";
-export { OOHeader } from "./components/OOHeader/OOHeader.jsx";
-export { OOFooter } from "./components/OOFooter/OOFooter.jsx";
+import React from "react";
+import clsx from "clsx";
+import "./MenuLabel.scss";
+import Link from "next/link";
+import { ChevronRightIcon } from "../../../../../../icons/index.js";
+
+const MenuLabel = ({ className, children, href }) => {
+  return href ? (
+    <Link className={clsx("oo-menu-label", className)} href={href}>
+      <span>{children}</span>
+      <ChevronRightIcon />
+    </Link>
+  ) : (
+    <div className={clsx("oo-menu-label", className)}>{children}</div>
+  );
+};
+
+export { MenuLabel };

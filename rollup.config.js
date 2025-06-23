@@ -10,10 +10,10 @@ import postcssUrl from "postcss-url";
 const components = [
   {
     name: "OOAdventAnnounce",
-    input: "src/OOAdventAnnounce/OOAdventAnnounce.jsx",
+    input: "src/components/OOAdventAnnounce/OOAdventAnnounce.jsx",
   },
-  { name: "footer-menu", input: "src/footer-menu/footer-menu.jsx" },
-  { name: "OOHeader", input: "src/OOHeader/OOHeader.jsx" },
+  { name: "OOFooter", input: "src/components/OOFooter/OOFooter.jsx" },
+  { name: "OOHeader", input: "src/components/OOHeader/OOHeader.jsx" },
 ];
 
 export default components.map((component) => ({
@@ -52,7 +52,7 @@ export default components.map((component) => ({
     copy({
       targets: [
         {
-          src: `src/${component.name.toLowerCase()}/images/*`,
+          src: `src/components/${component.name.toLowerCase()}/images/*`,
           dest: `dist/${component.name}/images`,
         },
       ],

@@ -1,7 +1,7 @@
 {
   "name": "onlyoffice-react-ui-kit",
-  "version": "1.0.0",
-  "description": "ONLYOFFICE advent announce banner, header and footer menu components for React projects",
+  "version": "1.13.0",
+  "description": "ONLYOFFICE advent announce banner, header and footer components for React projects",
   "license": "Apache-2.0",
   "homepage": "https://www.onlyoffice.com",
   "author": "Ascensio System SIA <integration@onlyoffice.com> (https://www.onlyoffice.com)",
@@ -23,8 +23,8 @@
     "./advent-announce/css": "./dist/OOAdventAnnounce/index.css",
     "./header": "./dist/OOHeader/index.js",
     "./header/css": "./dist/OOHeader/index.css",
-    "./footer-menu": "./dist/footer-menu/index.js",
-    "./footer-menu/css": "./dist/footer-menu/index.css"
+    "./footer": "./dist/OOFooter/index.js",
+    "./footer/css": "./dist/OOFooter/index.css"
   },
   "scripts": {
     "clean": "rimraf dist",
