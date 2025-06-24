@@ -24,7 +24,14 @@ import { MenuLabel } from "../../sub-components/MenuLabel/index.jsx";
 import { MenuText } from "../../sub-components/MenuText/index.jsx";
 import { getLink } from "../../../../../../utils/getLink.jsx";
 
-const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
+const Products = ({
+  t,
+  locale,
+  getBaseUrl,
+  theme,
+  highlight,
+  registerCloseMenu,
+}) => {
   const [activeTab, setActiveTab] = useState(null);
 
   useEffect(() => {
@@ -41,6 +48,10 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
     };
   }, []);
 
+  registerCloseMenu(() => {
+    setActiveTab(null);
+  });
+
   return (
     <MenuItem
       id="oo-menu-item-btn-products"
@@ -52,6 +63,7 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
       heading={t("Products")}
       theme={theme}
       active={highlight?.buttonId}
+      registerCloseMenu={registerCloseMenu}
     >
       <button
         onClick={() => {

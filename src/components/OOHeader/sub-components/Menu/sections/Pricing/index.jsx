@@ -23,7 +23,14 @@ import { MenuLink } from "../../sub-components/MenuLink/index.jsx";
 import { MenuLabel } from "../../sub-components/MenuLabel/index.jsx";
 import { MenuText } from "../../sub-components/MenuText/index.jsx";
 
-const Pricing = ({ t, locale, getBaseUrl, theme, highlight }) => {
+const Pricing = ({
+  t,
+  locale,
+  getBaseUrl,
+  theme,
+  highlight,
+  registerCloseMenu,
+}) => {
   return (
     <MenuItem
       id="oo-menu-item-btn-pricing"
@@ -31,6 +38,7 @@ const Pricing = ({ t, locale, getBaseUrl, theme, highlight }) => {
       heading={t("Pricing")}
       theme={theme}
       active={highlight?.buttonId}
+      registerCloseMenu={registerCloseMenu}
     >
       <div className="oo-header-menu-mob-height">
         <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column">

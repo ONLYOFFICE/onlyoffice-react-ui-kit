@@ -18,7 +18,15 @@ import React, { useState, useEffect, useRef } from "react";
 import clsx from "clsx";
 import "./MenuItem.scss";
 
-const MenuItem = ({ id, className, heading, children, theme, active }) => {
+const MenuItem = ({
+  id,
+  className,
+  heading,
+  children,
+  theme,
+  active,
+  registerCloseMenu,
+}) => {
   const [showMenu, setShowMenu] = useState(false);
   const listRef = useRef(null);
 
@@ -51,6 +59,10 @@ const MenuItem = ({ id, className, heading, children, theme, active }) => {
       document.body.classList.remove("oo-header-nav--overflow-hidden");
     };
   }, [showMenu]);
+
+  registerCloseMenu(() => {
+    setShowMenu(false);
+  });
 
   const handleKeyDown = (e) => {
     if (e.key === "Tab") {

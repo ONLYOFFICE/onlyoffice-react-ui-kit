@@ -21,7 +21,14 @@ import { MenuItem } from "../../sub-components/MenuItem/index.jsx";
 import { MenuLink } from "../../sub-components/MenuLink/index.jsx";
 import { MenuLabel } from "../../sub-components/MenuLabel/index.jsx";
 
-const Enterprise = ({ t, locale, getBaseUrl, theme, highlight }) => {
+const Enterprise = ({
+  t,
+  locale,
+  getBaseUrl,
+  theme,
+  highlight,
+  registerCloseMenu,
+}) => {
   return (
     <MenuItem
       id="oo-menu-item-btn-enterprise"
@@ -29,6 +36,7 @@ const Enterprise = ({ t, locale, getBaseUrl, theme, highlight }) => {
       heading={t("Enterprise")}
       theme={theme}
       active={highlight?.buttonId}
+      registerCloseMenu={registerCloseMenu}
     >
       <div className="oo-header-menu-mob-height">
         <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column">

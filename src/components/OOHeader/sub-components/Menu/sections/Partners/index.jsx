@@ -22,7 +22,14 @@ import { MenuItem } from "../../sub-components/MenuItem/index.jsx";
 import { MenuLink } from "../../sub-components/MenuLink/index.jsx";
 import { MenuText } from "../../sub-components/MenuText/index.jsx";
 
-const Partners = ({ t, locale, getBaseUrl, theme, highlight }) => {
+const Partners = ({
+  t,
+  locale,
+  getBaseUrl,
+  theme,
+  highlight,
+  registerCloseMenu,
+}) => {
   return (
     <MenuItem
       id="oo-menu-item-btn-partners"
@@ -30,6 +37,7 @@ const Partners = ({ t, locale, getBaseUrl, theme, highlight }) => {
       heading={t("Partners")}
       theme={theme}
       active={highlight?.buttonId}
+      registerCloseMenu={registerCloseMenu}
     >
       <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column oo-header-menu-mob-height-without-header">
         <div className="oo-header-menu-item">

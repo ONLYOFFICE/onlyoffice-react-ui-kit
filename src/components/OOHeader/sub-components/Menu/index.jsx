@@ -24,7 +24,14 @@ import { Pricing } from "./sections/Pricing/index.jsx";
 import { Partners } from "./sections/Partners/index.jsx";
 import { Resources } from "./sections/Resources/index.jsx";
 
-const Menu = ({ t, locale, getBaseUrl, theme, highlight }) => {
+const Menu = ({
+  t,
+  locale,
+  getBaseUrl,
+  theme,
+  highlight,
+  registerCloseMenu,
+}) => {
   return (
     <div className={clsx("oo-header-menu", locale)}>
       <Products
@@ -33,6 +40,7 @@ const Menu = ({ t, locale, getBaseUrl, theme, highlight }) => {
         getBaseUrl={getBaseUrl}
         theme={theme}
         highlight={highlight}
+        registerCloseMenu={registerCloseMenu}
       />
       <Enterprise
         t={t}
@@ -40,6 +48,7 @@ const Menu = ({ t, locale, getBaseUrl, theme, highlight }) => {
         getBaseUrl={getBaseUrl}
         theme={theme}
         highlight={highlight}
+        registerCloseMenu={registerCloseMenu}
       />
       <Developers
         t={t}
@@ -47,6 +56,7 @@ const Menu = ({ t, locale, getBaseUrl, theme, highlight }) => {
         getBaseUrl={getBaseUrl}
         theme={theme}
         highlight={highlight}
+        registerCloseMenu={registerCloseMenu}
       />
       <Pricing
         t={t}
@@ -54,6 +64,7 @@ const Menu = ({ t, locale, getBaseUrl, theme, highlight }) => {
         getBaseUrl={getBaseUrl}
         theme={theme}
         highlight={highlight}
+        registerCloseMenu={registerCloseMenu}
       />
       <Partners
         t={t}
@@ -61,6 +72,7 @@ const Menu = ({ t, locale, getBaseUrl, theme, highlight }) => {
         getBaseUrl={getBaseUrl}
         theme={theme}
         highlight={highlight}
+        registerCloseMenu={registerCloseMenu}
       />
       <Resources
         t={t}
@@ -68,6 +80,7 @@ const Menu = ({ t, locale, getBaseUrl, theme, highlight }) => {
         getBaseUrl={getBaseUrl}
         theme={theme}
         highlight={highlight}
+        registerCloseMenu={registerCloseMenu}
       />
     </div>
   );

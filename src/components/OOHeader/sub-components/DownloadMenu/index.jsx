@@ -22,7 +22,14 @@ import { MenuLabel } from "../Menu/sub-components/MenuLabel/index.jsx";
 import { MenuLink } from "../Menu/sub-components/MenuLink/index.jsx";
 import { MenuText } from "../Menu/sub-components/MenuText/index.jsx";
 
-const DownloadMenu = ({ t, locale, getBaseUrl, hasSearch, hasPhone }) => {
+const DownloadMenu = ({
+  t,
+  locale,
+  getBaseUrl,
+  hasSearch,
+  hasPhone,
+  registerCloseMenu,
+}) => {
   return (
     <MenuItem
       id="oo-menu-item-btn-download"
@@ -38,6 +45,7 @@ const DownloadMenu = ({ t, locale, getBaseUrl, hasSearch, hasPhone }) => {
           : null,
       )}
       heading={t("Download")}
+      registerCloseMenu={registerCloseMenu}
     >
       <div className="oo-header-menu-item">
         <MenuLabel className="oo-header-menu-mb-16">{t("Download")}</MenuLabel>

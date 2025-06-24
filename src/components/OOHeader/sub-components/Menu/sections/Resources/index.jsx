@@ -24,7 +24,14 @@ import { MenuLabel } from "../../sub-components/MenuLabel/index.jsx";
 import { MenuText } from "../../sub-components/MenuText/index.jsx";
 import { getLink } from "../../../../../../utils/getLink.jsx";
 
-const Resources = ({ t, locale, getBaseUrl, theme, highlight }) => {
+const Resources = ({
+  t,
+  locale,
+  getBaseUrl,
+  theme,
+  highlight,
+  registerCloseMenu,
+}) => {
   return (
     <MenuItem
       id="oo-menu-item-btn-resources"
@@ -32,6 +39,7 @@ const Resources = ({ t, locale, getBaseUrl, theme, highlight }) => {
       heading={t("Resources")}
       theme={theme}
       active={highlight?.buttonId}
+      registerCloseMenu={registerCloseMenu}
     >
       <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column oo-header-menu-mob-height-without-header">
         <div className="oo-header-menu-item oo-header-menu-item--with-border">

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import clsx from "clsx";
 import "./OOHeader.scss";
 import locales from "./locales/index.jsx";
@@ -44,6 +44,7 @@ const OOHeader = ({
     locales.en[key] ||
     key;
 
+  const closeMenusRef = useRef([]);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -87,11 +88,16 @@ const OOHeader = ({
       document
         .querySelector(".oo-advent-announce")
         ?.classList.remove("oo-advent-announce--active");
+      closeMenusRef.current.forEach((closeMenu) => closeMenu());
     }
 
     if (search?.show && showSearch && search?.variant === "main") {
       setShowSearch(false);
     }
+  };
+
+  const registerCloseMenu = (fn) => {
+    closeMenusRef.current.push(fn);
   };
 
   return (
@@ -164,6 +170,7 @@ const OOHeader = ({
               getBaseUrl={getBaseUrl}
               theme={theme}
               highlight={highlight}
+              registerCloseMenu={registerCloseMenu}
             />
 
             <div className={clsx("oo-header-btns", locale)}>
@@ -173,6 +180,7 @@ const OOHeader = ({
                 getBaseUrl={getBaseUrl}
                 hasSearch={search?.show}
                 hasPhone={hasPhone}
+                registerCloseMenu={registerCloseMenu}
               />
               <Link
                 className={clsx(
