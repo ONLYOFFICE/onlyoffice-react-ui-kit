@@ -17,7 +17,7 @@
 import React, { useRef, useEffect } from "react";
 import clsx from "clsx";
 import "./SearchSelector.scss";
-import { SearchIcon } from "../../../../icons/index.js";
+import { SearchIcon, SearchGrayIcon } from "../../../../icons/index.js";
 
 const SearchSelector = ({
   t,
@@ -42,7 +42,7 @@ const SearchSelector = ({
         !searchRef.current.contains(e.target)
       ) {
         setShowSearch(false);
-        setShowOverlay(false);
+        variant === "main" && setShowOverlay(false);
 
         if (window.innerWidth < 1024) {
           document.documentElement.style.overflow = "";
@@ -64,7 +64,7 @@ const SearchSelector = ({
     }, 0);
 
     if (window.innerWidth < 1024) {
-      setShowOverlay(true);
+      variant === "main" && setShowOverlay(true);
       document.documentElement.style.overflow = "hidden";
     }
   };
@@ -148,7 +148,7 @@ const SearchSelector = ({
             theme === "white" && "oo-header-search-btn--theme-white",
           )}
         >
-          <SearchIcon />
+          {variant === "blog" ? <SearchGrayIcon /> : <SearchIcon />}
         </button>
       )}
     </>

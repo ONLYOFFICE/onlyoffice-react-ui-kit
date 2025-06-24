@@ -15,6 +15,45 @@
  */
 
 .oo-advent-announce {
+  &.oo-advent-announce--active {
+    overflow: hidden;
+
+    .oo-advent-announce-wrapper {
+      @media screen and (max-width: 1024px) {
+        transform: translate3d(429px, 0, 0);
+        transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+      }
+
+      @media screen and (max-width: 592px) {
+        transform: translate3d(calc(-48px + 100vw), 0, 0);
+      }
+
+      @media screen and (max-width: 375px) {
+        transform: translate3d(calc(-32px + 100vw), 0, 0);
+      }
+    }
+  }
+
+  &.ar {
+    &.oo-advent-announce--active {
+      .oo-advent-announce-wrapper {
+        @media screen and (max-width: 1024px) {
+          transform: translate3d(-429px, 0, 0);
+        }
+
+        @media screen and (max-width: 592px) {
+          transform: translate3d(calc(48px - 100vw), 0, 0);
+        }
+
+        @media screen and (max-width: 375px) {
+          transform: translate3d(calc(32px - 100vw), 0, 0);
+        }
+      }
+    }
+  }
+}
+
+.oo-advent-announce-wrapper {
   position: relative;
   display: block;
   width: 100%;
@@ -28,35 +67,9 @@
   background-repeat: no-repeat;
   background-position-x: calc(50% - 251px);
 
-  &.oo-advent-announce--active {
-    @media screen and (max-width: 1024px) {
-      transform: translate3d(429px, 0, 0);
-      transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
-    }
-
-    @media screen and (max-width: 592px) {
-      transform: translate3d(calc(-48px + 100vw), 0, 0);
-    }
-
-    @media screen and (max-width: 375px) {
-      transform: translate3d(calc(-32px + 100vw), 0, 0);
-    }
-  }
-
   &.ar {
-    &.oo-advent-announce--active {
-      @media screen and (max-width: 1024px) {
-        transform: translate3d(-429px, 0, 0);
-      }
-
-      @media screen and (max-width: 592px) {
-        transform: translate3d(calc(48px - 100vw), 0, 0);
-      }
-
-      @media screen and (max-width: 375px) {
-        transform: translate3d(calc(32px - 100vw), 0, 0);
-      }
-    }
+    direction: initial;
+    unicode-bidi: initial;
   }
 
   &.de {

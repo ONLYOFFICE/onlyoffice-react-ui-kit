@@ -24,8 +24,14 @@
     margin-right: initial;
     margin-left: 8px;
 
+    &.oo-header-search--variant-main {
+      @media screen and (max-width: 1024px) {
+        margin-left: initial;
+      }
+    }
+
     @media screen and (max-width: 1024px) {
-      margin-left: initial;
+      margin-left: 16px;
     }
   }
 
@@ -34,13 +40,14 @@
       position: absolute;
       top: 12px;
       left: 50%;
+      margin-right: 16px;
       width: calc(100% - 32px);
       transform: translate(-50%);
     }
   }
 
   @media screen and (max-width: 1024px) {
-    margin-right: initial;
+    margin-right: 16px;
   }
 }
 

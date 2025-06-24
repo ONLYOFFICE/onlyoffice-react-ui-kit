@@ -73,6 +73,218 @@
     }
   }
 
+  &.oo-menu-item--position-1 {
+    &.en,
+    &.cs,
+    &.el,
+    &.hi,
+    &.hy {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1328px) {
+          top: 100%;
+          left: initial;
+          right: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+          left: 0;
+          right: initial;
+        }
+      }
+
+      @media screen and (max-width: 1328px) {
+        position: initial;
+      }
+    }
+
+    &.fr {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1260px) {
+          top: 100%;
+          left: initial;
+          right: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+          left: 0;
+          right: initial;
+        }
+      }
+
+      @media screen and (max-width: 1260px) {
+        position: initial;
+      }
+    }
+
+    &.pt,
+    &.pt-br {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1280px) {
+          top: 100%;
+          left: initial;
+          right: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+          left: 0;
+          right: initial;
+        }
+      }
+
+      @media screen and (max-width: 1280px) {
+        position: initial;
+      }
+    }
+
+    &.ru {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1408px) {
+          top: 100%;
+          left: initial;
+          right: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+          left: 0;
+          right: initial;
+        }
+      }
+
+      @media screen and (max-width: 1408px) {
+        position: initial;
+      }
+    }
+
+    &.zh,
+    &.zh-hans {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1480px) {
+          top: 100%;
+          left: initial;
+          right: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+          left: 0;
+          right: initial;
+        }
+      }
+
+      @media screen and (max-width: 1480px) {
+        position: initial;
+      }
+    }
+
+    &.ar {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1328px) {
+          top: 100%;
+          right: initial;
+          left: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+        }
+      }
+
+      @media screen and (max-width: 1328px) {
+        position: initial;
+      }
+    }
+  }
+
+  &.oo-menu-item--position-2 {
+    &.zh,
+    &.zh-hans {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1322px) {
+          top: 100%;
+          left: initial;
+          right: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+          left: 0;
+          right: initial;
+        }
+      }
+
+      @media screen and (max-width: 1322px) {
+        position: initial;
+      }
+    }
+  }
+
+  &.oo-menu-item--position-3 {
+    &.cs {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1260px) {
+          top: 100%;
+          left: initial;
+          right: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+          left: 0;
+          right: initial;
+        }
+      }
+
+      @media screen and (max-width: 1260px) {
+        position: initial;
+      }
+    }
+
+    &.ru {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1326px) {
+          top: 100%;
+          left: initial;
+          right: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+          left: 0;
+          right: initial;
+        }
+      }
+
+      @media screen and (max-width: 1326px) {
+        position: initial;
+      }
+    }
+
+    &.zh,
+    &.zh-hans {
+      .oo-menu-item-wrapper {
+        @media screen and (max-width: 1400px) {
+          top: 100%;
+          left: initial;
+          right: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+          top: 0;
+          left: 0;
+          right: initial;
+        }
+      }
+
+      @media screen and (max-width: 1400px) {
+        position: initial;
+      }
+    }
+  }
+
   .oo-header-menu-item {
     min-width: 352px;
     max-width: 352px;

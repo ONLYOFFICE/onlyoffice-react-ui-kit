@@ -329,3 +329,9 @@
     display: none;
   }
 }
+
+.oo-menu-item-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 24px);
+  gap: 8px;
+}

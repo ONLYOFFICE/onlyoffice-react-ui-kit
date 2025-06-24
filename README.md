@@ -57,22 +57,19 @@ function MyApp() {
     { key: "es", shortKey: "es", name: "Español", href: "/" },
     { key: "fr", shortKey: "fr", name: "Français", href: "/" },
     { key: "hi", shortKey: "hi", name: "हिन्दी", href: "/" },
-    { key: "hy", shortKey: "hy",name: "Հայերեն", href: "/" },
+    { key: "hy", shortKey: "hy", name: "Հայերեն", href: "/" },
     { key: "it", shortKey: "it", name: "Italiano", href: "/" },
     { key: "ja", shortKey: "ja", key: "ja", name: "日本語", href: "/" },
     { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
     { key: "pt-br", shortKey: "pt", name: "Português", href: "/" },
     { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
-    { key: "sr", shortKey: "sr",name: "Srpski", href: "/" },
+    { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
     { key: "zh-hans", shortKey: "zh", name: "中文", href: "/" },
   ];
 
   return (
     <div>
-      <OOHeader
-        locale="en"
-        languages={languages}
-      />
+      <OOHeader locale="en" languages={languages} />
     </div>
   );
 }
@@ -90,7 +87,7 @@ function MyApp() {
 | `borderColor` | Sets the bottom border color of the header. | `string` | `transparent` |
 | `backgroundColor` | Sets the background color of the header. | `string` | `transparent` |
 | `theme` | Applies a predefined visual theme. Currently only "white" is supported. | `string` | `undefined` |
-| `base` | Base configuration for internal links. Should be an object like { url: string, withAspx: boolean }. | `object` | `undefined` |
+| `base` | Base configuration for internal links. Should be an object like { url: string, withAspx: boolean, localePathMap: object }. | `object` | `undefined` |
 
 ### OOFooter
 
@@ -109,13 +106,13 @@ function MyApp() {
     { shortKey: "es", name: "Español", href: "/" },
     { shortKey: "fr", name: "Français", href: "/" },
     { shortKey: "hi", name: "हिन्दी", href: "/" },
-    { shortKey: "hy",name: "Հայերեն", href: "/" },
+    { shortKey: "hy", name: "Հայերեն", href: "/" },
     { shortKey: "it", name: "Italiano", href: "/" },
     { shortKey: "ja", key: "ja", name: "日本語", href: "/" },
     { shortKey: "nl", name: "Nederlands", href: "/" },
     { shortKey: "pt", name: "Português", href: "/" },
     { shortKey: "ru", name: "Русский", href: "/" },
-    { shortKey: "sr",name: "Srpski", href: "/" },
+    { shortKey: "sr", name: "Srpski", href: "/" },
     { shortKey: "zh", name: "中文", href: "/" },
   ];
 
@@ -138,7 +135,7 @@ function MyApp() {
 | ------------- | ------------- | ------------- | ------------- |
 | `locale` | Locale that should be used. Supported values: `"en"`, `"fr"`, `"de"`, `"es"`, `"pt"`, `"pt-br"`, `"it"`, `"cs"`, `"ja"`, `"zh"`, `"zh-hans"`, `"el"`, `"hi"`, `"ar"`, `"sr"`, `"hy"`, `"ru"`, `"nl"`. | `string` | `"en"` |
 | `languages` | Controls the visibility and content of the language selector. Should contain { languages: [ [key: string, shortKey: string, name: string, href: string], ... ] }. | `object` | `undefined` |
-| `base` | Base configuration for internal links. Should be an object like { url: string, withAspx: boolean }. | `object` | `undefined` |
+| `base` | Base configuration for internal links. Should be an object like { url: string, withAspx: boolean, localePathMap: object }. | `object` | `undefined` |
 | `mailApiUrl` | The URL for the email subscription API endpoint. Required for submitting the form data from the modal. | `string` | `null` |
 | `mailApiType` | Type identifier for the email API | `number` | `null` |
 

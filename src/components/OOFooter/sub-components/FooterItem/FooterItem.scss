@@ -88,6 +88,10 @@
         color: #ff6f3d;
       }
     }
+
+    @media screen and (max-width: 600px) {
+      pointer-events: none;
+    }
   }
 
   &.oo-footer-item-heading--active {

@@ -26,13 +26,7 @@ import { LanguageSelector } from "./sub-components/LanguageSelector/index.jsx";
 import { HippaIcon, GdprIcon, IsoIcon, HdsIcon } from "../../icons/index.js";
 import { getLink } from "../../utils/getLink.jsx";
 
-const OOFooter = ({
-  locale,
-  languages,
-  base,
-  mailApiUrl,
-  mailApiType,
-}) => {
+const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
   const t = (key) =>
     locales[locale === "zh-hans" ? "zh" : locale === "pt-br" ? "pt" : locale][
       key
@@ -40,7 +34,8 @@ const OOFooter = ({
     locales.en[key] ||
     key;
 
-  const getBaseUrl = (path) => getUrl(locale, path, base?.url, base?.withAspx);
+  const getBaseUrl = (path) =>
+    getUrl(locale, path, base?.url, base?.withAspx, base?.localePathMap);
 
   return (
     <footer className="oo-footer">
@@ -370,10 +365,7 @@ const OOFooter = ({
             />
           </div>
           <div className="oo-footer-copyright">
-            <LanguageSelector
-              locale={locale}
-              languages={languages}
-            />
+            <LanguageSelector locale={locale} languages={languages} />
             <div className={clsx("oo-footer-copyright-block", locale)}>
               <span>
                 © Ascensio System SIA 2009-{new Date().getFullYear()}

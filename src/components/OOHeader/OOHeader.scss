@@ -230,11 +230,19 @@
         @media screen and (max-width: 1130px) {
           padding: 25px 5px;
         }
+
+        @media screen and (max-width: 1024px) {
+          padding: 16px 40px 16px 24px;
+        }
       }
 
       .oo-header-btns {
         @media screen and (max-width: 1040px) {
           margin: 0 8px 0 16px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          margin: auto 0 0;
         }
       }
     }
@@ -243,6 +251,10 @@
       .oo-header-menu .oo-menu-item-btn {
         @media screen and (max-width: 1060px) {
           padding: 25px 5px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          padding: 16px 40px 16px 24px;
         }
       }
     }
@@ -403,6 +415,12 @@
   }
 
   &.oo-header-nav--overflow-hidden {
+    .oo-menu-item-btn {
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+
     @media screen and (max-width: 1024px) {
       overflow-y: hidden;
     }

@@ -22,11 +22,21 @@ import { MenuLabel } from "../Menu/sub-components/MenuLabel/index.jsx";
 import { MenuLink } from "../Menu/sub-components/MenuLink/index.jsx";
 import { MenuText } from "../Menu/sub-components/MenuText/index.jsx";
 
-const DownloadMenu = ({ t, locale, getBaseUrl }) => {
+const DownloadMenu = ({ t, locale, getBaseUrl, hasSearch, hasPhone }) => {
   return (
     <MenuItem
       id="oo-menu-item-btn-download"
-      className={clsx("oo-menu-item--download", locale)}
+      className={clsx(
+        "oo-menu-item--download",
+        locale,
+        !hasSearch && !hasPhone
+          ? "oo-menu-item--position-1"
+          : hasSearch && hasPhone
+          ? "oo-menu-item--position-2"
+          : hasSearch || hasPhone
+          ? "oo-menu-item--position-3"
+          : null,
+      )}
       heading={t("Download")}
     >
       <div className="oo-header-menu-item">

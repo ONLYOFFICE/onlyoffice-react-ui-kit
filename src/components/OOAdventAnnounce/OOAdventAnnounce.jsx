@@ -29,16 +29,21 @@ const OOAdventAnnounce = ({ locale }) => {
     key;
 
   return (
-    <a className="oo-advent-announce" href={t("AdventAnnounceLink")}>
-      <div className="oo-advent-announce-text">
-        <div className="oo-advent-announce-text-desktop">
-          {parse(t("AdventAnnounceDesktop"))}
+    <div className={clsx("oo-advent-announce", locale)}>
+      <a
+        className={clsx("oo-advent-announce-wrapper", locale)}
+        href={t("AdventAnnounceLink")}
+      >
+        <div className="oo-advent-announce-text">
+          <div className="oo-advent-announce-text-desktop">
+            {parse(t("AdventAnnounceDesktop"))}
+          </div>
+          <div className={clsx("oo-advent-announce-text-mobile", locale)}>
+            {parse(t("AdventAnnounceMobile"))}
+          </div>
         </div>
-        <div className={clsx("oo-advent-announce-text-mobile", locale)}>
-          {parse(t("AdventAnnounceMobile"))}
-        </div>
-      </div>
-    </a>
+      </a>
+    </div>
   );
 };
 

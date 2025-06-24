@@ -58,26 +58,20 @@ const Template = (args) => {
     { key: "es", shortKey: "es", name: "Español", href: "/" },
     { key: "fr", shortKey: "fr", name: "Français", href: "/" },
     { key: "hi", shortKey: "hi", name: "हिन्दी", href: "/" },
-    { key: "hy", shortKey: "hy",name: "Հայերեն", href: "/" },
+    { key: "hy", shortKey: "hy", name: "Հայերեն", href: "/" },
     { key: "it", shortKey: "it", name: "Italiano", href: "/" },
-    { key: "ja", shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+    { key: "ja", shortKey: "ja", name: "日本語", href: "/" },
     { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
     { key: "pt-br", shortKey: "pt", name: "Português", href: "/" },
     { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
-    { key: "sr", shortKey: "sr",name: "Srpski", href: "/" },
+    { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
     { key: "zh-hans", shortKey: "zh", name: "中文", href: "/" },
   ];
 
-  return (
-    <OOHeader
-      languages={languages}
-      {...args}
-    />
-  );
+  return <OOHeader languages={languages} {...args} />;
 };
 
 export const Default = Template.bind({});
 Default.args = {
   locale: "en",
 };
-

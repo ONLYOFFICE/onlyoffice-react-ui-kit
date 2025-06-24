@@ -12,10 +12,19 @@ const links = {
   marketplace: {
     base: `https://www.onlyoffice.com/app-directory`,
     paths: {
+      en: "",
       pt: "",
       it: "",
       cs: "",
       nl: "",
+      hy: "",
+      el: "",
+      hi: "",
+      ar: "",
+      sr: "",
+      hy: "",
+      "pt-br": "",
+      "zh-hans": "/zh",
     },
   },
   templates: {
@@ -28,9 +37,9 @@ const links = {
       hy: "",
       cs: "",
       ru: "",
+      nl: "",
       "zh-hans": "/zh",
       "pt-br": "/pt",
-      nl: "",
     },
   },
 };

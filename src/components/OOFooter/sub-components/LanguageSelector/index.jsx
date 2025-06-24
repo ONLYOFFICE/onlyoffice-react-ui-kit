@@ -59,12 +59,7 @@ const LanguageSelector = ({ locale, languages }) => {
           isOpen && "oo-footer-language-selector-btn--active",
         )}
       >
-        <span>
-          {
-            languages.find((lang) => lang.key === locale)
-              ?.name
-          }
-        </span>
+        <span>{languages.find((lang) => lang.shortKey === locale)?.name}</span>
 
         <ChevronDownIcon />
       </button>

@@ -48,7 +48,8 @@ const OOHeader = ({
   const [isMobile, setIsMobile] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
-  const getBaseUrl = (path) => getUrl(locale, path, base?.url, base?.withAspx);
+  const getBaseUrl = (path) =>
+    getUrl(locale, path, base?.url, base?.withAspx, base?.localePathMap);
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,7 +59,9 @@ const OOHeader = ({
         setIsMobile(false);
         setOpenMobileMenu(false);
         document.documentElement.style.overflow = "";
-        document.querySelector(".oo-advent-announce")?.classList.remove("oo-advent-announce--active");
+        document
+          .querySelector(".oo-advent-announce")
+          ?.classList.remove("oo-advent-announce--active");
         setShowOverlay(false);
       }
     };
@@ -68,7 +71,9 @@ const OOHeader = ({
 
     return () => {
       document.documentElement.style.overflow = "";
-      document.querySelector(".oo-advent-announce")?.classList.remove("oo-advent-announce--active");
+      document
+        .querySelector(".oo-advent-announce")
+        ?.classList.remove("oo-advent-announce--active");
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -79,10 +84,12 @@ const OOHeader = ({
     if (openMobileMenu) {
       setOpenMobileMenu(false);
       document.documentElement.style.overflow = "";
-      document.querySelector(".oo-advent-announce")?.classList.remove("oo-advent-announce--active");
+      document
+        .querySelector(".oo-advent-announce")
+        ?.classList.remove("oo-advent-announce--active");
     }
 
-    if (search?.show && showSearch && search.variant === "main") {
+    if (search?.show && showSearch && search?.variant === "main") {
       setShowSearch(false);
     }
   };
@@ -103,7 +110,9 @@ const OOHeader = ({
             setOpenMobileMenu(true);
             setShowOverlay(true);
             document.documentElement.style.overflow = "hidden";
-            document.querySelector(".oo-advent-announce")?.classList.add("oo-advent-announce--active");
+            document
+              .querySelector(".oo-advent-announce")
+              ?.classList.add("oo-advent-announce--active");
           }}
           className={clsx(
             "oo-header-hamburger",
@@ -129,9 +138,13 @@ const OOHeader = ({
             "oo-header-logo",
             locale,
             theme === "white" && "oo-header-logo--theme-white",
-            !(search || hasPhone) && "oo-header-logo--mobile-center",
+            !search?.show && "oo-header-logo--mobile-center",
           )}
-          href={base?.url || "/"}
+          href={`${base.url}${
+            locale === "en" || base.localePathMap?.[locale] === ""
+              ? ""
+              : `/${base.localePathMap?.[locale] ?? locale}`
+          }`}
         ></Link>
 
         {!showSearch && (
@@ -152,7 +165,13 @@ const OOHeader = ({
             />
 
             <div className={clsx("oo-header-btns", locale)}>
-              <DownloadMenu t={t} locale={locale} getBaseUrl={getBaseUrl} />
+              <DownloadMenu
+                t={t}
+                locale={locale}
+                getBaseUrl={getBaseUrl}
+                hasSearch={search?.show}
+                hasPhone={hasPhone}
+              />
               <Link
                 className={clsx(
                   "oo-header-btn",
@@ -185,7 +204,7 @@ const OOHeader = ({
             <SearchSelector
               t={t}
               locale={locale}
-              variant={search.variant}
+              variant={search?.variant}
               value={search.value}
               showSearch={showSearch}
               setShowSearch={setShowSearch}

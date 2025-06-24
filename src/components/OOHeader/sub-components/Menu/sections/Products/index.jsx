@@ -223,10 +223,9 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
               {t("DocSpaceConnectors")}
             </MenuLink>
 
-            <div className="oo-header-menu-d-flex">
+            <div className="oo-menu-item-icons">
               <MenuLink
                 id="oo-menu-link-docspace-zapier"
-                className="oo-header-menu-mr-8"
                 href={getBaseUrl("/office-for-zapier")}
                 icon="zapier"
                 variant="icon"
@@ -234,7 +233,6 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
               />
               <MenuLink
                 id="oo-menu-link-docspace-zoom"
-                className="oo-header-menu-mr-8"
                 href={getBaseUrl("/office-for-zoom")}
                 icon="zoom"
                 variant="icon"
@@ -242,7 +240,6 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
               />
               <MenuLink
                 id="oo-menu-link-docspace-wordpress"
-                className="oo-header-menu-mr-8"
                 href={getBaseUrl("/office-for-wordpress")}
                 icon="wordpress"
                 variant="icon"
@@ -250,7 +247,6 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
               />
               <MenuLink
                 id="oo-menu-link-docspace-drupal"
-                className="oo-header-menu-mr-8"
                 href={getBaseUrl("/office-for-drupal")}
                 icon="drupal"
                 variant="icon"
@@ -258,7 +254,6 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
               />
               <MenuLink
                 id="oo-menu-link-docspace-pipedrive"
-                className="oo-header-menu-mr-8"
                 href={getBaseUrl("/office-for-pipedrive")}
                 icon="pipedrive"
                 variant="icon"
@@ -266,7 +261,6 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
               />
               <MenuLink
                 id="oo-menu-link-docspace-moodle"
-                className="oo-header-menu-mr-8"
                 href={getBaseUrl("/office-for-moodle")}
                 icon="moodle"
                 variant="icon"
@@ -393,67 +387,59 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
               {t("DocsConnectors")}
             </MenuLink>
 
-            <div className="oo-header-menu-d-flex">
+            <div className="oo-menu-item-icons">
               {locale === "zh" || locale === "zh-hans" ? (
                 <>
                   <MenuLink
                     id="oo-menu-link-docs-alfresco"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-alfresco")}
                     icon="alfresco"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-confluence"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-confluence")}
                     icon="confluence"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-moodle"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-moodle")}
                     icon="moodle"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-nextcloud"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-nextcloud")}
                     icon="nextcloud"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-odoo"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-odoo")}
                     icon="odoo"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-seafile"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/all-connectors#seafile")}
                     icon="seafile"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-wordpress"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-wordpress")}
                     icon="wordpress"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-telegram"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-telegram")}
                     icon="telegram"
                     variant="icon"
                   />
                   <MenuLink
-                    id="oo-menu-link-docs-see-more"
+                    id="oo-menu-link-docs-see"
                     href={getBaseUrl("/all-connectors")}
                     icon="see-more"
                     variant="icon"
@@ -463,56 +449,48 @@ const Products = ({ t, locale, getBaseUrl, theme, highlight }) => {
                 <>
                   <MenuLink
                     id="oo-menu-link-docs-box"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-box")}
                     icon="box"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-confluence"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-confluence")}
                     icon="confluence"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-dropbox"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-dropbox")}
                     icon="dropbox"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-moodle"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-moodle")}
                     icon="moodle"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-nextcloud"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-nextcloud")}
                     icon="nextcloud"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-odoo"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-odoo")}
                     icon="odoo"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-owncloud"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-owncloud")}
                     icon="owncloud"
                     variant="icon"
                   />
                   <MenuLink
                     id="oo-menu-link-docs-telegram"
-                    className="oo-header-menu-mr-8"
                     href={getBaseUrl("/office-for-telegram")}
                     icon="telegram"
                     variant="icon"

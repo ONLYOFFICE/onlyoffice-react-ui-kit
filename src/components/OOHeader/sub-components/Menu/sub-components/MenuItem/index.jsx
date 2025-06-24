@@ -20,7 +20,6 @@ import "./MenuItem.scss";
 
 const MenuItem = ({ id, className, heading, children, theme, active }) => {
   const [showMenu, setShowMenu] = useState(false);
-
   const listRef = useRef(null);
 
   useEffect(() => {

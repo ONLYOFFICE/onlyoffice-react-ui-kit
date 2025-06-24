@@ -58,13 +58,13 @@ const Template = (args) => {
     { shortKey: "es", name: "Español", href: "/" },
     { shortKey: "fr", name: "Français", href: "/" },
     { shortKey: "hi", name: "हिन्दी", href: "/" },
-    { shortKey: "hy",name: "Հայերեն", href: "/" },
+    { shortKey: "hy", name: "Հայերեն", href: "/" },
     { shortKey: "it", name: "Italiano", href: "/" },
-    { shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+    { shortKey: "ja", name: "日本語", href: "/" },
     { shortKey: "nl", name: "Nederlands", href: "/" },
     { shortKey: "pt", name: "Português", href: "/" },
     { shortKey: "ru", name: "Русский", href: "/" },
-    { shortKey: "sr",name: "Srpski", href: "/" },
+    { shortKey: "sr", name: "Srpski", href: "/" },
     { shortKey: "zh", name: "中文", href: "/" },
   ];
 
@@ -74,6 +74,16 @@ const Template = (args) => {
       base={{
         url: "https://www.onlyoffice.com",
         withAspx: true,
+        localePathMap: {
+          en: "",
+          el: "",
+          hi: "",
+          ar: "",
+          sr: "",
+          hy: "",
+          "zh-hans": "zh",
+          "pt-br": "pt",
+        },
       }}
       {...args}
     />
