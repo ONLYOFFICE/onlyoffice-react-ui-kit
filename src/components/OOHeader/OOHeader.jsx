@@ -140,10 +140,12 @@ const OOHeader = ({
             theme === "white" && "oo-header-logo--theme-white",
             !search?.show && "oo-header-logo--mobile-center",
           )}
-          href={`${base.url}${
-            locale === "en" || base.localePathMap?.[locale] === ""
-              ? ""
-              : `/${base.localePathMap?.[locale] ?? locale}`
+          href={`${base?.url ?? ""}${
+            base?.localePathMap
+              ? locale === "en" || base.localePathMap?.[locale] === ""
+                ? ""
+                : `/${base.localePathMap?.[locale] ?? locale}`
+              : "/"
           }`}
         ></Link>
 
