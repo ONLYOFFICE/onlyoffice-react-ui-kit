@@ -1,0 +1,77 @@
+/*
+ * (c) Copyright Ascensio System SIA 2024-2025
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import React, { useState } from "react";
+import "../../styles.scss";
+import { OOHeader } from "./OOHeader";
+
+export default {
+  title: "Header",
+  component: OOHeader,
+  argTypes: {
+    locale: {
+      options: [
+        "ar",
+        "cs",
+        "de",
+        "el",
+        "en",
+        "es",
+        "fr",
+        "hi",
+        "hy",
+        "it",
+        "ja",
+        "pt",
+        "pt-br",
+        "ru",
+        "sr",
+        "zh",
+        "zh-hans",
+        "nl",
+      ],
+      control: { type: "select" },
+    },
+  },
+};
+
+const Template = (args) => {
+  const languages = [
+    { key: "ar", shortKey: "ar", name: "عربي", href: "/" },
+    { key: "cs", shortKey: "cs", name: "Čeština", href: "/" },
+    { key: "de", shortKey: "de", name: "Deutsch", href: "/" },
+    { key: "el", shortKey: "el", name: "Ελληνικά", href: "/" },
+    { key: "en", shortKey: "en", name: "English", href: "/" },
+    { key: "es", shortKey: "es", name: "Español", href: "/" },
+    { key: "fr", shortKey: "fr", name: "Français", href: "/" },
+    { key: "hi", shortKey: "hi", name: "हिन्दी", href: "/" },
+    { key: "hy", shortKey: "hy", name: "Հայերեն", href: "/" },
+    { key: "it", shortKey: "it", name: "Italiano", href: "/" },
+    { key: "ja", shortKey: "ja", name: "日本語", href: "/" },
+    { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
+    { key: "pt-br", shortKey: "pt", name: "Português", href: "/" },
+    { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
+    { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
+    { key: "zh-hans", shortKey: "zh", name: "中文", href: "/" },
+  ];
+
+  return <OOHeader languages={languages} {...args} />;
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  locale: "en",
+};

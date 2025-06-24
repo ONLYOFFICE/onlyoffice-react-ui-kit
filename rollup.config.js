@@ -8,9 +8,12 @@ import postcss from "rollup-plugin-postcss";
 import postcssUrl from "postcss-url";
 
 const components = [
-  { name: "advent-announce", input: "src/advent-announce/advent-announce.jsx" },
-  { name: "footer-menu", input: "src/footer-menu/footer-menu.jsx" },
-  { name: "header-menu", input: "src/header-menu/header-menu.jsx" },
+  {
+    name: "OOAdventAnnounce",
+    input: "src/components/OOAdventAnnounce/OOAdventAnnounce.jsx",
+  },
+  { name: "OOFooter", input: "src/components/OOFooter/OOFooter.jsx" },
+  { name: "OOHeader", input: "src/components/OOHeader/OOHeader.jsx" },
 ];
 
 export default components.map((component) => ({
@@ -36,6 +39,8 @@ export default components.map((component) => ({
               return asset.url.replace("../../images", "./images");
             } else if (asset.url.startsWith("../../../images")) {
               return asset.url.replace("../../../images", "./images");
+            } else if (asset.url.startsWith("../../../../images")) {
+              return asset.url.replace("../../../../images", "./images");
             }
             return asset.url;
           },
@@ -46,10 +51,13 @@ export default components.map((component) => ({
     }),
     copy({
       targets: [
-        { src: `src/${component.name.toLowerCase()}/images/*`, dest: `dist/${component.name}/images` },
+        {
+          src: `src/components/${component.name.toLowerCase()}/images/*`,
+          dest: `dist/${component.name}/images`,
+        },
       ],
     }),
     terser(),
   ],
-  external: ["react", "react-dom", "next"],
+  external: ["react", "react-dom", "next", "next/link"],
 }));
