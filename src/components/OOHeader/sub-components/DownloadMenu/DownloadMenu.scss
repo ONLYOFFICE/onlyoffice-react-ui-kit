@@ -75,7 +75,6 @@
 
   &.oo-menu-item--position-1 {
     &.en,
-    &.cs,
     &.el,
     &.hi,
     &.hy {
@@ -223,26 +222,6 @@
   }
 
   &.oo-menu-item--position-3 {
-    &.cs {
-      .oo-menu-item-wrapper {
-        @media screen and (max-width: 1260px) {
-          top: 100%;
-          left: initial;
-          right: 0;
-        }
-
-        @media screen and (max-width: 1024px) {
-          top: 0;
-          left: 0;
-          right: initial;
-        }
-      }
-
-      @media screen and (max-width: 1260px) {
-        position: initial;
-      }
-    }
-
     &.ru {
       .oo-menu-item-wrapper {
         @media screen and (max-width: 1326px) {

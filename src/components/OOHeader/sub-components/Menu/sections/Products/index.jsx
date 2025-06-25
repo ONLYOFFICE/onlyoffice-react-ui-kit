@@ -157,7 +157,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docspace-document-editors"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-24"
-              href={getBaseUrl("/office-suite")}
+              href={getBaseUrl("/office-suite?docspace=registration")}
               icon="docs"
               variant="small"
               active={highlight?.linkId}
@@ -361,7 +361,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-e-book-creator"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/e-book-creator?docs=download")}
+              href={getBaseUrl("/e-book?docs=download")}
               icon="e-book-creator"
               variant="small"
               active={highlight?.linkId}
@@ -529,6 +529,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-other-editors-desktop-editors"
               className="oo-header-menu-mb-8"
+              href={getBaseUrl("/desktop")}
               icon="desktop"
               active={highlight?.linkId}
             >
@@ -546,7 +547,7 @@ const Products = ({
             >
               {t("OODocuments")}
             </MenuLink>
-            <MenuText className="oo-header-menu-mb-16">
+            <MenuText className="oo-header-menu-mb-8">
               {t("FreeMobileAppsForAndroidAndIOS")}
             </MenuText>
 

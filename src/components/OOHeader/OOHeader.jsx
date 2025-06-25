@@ -247,7 +247,10 @@ const OOHeader = ({
 
         <div
           onClick={onOverlayhHandleClick}
-          className={clsx("oo-header-overlay", showOverlay && "active")}
+          className={clsx(
+            "oo-header-overlay",
+            showOverlay && "oo-header-overlay--active",
+          )}
         ></div>
       </div>
     </header>

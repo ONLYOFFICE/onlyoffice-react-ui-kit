@@ -50,44 +50,21 @@ export default {
 
 const Template = (args) => {
   const languages = [
-    { shortKey: "ar", name: "عربي", href: "/" },
-    { shortKey: "cs", name: "Čeština", href: "/" },
-    { shortKey: "de", name: "Deutsch", href: "/" },
-    { shortKey: "el", name: "Ελληνικά", href: "/" },
-    { shortKey: "en", name: "English", href: "/" },
-    { shortKey: "es", name: "Español", href: "/" },
-    { shortKey: "fr", name: "Français", href: "/" },
-    { shortKey: "hi", name: "हिन्दी", href: "/" },
-    { shortKey: "hy", name: "Հայերեն", href: "/" },
-    { shortKey: "it", name: "Italiano", href: "/" },
-    { shortKey: "ja", name: "日本語", href: "/" },
-    { shortKey: "nl", name: "Nederlands", href: "/" },
-    { shortKey: "pt", name: "Português", href: "/" },
-    { shortKey: "ru", name: "Русский", href: "/" },
-    { shortKey: "sr", name: "Srpski", href: "/" },
-    { shortKey: "zh", name: "中文", href: "/" },
+    { key: "en", shortKey: "en", name: "English", href: "/" },
+    { key: "fr", shortKey: "fr", name: "Français", href: "/" },
+    { key: "de", shortKey: "de", name: "Deutsch", href: "/" },
+    { key: "es", shortKey: "es", name: "Español", href: "/" },
+    { key: "pt", shortKey: "pt", name: "Português", href: "/" },
+    { key: "it", shortKey: "it", name: "Italiano", href: "/" },
+    { key: "cs", shortKey: "cs", name: "Čeština", href: "/" },
+    { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
+    { key: "ja", shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+    { key: "zh", shortKey: "zh", name: "中文", href: "/" },
+    { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
+    { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
   ];
 
-  return (
-    <OOFooter
-      languages={languages}
-      base={{
-        url: "https://www.onlyoffice.com",
-        withAspx: true,
-        localePathMap: {
-          en: "",
-          el: "",
-          hi: "",
-          ar: "",
-          sr: "",
-          hy: "",
-          "zh-hans": "zh",
-          "pt-br": "pt",
-        },
-      }}
-      {...args}
-    />
-  );
+  return <OOFooter languages={languages} {...args} />;
 };
 
 export const Default = Template.bind({});

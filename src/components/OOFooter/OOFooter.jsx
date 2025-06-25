@@ -63,7 +63,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
             </Link>
             <Link
               className="oo-footer-apps-item oo-footer-apps-item--android"
-              href={getBaseUrl("download-desktop#mobile")}
+              href={getBaseUrl("/download-desktop#mobile")}
             >
               {t("ForAndroid")}
             </Link>

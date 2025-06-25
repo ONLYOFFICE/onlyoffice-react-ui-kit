@@ -48,28 +48,45 @@ import { OOHeader } from "onlyoffice-react-ui-kit/header";
 import "onlyoffice-react-ui-kit/header/css";
 
 function MyApp() {
-  const languages = [
-    { key: "ar", shortKey: "ar", name: "عربي", href: "/" },
-    { key: "cs", shortKey: "cs", name: "Čeština", href: "/" },
-    { key: "de", shortKey: "de", name: "Deutsch", href: "/" },
-    { key: "el", shortKey: "el", name: "Ελληνικά", href: "/" },
-    { key: "en", shortKey: "en", name: "English", href: "/" },
-    { key: "es", shortKey: "es", name: "Español", href: "/" },
-    { key: "fr", shortKey: "fr", name: "Français", href: "/" },
-    { key: "hi", shortKey: "hi", name: "हिन्दी", href: "/" },
-    { key: "hy", shortKey: "hy", name: "Հայերեն", href: "/" },
-    { key: "it", shortKey: "it", name: "Italiano", href: "/" },
-    { key: "ja", shortKey: "ja", key: "ja", name: "日本語", href: "/" },
-    { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
-    { key: "pt-br", shortKey: "pt", name: "Português", href: "/" },
-    { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
-    { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
-    { key: "zh-hans", shortKey: "zh", name: "中文", href: "/" },
-  ];
-
   return (
     <div>
-      <OOHeader locale="en" languages={languages} />
+      <OOHeader
+        locale="en"
+        languages={[
+          { key: "en", shortKey: "en", name: "English", href: "/" },
+          { key: "fr", shortKey: "fr", name: "Français", href: "/" },
+          { key: "de", shortKey: "de", name: "Deutsch", href: "/" },
+          { key: "es", shortKey: "es", name: "Español", href: "/" },
+          { key: "pt", shortKey: "pt", name: "Português", href: "/" },
+          { key: "it", shortKey: "it", name: "Italiano", href: "/" },
+          { key: "cs", shortKey: "cs", name: "Čeština", href: "/" },
+          { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
+          { key: "ja", shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+          { key: "zh", shortKey: "zh", name: "中文", href: "/" },
+          { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
+          { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
+        ]}
+        base={{
+          url: "https://www.onlyoffice.com",
+          withAspx: true,
+          localePathMap: { "zh-hans": "zh", "pt-br": "pt" },
+        }}
+        theme="white"
+        borderColor="transparent"
+        backgroundColor="#444444"
+        search={{
+          show: true,
+          variant: "main",
+          value: "",
+          onSubmit: () => {},
+          onChange: () => {},
+        }}
+        hasPhone={true}
+        highlight={{
+          buttonId: "oo-menu-item-btn-resources",
+          linkId: "oo-menu-link-blog",
+        }}
+      />
     </div>
   );
 }
@@ -97,30 +114,29 @@ import { OOFooter } from "onlyoffice-react-ui-kit/footer";
 import "onlyoffice-react-ui-kit/footer/css";
 
 function MyApp() {
-  const languages = [
-    { shortKey: "ar", name: "عربي", href: "/" },
-    { shortKey: "cs", name: "Čeština", href: "/" },
-    { shortKey: "de", name: "Deutsch", href: "/" },
-    { shortKey: "el", name: "Ελληνικά", href: "/" },
-    { shortKey: "en", name: "English", href: "/" },
-    { shortKey: "es", name: "Español", href: "/" },
-    { shortKey: "fr", name: "Français", href: "/" },
-    { shortKey: "hi", name: "हिन्दी", href: "/" },
-    { shortKey: "hy", name: "Հայերեն", href: "/" },
-    { shortKey: "it", name: "Italiano", href: "/" },
-    { shortKey: "ja", key: "ja", name: "日本語", href: "/" },
-    { shortKey: "nl", name: "Nederlands", href: "/" },
-    { shortKey: "pt", name: "Português", href: "/" },
-    { shortKey: "ru", name: "Русский", href: "/" },
-    { shortKey: "sr", name: "Srpski", href: "/" },
-    { shortKey: "zh", name: "中文", href: "/" },
-  ];
-
   return (
     <div>
       <OOFooter
         locale="en"
-        languages={languages}
+        languages={[
+          { key: "en", shortKey: "en", name: "English", href: "/" },
+          { key: "fr", shortKey: "fr", name: "Français", href: "/" },
+          { key: "de", shortKey: "de", name: "Deutsch", href: "/" },
+          { key: "es", shortKey: "es", name: "Español", href: "/" },
+          { key: "pt", shortKey: "pt", name: "Português", href: "/" },
+          { key: "it", shortKey: "it", name: "Italiano", href: "/" },
+          { key: "cs", shortKey: "cs", name: "Čeština", href: "/" },
+          { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
+          { key: "ja", shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+          { key: "zh", shortKey: "zh", name: "中文", href: "/" },
+          { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
+          { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
+        ]}
+        base={{
+          url: "https://www.onlyoffice.com",
+          withAspx: true,
+          localePathMap: { "zh-hans": "zh", "pt-br": "pt" },
+        }}
         mailApiUrl="/api/subscribe"
         mailApiType={0}
       />

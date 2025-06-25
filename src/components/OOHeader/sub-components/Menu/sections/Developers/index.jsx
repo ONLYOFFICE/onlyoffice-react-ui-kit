@@ -103,7 +103,9 @@ const Developers = ({
             </MenuLink>
             <MenuLink
               id="oo-menu-link-developer-docs-get-it-now"
-              href={getBaseUrl("/download-developer#docs-developer")}
+              href={getBaseUrl(
+                "/download-developer?from=downloadintegrationmenu#docs-developer",
+              )}
               icon="get-in-now"
               active={highlight?.linkId}
             >
@@ -134,7 +136,7 @@ const Developers = ({
             </MenuLink>
             <MenuLink
               id="oo-menu-link-developer-docspace-get-in-now"
-              href={getBaseUrl("download-developer#docspace-developer")}
+              href={getBaseUrl("/download-developer#docspace-developer")}
               icon="get-in-now"
               active={highlight?.linkId}
             >

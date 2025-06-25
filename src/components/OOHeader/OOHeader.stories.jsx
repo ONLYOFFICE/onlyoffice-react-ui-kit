@@ -50,22 +50,18 @@ export default {
 
 const Template = (args) => {
   const languages = [
-    { key: "ar", shortKey: "ar", name: "عربي", href: "/" },
-    { key: "cs", shortKey: "cs", name: "Čeština", href: "/" },
-    { key: "de", shortKey: "de", name: "Deutsch", href: "/" },
-    { key: "el", shortKey: "el", name: "Ελληνικά", href: "/" },
     { key: "en", shortKey: "en", name: "English", href: "/" },
-    { key: "es", shortKey: "es", name: "Español", href: "/" },
     { key: "fr", shortKey: "fr", name: "Français", href: "/" },
-    { key: "hi", shortKey: "hi", name: "हिन्दी", href: "/" },
-    { key: "hy", shortKey: "hy", name: "Հայերեն", href: "/" },
+    { key: "de", shortKey: "de", name: "Deutsch", href: "/" },
+    { key: "es", shortKey: "es", name: "Español", href: "/" },
+    { key: "pt", shortKey: "pt", name: "Português", href: "/" },
     { key: "it", shortKey: "it", name: "Italiano", href: "/" },
-    { key: "ja", shortKey: "ja", name: "日本語", href: "/" },
+    { key: "cs", shortKey: "cs", name: "Čeština", href: "/" },
     { key: "nl", shortKey: "nl", name: "Nederlands", href: "/" },
-    { key: "pt-br", shortKey: "pt", name: "Português", href: "/" },
+    { key: "ja", shortKey: "ja", key: "ja", name: "日本語", href: "/" },
+    { key: "zh", shortKey: "zh", name: "中文", href: "/" },
     { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
     { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
-    { key: "zh-hans", shortKey: "zh", name: "中文", href: "/" },
   ];
 
   return <OOHeader languages={languages} {...args} />;

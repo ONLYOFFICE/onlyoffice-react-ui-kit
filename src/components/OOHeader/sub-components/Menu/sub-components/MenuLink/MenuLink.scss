@@ -46,7 +46,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: 50%;
       left: 0;
       display: block;
       width: 24px;
@@ -54,11 +54,7 @@
       height: 24px;
       background-image: url("../../../../images/menu-icons.svg");
       background-repeat: no-repeat;
-
-      @media screen and (max-width: 1024px) {
-        top: 50%;
-        transform: translateY(-50%);
-      }
+      transform: translateY(-50%);
     }
 
     &-docspace::before {
@@ -430,6 +426,11 @@
     &-small {
       font-size: 13px;
       font-weight: 600;
+
+      &::before {
+        top: 0;
+        transform: initial;
+      }
     }
   }
 
