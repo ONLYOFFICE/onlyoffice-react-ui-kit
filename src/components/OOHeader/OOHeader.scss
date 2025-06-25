@@ -47,7 +47,7 @@
       }
     }
 
-    .oo-menu-link:not([class*="oo-menu-link--variant-icon"]) {
+    .oo-menu-link:not([class*="oo-menu-link--variant-icon"]):not([class*="oo-menu-link--variant-text"]) {
       padding-left: initial;
       padding-right: 36px;
     }
