@@ -21,10 +21,10 @@
 .oo-footer-wrapper {
   box-sizing: border-box;
   position: relative;
-  padding: 56px 32px 60px;
+  padding: 56px 48px 80px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1184px;
+  max-width: 1216px;
   overflow: hidden;
 
   &.ar {
@@ -33,7 +33,7 @@
   }
 
   @media screen and (max-width: 1024px) {
-    padding: 88px 48px 48px;
+    padding: 56px 40px 48px;
   }
 
   @media screen and (max-width: 600px) {
