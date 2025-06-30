@@ -28,6 +28,7 @@ const DownloadMenu = ({
   getBaseUrl,
   hasSearch,
   hasPhone,
+  highlight,
   registerCloseMenu,
 }) => {
   return (
@@ -50,9 +51,11 @@ const DownloadMenu = ({
       <div className="oo-header-menu-item">
         <MenuLabel className="oo-header-menu-mb-16">{t("Download")}</MenuLabel>
         <MenuLink
+          id="oo-menu-link-enterprise-prices"
           className="oo-header-menu-mb-8"
           href={getBaseUrl("/download")}
           icon="enterprise-servers"
+          active={highlight?.linkId}
         >
           {t("EnterpriseServers")}
         </MenuLink>
@@ -61,9 +64,11 @@ const DownloadMenu = ({
         </MenuText>
 
         <MenuLink
+          id="oo-menu-link-developer-servers"
           className="oo-header-menu-mb-8"
           href={getBaseUrl("/download-developer")}
           icon="developer-servers"
+          active={highlight?.linkId}
         >
           {t("DeveloperServers")}
         </MenuLink>
@@ -72,9 +77,11 @@ const DownloadMenu = ({
         </MenuText>
 
         <MenuLink
+          id="oo-menu-link-desktop-mobile-apps"
           className="oo-header-menu-mb-8"
           href={getBaseUrl("/download-desktop")}
           icon="desktop-mobile-apps"
+          active={highlight?.linkId}
         >
           {t("DesktopAndMobilesApps")}
         </MenuLink>

@@ -186,6 +186,7 @@ const OOHeader = ({
                 getBaseUrl={getBaseUrl}
                 hasSearch={search?.show}
                 hasPhone={hasPhone}
+                highlight={highlight}
                 registerCloseMenu={registerCloseMenu}
               />
               <Link
