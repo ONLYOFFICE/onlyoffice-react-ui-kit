@@ -23,6 +23,9 @@ const LanguageSelector = ({ locale, theme, languages }) => {
   const buttonRef = useRef(null);
   const listRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+  const isHoverSupported =
+    typeof window !== "undefined" &&
+    window.matchMedia("(hover: hover)").matches;
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -65,8 +68,8 @@ const LanguageSelector = ({ locale, theme, languages }) => {
 
   return (
     <div
-      onMouseEnter={() => setIsOpen(!isOpen)}
-      onMouseLeave={() => setIsOpen(false)}
+      onMouseEnter={isHoverSupported ? () => setIsOpen(!isOpen) : undefined}
+      onMouseLeave={isHoverSupported ? () => setIsOpen(false) : undefined}
       onClick={() => setIsOpen(!isOpen)}
       onKeyDown={handleKeyDown}
       className="oo-language-selector"

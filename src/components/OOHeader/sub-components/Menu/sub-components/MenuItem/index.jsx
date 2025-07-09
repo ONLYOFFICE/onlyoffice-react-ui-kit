@@ -29,6 +29,9 @@ const MenuItem = ({
 }) => {
   const [showMenu, setShowMenu] = useState(false);
   const listRef = useRef(null);
+  const isHoverSupported =
+    typeof window !== "undefined" &&
+    window.matchMedia("(hover: hover)").matches;
 
   useEffect(() => {
     const resizeWindow = () => {
@@ -98,12 +101,12 @@ const MenuItem = ({
 
   return (
     <div
-      onMouseLeave={() => setShowMenu(false)}
+      onMouseLeave={isHoverSupported ? () => setShowMenu(false) : undefined}
       className={clsx("oo-menu-item", className)}
     >
       <button
         onClick={() => setShowMenu((prev) => !prev)}
-        onMouseEnter={() => setShowMenu(true)}
+        onMouseEnter={isHoverSupported ? () => setShowMenu(true) : undefined}
         id={id}
         className={clsx(
           "oo-menu-item-btn",

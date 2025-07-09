@@ -24,6 +24,30 @@ const LanguageSelector = ({ locale, languages }) => {
   const buttonRef = useRef(null);
   const listRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+  const isHoverSupported =
+    typeof window !== "undefined" &&
+    window.matchMedia("(hover: hover)").matches;
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        listRef.current &&
+        !listRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleKeyDown = (e) => {
     if (e.key === "Tab") {
@@ -45,8 +69,8 @@ const LanguageSelector = ({ locale, languages }) => {
 
   return (
     <div
-      onMouseEnter={() => setIsOpen(!isOpen)}
-      onMouseLeave={() => setIsOpen(false)}
+      onMouseEnter={isHoverSupported ? () => setIsOpen(!isOpen) : undefined}
+      onMouseLeave={isHoverSupported ? () => setIsOpen(false) : undefined}
       onClick={() => setIsOpen(!isOpen)}
       onKeyDown={handleKeyDown}
       className="oo-footer-language-selector"

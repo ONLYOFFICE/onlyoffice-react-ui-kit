@@ -24,6 +24,9 @@ const PhoneSelector = ({ t, locale, getBaseUrl, theme }) => {
   const buttonRef = useRef(null);
   const dropdownRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+  const isHoverSupported =
+    typeof window !== "undefined" &&
+    window.matchMedia("(hover: hover)").matches;
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -66,13 +69,13 @@ const PhoneSelector = ({ t, locale, getBaseUrl, theme }) => {
 
   return (
     <div
-      onMouseLeave={() => setIsOpen(false)}
+      onMouseLeave={isHoverSupported ? () => setIsOpen(false) : undefined}
       onKeyDown={handleKeyDown}
       className={clsx("oo-phone-selector", locale)}
     >
       <button
         ref={buttonRef}
-        onMouseEnter={() => setIsOpen(true)}
+        onMouseEnter={isHoverSupported ? () => setIsOpen(true) : undefined}
         onClick={() => setIsOpen(!isOpen)}
         className={clsx(
           "oo-phone-selector-btn",
