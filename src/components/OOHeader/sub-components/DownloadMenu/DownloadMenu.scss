@@ -62,8 +62,8 @@
   &.ru {
     .oo-header-menu-item {
       width: max-content;
-      min-width: 352px;
-      max-width: 420px;
+      min-width: 304px;
+      max-width: 372px;
 
       @media screen and (max-width: 1024px) {
         width: 100%;
@@ -265,8 +265,8 @@
   }
 
   .oo-header-menu-item {
-    min-width: 352px;
-    max-width: 352px;
+    min-width: 304px;
+    max-width: 304px;
 
     @media screen and (max-width: 1024px) {
       min-width: 100%;
@@ -340,6 +340,8 @@
     }
 
     &.oo-menu-item-btn--open {
+      color: #ffffff;
+
       &::after {
         content: "";
         position: absolute;

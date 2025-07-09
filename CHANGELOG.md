@@ -3,6 +3,7 @@
 ## 1.13.1
 * header
   - Add id for download links
+  - Fix styles
 
 ## 1.13.0
 * advent-announce

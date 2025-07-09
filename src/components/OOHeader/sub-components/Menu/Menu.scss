@@ -54,11 +54,10 @@
 }
 
 .oo-header-menu-item {
-  box-sizing: border-box;
   padding: 24px;
   width: 100%;
-  min-width: 312px;
-  max-width: 312px;
+  min-width: 264px;
+  max-width: 264px;
 
   &:not(:first-child):not([class*="--bg-gray"]):not([class*="active"]) {
     @media screen and (max-width: 1024px) {
@@ -95,6 +94,7 @@
   }
 
   @media screen and (max-width: 1024px) {
+    box-sizing: border-box;
     min-width: 100%;
     max-width: 100%;
   }

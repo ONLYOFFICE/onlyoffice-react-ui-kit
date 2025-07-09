@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import clsx from "clsx";
 import "./LanguageSelector.scss";
@@ -23,6 +23,27 @@ const LanguageSelector = ({ locale, theme, languages }) => {
   const buttonRef = useRef(null);
   const listRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        listRef.current &&
+        !listRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleKeyDown = (e) => {
     if (e.key === "Tab") {

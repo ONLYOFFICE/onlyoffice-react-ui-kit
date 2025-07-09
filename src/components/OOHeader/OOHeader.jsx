@@ -157,7 +157,9 @@ const OOHeader = ({
                     ? ""
                     : `/${locale}`
                 }`
-              : "/"
+              : locale === "en"
+              ? ""
+              : `/${locale}`
           }
         ></Link>
 

@@ -20,8 +20,8 @@
     .oo-header-menu-item {
       &:last-child {
         width: max-content;
-        min-width: 312px;
-        max-width: 320px;
+        min-width: 264px;
+        max-width: 272px;
 
         @media screen and (max-width: 1024px) {
           width: 100%;
@@ -36,8 +36,8 @@
     .oo-header-menu-item {
       &:first-child {
         width: max-content;
-        min-width: 312px;
-        max-width: 320px;
+        min-width: 264px;
+        max-width: 272px;
 
         @media screen and (max-width: 1024px) {
           width: 100%;

@@ -45,18 +45,31 @@ const MenuItem = ({
   }, []);
 
   useEffect(() => {
+    const headerNav = document.querySelector(".oo-header-nav");
+
     if (showMenu) {
-      document
-        .querySelector(".oo-header-nav")
-        .classList.add("oo-header-nav--overflow-hidden");
+      headerNav?.classList.add("oo-header-nav--overflow-hidden");
     } else {
-      document
-        .querySelector(".oo-header-nav")
-        .classList.remove("oo-header-nav--overflow-hidden");
+      headerNav?.classList.remove("oo-header-nav--overflow-hidden");
+    }
+
+    const handleClickOutside = (event) => {
+      if (
+        listRef.current &&
+        !listRef.current.contains(event.target) &&
+        !event.target.closest(`#${id}`)
+      ) {
+        setShowMenu(false);
+      }
+    };
+
+    if (showMenu) {
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.body.classList.remove("oo-header-nav--overflow-hidden");
+      headerNav?.classList.remove("oo-header-nav--overflow-hidden");
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showMenu]);
 
@@ -85,16 +98,16 @@ const MenuItem = ({
 
   return (
     <div
-      onMouseLeave={() => window.innerWidth > 1024 && setShowMenu(false)}
+      onMouseLeave={() => setShowMenu(false)}
       className={clsx("oo-menu-item", className)}
     >
       <button
-        onClick={() => setShowMenu(!showMenu)}
-        onMouseEnter={() => window.innerWidth > 1024 && setShowMenu(true)}
+        onClick={() => setShowMenu((prev) => !prev)}
+        onMouseEnter={() => setShowMenu(true)}
         id={id}
         className={clsx(
           "oo-menu-item-btn",
-          active === id ? "oo-menu-item-btn--active" : "",
+          active === id && "oo-menu-item-btn--active",
           showMenu && "oo-menu-item-btn--open",
           theme === "white" && "oo-menu-item-btn--theme-white",
         )}

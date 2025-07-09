@@ -18,8 +18,8 @@
   .oo-header-menu-item {
     &:first-child {
       width: max-content;
-      min-width: 312px;
-      max-width: 350px;
+      min-width: 264px;
+      max-width: 302px;
 
       @media screen and (max-width: 1024px) {
         width: 100%;

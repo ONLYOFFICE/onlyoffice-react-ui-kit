@@ -44,8 +44,8 @@
   &.fr {
     .oo-header-menu-item {
       &:first-child {
-        min-width: 364px;
-        max-width: 364px;
+        min-width: 316px;
+        max-width: 316px;
 
         @media screen and (max-width: 1024px) {
           min-width: 100%;
@@ -58,8 +58,8 @@
   &.de {
     .oo-header-menu-item {
       &:first-child {
-        min-width: 336px;
-        max-width: 336px;
+        min-width: 288px;
+        max-width: 288px;
 
         @media screen and (max-width: 1024px) {
           min-width: 100%;
@@ -83,8 +83,8 @@
   &.pt-br {
     .oo-header-menu-item {
       &:first-child {
-        min-width: 332px;
-        max-width: 332px;
+        min-width: 284px;
+        max-width: 284px;
 
         @media screen and (max-width: 1024px) {
           min-width: 100%;
@@ -107,8 +107,8 @@
   &.ja {
     .oo-header-menu-item {
       &:last-child {
-        min-width: 342px;
-        max-width: 342px;
+        min-width: 294px;
+        max-width: 294px;
 
         @media screen and (max-width: 1024px) {
           min-width: 100%;
@@ -121,8 +121,8 @@
   &.ru {
     .oo-header-menu-item {
       &:first-child {
-        min-width: 352px;
-        max-width: 352px;
+        min-width: 304px;
+        max-width: 304px;
 
         @media screen and (max-width: 1024px) {
           min-width: 100%;
@@ -143,8 +143,8 @@
   .oo-header-menu-item {
     &:first-child,
     &:nth-child(2) {
-      min-width: 328px;
-      max-width: 328px;
+      min-width: 280px;
+      max-width: 280px;
 
       @media screen and (max-width: 1024px) {
         min-width: 100%;
@@ -153,8 +153,8 @@
     }
 
     &:last-child {
-      min-width: 320px;
-      max-width: 320px;
+      min-width: 272px;
+      max-width: 272px;
 
       @media screen and (max-width: 1024px) {
         min-width: 100%;
