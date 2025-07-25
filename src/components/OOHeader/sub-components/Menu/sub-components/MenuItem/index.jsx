@@ -15,6 +15,7 @@
  */
 
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import clsx from "clsx";
 import "./MenuItem.scss";
 
@@ -27,6 +28,7 @@ const MenuItem = ({
   active,
   registerCloseMenu,
 }) => {
+  const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
   const listRef = useRef(null);
   const isHoverSupported =
@@ -46,6 +48,10 @@ const MenuItem = ({
       window.removeEventListener("resize", resizeWindow);
     };
   }, []);
+
+  useEffect(() => {
+    setShowMenu(false);
+  }, [router.asPath]);
 
   useEffect(() => {
     const headerNav = document.querySelector(".oo-header-nav");

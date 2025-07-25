@@ -59,5 +59,5 @@ export default components.map((component) => ({
     }),
     terser(),
   ],
-  external: ["react", "react-dom", "next", "next/link"],
+  external: ["react", "react-dom", "next", "next/link", "next/router"],
 }));
