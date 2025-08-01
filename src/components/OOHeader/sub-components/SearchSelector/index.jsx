@@ -15,6 +15,7 @@
  */
 
 import React, { useRef, useEffect } from "react";
+import { useRouter } from "next/router";
 import clsx from "clsx";
 import "./SearchSelector.scss";
 import { SearchIcon, SearchGrayIcon } from "../../../../icons/index.js";
@@ -31,8 +32,13 @@ const SearchSelector = ({
   onChange,
   onSubmit,
 }) => {
+  const router = useRouter();
   const wrapperRef = useRef(null);
   const searchRef = useRef();
+
+  useEffect(() => {
+    setShowSearch(false);
+  }, [router.asPath]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
