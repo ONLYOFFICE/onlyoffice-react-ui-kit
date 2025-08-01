@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.2
+* header
+  - Close search on page navigation
+
 ## 1.13.1
 * header
   - Add id for download links
