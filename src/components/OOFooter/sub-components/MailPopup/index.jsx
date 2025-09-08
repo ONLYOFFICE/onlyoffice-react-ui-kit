@@ -27,14 +27,15 @@ const MailPopup = ({
   mailApiType,
 }) => {
   const modalRef = useRef(null);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    email: "",
+  });
+  const [formErrors, setFormErrors] = useState({
+    firstName: false,
+    email: false,
+  });
   const [formComplete, setFormComplete] = useState(false);
-  const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [emailError, setEmailError] = useState(false);
-  const [firstNameError, setFirstNameError] = useState(false);
-  const [validEmail, setValidEmail] = useState(false);
-  const [validFirstName, setValidFirstName] = useState(false);
-  const [emailErrorText, setEmailErrorText] = useState(t("EmailIsEmpty"));
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -69,79 +70,58 @@ const MailPopup = ({
     }
   }, [popupIsOpen]);
 
-  const emailIsValid = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const handleChange = (field, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
   };
 
-  const nameIsValid = (name) => {
-    return name.length > 0;
-  };
-
-  const handleEmailInput = (e) => {
-    setEmail(e.target.value);
-    setValidEmail(emailIsValid(e.target.value));
-  };
-
-  const handleNameInput = (e) => {
-    const name = e.target.value;
-    setFirstName(name);
-    setValidFirstName(nameIsValid(name));
+  const validateForm = () => {
+    let errors = {
+      firstName: formData.firstName.trim() === "",
+      email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email),
+    };
+    setFormErrors(errors);
+    return !Object.values(errors).some((v) => v);
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setEmailError(!validEmail);
-    setFirstNameError(!validFirstName);
 
-    if (!firstName) {
-      setFirstNameError(true);
+    if (!validateForm()) {
+      return;
     }
 
-    if (!email) {
-      setEmailError(true);
-    }
+    setIsLoading(true);
 
-    setEmailErrorText(
-      email.length === 0 ? t("EmailIsEmpty") : t("EmailIsIncorrect"),
-    );
+    try {
+      const response = await fetch(mailApiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          language: locale === "en" ? "" : locale,
+          firstname: formData.firstName,
+          email: formData.email,
+          type: mailApiType,
+        }),
+      });
 
-    if (validFirstName && validEmail) {
-      setIsLoading(true);
-
-      try {
-        const response = await fetch(mailApiUrl, {
-          method: "POST",
-          body: JSON.stringify({
-            firstname: firstName,
-            email: email,
-            type: mailApiType,
-          }),
-        });
-
-        if (response.status === 200) {
-          setFormComplete(true);
-          setIsLoading(false);
-        }
-      } catch (error) {
-        console.error("Subscription failed", error);
-      } finally {
-        setIsLoading(false);
+      if (response.ok) {
+        setFormComplete(true);
       }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const handleCloseForm = () => {
-    if (formComplete === true) {
-      setFormComplete(false);
-    }
-
-    setValidEmail(false);
-    setValidFirstName(false);
     setPopupIsOpen(false);
-    setEmail("");
-    setFirstName("");
-    setEmailError(false);
-    setFirstNameError(false);
+    setFormData({ firstName: "", email: "" });
+    setFormErrors({ firstName: false, email: false });
+    setFormComplete(false);
   };
 
   return (
@@ -157,84 +137,92 @@ const MailPopup = ({
         <div className="oo-footer-mail-popup-wrapper">
           <div
             onClick={(e) => e.stopPropagation()}
-            className="oo-footer-mail-popup-body"
+            className="oo-footer-mail-popup-content"
           >
-            <div className="oo-footer-mail-popup-header">
-              <div className={clsx("oo-footer-mail-popup-title", locale)}>
-                {t("DontMissAnUpdate")}
-              </div>
-              <button
-                onClick={() => handleCloseForm()}
-                className="oo-footer-mail-popup-close-btn"
-              ></button>
-            </div>
-            {formComplete ? (
-              <div className="oo-footer-mail-popup-success">
-                <div className="oo-footer-mail-popup-success-text">
-                  {t("WeSentAnEmailMessage")}
+            <div className="oo-footer-mail-popup-body">
+              <div className="oo-footer-mail-popup-header">
+                <div className={clsx("oo-footer-mail-popup-title", locale)}>
+                  {t("DontMissAnUpdate")}
                 </div>
                 <button
                   onClick={() => handleCloseForm()}
-                  className="oo-footer-mail-popup-success-btn"
-                >
-                  {t("OK")}
-                </button>
+                  className="oo-footer-mail-popup-close-btn"
+                ></button>
               </div>
-            ) : (
-              <div className="oo-footer-mail-popup-form">
-                <div className="oo-footer-mail-popup-text">
-                  {t("GetTheLatestOONews")}
-                </div>
-                <form
-                  onSubmit={handleFormSubmit}
-                  className="oo-footer-mail-popup-inputs"
-                >
-                  <div className="oo-footer-mail-popup-input-wrapper">
-                    <input
-                      onChange={handleNameInput}
-                      className={clsx(
-                        "oo-footer-mail-popup-input",
-                        firstNameError && "oo-footer-mail-popup-input--error",
-                      )}
-                      value={firstName}
-                      name="firstName"
-                      placeholder={t("FirstName")}
-                    />
-                    {firstNameError && (
-                      <div className="oo-footer-mail-popup-error-text">
-                        {t("FirstNameIsEmpty")}
-                      </div>
-                    )}
-                  </div>
-                  <div className="oo-footer-mail-popup-input-wrapper">
-                    <input
-                      onChange={handleEmailInput}
-                      className={clsx(
-                        "oo-footer-mail-popup-input",
-                        emailError && "oo-footer-mail-popup-input--error",
-                      )}
-                      value={email}
-                      name="email"
-                      placeholder={t("YourEmail")}
-                    />
-                    {emailError && (
-                      <div className="oo-footer-mail-popup-error-text">
-                        {emailErrorText}
-                      </div>
-                    )}
+              {formComplete ? (
+                <div className="oo-footer-mail-popup-success">
+                  <div className="oo-footer-mail-popup-success-text">
+                    {t("WeSentAnEmailMessage")}
                   </div>
                   <button
-                    className={clsx(
-                      "oo-footer-mail-popup-btn",
-                      isLoading && "oo-footer-mail-popup-btn--loading",
-                    )}
-                    disabled={isLoading && true}
+                    onClick={() => handleCloseForm()}
+                    className="oo-footer-mail-popup-success-btn"
                   >
-                    {t("Subscribe")}
+                    {t("OK")}
                   </button>
-                </form>
-              </div>
-            )}
+                </div>
+              ) : (
+                <div className="oo-footer-mail-popup-form">
+                  <div className="oo-footer-mail-popup-text">
+                    {t("GetTheLatestOONews")}
+                  </div>
+                  <form
+                    onSubmit={handleFormSubmit}
+                    className="oo-footer-mail-popup-inputs"
+                  >
+                    <div className="oo-footer-mail-popup-input-wrapper">
+                      <input
+                        onChange={(e) =>
+                          handleChange("firstName", e.target.value)
+                        }
+                        className={clsx(
+                          "oo-footer-mail-popup-input",
+                          formErrors.firstName &&
+                            "oo-footer-mail-popup-input--error",
+                        )}
+                        value={formData.firstName}
+                        name="firstName"
+                        placeholder={t("FirstName")}
+                      />
+                      {formErrors.firstName && (
+                        <div className="oo-footer-mail-popup-error-text">
+                          {t("FirstNameIsEmpty")}
+                        </div>
+                      )}
+                    </div>
+                    <div className="oo-footer-mail-popup-input-wrapper">
+                      <input
+                        onChange={(e) => handleChange("email", e.target.value)}
+                        className={clsx(
+                          "oo-footer-mail-popup-input",
+                          formErrors.email &&
+                            "oo-footer-mail-popup-input--error",
+                        )}
+                        value={formData.email}
+                        name="email"
+                        placeholder={t("YourEmail")}
+                      />
+                      {formErrors.email && (
+                        <div className="oo-footer-mail-popup-error-text">
+                          {formData.email.length === 0
+                            ? t("EmailIsEmpty")
+                            : t("EmailIsIncorrect")}
+                        </div>
+                      )}
+                    </div>
+                    <button
+                      className={clsx(
+                        "oo-footer-mail-popup-btn",
+                        isLoading && "oo-footer-mail-popup-btn--loading",
+                      )}
+                      disabled={isLoading}
+                    >
+                      {t("Subscribe")}
+                    </button>
+                  </form>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
