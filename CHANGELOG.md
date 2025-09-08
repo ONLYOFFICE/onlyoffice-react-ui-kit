@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.14.0
+- header
+  - Update mouse leave event
+  - Fix active menu highlight
+- footer
+  - Update Mail popup form
+  - Fix Language selector styles
+
 ## 1.13.2
 * header
   - Close search on page navigation
