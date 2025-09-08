@@ -138,7 +138,7 @@ function MyApp() {
           localePathMap: { "zh-hans": "zh", "pt-br": "pt" },
         }}
         mailApiUrl="/api/subscribe"
-        mailApiType={0}
+        mailApiType="Common"
       />
     </div>
   );
@@ -153,7 +153,7 @@ function MyApp() {
 | `languages` | Controls the visibility and content of the language selector. Should contain { languages: [ [key: string, shortKey: string, name: string, href: string], ... ] }. | `object` | `undefined` |
 | `base` | Base configuration for internal links. Should be an object like { url: string, withAspx: boolean, localePathMap: object }. | `object` | `undefined` |
 | `mailApiUrl` | The URL for the email subscription API endpoint. Required for submitting the form data from the modal. | `string` | `null` |
-| `mailApiType` | Type identifier for the email API | `number` | `null` |
+| `mailApiType` | Type identifier for the email API | `string` | `""` |
 
 ## Storybook
 
