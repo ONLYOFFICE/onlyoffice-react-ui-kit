@@ -30,6 +30,7 @@ const Pricing = ({
   theme,
   highlight,
   registerCloseMenu,
+  handleCloseAllMenus,
 }) => {
   return (
     <MenuItem
@@ -39,6 +40,7 @@ const Pricing = ({
       theme={theme}
       active={highlight?.buttonId}
       registerCloseMenu={registerCloseMenu}
+      handleCloseAllMenus={handleCloseAllMenus}
     >
       <div className="oo-header-menu-mob-height">
         <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column">

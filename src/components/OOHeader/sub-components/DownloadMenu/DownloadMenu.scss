@@ -341,16 +341,6 @@
 
     &.oo-menu-item-btn--open {
       color: #ffffff;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 16px;
-        background-color: transparent;
-      }
     }
 
     &:hover {

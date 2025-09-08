@@ -31,6 +31,7 @@ const Products = ({
   theme,
   highlight,
   registerCloseMenu,
+  handleCloseAllMenus,
 }) => {
   const [activeTab, setActiveTab] = useState(null);
 
@@ -64,6 +65,7 @@ const Products = ({
       theme={theme}
       active={highlight?.buttonId}
       registerCloseMenu={registerCloseMenu}
+      handleCloseAllMenus={handleCloseAllMenus}
     >
       <button
         onClick={() => {

@@ -27,6 +27,7 @@ const MenuItem = ({
   theme,
   active,
   registerCloseMenu,
+  handleCloseAllMenus,
 }) => {
   const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
@@ -106,13 +107,20 @@ const MenuItem = ({
   };
 
   return (
-    <div
-      onMouseLeave={isHoverSupported ? () => setShowMenu(false) : undefined}
-      className={clsx("oo-menu-item", className)}
-    >
+    <div className={clsx("oo-menu-item", className)}>
       <button
-        onClick={() => setShowMenu((prev) => !prev)}
-        onMouseEnter={isHoverSupported ? () => setShowMenu(true) : undefined}
+        onClick={() => {
+          handleCloseAllMenus();
+          setShowMenu((prev) => !prev);
+        }}
+        onMouseEnter={
+          isHoverSupported
+            ? () => {
+                handleCloseAllMenus();
+                setShowMenu(true);
+              }
+            : undefined
+        }
         id={id}
         className={clsx(
           "oo-menu-item-btn",

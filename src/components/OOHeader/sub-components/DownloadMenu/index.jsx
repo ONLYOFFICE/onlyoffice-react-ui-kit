@@ -30,6 +30,7 @@ const DownloadMenu = ({
   hasPhone,
   highlight,
   registerCloseMenu,
+  handleCloseAllMenus,
 }) => {
   return (
     <MenuItem
@@ -47,6 +48,7 @@ const DownloadMenu = ({
       )}
       heading={t("Download")}
       registerCloseMenu={registerCloseMenu}
+      handleCloseAllMenus={handleCloseAllMenus}
     >
       <div className="oo-header-menu-item">
         <MenuLabel className="oo-header-menu-mb-16">{t("Download")}</MenuLabel>

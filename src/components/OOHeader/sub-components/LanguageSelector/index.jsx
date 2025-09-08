@@ -19,7 +19,13 @@ import Link from "next/link";
 import clsx from "clsx";
 import "./LanguageSelector.scss";
 
-const LanguageSelector = ({ locale, theme, languages }) => {
+const LanguageSelector = ({
+  locale,
+  theme,
+  languages,
+  registerCloseMenu,
+  handleCloseAllMenus,
+}) => {
   const buttonRef = useRef(null);
   const listRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -66,11 +72,24 @@ const LanguageSelector = ({ locale, theme, languages }) => {
     }
   };
 
+  if (registerCloseMenu) {
+    registerCloseMenu(() => setIsOpen(false));
+  }
+
   return (
     <div
-      onMouseEnter={isHoverSupported ? () => setIsOpen(!isOpen) : undefined}
-      onMouseLeave={isHoverSupported ? () => setIsOpen(false) : undefined}
-      onClick={() => setIsOpen(!isOpen)}
+      onMouseEnter={
+        isHoverSupported
+          ? () => {
+              handleCloseAllMenus();
+              setIsOpen(true);
+            }
+          : undefined
+      }
+      onClick={() => {
+        handleCloseAllMenus();
+        setIsOpen(!isOpen);
+      }}
       onKeyDown={handleKeyDown}
       className="oo-language-selector"
     >

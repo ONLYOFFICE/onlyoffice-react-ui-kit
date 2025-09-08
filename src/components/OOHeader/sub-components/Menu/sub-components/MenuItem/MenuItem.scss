@@ -101,7 +101,7 @@
       content: "";
       position: absolute;
       left: 50%;
-      bottom: -1px;
+      bottom: 0;
       border-bottom: 1px solid #ff6f3d;
       width: calc(100% - 24px);
       transform: translateX(-50%);
@@ -149,7 +149,7 @@
 
 .oo-menu-item-wrapper {
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 50%;
   display: flex;
   border-radius: 0 0 9px 9px;

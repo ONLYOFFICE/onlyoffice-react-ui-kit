@@ -29,6 +29,7 @@ const Partners = ({
   theme,
   highlight,
   registerCloseMenu,
+  handleCloseAllMenus,
 }) => {
   return (
     <MenuItem
@@ -38,6 +39,7 @@ const Partners = ({
       theme={theme}
       active={highlight?.buttonId}
       registerCloseMenu={registerCloseMenu}
+      handleCloseAllMenus={handleCloseAllMenus}
     >
       <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column oo-header-menu-mob-height-without-header">
         <div className="oo-header-menu-item">

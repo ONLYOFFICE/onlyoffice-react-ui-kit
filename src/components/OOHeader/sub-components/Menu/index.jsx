@@ -31,6 +31,7 @@ const Menu = ({
   theme,
   highlight,
   registerCloseMenu,
+  handleCloseAllMenus,
 }) => {
   return (
     <div className={clsx("oo-header-menu", locale)}>
@@ -41,6 +42,7 @@ const Menu = ({
         theme={theme}
         highlight={highlight}
         registerCloseMenu={registerCloseMenu}
+        handleCloseAllMenus={handleCloseAllMenus}
       />
       <Enterprise
         t={t}
@@ -49,6 +51,7 @@ const Menu = ({
         theme={theme}
         highlight={highlight}
         registerCloseMenu={registerCloseMenu}
+        handleCloseAllMenus={handleCloseAllMenus}
       />
       <Developers
         t={t}
@@ -57,6 +60,7 @@ const Menu = ({
         theme={theme}
         highlight={highlight}
         registerCloseMenu={registerCloseMenu}
+        handleCloseAllMenus={handleCloseAllMenus}
       />
       <Pricing
         t={t}
@@ -65,6 +69,7 @@ const Menu = ({
         theme={theme}
         highlight={highlight}
         registerCloseMenu={registerCloseMenu}
+        handleCloseAllMenus={handleCloseAllMenus}
       />
       <Partners
         t={t}
@@ -73,6 +78,7 @@ const Menu = ({
         theme={theme}
         highlight={highlight}
         registerCloseMenu={registerCloseMenu}
+        handleCloseAllMenus={handleCloseAllMenus}
       />
       <Resources
         t={t}
@@ -81,6 +87,7 @@ const Menu = ({
         theme={theme}
         highlight={highlight}
         registerCloseMenu={registerCloseMenu}
+        handleCloseAllMenus={handleCloseAllMenus}
       />
     </div>
   );

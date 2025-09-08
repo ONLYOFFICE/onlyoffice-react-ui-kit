@@ -20,7 +20,14 @@ import clsx from "clsx";
 import "./PhoneSelector.scss";
 import { PhoneIcon } from "../../../../icons/index.js";
 
-const PhoneSelector = ({ t, locale, getBaseUrl, theme }) => {
+const PhoneSelector = ({
+  t,
+  locale,
+  getBaseUrl,
+  theme,
+  registerCloseMenu,
+  handleCloseAllMenus,
+}) => {
   const buttonRef = useRef(null);
   const dropdownRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -67,16 +74,29 @@ const PhoneSelector = ({ t, locale, getBaseUrl, theme }) => {
     }
   };
 
+  if (registerCloseMenu) {
+    registerCloseMenu(() => setIsOpen(false));
+  }
+
   return (
     <div
-      onMouseLeave={isHoverSupported ? () => setIsOpen(false) : undefined}
       onKeyDown={handleKeyDown}
       className={clsx("oo-phone-selector", locale)}
     >
       <button
         ref={buttonRef}
-        onMouseEnter={isHoverSupported ? () => setIsOpen(true) : undefined}
-        onClick={() => setIsOpen(!isOpen)}
+        onMouseEnter={
+          isHoverSupported
+            ? () => {
+                handleCloseAllMenus();
+                setIsOpen(true);
+              }
+            : undefined
+        }
+        onClick={() => {
+          handleCloseAllMenus();
+          setIsOpen(!isOpen);
+        }}
         className={clsx(
           "oo-phone-selector-btn",
           isOpen && "oo-phone-selector-btn--open",

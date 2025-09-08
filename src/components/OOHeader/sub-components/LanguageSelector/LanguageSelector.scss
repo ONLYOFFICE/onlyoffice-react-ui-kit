@@ -52,16 +52,6 @@
     .oo-language-selector-icon-arrow {
       transform: rotate(180deg);
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 24px;
-      background-color: transparent;
-    }
   }
 }
 

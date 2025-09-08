@@ -100,8 +100,14 @@ const OOHeader = ({
     closeMenusRef.current.push(fn);
   };
 
+  const handleCloseAllMenus = () => {
+    closeMenusRef.current.forEach((closeMenu) => closeMenu());
+    closeMenusRef.current = [];
+  };
+
   return (
     <header
+      onMouseLeave={handleCloseAllMenus}
       className={clsx(
         "oo-header",
         locale,
@@ -179,6 +185,7 @@ const OOHeader = ({
               theme={theme}
               highlight={highlight}
               registerCloseMenu={registerCloseMenu}
+              handleCloseAllMenus={handleCloseAllMenus}
             />
 
             <div className={clsx("oo-header-btns", locale)}>
@@ -190,8 +197,10 @@ const OOHeader = ({
                 hasPhone={hasPhone}
                 highlight={highlight}
                 registerCloseMenu={registerCloseMenu}
+                handleCloseAllMenus={handleCloseAllMenus}
               />
               <Link
+                onMouseEnter={handleCloseAllMenus}
                 className={clsx(
                   "oo-header-btn",
                   locale,
@@ -239,12 +248,16 @@ const OOHeader = ({
               locale={locale}
               getBaseUrl={getBaseUrl}
               theme={theme}
+              registerCloseMenu={registerCloseMenu}
+              handleCloseAllMenus={handleCloseAllMenus}
             />
           )}
           <LanguageSelector
             locale={locale}
             theme={theme}
             languages={languages}
+            registerCloseMenu={registerCloseMenu}
+            handleCloseAllMenus={handleCloseAllMenus}
           />
         </div>
 
