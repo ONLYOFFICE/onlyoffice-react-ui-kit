@@ -3,6 +3,7 @@
 ## 1.14.0
 - header
   - Update mouse leave event
+  - Remove Workspace from Pricing menu
   - Fix active menu highlight
 - footer
   - Update Mail popup form

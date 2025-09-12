@@ -66,15 +66,6 @@ const Pricing = ({
             >
               {t("DocsEnterprise")}
             </MenuLink>
-            <MenuLink
-              id="oo-menu-link-pricing-workspace"
-              className="oo-header-menu-mb-16 oo-header-menu-mob-mb-24"
-              href={getBaseUrl("/workspace-prices")}
-              icon="workspace"
-              active={highlight?.linkId}
-            >
-              {t("Workspace")}
-            </MenuLink>
 
             <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
               {t("ForDevelopers")}
