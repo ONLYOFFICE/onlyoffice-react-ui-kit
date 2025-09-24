@@ -142,7 +142,7 @@ const Resources = ({
             icon="for-contributers"
             active={highlight?.linkId}
           >
-            {t("ForContributers")}
+            {t("ForContributors")}
           </MenuLink>
           <MenuLink
             id="oo-menu-link-for-translators"
