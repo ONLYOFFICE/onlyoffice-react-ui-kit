@@ -5,9 +5,13 @@
   - Update mouse leave event
   - Remove Workspace from Pricing menu
   - Fix active menu highlight
+  - Resources: 
+    + Rename "ForContributers" to "ForContributors"
+    + Fix key typo ForInfluencers for /pt
 - footer
   - Update Mail popup form
   - Fix Language selector styles
+  - Fix Mail popup api
 
 ## 1.13.2
 * header
