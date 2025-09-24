@@ -100,8 +100,8 @@ const MailPopup = ({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          language: locale === "en" ? "" : locale,
-          firstname: formData.firstName,
+          locale,
+          firstName: formData.firstName,
           email: formData.email,
           type: mailApiType,
         }),
