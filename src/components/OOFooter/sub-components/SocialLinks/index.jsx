@@ -296,14 +296,14 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
           <li>
             <Link
               className="oo-footer-social-link"
-              href="https://www.xiaohongshu.com/user/profile/627e271800000000210253ec"
-              title="在Xiaohongshu上关注我们"
+              href="https://weibo.com/u/7989605631"
+              title="在Weibo上关注我们"
               target="_blank"
               rel="noreferrer noopener"
             >
               <span
-                className="oo-footer-social-link-icon oo-footer-social-link-icon--xiaohongshu"
-                title="Xiaohongshu"
+                className="oo-footer-social-link-icon oo-footer-social-link-icon--weibo"
+                title="Weibo"
               ></span>
             </Link>
           </li>

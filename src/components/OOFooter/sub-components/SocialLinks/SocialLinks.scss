@@ -91,7 +91,7 @@
   background-repeat: no-repeat;
 
   &.oo-footer-social-link-icon--subscribe-mail {
-    background-position-x: -434px;
+    background-position-x: -440px;
   }
 
   &.oo-footer-social-link-icon--blog {
@@ -116,9 +116,7 @@
   }
 
   &.oo-footer-social-link-icon--discord {
-    background-image: url("../../images/discord.svg");
-    background-position: center;
-    background-size: contain;
+    background-position-x: -840px;
   }
 
   &.oo-footer-social-link-icon--youtube {
@@ -147,12 +145,11 @@
   }
 
   &.oo-footer-social-link-icon--fosstodon {
-    background-position-x: -397px;
+    background-position-x: -400px;
   }
 
   &.oo-footer-social-link-icon--telegram {
-    background-image: url("../../images/telegram.svg");
-    background-position: center;
+    background-position-x: -800px;
   }
 
   &.oo-footer-social-link-icon--vk {
@@ -164,23 +161,23 @@
   }
 
   &.oo-footer-social-link-icon--kuaishou {
-    background-position-x: -554px;
+    background-position-x: -560px;
   }
 
-  &.oo-footer-social-link-icon--xiaohongshu {
-    background-position-x: -634px;
+  &.oo-footer-social-link-icon--weibo {
+    background-position-x: -760px;
   }
 
   &.oo-footer-social-link-icon--csdn {
-    background-position-x: -674px;
+    background-position-x: -680px;
   }
 
   &.oo-footer-social-link-icon--toutiao {
-    background-position-x: -594px;
+    background-position-x: -600px;
   }
 
   &.oo-footer-social-link-icon--bilibili {
-    background-position-x: -714px;
+    background-position-x: -720px;
   }
 }
 
