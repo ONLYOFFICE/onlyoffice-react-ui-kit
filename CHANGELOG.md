@@ -7,9 +7,10 @@
   - Fix active menu highlight
   - Resources: 
     + Rename "ForContributers" to "ForContributors"
-    + Fix key typo ForInfluencers for /pt
+    + Fix key typo "ForInfluencers" in Portuguese
 - footer
   - Update Mail popup form
+  - Replace Xiaohongshu with Weibo in Chinese
   - Fix Language selector styles
   - Fix Mail popup api
 
