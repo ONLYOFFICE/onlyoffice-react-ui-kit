@@ -1,6 +1,7 @@
 # Changelog
 
 ## 1.14.0
+- Update next.js version
 - header
   - Update mouse leave event
   - Remove Workspace from Pricing menu
