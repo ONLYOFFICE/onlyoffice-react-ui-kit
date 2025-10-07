@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.15.0
+* advent-announce
+  - Get ready for ONLYOFFICE Docs 9.1
+
 ## 1.14.0
 - Update next.js version
 - header
