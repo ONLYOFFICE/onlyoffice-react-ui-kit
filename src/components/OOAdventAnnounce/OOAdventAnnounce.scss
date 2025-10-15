@@ -63,29 +63,22 @@
   text-decoration: none;
   background-color: #1b283d;
   background-image: url("./images/docs_9.1.png");
-  background-size: auto 104px;
+  background-size: auto 144px;
   background-repeat: no-repeat;
-  background-position-x: calc(50% - 251px);
+  background-position: calc(50% + 65px) 50%;
 
   &.ar {
     direction: initial;
     unicode-bidi: initial;
   }
 
-  &.de,
-  &.fr {
-    .oo-advent-announce-text {
-      max-width: 900px;
-
-      @media screen and (max-width: 375px) {
-        font-size: 13px;
-      }
-    }
-  }
-
   &.es {
     .oo-advent-announce-text {
-      max-width: 922px;
+      max-width: 872px;
+
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 350px);
+      }
     }
   }
 
@@ -99,9 +92,29 @@
     .oo-advent-announce-text {
       max-width: 100%;
 
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 345px);
+      }
+
       @media screen and (max-width: 375px) {
         font-size: 13px;
       }
+    }
+  }
+
+  &.fr .oo-advent-announce-text {
+    @media screen and (max-width: 1024px) {
+      background-position-x: calc(50% + 345px);
+    }
+  }
+
+  &.de .oo-advent-announce-text {
+    @media screen and (max-width: 1024px) {
+      background-position-x: calc(50% + 335px);
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 13px;
     }
   }
 
@@ -109,12 +122,20 @@
   &.pt-br {
     .oo-advent-announce-text {
       max-width: 870px;
+
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 345px);
+      }
     }
   }
 
   &.ru {
     .oo-advent-announce-text {
       max-width: 978px;
+
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 345px);
+      }
 
       @media screen and (max-width: 375px) {
         font-size: 13px;
@@ -124,7 +145,9 @@
 
   &.sr {
     .oo-advent-announce-text {
-      max-width: 788px;
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 350px);
+      }
     }
   }
 
@@ -132,6 +155,10 @@
   &.zh-hans {
     .oo-advent-announce-text {
       max-width: 100%;
+
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 363px);
+      }
 
       @media screen and (max-width: 375px) {
         font-size: 13px;
@@ -141,9 +168,18 @@
 
   @media screen and (max-width: 1024px) {
     height: 48px;
-    background-image: url("./images/docs_9.1.png");
-    background-size: auto 60px;
-    background-position: calc(50% + 224px) bottom;
+    background-size: auto 134px;
+    background-position: calc(50% + 367px) -42px;
+  }
+
+  @media screen and (max-width: 320px) {
+    background-image: url("./images/mobile_bg.png");
+    background-size: auto 49px;
+    background-position: 50% 50%;
+
+    &[class] {
+      background-position-x: 50%;
+    }
   }
 }
 
@@ -156,7 +192,7 @@
   font-size: 14px;
   line-height: 19px;
   text-align: center;
-  max-width: 872px;
+  max-width: 846px;
   height: 100%;
   color: #ffffff;
   text-decoration: none;
@@ -172,17 +208,13 @@
 
   &:before {
     margin-right: 12px;
-    width: 64px;
-    min-width: 60px;
-    height: 62px;
+    width: 50px;
+    min-width: 50px;
+    height: 44px;
     background-image: url("./images/docs_icon_9.1.svg");
-    background-size: 64px 62px;
+    background-size: 47px 44px;
 
     @media screen and (max-width: 1024px) {
-      margin-right: 8px;
-      width: 56px;
-      min-width: 56px;
-      height: 54px;
       background-size: contain;
     }
   }
