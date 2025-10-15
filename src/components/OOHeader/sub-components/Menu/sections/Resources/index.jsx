@@ -239,6 +239,7 @@ const Resources = ({
             href={getLink("blog", locale)}
             variant="text"
             active={highlight?.linkId}
+            locale={false}
           >
             {t("Blog")}
           </MenuLink>
@@ -246,6 +247,7 @@ const Resources = ({
           <Link
             className="oo-header-menu-block oo-header-menu-mb-16"
             href={t("blogLink1")}
+            locale={false}
           >
             <div
               className={clsx(
@@ -261,7 +263,11 @@ const Resources = ({
             </MenuText>
           </Link>
 
-          <Link className="oo-header-menu-block" href={t("blogLink2")}>
+          <Link
+            className="oo-header-menu-block"
+            href={t("blogLink2")}
+            locale={false}
+          >
             <div
               className={clsx(
                 "oo-header-menu-img oo-header-menu-img--blog-2 oo-header-menu-mb-12",

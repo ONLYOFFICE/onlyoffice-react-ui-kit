@@ -28,6 +28,7 @@ const MenuLink = ({
   href,
   target,
   active,
+  locale,
 }) => {
   const classNames = clsx(
     "oo-menu-link",
@@ -38,7 +39,13 @@ const MenuLink = ({
   );
 
   return href ? (
-    <Link id={id} className={classNames} href={href} target={target}>
+    <Link
+      id={id}
+      className={classNames}
+      href={href}
+      target={target}
+      locale={locale}
+    >
       {children}
     </Link>
   ) : (
