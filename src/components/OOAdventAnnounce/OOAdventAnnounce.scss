@@ -74,7 +74,11 @@
 
   &.es {
     .oo-advent-announce-text {
-      max-width: 922px;
+      max-width: 872px;
+
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 350px);
+      }
     }
   }
 
@@ -88,13 +92,27 @@
     .oo-advent-announce-text {
       max-width: 100%;
 
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 345px);
+      }
+
       @media screen and (max-width: 375px) {
         font-size: 13px;
       }
     }
   }
 
+  &.fr .oo-advent-announce-text {
+    @media screen and (max-width: 1024px) {
+      background-position-x: calc(50% + 345px);
+    }
+  }
+
   &.de .oo-advent-announce-text {
+    @media screen and (max-width: 1024px) {
+      background-position-x: calc(50% + 335px);
+    }
+
     @media screen and (max-width: 375px) {
       font-size: 13px;
     }
@@ -104,6 +122,10 @@
   &.pt-br {
     .oo-advent-announce-text {
       max-width: 870px;
+
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 345px);
+      }
     }
   }
 
@@ -111,8 +133,20 @@
     .oo-advent-announce-text {
       max-width: 978px;
 
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 345px);
+      }
+
       @media screen and (max-width: 375px) {
         font-size: 13px;
+      }
+    }
+  }
+
+  &.sr {
+    .oo-advent-announce-text {
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 350px);
       }
     }
   }
@@ -121,6 +155,10 @@
   &.zh-hans {
     .oo-advent-announce-text {
       max-width: 100%;
+
+      @media screen and (max-width: 1024px) {
+        background-position-x: calc(50% + 363px);
+      }
 
       @media screen and (max-width: 375px) {
         font-size: 13px;
@@ -132,34 +170,13 @@
     height: 48px;
     background-size: auto 134px;
     background-position: calc(50% + 367px) -42px;
-
-    &.de {
-      background-position-x: calc(50% + 335px);
-    }
-
-    &.ja,
-    &.fr,
-    &.pt,
-    &.pt-br,
-    &.ru {
-      background-position-x: calc(50% + 345px);
-    }
-
-    &.sr,
-    &.es {
-      background-position-x: calc(50% + 350px);
-    }
-
-    &.zh,
-    &.zh-hans {
-      background-position-x: calc(50% + 363px);
-    }
   }
 
   @media screen and (max-width: 320px) {
     background-image: url("./images/mobile_bg.png");
     background-size: auto 49px;
     background-position: 50% 50%;
+
     &[class] {
       background-position-x: 50%;
     }

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.16.0
+* advent-announce
+  - ONLYOFFICE Docs 9.1 released
+* header
+  - Resources: 
+    + Update Docs 9.0 to Docs 9.1
+  
 ## 1.15.0
 * advent-announce
   - Get ready for ONLYOFFICE Docs 9.1
