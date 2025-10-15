@@ -610,6 +610,7 @@ const Products = ({
             icon="marketplace"
             variant="small"
             active={highlight?.linkId}
+            locale={false}
           >
             {t("Marketplace")}
           </MenuLink>
