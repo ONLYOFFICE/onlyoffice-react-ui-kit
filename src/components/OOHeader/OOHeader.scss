@@ -329,6 +329,10 @@
     background-image: url("./images/logo-white.svg");
   }
 
+  &.oo-header-logo--theme-white-secondary {
+    background-image: url("./images/logo-white-secondary.svg");
+  }
+
   &.oo-header-logo--mobile-center {
     &.ar {
       @media screen and (max-width: 1024px) {
@@ -526,13 +530,22 @@
 
   &.oo-header-btn--theme-white {
     color: #444444;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.2s;
 
     span {
       background-color: #444444;
 
       @media screen and (max-width: 1024px) {
         background-color: initial;
+      }
+    }
+
+    &:hover {
+      background-color: #ffffff;
+
+      @media screen and (max-width: 1024px) {
+        background-color: #555555;
       }
     }
 

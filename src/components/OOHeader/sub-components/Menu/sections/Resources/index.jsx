@@ -227,6 +227,7 @@ const Resources = ({
             id="oo-menu-link-white-papers"
             href={getBaseUrl("/whitepapers")}
             icon="white-papers"
+            active={highlight?.linkId}
           >
             {t("WhitePapers")}
           </MenuLink>

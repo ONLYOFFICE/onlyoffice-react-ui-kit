@@ -29,9 +29,6 @@ const LanguageSelector = ({
   const buttonRef = useRef(null);
   const listRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const isHoverSupported =
-    typeof window !== "undefined" &&
-    window.matchMedia("(hover: hover)").matches;
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -78,14 +75,12 @@ const LanguageSelector = ({
 
   return (
     <div
-      onMouseEnter={
-        isHoverSupported
-          ? () => {
-              handleCloseAllMenus();
-              setIsOpen(true);
-            }
-          : undefined
-      }
+      onMouseEnter={() => {
+        if (window.innerWidth > 1024) {
+          handleCloseAllMenus();
+          setIsOpen(true);
+        }
+      }}
       onClick={() => {
         handleCloseAllMenus();
         setIsOpen(!isOpen);
@@ -98,7 +93,10 @@ const LanguageSelector = ({
         className={clsx(
           "oo-language-selector-btn",
           isOpen && "oo-language-selector-btn--open",
-          theme === "white" && "oo-language-selector-btn--theme-white",
+          (theme === "white" ||
+            theme === "white-secondary" ||
+            theme === "white-tertiary") &&
+            "oo-language-selector-btn--theme-white",
         )}
       >
         <svg

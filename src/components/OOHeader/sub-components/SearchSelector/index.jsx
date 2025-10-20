@@ -37,8 +37,20 @@ const SearchSelector = ({
   const searchRef = useRef();
 
   useEffect(() => {
-    setShowSearch(false);
-  }, [router.asPath]);
+    const handleCloseSearch = () => {
+      setShowSearch(false);
+      setShowOverlay(false);
+      document.documentElement.style.overflow = "";
+    };
+
+    router.events.on("routeChangeComplete", handleCloseSearch);
+    router.events.on("hashChangeComplete", handleCloseSearch);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleCloseSearch);
+      router.events.off("hashChangeComplete", handleCloseSearch);
+    };
+  }, [router]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -151,7 +163,10 @@ const SearchSelector = ({
           className={clsx(
             "oo-header-search-btn",
             locale,
-            theme === "white" && "oo-header-search-btn--theme-white",
+            (theme === "white" ||
+              theme === "white-secondary" ||
+              theme === "white-tertiary") &&
+              "oo-header-search-btn--theme-white",
           )}
         >
           {variant === "blog" ? <SearchGrayIcon /> : <SearchIcon />}

@@ -73,6 +73,24 @@
     }
   }
 
+  &.oo-menu-item--download-theme-white-tertiary {
+    .oo-menu-item-btn {
+      background-color: #444444;
+
+      &:hover {
+        background-color: #555555;
+
+        @media screen and (max-width: 1024px) {
+          background-color: #ff865c;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        background-color: #ff6f3d;
+      }
+    }
+  }
+
   &.oo-menu-item--position-1 {
     &.en,
     &.el,

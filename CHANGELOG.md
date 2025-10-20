@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.18.0
+
+- header
+  - Add header themes: white-secondary, white-tertiary
+  - Add menu closing when clicking the button again on desktop
+  - Fix incorrect menu items click with touchscreen on mobile
+  - Fix search closing behavior on mobile
+
 ## 1.17.0
 
 - advent-announce

@@ -20,14 +20,31 @@ import "./MenuLabel.scss";
 import Link from "next/link";
 import { ChevronRightIcon } from "../../../../../../icons/index.js";
 
-const MenuLabel = ({ className, children, href }) => {
+const MenuLabel = ({ id, className, children, href, active }) => {
   return href ? (
-    <Link className={clsx("oo-menu-label", className)} href={href}>
+    <Link
+      id={id}
+      className={clsx(
+        "oo-menu-label",
+        active && active === id && "oo-menu-label--active",
+        className,
+      )}
+      href={href}
+    >
       <span>{children}</span>
       <ChevronRightIcon />
     </Link>
   ) : (
-    <div className={clsx("oo-menu-label", className)}>{children}</div>
+    <div
+      id={id}
+      className={clsx(
+        "oo-menu-label",
+        active && active === id && "oo-menu-label--active",
+        className,
+      )}
+    >
+      {children}
+    </div>
   );
 };
 

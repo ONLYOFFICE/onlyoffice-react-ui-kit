@@ -18,6 +18,7 @@ import React, { useRef, useState, useEffect } from "react";
 import clsx from "clsx";
 import "./OOHeader.scss";
 import locales from "./locales/index.jsx";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { Menu } from "./sub-components/Menu/index.jsx";
 import { DownloadMenu } from "./sub-components/DownloadMenu/index.jsx";
@@ -44,6 +45,7 @@ const OOHeader = ({
     locales.en[key] ||
     key;
 
+  const router = useRouter();
   const closeMenusRef = useRef([]);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -53,22 +55,29 @@ const OOHeader = ({
     getUrl(locale, path, base?.url, base?.withAspx, base?.localePathMap);
 
   useEffect(() => {
+    const closeAllMenus = () => {
+      setShowOverlay(false);
+      setOpenMobileMenu(false);
+      document.documentElement.style.overflow = "";
+      document
+        .querySelector(".oo-advent-announce")
+        ?.classList.remove("oo-advent-announce--active");
+    };
+
     const handleResize = () => {
       if (window.innerWidth < 1024) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
-        setOpenMobileMenu(false);
-        document.documentElement.style.overflow = "";
-        document
-          .querySelector(".oo-advent-announce")
-          ?.classList.remove("oo-advent-announce--active");
-        setShowOverlay(false);
+        closeAllMenus();
       }
     };
 
     handleResize();
     window.addEventListener("resize", handleResize);
+
+    router.events.on("routeChangeComplete", closeAllMenus);
+    router.events.on("hashChangeComplete", closeAllMenus);
 
     return () => {
       document.documentElement.style.overflow = "";
@@ -76,8 +85,10 @@ const OOHeader = ({
         .querySelector(".oo-advent-announce")
         ?.classList.remove("oo-advent-announce--active");
       window.removeEventListener("resize", handleResize);
+      router.events.off("routeChangeComplete", closeAllMenus);
+      router.events.off("hashChangeComplete", closeAllMenus);
     };
-  }, []);
+  }, [router]);
 
   const onOverlayhHandleClick = () => {
     setShowOverlay(false);
@@ -101,8 +112,10 @@ const OOHeader = ({
   };
 
   const handleCloseAllMenus = () => {
-    closeMenusRef.current.forEach((closeMenu) => closeMenu());
-    closeMenusRef.current = [];
+    if (window.innerWidth > 1024) {
+      closeMenusRef.current.forEach((closeMenu) => closeMenu());
+      closeMenusRef.current = [];
+    }
   };
 
   return (
@@ -129,7 +142,10 @@ const OOHeader = ({
           className={clsx(
             "oo-header-hamburger",
             locale,
-            theme === "white" && "oo-header-hamburger--theme-white",
+            (theme === "white" ||
+              theme === "white-secondary" ||
+              theme === "white-tertiary") &&
+              "oo-header-hamburger--theme-white",
           )}
         >
           <svg
@@ -149,7 +165,11 @@ const OOHeader = ({
           className={clsx(
             "oo-header-logo",
             locale,
-            theme === "white" && "oo-header-logo--theme-white",
+            theme === "white"
+              ? "oo-header-logo--theme-white"
+              : theme === "white-secondary" || theme === "white-tertiary"
+              ? "oo-header-logo--theme-white-secondary"
+              : undefined,
             !search?.show && "oo-header-logo--mobile-center",
           )}
           href={
@@ -193,6 +213,7 @@ const OOHeader = ({
                 t={t}
                 locale={locale}
                 getBaseUrl={getBaseUrl}
+                theme={theme}
                 hasSearch={search?.show}
                 hasPhone={hasPhone}
                 highlight={highlight}
@@ -204,7 +225,10 @@ const OOHeader = ({
                 className={clsx(
                   "oo-header-btn",
                   locale,
-                  theme === "white" && "oo-header-btn--theme-white",
+                  (theme === "white" ||
+                    theme === "white-secondary" ||
+                    theme === "white-tertiary") &&
+                    "oo-header-btn--theme-white",
                 )}
                 href={getBaseUrl("/docspace-registration")}
               >

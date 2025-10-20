@@ -31,9 +31,6 @@ const PhoneSelector = ({
   const buttonRef = useRef(null);
   const dropdownRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const isHoverSupported =
-    typeof window !== "undefined" &&
-    window.matchMedia("(hover: hover)").matches;
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -85,14 +82,12 @@ const PhoneSelector = ({
     >
       <button
         ref={buttonRef}
-        onMouseEnter={
-          isHoverSupported
-            ? () => {
-                handleCloseAllMenus();
-                setIsOpen(true);
-              }
-            : undefined
-        }
+        onMouseEnter={() => {
+          if (window.innerWidth > 1024) {
+            handleCloseAllMenus();
+            setIsOpen(true);
+          }
+        }}
         onClick={() => {
           handleCloseAllMenus();
           setIsOpen(!isOpen);
@@ -100,7 +95,10 @@ const PhoneSelector = ({
         className={clsx(
           "oo-phone-selector-btn",
           isOpen && "oo-phone-selector-btn--open",
-          theme === "white" && "oo-phone-selector-btn--theme-white",
+          (theme === "white" ||
+            theme === "white-secondary" ||
+            theme === "white-tertiary") &&
+            "oo-phone-selector-btn--theme-white",
         )}
       >
         <PhoneIcon />

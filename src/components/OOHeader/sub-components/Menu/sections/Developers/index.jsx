@@ -44,8 +44,10 @@ const Developers = ({
         <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column">
           <div className="oo-header-menu-item oo-header-menu-item--with-border">
             <MenuLabel
+              id="oo-menu-link-for-developers"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16"
               href={getBaseUrl("/for-developers")}
+              active={highlight?.linkId}
             >
               {t("AllSolutions")}
             </MenuLabel>
@@ -100,6 +102,7 @@ const Developers = ({
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
               href={getBaseUrl("/see-it-in-action?developer=edition")}
               icon="launch-demo"
+              active={highlight?.linkId}
             >
               {t("LaunchDemo")}
             </MenuLink>

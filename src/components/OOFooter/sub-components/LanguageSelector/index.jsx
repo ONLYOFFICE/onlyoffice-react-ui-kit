@@ -24,9 +24,6 @@ const LanguageSelector = ({ locale, languages }) => {
   const buttonRef = useRef(null);
   const listRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const isHoverSupported =
-    typeof window !== "undefined" &&
-    window.matchMedia("(hover: hover)").matches;
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -69,8 +66,16 @@ const LanguageSelector = ({ locale, languages }) => {
 
   return (
     <div
-      onMouseEnter={isHoverSupported ? () => setIsOpen(!isOpen) : undefined}
-      onMouseLeave={isHoverSupported ? () => setIsOpen(false) : undefined}
+      onMouseEnter={() => {
+        if (window.innerWidth > 1024) {
+          setIsOpen(true);
+        }
+      }}
+      onMouseLeave={() => {
+        if (window.innerWidth > 1024) {
+          setIsOpen(false);
+        }
+      }}
       onClick={() => setIsOpen(!isOpen)}
       onKeyDown={handleKeyDown}
       className="oo-footer-language-selector"

@@ -103,7 +103,7 @@ function MyApp() {
 | `highlight` | Highlights specific menu elements. Should be an object like { buttonId: string, linkId: string }, where values are DOM element IDs to apply highlight styles to. | `object` | `undefined` |
 | `borderColor` | Sets the bottom border color of the header. | `string` | `transparent` |
 | `backgroundColor` | Sets the background color of the header. | `string` | `transparent` |
-| `theme` | Applies a predefined visual theme. Currently only "white" is supported. | `string` | `undefined` |
+| `theme` | Applies a predefined visual theme. | `white`, `white-secondary`, `white-tertiary` | `undefined` |
 | `base` | Base configuration for internal links. Should be an object like { url: string, withAspx: boolean, localePathMap: object }. | `object` | `undefined` |
 
 ### OOFooter

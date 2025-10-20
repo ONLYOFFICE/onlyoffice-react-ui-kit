@@ -32,9 +32,6 @@ const MenuItem = ({
   const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
   const listRef = useRef(null);
-  const isHoverSupported =
-    typeof window !== "undefined" &&
-    window.matchMedia("(hover: hover)").matches;
 
   useEffect(() => {
     const resizeWindow = () => {
@@ -51,8 +48,16 @@ const MenuItem = ({
   }, []);
 
   useEffect(() => {
-    setShowMenu(false);
-  }, [router.asPath]);
+    const handleCloseMenu = () => setShowMenu(false);
+
+    router.events.on("routeChangeComplete", handleCloseMenu);
+    router.events.on("hashChangeComplete", handleCloseMenu);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleCloseMenu);
+      router.events.off("hashChangeComplete", handleCloseMenu);
+    };
+  }, [router]);
 
   useEffect(() => {
     const headerNav = document.querySelector(".oo-header-nav");
@@ -109,24 +114,26 @@ const MenuItem = ({
   return (
     <div className={clsx("oo-menu-item", className)}>
       <button
+        onMouseEnter={() => {
+          if (window.innerWidth > 1024) {
+            handleCloseAllMenus();
+            setShowMenu(true);
+          }
+        }}
         onClick={() => {
           handleCloseAllMenus();
-          setShowMenu((prev) => !prev);
+          setShowMenu(!showMenu);
         }}
-        onMouseEnter={
-          isHoverSupported
-            ? () => {
-                handleCloseAllMenus();
-                setShowMenu(true);
-              }
-            : undefined
-        }
         id={id}
         className={clsx(
           "oo-menu-item-btn",
           active === id && "oo-menu-item-btn--active",
           showMenu && "oo-menu-item-btn--open",
-          theme === "white" && "oo-menu-item-btn--theme-white",
+          theme === "white"
+            ? "oo-menu-item-btn--theme-white"
+            : theme === "white-secondary" || theme === "white-tertiary"
+            ? "oo-menu-item-btn--theme-white-secondary"
+            : "",
         )}
       >
         {heading}

@@ -243,49 +243,42 @@ const Products = ({
                 href={getBaseUrl("/office-for-zapier")}
                 icon="zapier"
                 variant="icon"
-                active={highlight?.linkId}
               />
               <MenuLink
                 id="oo-menu-link-docspace-zoom"
                 href={getBaseUrl("/office-for-zoom")}
                 icon="zoom"
                 variant="icon"
-                active={highlight?.linkId}
               />
               <MenuLink
                 id="oo-menu-link-docspace-wordpress"
                 href={getBaseUrl("/office-for-wordpress")}
                 icon="wordpress"
                 variant="icon"
-                active={highlight?.linkId}
               />
               <MenuLink
                 id="oo-menu-link-docspace-drupal"
                 href={getBaseUrl("/office-for-drupal")}
                 icon="drupal"
                 variant="icon"
-                active={highlight?.linkId}
               />
               <MenuLink
                 id="oo-menu-link-docspace-pipedrive"
                 href={getBaseUrl("/office-for-pipedrive")}
                 icon="pipedrive"
                 variant="icon"
-                active={highlight?.linkId}
               />
               <MenuLink
                 id="oo-menu-link-docspace-moodle"
                 href={getBaseUrl("/office-for-moodle")}
                 icon="moodle"
                 variant="icon"
-                active={highlight?.linkId}
               />
               <MenuLink
                 id="oo-menu-link-docspace-see-more"
                 href={getBaseUrl("/all-connectors")}
                 icon="see-more"
                 variant="icon"
-                active={highlight?.linkId}
               />
             </div>
           </div>

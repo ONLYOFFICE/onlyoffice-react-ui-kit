@@ -26,6 +26,7 @@ const DownloadMenu = ({
   t,
   locale,
   getBaseUrl,
+  theme,
   hasSearch,
   hasPhone,
   highlight,
@@ -37,6 +38,8 @@ const DownloadMenu = ({
       id="oo-menu-item-btn-download"
       className={clsx(
         "oo-menu-item--download",
+        theme === "white-tertiary" &&
+          "oo-menu-item--download-theme-white-tertiary",
         locale,
         !hasSearch && !hasPhone
           ? "oo-menu-item--position-1"
