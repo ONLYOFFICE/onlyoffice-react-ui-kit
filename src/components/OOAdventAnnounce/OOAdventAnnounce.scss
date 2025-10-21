@@ -61,8 +61,8 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #1b283d;
-  background-image: url("./images/docs_9.1.png");
+  background-color: #0b1f1c;
+  background-image: url("./images/docspace_3.5.png");
   background-size: auto 144px;
   background-repeat: no-repeat;
   background-position: calc(50% + 65px) 50%;
@@ -74,7 +74,7 @@
 
   &.es {
     .oo-advent-announce-text {
-      max-width: 872px;
+      max-width: 900px;
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 350px);
@@ -103,12 +103,16 @@
   }
 
   &.fr .oo-advent-announce-text {
+    max-width: 882px;
+
     @media screen and (max-width: 1024px) {
       background-position-x: calc(50% + 345px);
     }
   }
 
   &.de .oo-advent-announce-text {
+    max-width: 886px;
+
     @media screen and (max-width: 1024px) {
       background-position-x: calc(50% + 335px);
     }
@@ -121,7 +125,7 @@
   &.pt,
   &.pt-br {
     .oo-advent-announce-text {
-      max-width: 870px;
+      max-width: 940px;
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 345px);
@@ -131,7 +135,7 @@
 
   &.ru {
     .oo-advent-announce-text {
-      max-width: 978px;
+      max-width: 100%;
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 345px);
@@ -145,6 +149,8 @@
 
   &.sr {
     .oo-advent-announce-text {
+      max-width: 902px;
+
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 350px);
       }
@@ -173,7 +179,7 @@
   }
 
   @media screen and (max-width: 320px) {
-    background-image: url("./images/mobile_bg.png");
+    background-image: url("./images/docspace_mobile_3.5.png");
     background-size: auto 49px;
     background-position: 50% 50%;
 
@@ -192,7 +198,7 @@
   font-size: 14px;
   line-height: 19px;
   text-align: center;
-  max-width: 846px;
+  max-width: 862px;
   height: 100%;
   color: #ffffff;
   text-decoration: none;
@@ -207,15 +213,14 @@
   }
 
   &:before {
-    margin-right: 12px;
-    width: 50px;
-    min-width: 50px;
-    height: 44px;
-    background-image: url("./images/docs_icon_9.1.svg");
-    background-size: 47px 44px;
+    width: 104px;
+    min-width: 104px;
+    height: 60px;
+    background-image: url("./images/docspace_icon_3.5.svg");
+    background-size: 104px 60px;
 
     @media screen and (max-width: 1024px) {
-      background-size: contain;
+      display: none;
     }
   }
 
@@ -224,7 +229,7 @@
     width: 24px;
     min-width: 24px;
     height: 24px;
-    background-image: url("./images/arrow-right.svg");
+    background-image: url("./images/arrow_right.svg");
 
     @media screen and (max-width: 1024px) {
       margin-left: 2px;
