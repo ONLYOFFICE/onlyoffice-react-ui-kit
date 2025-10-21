@@ -98,6 +98,7 @@
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 345px);
+        font-size: 14px;
       }
     }
   }
@@ -115,10 +116,6 @@
 
     @media screen and (max-width: 1024px) {
       background-position-x: calc(50% + 335px);
-    }
-
-    @media screen and (max-width: 375px) {
-      font-size: 13px;
     }
   }
 
@@ -148,7 +145,7 @@
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 345px);
-        font-size: 13px;
+        font-size: 14px;
       }
     }
   }
@@ -168,10 +165,6 @@
     .oo-advent-announce-text {
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 363px);
-      }
-
-      @media screen and (max-width: 375px) {
-        font-size: 13px;
       }
     }
   }
