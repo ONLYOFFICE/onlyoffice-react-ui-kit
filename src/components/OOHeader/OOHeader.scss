@@ -24,7 +24,7 @@
   border-bottom: 1px solid transparent;
   width: 100%;
   height: 72px;
-  z-index: 1000;
+  z-index: 999999;
 
   &.ar {
     direction: rtl;
@@ -317,13 +317,13 @@
 .oo-header-logo {
   display: inline-flex;
   margin-right: 20px;
-  width: 130px;
-  min-width: 130px;
+  width: 128px;
+  min-width: 128px;
   height: 24px;
   background-image: url("./images/logo.svg");
   background-repeat: no-repeat;
   background-position-y: center;
-  background-size: auto 24px;
+  background-size: contain;
 
   &.oo-header-logo--theme-white {
     background-image: url("./images/logo-white.svg");
@@ -370,8 +370,8 @@
 
   @media screen and (max-width: 1300px) {
     margin-right: 4px;
-    width: 30px;
-    min-width: 30px;
+    width: 26px;
+    min-width: 26px;
     overflow: hidden;
     background-size: auto 24px;
   }
@@ -380,8 +380,8 @@
     position: absolute;
     left: 60px;
     margin-right: initial;
-    width: 130px;
-    min-width: 130px;
+    width: 128px;
+    min-width: 128px;
     overflow: initial;
   }
 
