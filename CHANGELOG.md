@@ -2,7 +2,10 @@
 
 ## 1.18.0
 
+- advent-announce
+  - Meet ONLYOFFICE DocSpace 3.5
 - header
+  - Menu -> Resources -> Blog: Update DocSpace 3.1 -> DocSpace 3.5
   - Add header themes: white-secondary, white-tertiary
   - Add menu closing when clicking the button again on desktop
   - Fix incorrect menu items click with touchscreen on mobile
