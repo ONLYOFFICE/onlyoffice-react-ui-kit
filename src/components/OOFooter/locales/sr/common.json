@@ -96,6 +96,9 @@
   "YourEmail": "Your email",
   "EmailIsEmpty": "Email is empty",
   "EmailIsIncorrect": "Email is incorrect",
+  "TooManyRequestsPleaseTryAgainLater": "Previše zahteva. Molimo Vas pokušajte ponovo kasnije.",
+  "FailedToSendEmail": "Failed to send email. Please check that the email address you entered is correct.",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "Žao nam je, ali došlo je do greške, pokušajte ponovo kasnije",
   "Subscribe": "Subscribe",
   "WeSentAnEmailMessage": "We sent an email message with confirmation to your email address.",
   "OK": "OK"

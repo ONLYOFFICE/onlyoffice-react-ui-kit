@@ -96,6 +96,9 @@
   "YourEmail": "E-Mail-Adresse",
   "EmailIsEmpty": "E-Mail-Adresse ist leer",
   "EmailIsIncorrect": "Die E-Mail-Adresse ist falsch",
+  "TooManyRequestsPleaseTryAgainLater": "Zu viele Anfragen. Bitte versuchen Sie es später erneut.",
+  "FailedToSendEmail": "E-Mail konnte nicht gesendet werden. Bitte überprüfen Sie, ob die von Ihnen eingegebene E-Mail-Adresse korrekt ist.",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "Entschuldigung, ein Fehler ist aufgetreten. Bitte versuchen Sie erneut später",
   "Subscribe": "Abonnieren",
   "WeSentAnEmailMessage": "Wir haben eine E-Mail-Nachricht mit einer Bestätigung an Ihre E-Mail-Adresse gesendet.",
   "OK": "OK"

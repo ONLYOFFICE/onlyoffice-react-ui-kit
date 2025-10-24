@@ -96,6 +96,9 @@
   "YourEmail": "您的电子邮箱",
   "EmailIsEmpty": "电子邮箱为空",
   "EmailIsIncorrect": "电子邮箱错误",
+  "TooManyRequestsPleaseTryAgainLater": "请求过多，请稍后再试。",
+  "FailedToSendEmail": "发送邮件失败。请检查您输入的邮箱地址是否正确。",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "很抱歉，发生错误，请稍后重试",
   "Subscribe": "订阅",
   "WeSentAnEmailMessage": "我们向您的邮箱发送了一封确认邮件。",
   "OK": "OK"

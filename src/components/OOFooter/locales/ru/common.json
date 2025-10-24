@@ -96,6 +96,9 @@
   "YourEmail": "Ваш email",
   "EmailIsEmpty": "Поле Email не заполнено",
   "EmailIsIncorrect": "Неверный Email",
+  "TooManyRequestsPleaseTryAgainLater": "Слишком много запросов. Пожалуйста, попробуйте позже.",
+  "FailedToSendEmail": "Не удалось отправить электронное письмо. Проверьте правильность введенного адреса электронной почты.",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "К сожалению, произошла ошибка, повторите попытку позже",
   "Subscribe": "Подписаться",
   "WeSentAnEmailMessage": "На ваш адрес электронной почты отправлено сообщение с подтверждением.",
   "OK": "OK"

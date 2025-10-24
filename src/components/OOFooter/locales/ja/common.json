@@ -96,6 +96,9 @@
   "YourEmail": "メールアドレス",
   "EmailIsEmpty": "メールが入力されていません",
   "EmailIsIncorrect": "メールが正しくありません",
+  "TooManyRequestsPleaseTryAgainLater": "リクエストが多すぎます。後でもう一度お試しください。",
+  "FailedToSendEmail": "メールの送信に失敗しました。入力したメールアドレスが正しいかご確認ください。",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "申し訳ありません。エラーが発生しましたので、後でもう一度お試しください",
   "Subscribe": "Subscribe",
   "WeSentAnEmailMessage": "お客様のメールアドレスに確認メールを送信しました。",
   "OK": "OK"

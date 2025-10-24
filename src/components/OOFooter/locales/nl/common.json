@@ -96,6 +96,9 @@
   "YourEmail": "Uw e-mail",
   "EmailIsEmpty": "E-mail is leeg",
   "EmailIsIncorrect": "E-mailadres is onjuist",
+  "TooManyRequestsPleaseTryAgainLater": "Too many requests. Please try again later.",
+  "FailedToSendEmail": "Failed to send email. Please check that the email address you entered is correct.",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "Excuses, maar er is een fout gemaakt, probeer het later nog eens",
   "Subscribe": "Abonneren",
   "WeSentAnEmailMessage": "We hebben een e-mailbericht met bevestiging naar uw e-mailadres gestuurd.",
   "OK": "OK"

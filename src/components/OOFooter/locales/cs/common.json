@@ -96,6 +96,9 @@
   "YourEmail": "Váš e-mail",
   "EmailIsEmpty": "Pole pro e-mail je prázdné",
   "EmailIsIncorrect": "Nesprávný e-mail",
+  "TooManyRequestsPleaseTryAgainLater": "Too many requests. Please try again later.",
+  "FailedToSendEmail": "Failed to send email. Please check that the email address you entered is correct.",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "Je nám líto, ale došlo k chybě, zkuste to znovu později",
   "Subscribe": "Odebírejte",
   "WeSentAnEmailMessage": "Na vaši e-mailovou adresu jsme odeslali zprávu s potvrzením.",
   "OK": "OK"
