@@ -17,7 +17,7 @@
 import React from "react";
 import clsx from "clsx";
 import "./MenuLabel.scss";
-import Link from "next/link";
+import { Link } from "../../../../../../sub-components/Link/index.jsx";
 import { ChevronRightIcon } from "../../../../../../icons/index.js";
 
 const MenuLabel = ({ id, className, children, href, active }) => {

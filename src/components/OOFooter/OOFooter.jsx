@@ -15,11 +15,11 @@
  */
 
 import React from "react";
-import Link from "next/link";
 import clsx from "clsx";
 import locales from "./locales/index.jsx";
 import "./OOFooter.scss";
 import { getUrl } from "../../utils/getUrl.jsx";
+import { Link } from "../../sub-components/Link/index.jsx";
 import { FooterItem } from "./sub-components/FooterItem/index.jsx";
 import { SocialLinks } from "./sub-components/SocialLinks/index.jsx";
 import { LanguageSelector } from "./sub-components/LanguageSelector/index.jsx";

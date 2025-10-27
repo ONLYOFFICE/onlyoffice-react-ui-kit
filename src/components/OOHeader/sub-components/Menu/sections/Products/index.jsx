@@ -16,8 +16,8 @@
 
 import React, { useState, useEffect } from "react";
 import clsx from "clsx";
-import Link from "next/link";
 import "./Products.scss";
+import { Link } from "../../../../../../sub-components/Link/index.jsx";
 import { MenuItem } from "../../sub-components/MenuItem/index.jsx";
 import { MenuLink } from "../../sub-components/MenuLink/index.jsx";
 import { MenuLabel } from "../../sub-components/MenuLabel/index.jsx";

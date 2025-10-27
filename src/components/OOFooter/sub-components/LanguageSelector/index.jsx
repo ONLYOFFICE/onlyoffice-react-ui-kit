@@ -15,9 +15,9 @@
  */
 
 import React, { useState, useRef, useEffect } from "react";
-import Link from "next/link";
 import clsx from "clsx";
 import "./LanguageSelector.scss";
+import { Link } from "../../../../sub-components/Link/index.jsx";
 import { ChevronDownIcon } from "../../../../icons/index.js";
 
 const LanguageSelector = ({ locale, languages }) => {

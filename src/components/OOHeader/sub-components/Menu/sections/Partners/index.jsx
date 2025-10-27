@@ -15,9 +15,9 @@
  */
 
 import React from "react";
-import Link from "next/link";
 import clsx from "clsx";
 import "./Partners.scss";
+import { Link } from "../../../../../../sub-components/Link/index.jsx";
 import { MenuItem } from "../../sub-components/MenuItem/index.jsx";
 import { MenuLink } from "../../sub-components/MenuLink/index.jsx";
 import { MenuText } from "../../sub-components/MenuText/index.jsx";

@@ -15,9 +15,9 @@
  */
 
 import React, { useRef, useState, useEffect } from "react";
-import Link from "next/link";
 import clsx from "clsx";
 import "./PhoneSelector.scss";
+import { Link } from "../../../../sub-components/Link/index.jsx";
 import { PhoneIcon } from "../../../../icons/index.js";
 
 const PhoneSelector = ({

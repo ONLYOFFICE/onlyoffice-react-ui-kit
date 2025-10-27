@@ -15,9 +15,9 @@
  */
 
 import React, { useState, useRef } from "react";
-import Link from "next/link";
 import clsx from "clsx";
 import "./FooterItem.scss";
+import { Link } from "../../../../sub-components/Link/index.jsx";
 
 const FooterItem = ({ locale, children, heading, href }) => {
   const content = useRef();

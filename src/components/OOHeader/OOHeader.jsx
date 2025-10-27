@@ -19,7 +19,7 @@ import clsx from "clsx";
 import "./OOHeader.scss";
 import locales from "./locales/index.jsx";
 import { useRouter } from "next/router";
-import Link from "next/link";
+import { Link } from "../../sub-components/Link/index.jsx";
 import { Menu } from "./sub-components/Menu/index.jsx";
 import { DownloadMenu } from "./sub-components/DownloadMenu/index.jsx";
 import { LanguageSelector } from "./sub-components/LanguageSelector/index.jsx";

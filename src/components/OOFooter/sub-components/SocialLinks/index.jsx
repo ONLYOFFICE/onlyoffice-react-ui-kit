@@ -15,9 +15,9 @@
  */
 
 import React, { useState } from "react";
-import Link from "next/link";
 import clsx from "clsx";
 import "./SocialLinks.scss";
+import { Link } from "../../../../sub-components/Link/index.jsx";
 import { MailPopup } from "../../sub-components/MailPopup/index.jsx";
 import { getLink } from "../../../../utils/getLink.jsx";
 

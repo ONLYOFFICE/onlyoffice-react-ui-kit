@@ -15,9 +15,9 @@
  */
 
 import React, { useRef, useState, useEffect } from "react";
-import Link from "next/link";
 import clsx from "clsx";
 import "./LanguageSelector.scss";
+import { Link } from "../../../../sub-components/Link/index.jsx";
 
 const LanguageSelector = ({
   locale,
