@@ -35,8 +35,7 @@ const MailPopup = ({
     firstName: false,
     email: false,
   });
-  const [formComplete, setFormComplete] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [formStatus, setFormStatus] = useState("default");
 
   useEffect(() => {
     if (popupIsOpen && modalRef.current) {
@@ -70,11 +69,23 @@ const MailPopup = ({
     }
   }, [popupIsOpen]);
 
-  const handleChange = (field, value) => {
+  const handleInputChange = (field, value) => {
+    if (formStatus === "loading") return;
     setFormData((prev) => ({
       ...prev,
       [field]: value,
     }));
+  };
+
+  const handleInputFocus = () => {
+    if (formStatus === "loading") return;
+    if (
+      formStatus === "rateLimit" ||
+      formStatus === "incorrectEmail" ||
+      formStatus === "error"
+    ) {
+      setFormStatus("default");
+    }
   };
 
   const validateForm = () => {
@@ -93,7 +104,7 @@ const MailPopup = ({
       return;
     }
 
-    setIsLoading(true);
+    setFormStatus("loading");
 
     try {
       const response = await fetch(mailApiUrl, {
@@ -107,13 +118,27 @@ const MailPopup = ({
         }),
       });
 
-      if (response.ok) {
-        setFormComplete(true);
+      const data = await response.json();
+
+      if (data.status === "rateLimit") {
+        setFormStatus("rateLimit");
+        return;
+      }
+
+      if (data.status === "incorrectEmail") {
+        setFormStatus("incorrectEmail");
+        return;
+      }
+
+      if (data.status === "success") {
+        setFormStatus("success");
+      } else {
+        console.log(data.message);
+        setFormStatus("error");
       }
     } catch (error) {
       console.error(error);
-    } finally {
-      setIsLoading(false);
+      setFormStatus("error");
     }
   };
 
@@ -121,7 +146,7 @@ const MailPopup = ({
     setPopupIsOpen(false);
     setFormData({ firstName: "", email: "" });
     setFormErrors({ firstName: false, email: false });
-    setFormComplete(false);
+    setFormStatus("default");
   };
 
   return (
@@ -149,7 +174,7 @@ const MailPopup = ({
                   className="oo-footer-mail-popup-close-btn"
                 ></button>
               </div>
-              {formComplete ? (
+              {formStatus === "success" ? (
                 <div className="oo-footer-mail-popup-success">
                   <div className="oo-footer-mail-popup-success-text">
                     {t("WeSentAnEmailMessage")}
@@ -173,8 +198,9 @@ const MailPopup = ({
                     <div className="oo-footer-mail-popup-input-wrapper">
                       <input
                         onChange={(e) =>
-                          handleChange("firstName", e.target.value)
+                          handleInputChange("firstName", e.target.value)
                         }
+                        onFocus={handleInputFocus}
                         className={clsx(
                           "oo-footer-mail-popup-input",
                           formErrors.firstName &&
@@ -185,14 +211,17 @@ const MailPopup = ({
                         placeholder={t("FirstName")}
                       />
                       {formErrors.firstName && (
-                        <div className="oo-footer-mail-popup-error-text">
+                        <div className="oo-footer-mail-popup-input-error-text">
                           {t("FirstNameIsEmpty")}
                         </div>
                       )}
                     </div>
                     <div className="oo-footer-mail-popup-input-wrapper">
                       <input
-                        onChange={(e) => handleChange("email", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("email", e.target.value)
+                        }
+                        onFocus={handleInputFocus}
                         className={clsx(
                           "oo-footer-mail-popup-input",
                           formErrors.email &&
@@ -203,19 +232,29 @@ const MailPopup = ({
                         placeholder={t("YourEmail")}
                       />
                       {formErrors.email && (
-                        <div className="oo-footer-mail-popup-error-text">
+                        <div className="oo-footer-mail-popup-input-error-text">
                           {formData.email.length === 0
                             ? t("EmailIsEmpty")
                             : t("EmailIsIncorrect")}
                         </div>
                       )}
                     </div>
+                    {(formStatus === "rateLimit" ||
+                      formStatus === "incorrectEmail" ||
+                      formStatus === "error") && (
+                      <div className="oo-footer-mail-popup-error-text">
+                        {formStatus === "rateLimit"
+                          ? t("TooManyRequestsPleaseTryAgainLater")
+                          : formStatus === "incorrectEmail"
+                          ? t("FailedToSendEmail")
+                          : formStatus === "error"
+                          ? t("WeAreSorryButAnErrorOccurredTryAgainLater")
+                          : null}
+                      </div>
+                    )}
                     <button
-                      className={clsx(
-                        "oo-footer-mail-popup-btn",
-                        isLoading && "oo-footer-mail-popup-btn--loading",
-                      )}
-                      disabled={isLoading}
+                      className={clsx("oo-footer-mail-popup-btn")}
+                      disabled={formStatus === "loading"}
                     >
                       {t("Subscribe")}
                     </button>

@@ -28,7 +28,7 @@
   width: 100%;
   height: 100%;
   background-color: rgb(255 255 255 / 50%);
-  z-index: 1000;
+  z-index: 999999;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
@@ -167,7 +167,7 @@
 
 .oo-footer-mail-popup-success-btn {
   border: none;
-  border-radius: 3px;
+  border-radius: 9px;
   padding: 22px 26px;
   font-size: 12px;
   font-weight: 600;
@@ -205,7 +205,7 @@
 .oo-footer-mail-popup-input {
   box-sizing: border-box;
   border: 1px solid #aaaaaa;
-  border-radius: 3px;
+  border-radius: 6px;
   padding: 0 16px;
   font-family: inherit;
   font-size: 16px;
@@ -232,28 +232,46 @@
   }
 }
 
-.oo-footer-mail-popup-error-text {
+.oo-footer-mail-popup-input-error-text {
   position: absolute;
   font-size: 13px;
   line-height: 21px;
   color: #cb0000;
-  width: max-content;
-  white-space: break-spaces;
+}
+
+.oo-footer-mail-popup-error-text {
+  margin-top: -26px;
+  font-size: 13px;
+  line-height: 21px;
+  color: #cb0000;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+
+    @media screen and (max-width: 592px) {
+      margin-bottom: 6px;
+    }
+  }
+
+  @media screen and (max-width: 592px) {
+    margin-top: -22px;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .oo-footer-mail-popup-btn {
   position: relative;
   border: none;
-  border-radius: 3px;
+  border-radius: 9px;
   font-family: inherit;
-  font-size: 13px;
-  padding: 0 25px;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 17px 24px;
   font-weight: 600;
-  letter-spacing: 0.04em;
   color: #ffffff;
   height: 56px;
   background-color: #ff6f3d;
-  text-transform: uppercase;
   transition: background-color 0.2s;
   cursor: pointer;
 
@@ -278,15 +296,14 @@
     background-color: #ff865c;
   }
 
-  &.oo-footer-mail-popup-btn--loading {
-    color: transparent;
-
-    &:after {
-      opacity: 1;
-    }
+  &:disabled {
+    background-color: #ffd4c5;
+    pointer-events: none;
+    cursor: initial;
   }
 
   @media screen and (max-width: 592px) {
+    padding: 13px 24px;
     height: 48px;
   }
 }

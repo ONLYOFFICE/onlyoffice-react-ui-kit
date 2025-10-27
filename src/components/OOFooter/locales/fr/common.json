@@ -96,6 +96,9 @@
   "YourEmail": "Email",
   "EmailIsEmpty": "Le champ Email est vide",
   "EmailIsIncorrect": "L'adresse email est incorrecte",
+  "TooManyRequestsPleaseTryAgainLater": "Trop de demandes. Veuillez réessayer plus tard.",
+  "FailedToSendEmail": "Échec de l'envoi de l'e-mail. Veuillez vérifier que l'adresse e-mail que vous avez saisie est correcte.",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "Désolé, une erreur est survenue. Veuillez réessayer plus tard",
   "Subscribe": "S'abonner",
   "WeSentAnEmailMessage": "Nous avons envoyé un email de confirmation à votre adresse de courrier électronique.",
   "OK": "OK"

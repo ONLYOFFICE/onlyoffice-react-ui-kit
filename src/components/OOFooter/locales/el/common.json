@@ -96,6 +96,9 @@
   "YourEmail": "Your email",
   "EmailIsEmpty": "Το email είναι άδειο",
   "EmailIsIncorrect": "Το email είναι λανθασμένο",
+  "TooManyRequestsPleaseTryAgainLater": "Too many requests. Please try again later.",
+  "FailedToSendEmail": "Failed to send email. Please check that the email address you entered is correct.",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "We are sorry, but an error occurred, try again later",
   "Subscribe": "Εγγραφείτε",
   "WeSentAnEmailMessage": "Στείλαμε ένα email επιβεβαίωσης στη διεύθυνση email σας.",
   "OK": "OK"

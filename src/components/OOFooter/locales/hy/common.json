@@ -96,6 +96,9 @@
   "YourEmail": "Your email",
   "EmailIsEmpty": "Էլ․ հասցեն դատարկ է",
   "EmailIsIncorrect": "Էլ․ հասցեն սխալ է",
+  "TooManyRequestsPleaseTryAgainLater": "Too many requests. Please try again later.",
+  "FailedToSendEmail": "Failed to send email. Please check that the email address you entered is correct.",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "We are sorry, but an error occurred, try again later",
   "Subscribe": "Բաժանորդագրվել",
   "WeSentAnEmailMessage": "Մենք էլ․  հաղորդագրություն ենք ուղարկել ձեր էլ. հասցեին հաստատումով",
   "OK": "OK"

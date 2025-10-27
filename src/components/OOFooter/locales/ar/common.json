@@ -96,6 +96,9 @@
   "YourEmail": "بريدك الإلكتروني",
   "EmailIsEmpty": "البريد الإلكتروني فارغ",
   "EmailIsIncorrect": "البريد الإلكتروني غير صحيح",
+  "TooManyRequestsPleaseTryAgainLater": "Too many requests. Please try again later.",
+  "FailedToSendEmail": "Failed to send email. Please check that the email address you entered is correct.",
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "We are sorry, but an error occurred, try again later",
   "Subscribe": "الاشتراك",
   "WeSentAnEmailMessage": "لقد أرسلنا رسالة عبر البريد الإلكتروني تحتوي على تأكيد عنوان بريدك الإلكتروني.",
   "OK": "نعم"
