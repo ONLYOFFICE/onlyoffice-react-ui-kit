@@ -77,8 +77,14 @@ const MailPopup = ({
     }));
   };
 
-  const handleInputFocus = () => {
+  const handleInputFocus = (field) => {
     if (formStatus === "loading") return;
+
+    setFormErrors((prev) => ({
+      ...prev,
+      [field]: false,
+    }));
+
     if (
       formStatus === "rateLimit" ||
       formStatus === "incorrectEmail" ||
@@ -88,21 +94,41 @@ const MailPopup = ({
     }
   };
 
-  const validateForm = () => {
-    let errors = {
-      firstName: formData.firstName.trim() === "",
-      email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email),
-    };
-    setFormErrors(errors);
-    return !Object.values(errors).some((v) => v);
+  const handleInputBlur = (field, value) => {
+    if (formStatus === "loading") return;
+    if (
+      formStatus === "rateLimit" ||
+      formStatus === "incorrectEmail" ||
+      formStatus === "error"
+    ) {
+      setFormStatus("default");
+    }
+
+    let hasError = false;
+
+    if (field === "firstName") {
+      hasError = value.trim() === "";
+    } else if (field === "email") {
+      hasError = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    setFormErrors((prev) => ({
+      ...prev,
+      [field]: hasError,
+    }));
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateForm()) {
-      return;
-    }
+    const errors = {
+      firstName: formData.firstName.trim() === "",
+      email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email),
+    };
+    setFormErrors(errors);
+
+    const isValid = !Object.values(errors).some((v) => v);
+    if (!isValid) return;
 
     setFormStatus("loading");
 
@@ -200,7 +226,10 @@ const MailPopup = ({
                         onChange={(e) =>
                           handleInputChange("firstName", e.target.value)
                         }
-                        onFocus={handleInputFocus}
+                        onFocus={() => handleInputFocus("firstName")}
+                        onBlur={(e) =>
+                          handleInputBlur("firstName", e.target.value)
+                        }
                         className={clsx(
                           "oo-footer-mail-popup-input",
                           formErrors.firstName &&
@@ -221,7 +250,8 @@ const MailPopup = ({
                         onChange={(e) =>
                           handleInputChange("email", e.target.value)
                         }
-                        onFocus={handleInputFocus}
+                        onFocus={() => handleInputFocus("email")}
+                        onBlur={(e) => handleInputBlur("email", e.target.value)}
                         className={clsx(
                           "oo-footer-mail-popup-input",
                           formErrors.email &&
