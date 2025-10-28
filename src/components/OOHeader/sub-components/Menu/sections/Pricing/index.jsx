@@ -121,6 +121,7 @@ const Pricing = ({
                     ? "https://www.onlyoffice.com/blog/fr/2020/01/onlyoffice-est-reference-par-l-ugap"
                     : getBaseUrl("/find-partners")
                 }
+                locale={locale === "fr" ? false : undefined}
                 variant="text"
                 active={highlight?.linkId}
               >
