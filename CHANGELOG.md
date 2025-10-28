@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.19.0
+
+- Disable prefetch for Link component
+- footer
+  - Improve form handling and added error messages in Subscribe modal
+
 ## 1.18.0
 
 - advent-announce
