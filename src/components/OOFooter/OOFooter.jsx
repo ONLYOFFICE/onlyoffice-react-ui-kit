@@ -41,7 +41,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
     <footer className="oo-footer">
       <div className={clsx("oo-footer-wrapper", locale)}>
         <div className="oo-footer-apps">
-          <h6 className="oo-footer-apps-title">{t("GetFreeApps")}</h6>
+          <div className="oo-footer-apps-title">{t("GetFreeApps")}</div>
           <div className={clsx("oo-footer-apps-items", locale)}>
             <Link
               className="oo-footer-apps-item oo-footer-apps-item--windows"
@@ -356,7 +356,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
         </div>
         <div className="oo-footer-bottom">
           <div className="oo-footer-follow">
-            <h6 className="oo-footer-follow-heading">{t("FollowUsOn")}</h6>
+            <div className="oo-footer-follow-heading">{t("FollowUsOn")}</div>
             <SocialLinks
               t={t}
               locale={locale}
