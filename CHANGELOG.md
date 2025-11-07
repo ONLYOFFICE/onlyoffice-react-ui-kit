@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.20.0
+
+- header
+  - Add aria attributes
+- footer
+  - Adjust heading structure
+
 ## 1.19.0
 
 - Disable prefetch for Link component
