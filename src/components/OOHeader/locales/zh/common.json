@@ -121,5 +121,10 @@
   "SearchBlog": "搜索博客",
   "SearchOnSite": "网站搜索",
   "DiagramViewer": "图表查看器",
-  "Academy": "学院"
+  "Academy": "学院",
+  "GoToHomepage": "返回首页",
+  "SelectLanguage": "选择语言",
+  "OpenPhoneMenu": "打开手机菜单",
+  "ClearSearch": "清除搜索",
+  "OpenSearch": "打开搜索"
 }

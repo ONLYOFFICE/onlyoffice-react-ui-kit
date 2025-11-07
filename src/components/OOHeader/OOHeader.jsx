@@ -187,6 +187,7 @@ const OOHeader = ({
               ? "/"
               : `/${locale}`
           }
+          aria-label={t("GoToHomepage")}
         ></Link>
 
         {!showSearch && (
@@ -277,6 +278,7 @@ const OOHeader = ({
             />
           )}
           <LanguageSelector
+            t={t}
             locale={locale}
             theme={theme}
             languages={languages}

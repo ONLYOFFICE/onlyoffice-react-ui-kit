@@ -121,5 +121,10 @@
   "SearchBlog": "Search blog",
   "SearchOnSite": "Поиск по сайту",
   "DiagramViewer": "Просмотрщик диаграмм",
-  "Academy": "Академия"
+  "Academy": "Академия",
+  "GoToHomepage": "Перейти на главную страницу",
+  "SelectLanguage": "Выбрать язык",
+  "OpenPhoneMenu": "Открыть меню телефона",
+  "ClearSearch": "Очистить поиск",
+  "OpenSearch": "Открыть поиск"
 }

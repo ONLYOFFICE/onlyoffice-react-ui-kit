@@ -121,5 +121,10 @@
   "SearchBlog": "Search blog",
   "SearchOnSite": "Pretraga na sajtu",
   "DiagramViewer": "Pregledač dijagrama",
-  "Academy": "Akademija"
+  "Academy": "Akademija",
+  "GoToHomepage": "Idite na početnu stranicu",
+  "SelectLanguage": "Izaberite jezik",
+  "OpenPhoneMenu": "Otvorite meni na telefonu",
+  "ClearSearch": "Obrišite pretragu",
+  "OpenSearch": "Otvorite pretragu"
 }

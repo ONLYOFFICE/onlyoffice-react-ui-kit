@@ -20,6 +20,7 @@ import "./LanguageSelector.scss";
 import { Link } from "../../../../sub-components/Link/index.jsx";
 
 const LanguageSelector = ({
+  t,
   locale,
   theme,
   languages,
@@ -98,6 +99,10 @@ const LanguageSelector = ({
             theme === "white-tertiary") &&
             "oo-language-selector-btn--theme-white",
         )}
+        aria-label={t("SelectLanguage")}
+        aria-haspopup="true"
+        aria-expanded={isOpen}
+        aria-controls="oo-language-selector-list"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -105,6 +110,7 @@ const LanguageSelector = ({
           height="24"
           viewBox="0 0 24 24"
           fill="none"
+          aria-hidden={true}
         >
           <circle
             className="oo-language-selector-icon-stroke"
@@ -146,6 +152,7 @@ const LanguageSelector = ({
           viewBox="0 0 8 5"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-hidden={true}
         >
           <path
             className="oo-language-selector-icon-fill"
@@ -158,6 +165,7 @@ const LanguageSelector = ({
       {isOpen && (
         <ul
           ref={listRef}
+          id="oo-language-selector-list"
           className={clsx(
             "oo-language-selector-list",
             locale,

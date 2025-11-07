@@ -199,7 +199,6 @@ const Resources = ({
             id="oo-menu-link-academy"
             className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
             href={getBaseUrl("/academy")}
-            target="_blank"
             icon="academy"
             active={highlight?.linkId}
           >

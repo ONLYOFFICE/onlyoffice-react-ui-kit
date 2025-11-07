@@ -121,5 +121,10 @@
   "SearchBlog": "ブログを検索",
   "SearchOnSite": "サイトで検索",
   "DiagramViewer": "図ビューア",
-  "Academy": "アカデミー"
+  "Academy": "アカデミー",
+  "GoToHomepage": "ホームページへ移動",
+  "SelectLanguage": "言語を選択",
+  "OpenPhoneMenu": "モバイルメニューを開く",
+  "ClearSearch": "検索をクリア",
+  "OpenSearch": "検索を開く"
 }

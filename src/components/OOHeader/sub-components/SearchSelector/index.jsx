@@ -114,6 +114,7 @@ const SearchSelector = ({
             locale,
             variant === "main" && "oo-header-search--variant-main",
           )}
+          id="oo-header-search-form"
         >
           <input
             ref={searchRef}
@@ -133,6 +134,9 @@ const SearchSelector = ({
             }
             value={value}
             onChange={onChange}
+            aria-label={
+              variant === "main" ? t("SearchOnSite") : t("SearchBlog")
+            }
           />
           {variant === "main" && (
             <label
@@ -153,6 +157,7 @@ const SearchSelector = ({
               variant === "blog" && "oo-header-search-clear-btn--variant-blog",
             )}
             type="button"
+            aria-label={t("ClearSearch")}
           ></button>
         </form>
       )}
@@ -168,8 +173,16 @@ const SearchSelector = ({
               theme === "white-tertiary") &&
               "oo-header-search-btn--theme-white",
           )}
+          aria-label={t("OpenSearch")}
+          aria-haspopup="true"
+          aria-expanded={showSearch}
+          aria-controls="oo-header-search-form"
         >
-          {variant === "blog" ? <SearchGrayIcon /> : <SearchIcon />}
+          {variant === "blog" ? (
+            <SearchGrayIcon aria-hidden={true} />
+          ) : (
+            <SearchIcon aria-hidden={true} />
+          )}
         </button>
       )}
     </>

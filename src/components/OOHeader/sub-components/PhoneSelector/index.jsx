@@ -100,13 +100,18 @@ const PhoneSelector = ({
             theme === "white-tertiary") &&
             "oo-phone-selector-btn--theme-white",
         )}
+        aria-label={t("OpenPhoneMenu")}
+        aria-haspopup="true"
+        aria-expanded={isOpen}
+        aria-controls="oo-phone-selector-dropdown"
       >
-        <PhoneIcon />
+        <PhoneIcon aria-hidden={true} />
       </button>
 
       {isOpen && (
         <div
           ref={dropdownRef}
+          id="oo-phone-selector-dropdown"
           className={clsx(
             "oo-phone-selector-wrapper",
             locale,

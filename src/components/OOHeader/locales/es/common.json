@@ -121,5 +121,10 @@
   "SearchBlog": "Buscar en el blog",
   "SearchOnSite": "Buscar en el sitio",
   "DiagramViewer": "Visor de diagramas",
-  "Academy": "Academia"
+  "Academy": "Academia",
+  "GoToHomepage": "Ir a la página de inicio",
+  "SelectLanguage": "Seleccionar idioma",
+  "OpenPhoneMenu": "Abrir el menú del teléfono",
+  "ClearSearch": "Borrar búsqueda",
+  "OpenSearch": "Abrir búsqueda"
 }
