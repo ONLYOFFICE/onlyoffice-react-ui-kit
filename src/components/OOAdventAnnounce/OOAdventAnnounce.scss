@@ -61,11 +61,17 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #0b1f1c;
-  background-image: url("./images/docspace_3.5.png");
-  background-size: auto 72px;
+  background-color: #15699C;
+  background-image: url("./images/ai_updates_bg.png");
+  background-size: auto 89px;
   background-repeat: no-repeat;
-  background-position: calc(50% + 65px) 50%;
+  background-position: calc(50% - 10px) 0%;
+
+  .oo-advent-announce-text {
+    @media screen and (max-width: 375px) {
+      max-width: 280px;
+    }
+  }
 
   &.ar {
     direction: initial;
@@ -74,10 +80,14 @@
 
   &.es {
     .oo-advent-announce-text {
-      max-width: 966px;
+      max-width: 896px;
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 350px);
+      }
+      
+      @media screen and (max-width: 375px) {
+        max-width: 290px;
       }
     }
   }
@@ -90,16 +100,6 @@
 
   &.ja {
     .oo-advent-announce-text {
-      max-width: 1110px;
-
-      @media screen and (max-width: 1110px) {
-        font-size: 13px;
-      }
-
-      @media screen and (max-width: 1050px) {
-        font-size: 12px;
-      }
-
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 345px);
         font-size: 14px;
@@ -108,10 +108,14 @@
   }
 
   &.fr .oo-advent-announce-text {
-    max-width: 950px;
+    max-width: 910px;
 
     @media screen and (max-width: 1024px) {
       background-position-x: calc(50% + 345px);
+    }
+
+    @media screen and (max-width: 375px) {
+      max-width: 300px;
     }
   }
 
@@ -121,31 +125,30 @@
     @media screen and (max-width: 1024px) {
       background-position-x: calc(50% + 335px);
     }
+
+    @media screen and (max-width: 375px) {
+      max-width: 240px;
+    }
   }
 
   &.pt,
   &.pt-br {
     .oo-advent-announce-text {
-      max-width: 1008px;
+      max-width: 978px;
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 345px);
+      }
+      
+      @media screen and (max-width: 375px) {
+        max-width: 290px;
       }
     }
   }
 
   &.ru {
     .oo-advent-announce-text {
-      max-width: 1160px;
-
-      @media screen and (max-width: 1200px) {
-        font-size: 13px;
-      }
-
-      @media screen and (max-width: 1100px) {
-        max-width: 1024px;
-        font-size: 12px;
-      }
+      max-width: 970px;
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 345px);
@@ -156,7 +159,7 @@
 
   &.sr {
     .oo-advent-announce-text {
-      max-width: 970px;
+      max-width: 910px;
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 350px);
@@ -180,7 +183,7 @@
   }
 
   @media screen and (max-width: 320px) {
-    background-image: url("./images/docspace_mobile_3.5.png");
+    background-image: url("./images/ai_updates_bg_mob.png");
     background-size: auto 49px;
     background-position: 50% 50%;
 
@@ -199,7 +202,7 @@
   font-size: 14px;
   line-height: 19px;
   text-align: center;
-  max-width: 930px;
+  max-width: 870px;
   height: 100%;
   color: #ffffff;
   text-decoration: none;
@@ -214,11 +217,11 @@
   }
 
   &:before {
-    width: 104px;
-    min-width: 104px;
-    height: 60px;
-    background-image: url("./images/docspace_icon_3.5.svg");
-    background-size: 104px 60px;
+    width: 72px;
+    min-width: 72px;
+    height: 71px;
+    background-image: url("./images/ai_icon.png");
+    background-size: 72px 71px;
 
     @media screen and (max-width: 1024px) {
       display: none;
@@ -226,7 +229,7 @@
   }
 
   &:after {
-    margin: 0 40px;
+    margin: 0 20px;
     width: 24px;
     min-width: 24px;
     height: 24px;
