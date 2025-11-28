@@ -23,6 +23,7 @@ import { MenuLink } from "../../sub-components/MenuLink/index.jsx";
 import { MenuLabel } from "../../sub-components/MenuLabel/index.jsx";
 import { MenuText } from "../../sub-components/MenuText/index.jsx";
 import { getLink } from "../../../../../../utils/getLink.jsx";
+import { Button } from "storybook/internal/components";
 
 const Products = ({
   t,
@@ -521,6 +522,20 @@ const Products = ({
             <MenuLabel className="oo-header-menu-mb-16 oo-menu-item-box-label">
               {t("OtherProducts")}
             </MenuLabel>
+            <div className="oo-header-menu-color-highlight">
+              <MenuLink
+                id="oo-menu-link-ai-assistant"
+                className="oo-header-menu-mb-8"
+                href={getBaseUrl("/ai-assistants")}
+                icon="ai-assistant"
+                active={highlight?.linkId}
+              >
+                {t("AIInONLYOFFICE")}
+              </MenuLink>
+              <MenuText className="oo-header-menu-mb-8">
+                {t("WorkSmarterOnYourDocsWithAIAssistantsAndAgents")}
+              </MenuText>
+            </div>
             <MenuLink
               id="oo-menu-link-other-editors-desktop-editors"
               className="oo-header-menu-mb-8"
@@ -569,83 +584,78 @@ const Products = ({
             <MenuText className="oo-header-menu-mb-16">
               {t("BusinessPlatformToManageYourTeamActivities")}
             </MenuText>
-
+          </div>
+        </div>
+        <div className="oo-header-menu-bottom-with-button">
+          <div className="oo-header-menu-bottom">
+            <MenuLink
+              id="oo-menu-link-templates"
+              className="oo-header-menu-mr-16 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
+              href={getLink("templates", locale)}
+              icon="templates"
+              variant="small"
+              active={highlight?.linkId}
+            >
+              {t("Templates")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-marketplace"
+              className="oo-header-menu-mr-16 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
+              href={getLink("marketplace", locale)}
+              icon="marketplace"
+              variant="small"
+              active={highlight?.linkId}
+              locale={false}
+            >
+              {t("Marketplace")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-security"
+              className="oo-header-menu-mr-16 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
+              href={getBaseUrl("/security")}
+              icon="security"
+              variant="small"
+              active={highlight?.linkId}
+            >
+              {t("Security")}
+            </MenuLink>
             <MenuLink
               id="oo-menu-link-other-editors-online-converters"
-              className="oo-header-menu-mb-8"
+              className="oo-header-menu-mr-16 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
               href={getBaseUrl("/online-document-converter")}
               icon="conversion-doc"
+              variant="small"
               active={highlight?.linkId}
             >
               {t("OnlineConverters")}
             </MenuLink>
-            <MenuText className="oo-header-menu-mb-16">
-              {t("ForDocsSheetsSlidesPDFs")}
-            </MenuText>
+            <MenuLink
+              id="oo-menu-link-accessibility"
+              className="oo-header-menu-mr-16 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
+              href={getBaseUrl("/accessibility")}
+              icon="for-desktop"
+              variant="small"
+              active={highlight?.linkId}
+            >
+              {t("Accessibility")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-sustainability"
+              href={t("SustainabilityLink")}
+              icon="sustainability"
+              variant="small"
+              active={highlight?.linkId}
+            >
+              {t("Sustainability")}
+            </MenuLink>
           </div>
-        </div>
 
-        <div className="oo-header-menu-bottom">
-          <MenuLink
-            id="oo-menu-link-templates"
-            className="oo-header-menu-mr-24 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
-            href={getLink("templates", locale)}
-            icon="templates"
-            variant="small"
-            active={highlight?.linkId}
+          <Link
+            className="oo-header-btn oo-book-demo-btn"
+            href={getBaseUrl("/demo-order")}
           >
-            {t("Templates")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-marketplace"
-            className="oo-header-menu-mr-24 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
-            href={getLink("marketplace", locale)}
-            icon="marketplace"
-            variant="small"
-            active={highlight?.linkId}
-            locale={false}
-          >
-            {t("Marketplace")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-security"
-            className="oo-header-menu-mr-24 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
-            href={getBaseUrl("/security")}
-            icon="security"
-            variant="small"
-            active={highlight?.linkId}
-          >
-            {t("Security")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-ai-assistant"
-            className="oo-header-menu-mr-24 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
-            href={getBaseUrl("/ai-assistants")}
-            icon="ai-assistant"
-            variant="small"
-            active={highlight?.linkId}
-          >
-            {t("AIAssistant")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-accessibility"
-            className="oo-header-menu-mr-24 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
-            href={getBaseUrl("/accessibility")}
-            icon="for-desktop"
-            variant="small"
-            active={highlight?.linkId}
-          >
-            {t("Accessibility")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-sustainability"
-            href={t("SustainabilityLink")}
-            icon="sustainability"
-            variant="small"
-            active={highlight?.linkId}
-          >
-            {t("Sustainability")}
-          </MenuLink>
+            {t("BookDemo")}
+          </Link>
         </div>
       </div>
     </MenuItem>

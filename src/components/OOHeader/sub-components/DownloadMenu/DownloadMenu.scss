@@ -367,12 +367,12 @@
 
     @media screen and (max-width: 1024px) {
       position: relative;
-      margin: 0 0 8px;
+      margin: 0 16px 16px;
       padding: 16px 48px 16px 56px;
-      border-radius: initial;
       font-size: 20px;
       font-weight: 700;
       line-height: 24px;
+      width: calc(100% - 32px);
     }
 
     @media screen and (max-width: 430px) {

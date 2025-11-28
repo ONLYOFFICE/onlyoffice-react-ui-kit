@@ -126,5 +126,8 @@
   "SelectLanguage": "Выбрать язык",
   "OpenPhoneMenu": "Открыть меню телефона",
   "ClearSearch": "Очистить поиск",
-  "OpenSearch": "Открыть поиск"
+  "OpenSearch": "Открыть поиск",
+  "AIInONLYOFFICE": "Искусственный интеллект в ONLYOFFICE",
+  "WorkSmarterOnYourDocsWithAIAssistantsAndAgents": "Работайте над документами эффективнее с ИИ-помощниками и ИИ-агентами",
+  "BookDemo": "Заказать демо-версию"
 }
