@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.21.0
+
+- advent-announce
+  - Explore the latest AI updates in ONLYOFFICE
+- header
+  - Products
+    - ONLYOFFICE Docs: "Diagram Viewer" → "Diagram viewer"
+    - Other products
+      - Add "AI in ONLYOFFICE"
+      - Remove "Online converters"
+    - footer
+      - Replace "AI assistant" → "Online converters"
+      - Add "Book a demo"
+  - Resources → Blog
+    - "ONLYOFFICE Docs 9.1 released" → "ONLYOFFICE Docs 9.2 released"
+    - "ONLYOFFICE DocSpace 3.5 released" → "ONLYOFFICE DocSpace 3.6 released"
+  - Update text of the button "Login" → "Log in" (for English)
+
 ## 1.20.0
 
 - header
