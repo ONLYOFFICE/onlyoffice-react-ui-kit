@@ -23,7 +23,6 @@ import { MenuLink } from "../../sub-components/MenuLink/index.jsx";
 import { MenuLabel } from "../../sub-components/MenuLabel/index.jsx";
 import { MenuText } from "../../sub-components/MenuText/index.jsx";
 import { getLink } from "../../../../../../utils/getLink.jsx";
-import { Button } from "storybook/internal/components";
 
 const Products = ({
   t,
@@ -532,7 +531,7 @@ const Products = ({
               >
                 {t("AIInONLYOFFICE")}
               </MenuLink>
-              <MenuText className="oo-header-menu-mb-8">
+              <MenuText>
                 {t("WorkSmarterOnYourDocsWithAIAssistantsAndAgents")}
               </MenuText>
             </div>
@@ -650,10 +649,7 @@ const Products = ({
             </MenuLink>
           </div>
 
-          <Link
-            className="oo-header-btn oo-book-demo-btn"
-            href={getBaseUrl("/demo-order")}
-          >
+          <Link className="oo-book-demo-btn" href={getBaseUrl("/demo-order")}>
             {t("BookDemo")}
           </Link>
         </div>

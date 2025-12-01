@@ -71,10 +71,67 @@
         min-width: 328px;
         max-width: 328px;
 
+        @media screen and (max-width: 1050px) {
+          min-width: 300px;
+          max-width: 300px;
+        }
+
         @media screen and (max-width: 1024px) {
           min-width: 100%;
           max-width: 100%;
         }
+      }
+    }
+  }
+
+  &.es {
+    position: initial;
+
+    .oo-menu-item-wrapper {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .oo-header-menu-item {
+      &:first-child,
+      &:nth-child(2) {
+        min-width: 300px;
+        max-width: 300px;
+
+        @media screen and (max-width: 1084px) {
+          min-width: 280px;
+          max-width: 280px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      &:last-child {
+        min-width: 330px;
+        max-width: 330px;
+
+        @media screen and (max-width: 1084px) {
+          min-width: 272px;
+          max-width: 272px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .oo-book-demo-btn {
+      @media screen and (max-width: 1084px) {
+        max-width: 120px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        max-width: 100%;
       }
     }
   }
@@ -82,9 +139,15 @@
   &.pt,
   &.pt-br {
     .oo-header-menu-item {
-      &:first-child {
-        min-width: 284px;
-        max-width: 284px;
+      &:first-child,
+      &:nth-child(2) {
+        min-width: 290px;
+        max-width: 290px;
+
+        @media screen and (max-width: 1110px) {
+          min-width: 284px;
+          max-width: 284px;
+        }
 
         @media screen and (max-width: 1024px) {
           min-width: 100%;
@@ -93,8 +156,13 @@
       }
 
       &:last-child {
-        min-width: 336px;
-        max-width: 336px;
+        min-width: 340px;
+        max-width: 340px;
+
+        @media screen and (max-width: 1110px) {
+          min-width: 306px;
+          max-width: 306px;
+        }
 
         @media screen and (max-width: 1024px) {
           min-width: 100%;
@@ -102,27 +170,161 @@
         }
       }
     }
+
+    .oo-book-demo-btn {
+      @media screen and (max-width: 1110px) {
+        max-width: 130px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        max-width: 100%;
+      }
+    }
   }
 
   &.ja {
+    position: initial;
+
+    .oo-menu-item-wrapper {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .oo-header-menu-item {
-      &:last-child {
-        min-width: 294px;
-        max-width: 294px;
+      &:first-child,
+      &:nth-child(2) {
+        min-width: 310px;
+        max-width: 310px;
+
+        @media screen and (max-width: 1110px) {
+          min-width: 284px;
+          max-width: 284px;
+        }
 
         @media screen and (max-width: 1024px) {
           min-width: 100%;
           max-width: 100%;
+        }
+      }
+
+      &:last-child {
+        min-width: 340px;
+        max-width: 340px;
+
+        @media screen and (max-width: 1110px) {
+          min-width: 300px;
+          max-width: 300px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .oo-header-menu-bottom-with-button {
+      .oo-menu-link {
+        @media screen and (max-width: 1110px) {
+          font-size: 12px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          font-size: 13px;
+        }
+      }
+
+      .oo-header-menu-mr-16 {
+        @media screen and (max-width: 1110px) {
+          margin-right: 8px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          margin-right: 0;
         }
       }
     }
   }
 
   &.ru {
+    position: initial;
+
+    .oo-menu-item-wrapper {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .oo-header-menu-item {
-      &:first-child {
-        min-width: 304px;
-        max-width: 304px;
+      &:first-child,
+      &:nth-child(2) {
+        min-width: 320px;
+        max-width: 320px;
+
+        @media screen and (max-width: 1150px) {
+          min-width: 284px;
+          max-width: 284px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      &:last-child {
+        min-width: 350px;
+        max-width: 350px;
+
+        @media screen and (max-width: 1150px) {
+          min-width: 300px;
+          max-width: 300px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .oo-book-demo-btn {
+      @media screen and (max-width: 1150px) {
+        max-width: 124px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+
+    .oo-header-menu-bottom-with-button {
+      .oo-menu-link {
+        @media screen and (max-width: 1150px) {
+          font-size: 12px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          font-size: 13px;
+        }
+      }
+
+      .oo-header-menu-mr-16 {
+        @media screen and (max-width: 1150px) {
+          margin-right: 15px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &.hy {
+    .oo-header-menu-item {
+      &:last-child {
+        min-width: 300px;
+        max-width: 300px;
 
         @media screen and (max-width: 1024px) {
           min-width: 100%;
@@ -339,8 +541,8 @@
 .oo-header-menu-color-highlight {
   background-color: #ffffff;
   border-radius: 6px;
-  box-shadow: 0px 7px 15px 0px #5555551a;
-  padding: 16px 16px 8px;
+  box-shadow: 0px 7px 15px 0px rgba(85, 85, 85, 0.1);
+  padding: 16px;
   margin: 0 0 16px;
 
   > a {
@@ -349,21 +551,32 @@
 }
 
 .oo-book-demo-btn {
-  font-size: 13px;
-  line-height: 16px;
-  border-radius: 0px;
+  box-sizing: border-box;
   padding: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #444444;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #555555;
+  }
 
   @media screen and (max-width: 1024px) {
-    font-size: 20px;
     border-radius: 6px;
+    margin: 0 16px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: initial;
 
     &::after {
       display: none;
     }
-  }
-
-  @media screen and (max-width: 430px) {
-    font-size: 16px;
   }
 }

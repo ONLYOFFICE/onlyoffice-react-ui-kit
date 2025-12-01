@@ -344,16 +344,12 @@
         content: "";
         position: absolute;
         right: 24px;
-        top: 16px;
+        top: 12px;
         width: 24px;
         height: 24px;
         background-image: url("../../images/arrow-right-white.svg");
         background-repeat: no-repeat;
         transform: initial;
-      }
-
-      @media screen and (max-width: 430px) {
-        top: 12px;
       }
     }
 
@@ -368,8 +364,8 @@
     @media screen and (max-width: 1024px) {
       position: relative;
       margin: 0 16px 16px;
-      padding: 16px 48px 16px 56px;
-      font-size: 20px;
+      padding: 12px 48px 12px 56px;
+      font-size: 16px;
       font-weight: 700;
       line-height: 24px;
       width: calc(100% - 32px);
