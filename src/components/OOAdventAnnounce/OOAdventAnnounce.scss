@@ -69,7 +69,7 @@
 
   .oo-advent-announce-text {
     @media screen and (max-width: 375px) {
-      max-width: 280px;
+      max-width: 247px;
     }
   }
 
@@ -85,7 +85,7 @@
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 350px);
       }
-      
+
       @media screen and (max-width: 375px) {
         max-width: 290px;
       }
@@ -95,6 +95,10 @@
   &.it {
     .oo-advent-announce-text {
       max-width: 900px;
+
+      @media screen and (max-width: 375px) {
+        max-width: 247px;
+      }
     }
   }
 
@@ -139,7 +143,7 @@
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 345px);
       }
-      
+
       @media screen and (max-width: 375px) {
         max-width: 290px;
       }
@@ -154,6 +158,10 @@
         background-position-x: calc(50% + 345px);
         font-size: 14px;
       }
+
+      @media screen and (max-width: 375px) {
+        max-width: 290px;
+      }
     }
   }
 
@@ -163,6 +171,10 @@
 
       @media screen and (max-width: 1024px) {
         background-position-x: calc(50% + 350px);
+      }
+
+      @media screen and (max-width: 375px) {
+        max-width: 255px;
       }
     }
   }
@@ -182,9 +194,9 @@
     background-position: calc(50% + 367px) -42px;
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 592px) {
     background-image: url("./images/ai_updates_bg_mob.png");
-    background-size: auto 49px;
+    background-size: auto 89px;
     background-position: 50% 50%;
 
     &[class] {
@@ -229,7 +241,7 @@
   }
 
   &:after {
-    margin: 0 20px;
+    margin: 0 13px;
     width: 24px;
     min-width: 24px;
     height: 24px;
@@ -256,5 +268,9 @@
 
   @media screen and (max-width: 1024px) {
     display: block;
+  }
+
+  @media screen and (max-width: 592px) {
+    font-size: 13px;
   }
 }
