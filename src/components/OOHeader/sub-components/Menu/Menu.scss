@@ -121,6 +121,24 @@
   }
 }
 
+.oo-header-menu-bottom-with-button {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e2e2e2;
+  > .oo-header-menu-bottom {
+    border-top: none;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 16px;
+    > .oo-header-menu-bottom {
+      margin-top: 0;
+    }
+  }
+}
+
 .oo-header-menu-app-link {
   display: inline-flex;
   width: 28px;
@@ -170,6 +188,10 @@
 
 .oo-header-menu-mr-24 {
   margin-right: 24px;
+}
+
+.oo-header-menu-mr-16 {
+  margin-right: 16px;
 }
 
 .oo-header-menu-mr-12 {
