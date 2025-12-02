@@ -17,6 +17,7 @@
     - "ONLYOFFICE Docs 9.1 released" → "ONLYOFFICE Docs 9.2 released"
     - "ONLYOFFICE DocSpace 3.5 released" → "ONLYOFFICE DocSpace 3.6 released"
   - Update text of the button "Login" → "Log in" (for English)
+  - Update the "Download" and "Log in / Sign up" button styles on the mobile version
 
 ## 1.20.0
 
