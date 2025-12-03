@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import clsx from "clsx";
 import "./Products.scss";
 import { Link } from "../../../../../../sub-components/Link/index.jsx";
@@ -159,7 +159,11 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docspace-document-editors"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-24"
-              href={getBaseUrl("/office-suite?docspace=registration")}
+              href={getBaseUrl(
+                locale === "en"
+                  ? "/docs?docspace=registration"
+                  : "/office-suite?docspace=registration",
+              )}
               icon="docs"
               variant="small"
               active={highlight?.linkId}
@@ -294,7 +298,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-what-is"
               className="oo-header-menu-mb-8"
-              href={getBaseUrl("/office-suite")}
+              href={getBaseUrl(locale === "en" ? "/docs" : "/office-suite")}
               icon="docs"
               active={highlight?.linkId}
             >
@@ -306,7 +310,11 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-document-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/document-editor?docs=download")}
+              href={getBaseUrl(
+                locale === "en"
+                  ? "/word-processor?docs=download"
+                  : "/document-editor?docs=download",
+              )}
               icon="document-editor"
               variant="small"
               active={highlight?.linkId}
@@ -316,7 +324,11 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-spreadsheet-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/spreadsheet-editor?docs=download")}
+              href={getBaseUrl(
+                locale === "en"
+                  ? "/sheets?docs=download"
+                  : "/spreadsheet-editor?docs=download",
+              )}
               icon="spreadsheet-editor"
               variant="small"
               active={highlight?.linkId}
