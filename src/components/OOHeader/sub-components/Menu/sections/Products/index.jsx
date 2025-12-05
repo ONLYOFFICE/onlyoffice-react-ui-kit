@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import "./Products.scss";
 import { Link } from "../../../../../../sub-components/Link/index.jsx";
