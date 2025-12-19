@@ -550,6 +550,18 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-other-editors-desktop-editors"
               className="oo-header-menu-mb-8"
+              href={getBaseUrl("/mcp-server")}
+              icon="desktop"
+              active={highlight?.linkId}
+            >
+              {t("OOMcpServer")}
+            </MenuLink>
+            <MenuText className="oo-header-menu-mb-16">
+              {t("ConnectAiAgentsAndTools")}
+            </MenuText>
+            <MenuLink
+              id="oo-menu-link-other-editors-desktop-editors"
+              className="oo-header-menu-mb-8"
               href={getBaseUrl("/desktop")}
               icon="desktop"
               active={highlight?.linkId}
