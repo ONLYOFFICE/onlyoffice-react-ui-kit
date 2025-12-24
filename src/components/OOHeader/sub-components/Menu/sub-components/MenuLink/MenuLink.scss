@@ -181,6 +181,10 @@
       background-image: url("../../../../images/see-more.svg");
     }
 
+    &-mcp-server::before {
+      background-position-y: -3198px;
+    }
+
     &-desktop::before {
       background-position-y: -2834px;
     }
