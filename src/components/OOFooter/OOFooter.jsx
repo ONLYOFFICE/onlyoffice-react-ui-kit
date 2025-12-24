@@ -205,19 +205,32 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
               </Link>
 
               <div className="oo-footer-item-icons">
-                <Link href={t("HIPAAComplianceLink")} aria-label="HIPAA">
+                <Link
+                  href={t("HIPAAComplianceLink")}
+                  locale={false}
+                  aria-label="HIPAA"
+                >
                   <HippaIcon />
                 </Link>
-                <Link href={t("GDPRComplianceLink")} aria-label="GDPR">
+                <Link
+                  href={t("GDPRComplianceLink")}
+                  locale={false}
+                  aria-label="GDPR"
+                >
                   <GdprIcon />
                 </Link>
                 <Link
                   href={t("ISO27001CertificationLink")}
+                  locale={false}
                   aria-label="NetExplorer"
                 >
                   <IsoIcon />
                 </Link>
-                <Link href={t("HDSCertificationLink")} aria-label="NetExplorer">
+                <Link
+                  href={t("HDSCertificationLink")}
+                  locale={false}
+                  aria-label="NetExplorer"
+                >
                   <HdsIcon />
                 </Link>
               </div>
