@@ -548,7 +548,7 @@ const Products = ({
               </MenuText>
             </div>
             <MenuLink
-              id="oo-menu-link-other-mcp-server"
+              id="oo-menu-link-other-editors-mcp-server"
               className="oo-header-menu-mb-8"
               href={getBaseUrl("/mcp-server")}
               icon="mcp-server"
