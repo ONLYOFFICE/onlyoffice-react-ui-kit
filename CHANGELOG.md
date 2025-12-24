@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.23.0
+
+- header
+  - Products → Other products: Add "ONLYOFFICE MCP Server" menu item
 
 ## 1.22.0
 
