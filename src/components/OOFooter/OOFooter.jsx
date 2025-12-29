@@ -248,11 +248,8 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
               >
                 {t("HelpCenter")}
               </Link>
-              <Link
-                className="oo-footer-link"
-                href={getBaseUrl("/training-courses")}
-              >
-                {t("TrainingCourses")}
+              <Link className="oo-footer-link" href={getBaseUrl("/academy")}>
+                {t("ONLYOFFICEAcademy")}
               </Link>
               <Link className="oo-footer-link" href={getBaseUrl("/webinars")}>
                 {t("Webinars")}

@@ -205,15 +205,6 @@ const Resources = ({
             {t("Academy")}
           </MenuLink>
           <MenuLink
-            id="oo-menu-link-training-courses"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/training-courses")}
-            icon="training-courses"
-            active={highlight?.linkId}
-          >
-            {t("TrainingCourses")}
-          </MenuLink>
-          <MenuLink
             id="oo-menu-link-webinars"
             className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
             href={getBaseUrl("/webinars")}
