@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.24.0
+
+- header
+  - Menu -> Resources: remove "Training courses"
+- footer
+  - Replace "Training courses" with "ONLYOFFICE Academy"
+
 ## 1.23.0
 
 - header
