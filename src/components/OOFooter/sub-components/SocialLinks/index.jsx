@@ -229,6 +229,12 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
           </div>
         </div>
       )}
+      {(locale === "zh" || locale === "zh-hans") && (
+        <div className="oo-footer-icon-item">
+          <span className="oo-footer-wdgt-wechat-video" title="WeChat"></span>
+          <div className="oo-footer-popup-qr-code oo-footer-popup-qr-code--wechat-video"></div>
+        </div>
+      )}
       {locale !== "zh" && locale !== "zh-hans" && (
         <li>
           <Link
@@ -318,20 +324,6 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
               <span
                 className="oo-footer-social-link-icon oo-footer-social-link-icon--csdn"
                 title="CSDN"
-              ></span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="oo-footer-social-link"
-              href="https://www.toutiao.com/c/user/token/MS4wLjABAAAAituLIinbu_T7phDvBDiqiVsev4z3kjH95MZsEpnq7Lv2MnXBh-Sp9tuAHzFnI-Tk/"
-              title="在Toutiao上关注我们"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <span
-                className="oo-footer-social-link-icon oo-footer-social-link-icon--toutiao"
-                title="Toutiao"
               ></span>
             </Link>
           </li>
