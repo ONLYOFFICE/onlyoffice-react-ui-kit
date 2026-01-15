@@ -114,7 +114,7 @@ const Resources = ({
           <MenuLink
             id="oo-menu-link-gift-shop"
             className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href="https://shop.spreadshirt.com/onlyoffice"
+            href="https://onlyoffice.myspreadshop.com/all"
             target="_blank"
             icon="gift-shop"
             active={highlight?.linkId}
