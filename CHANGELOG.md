@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.25.0
+
+- header
+  - Menu -> Resources: update "Gift shop" link
+
 ## 1.24.0
 
 - header
