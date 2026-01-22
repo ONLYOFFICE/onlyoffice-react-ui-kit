@@ -172,10 +172,6 @@
     background-position-x: -680px;
   }
 
-  &.oo-footer-social-link-icon--toutiao {
-    background-position-x: -600px;
-  }
-
   &.oo-footer-social-link-icon--bilibili {
     background-position-x: -720px;
   }
@@ -193,7 +189,8 @@
   }
 }
 
-.oo-footer-wdgt-wechat {
+.oo-footer-wdgt-wechat,
+.oo-footer-wdgt-wechat-video {
   display: block;
   border-radius: 50%;
   width: 40px;
@@ -212,6 +209,10 @@
 
 .oo-footer-wdgt-wechat {
   background-image: url("../../images/social-wechat.png");
+}
+
+.oo-footer-wdgt-wechat-video {
+  background-image: url("../../images/social-wechat-video.png");
 }
 
 .oo-footer-popup-qr-code {
@@ -233,9 +234,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateX(-50%);
-  transition:
-    0.55s opacity,
-    0.55s visibility;
+  transition: 0.55s opacity, 0.55s visibility;
 
   p {
     margin: 0;
@@ -258,15 +257,74 @@
       transform: translateX(-50%);
     }
 
+    @media screen and (max-width: 406px) {
+      left: 50%;
+      right: initial;
+      transform: translateX(-35%);
+    }
+
     @media screen and (max-width: 391px) {
       left: 0;
       transform: initial;
+    }
+
+    @media screen and (max-width: 342px) {
+      left: initial;
+      right: 0;
+      transform: translateX(40%);
     }
 
     @media screen and (max-width: 328px) {
       left: 50%;
       right: initial;
       transform: translateX(-50%);
+    }
+  }
+
+  &.oo-footer-popup-qr-code--wechat-video {
+    top: -230px;
+    height: 218px;
+    background-image: url("../../images/qrcode-for-wechat-video.jpg");
+
+    @media screen and (max-width: 830px) {
+      left: initial;
+      right: 0;
+      transform: initial;
+    }
+
+    @media screen and (max-width: 758px) {
+      left: 50%;
+      right: initial;
+      transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 699px) {
+      left: 50%;
+      right: initial;
+      transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 470px) {
+      left: initial;
+      right: 0;
+      transform: translateX(0);
+    }
+
+    @media screen and (max-width: 406px) {
+      left: 50%;
+      right: initial;
+      transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 391px) {
+      left: 0;
+      transform: initial;
+    }
+
+    @media screen and (max-width: 342px) {
+      left: initial;
+      right: 0;
+      transform: translateX(10%);
     }
   }
 }
