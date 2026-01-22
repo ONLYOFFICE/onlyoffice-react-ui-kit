@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.26.0
+
+- footer
+  - Replace WeChat Public Account QR code
+  - Add WeChat Video logo with QR code
+  - Remove Toutiao logo and link
+
 ## 1.25.0
 
 - header
