@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.27.0
+
+- footer
+  - Remove ISO, HDS from "Security"
+
 ## 1.26.0
 
 - footer
