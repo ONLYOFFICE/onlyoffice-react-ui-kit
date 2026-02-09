@@ -23,7 +23,7 @@ import { Link } from "../../sub-components/Link/index.jsx";
 import { FooterItem } from "./sub-components/FooterItem/index.jsx";
 import { SocialLinks } from "./sub-components/SocialLinks/index.jsx";
 import { LanguageSelector } from "./sub-components/LanguageSelector/index.jsx";
-import { HippaIcon, GdprIcon, IsoIcon, HdsIcon } from "../../icons/index.js";
+import { HippaIcon, GdprIcon } from "../../icons/index.js";
 import { getLink } from "../../utils/getLink.jsx";
 
 const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
@@ -218,20 +218,6 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                   aria-label="GDPR"
                 >
                   <GdprIcon />
-                </Link>
-                <Link
-                  href={t("ISO27001CertificationLink")}
-                  locale={false}
-                  aria-label="NetExplorer"
-                >
-                  <IsoIcon />
-                </Link>
-                <Link
-                  href={t("HDSCertificationLink")}
-                  locale={false}
-                  aria-label="NetExplorer"
-                >
-                  <HdsIcon />
                 </Link>
               </div>
             </FooterItem>
