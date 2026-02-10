@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.28.0
+
+- Update config and dependencies
+
 ## 1.27.0
 
 - footer
