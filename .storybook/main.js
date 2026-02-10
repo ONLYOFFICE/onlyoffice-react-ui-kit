@@ -17,14 +17,6 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: [
-    "@storybook/preset-create-react-app",
-    "@storybook/addon-onboarding",
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@chromatic-com/storybook",
-    "@storybook/addon-interactions",
-  ],
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
@@ -34,7 +26,25 @@ const config = {
       ...config.resolve.alias,
       "next/router": "next-router-mock",
     };
+
+    config.module.rules.push({
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-env", "@babel/preset-react"],
+        },
+      },
+    });
+
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ["style-loader", "css-loader", "sass-loader"],
+    });
+
     return config;
   },
 };
-export default config;
+
+module.exports = config;

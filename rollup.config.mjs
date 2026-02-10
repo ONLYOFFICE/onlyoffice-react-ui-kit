@@ -2,7 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
 import json from "@rollup/plugin-json";
-import { terser } from "rollup-plugin-terser";
+import terser from "@rollup/plugin-terser";
 import copy from "rollup-plugin-copy";
 import postcss from "rollup-plugin-postcss";
 import postcssUrl from "postcss-url";
@@ -48,6 +48,14 @@ export default components.map((component) => ({
       ],
       extract: true,
       minimize: true,
+      use: [
+        [
+          "sass",
+          {
+            silenceDeprecations: ["legacy-js-api"],
+          },
+        ],
+      ],
     }),
     copy({
       targets: [
