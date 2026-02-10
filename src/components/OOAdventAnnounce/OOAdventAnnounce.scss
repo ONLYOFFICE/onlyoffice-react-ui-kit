@@ -1,5 +1,5 @@
 /*
- * (c) Copyright Ascensio System SIA 2024-2025
+ * (c) Copyright Ascensio System SIA 2026
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -147,7 +147,8 @@
 
   @media screen and (max-width: 1024px) {
     height: 48px;
-    background-image: url("./images/bg_mobile.svg"), url("./images/ai_updates_bg_mobile.svg");
+    background-image:
+      url("./images/bg_mobile.svg"), url("./images/ai_updates_bg_mobile.svg");
     background-position:
       calc(50% - 71px) -51px,
       calc(50% + 186px) top;

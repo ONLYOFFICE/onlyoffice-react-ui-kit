@@ -1,5 +1,5 @@
 /*
- * (c) Copyright Ascensio System SIA 2024-2025
+ * (c) Copyright Ascensio System SIA 2026
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,7 +48,9 @@
       }
     }
 
-    .oo-menu-link:not([class*="oo-menu-link--variant-icon"]):not([class*="oo-menu-link--variant-text"]) {
+    .oo-menu-link:not([class*="oo-menu-link--variant-icon"]):not(
+        [class*="oo-menu-link--variant-text"]
+      ) {
       padding-left: initial;
       padding-right: 36px;
     }

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright Ascensio System SIA 2024-2025
+ * (c) Copyright Ascensio System SIA 2026
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -168,8 +168,8 @@ const OOHeader = ({
             theme === "white"
               ? "oo-header-logo--theme-white"
               : theme === "white-secondary" || theme === "white-tertiary"
-              ? "oo-header-logo--theme-white-secondary"
-              : undefined,
+                ? "oo-header-logo--theme-white-secondary"
+                : undefined,
             !search?.show && "oo-header-logo--mobile-center",
           )}
           href={
@@ -180,12 +180,12 @@ const OOHeader = ({
                       ? ""
                       : `/${base.localePathMap[locale] ?? locale}`
                     : locale === "en"
-                    ? ""
-                    : `/${locale}`
+                      ? ""
+                      : `/${locale}`
                 }`
               : locale === "en"
-              ? "/"
-              : `/${locale}`
+                ? "/"
+                : `/${locale}`
           }
           aria-label={t("GoToHomepage")}
         ></Link>

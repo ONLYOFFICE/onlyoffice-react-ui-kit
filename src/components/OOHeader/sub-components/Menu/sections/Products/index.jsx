@@ -1,5 +1,5 @@
 /*
- * (c) Copyright Ascensio System SIA 2024-2025
+ * (c) Copyright Ascensio System SIA 2026
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -80,10 +80,10 @@ const Products = ({
         {activeTab === 0
           ? t("OODocSpace")
           : activeTab === 1
-          ? t("OODocs")
-          : activeTab === 2
-          ? t("OtherProducts")
-          : ""}
+            ? t("OODocs")
+            : activeTab === 2
+              ? t("OtherProducts")
+              : ""}
       </button>
 
       <div className="oo-header-menu-mob-height">

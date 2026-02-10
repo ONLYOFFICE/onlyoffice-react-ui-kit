@@ -1,5 +1,5 @@
 /*
- * (c) Copyright Ascensio System SIA 2024-2025
+ * (c) Copyright Ascensio System SIA 2026
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,10 +44,10 @@ const DownloadMenu = ({
         !hasSearch && !hasPhone
           ? "oo-menu-item--position-1"
           : hasSearch && hasPhone
-          ? "oo-menu-item--position-2"
-          : hasSearch || hasPhone
-          ? "oo-menu-item--position-3"
-          : null,
+            ? "oo-menu-item--position-2"
+            : hasSearch || hasPhone
+              ? "oo-menu-item--position-3"
+              : null,
       )}
       heading={t("Download")}
       registerCloseMenu={registerCloseMenu}
