@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.29.0
+
+- header
+  - Menu -> Resources -> Blog: Update to Docs 9.3
+
 ## 1.28.0
 
 - Update config and dependencies
