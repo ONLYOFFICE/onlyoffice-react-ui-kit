@@ -61,80 +61,59 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #15699c;
-  background-image: url("./images/ai_updates_bg.svg");
-  background-size: auto 89px;
-  background-repeat: no-repeat;
-  background-position-x: calc(50% - 10px);
+  background-color: #120754;
+  background-image: linear-gradient(to right, #120754 0%, #120962 32%, #140f86 62%, #0c119e 81%, #050a79 100%);
 
   &.ar {
     direction: initial;
     unicode-bidi: initial;
   }
 
-  &.es,
   &.fr {
     .oo-advent-announce-text {
-      @media screen and (max-width: 430px) {
-        max-width: 300px;
-      }
+      max-width: 1050px;
+    }
+  }
+
+  &.es {
+    .oo-advent-announce-text {
+      max-width: 1040px;
     }
   }
 
   &.it {
     .oo-advent-announce-text {
-      max-width: 782px;
-
-      @media screen and (max-width: 430px) {
-        max-width: 276px;
-      }
+      max-width: 1002px;
     }
   }
 
   &.ja {
     .oo-advent-announce-text {
-      @media screen and (max-width: 430px) {
-        max-width: 260px;
-      }
+      max-width: 1030px;
     }
   }
 
   &.de .oo-advent-announce-text {
-    max-width: 800px;
-
-    @media screen and (max-width: 430px) {
-      max-width: 290px;
-    }
+    max-width: 980px;
   }
 
   &.pt,
   &.pt-br {
     .oo-advent-announce-text {
-      max-width: 850px;
-
-      @media screen and (max-width: 430px) {
-        max-width: 276px;
-      }
+      max-width: 1090px;
     }
   }
 
   &.ru {
     .oo-advent-announce-text {
-      max-width: 970px;
-
-      @media screen and (max-width: 475px) {
-        max-width: 290px;
-      }
+      max-width: 1090px;
+      font-size: 13px;
     }
   }
 
   &.sr {
     .oo-advent-announce-text {
-      max-width: 830px;
-
-      @media screen and (max-width: 375px) {
-        max-width: 240px;
-      }
+      max-width: 970px;
     }
   }
 
@@ -148,13 +127,14 @@
   @media screen and (max-width: 1024px) {
     height: 48px;
     background-image:
-      url("./images/bg_mobile.svg"), url("./images/ai_updates_bg_mobile.svg");
+      url("./images/ai_updates_bg_mobile.png"),
+      linear-gradient(to right, #120754 0%, #120962 32%, #140f86 62%, #0c119e 81%, #050a79 100%);
     background-position:
       calc(50% - 71px) -51px,
-      calc(50% + 186px) top;
+      center;
     background-size:
-      595px 191px,
-      506px 66px;
+      1165px 191px,
+      100% 100%;
   }
 }
 
@@ -167,7 +147,7 @@
   font-size: 14px;
   line-height: 19px;
   text-align: center;
-  max-width: 870px;
+  max-width: 960px;
   height: 100%;
   color: #ffffff;
   text-decoration: none;
@@ -185,7 +165,7 @@
     width: 72px;
     min-width: 72px;
     height: 71px;
-    background-image: url("./images/ai_icon.png");
+    background-image: url("./images/ai_icon.svg");
     background-size: 72px 71px;
 
     @media screen and (max-width: 1024px) {
