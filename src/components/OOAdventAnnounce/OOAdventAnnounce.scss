@@ -61,11 +61,8 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #0d054f;
-  background-image: url("./images/ai_updates_bg.png");
-  background-size: auto 64px;
-  background-repeat: no-repeat;
-  background-position-x: calc(50% - 10px);
+  background-color: #120754;
+  background-image: linear-gradient(to right, #120754 0%, #120962 32%, #140f86 62%, #0c119e 81%, #050a79 100%);
 
   &.ar {
     direction: initial;
@@ -129,11 +126,15 @@
 
   @media screen and (max-width: 1024px) {
     height: 48px;
-    background-image: url("./images/ai_updates_bg_mobile.png");
+    background-image:
+      url("./images/ai_updates_bg_mobile.png"),
+      linear-gradient(to right, #120754 0%, #120962 32%, #140f86 62%, #0c119e 81%, #050a79 100%);
     background-position:
       calc(50% - 71px) -51px,
-      calc(50% + 186px) top;
-    background-size: 1165px 191px;
+      center;
+    background-size:
+      1165px 191px,
+      100% 100%;
   }
 }
 
