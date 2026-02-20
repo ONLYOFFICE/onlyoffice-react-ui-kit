@@ -2,6 +2,8 @@
 
 ## 1.29.0
 
+- advent-announce
+  - ONLYOFFICE Docs 9.3 released
 - header
   - Menu -> Resources -> Blog: Update to Docs 9.3
 
