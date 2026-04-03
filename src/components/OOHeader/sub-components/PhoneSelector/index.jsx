@@ -19,6 +19,7 @@ import clsx from "clsx";
 import "./PhoneSelector.scss";
 import { Link } from "../../../../sub-components/Link/index.jsx";
 import { PhoneIcon } from "../../../../icons/index.js";
+import { getUserCountry } from "../../../../utils/getUserCountry.jsx";
 
 const PhoneSelector = ({
   t,
@@ -31,6 +32,7 @@ const PhoneSelector = ({
   const buttonRef = useRef(null);
   const dropdownRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [isUSA, setIsUSA] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -52,6 +54,12 @@ const PhoneSelector = ({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    getUserCountry().then((country) => {
+      setIsUSA(country === "US");
+    });
+  }, []);
 
   const handleKeyDown = (e) => {
     if (e.key === "Tab") {
@@ -119,8 +127,8 @@ const PhoneSelector = ({
           )}
         >
           <div className="oo-phone-selector-text">{t("AscensioSystemSIA")}</div>
-          <a className="oo-phone-selector-label" href="tel:+37163399867">
-            {t("Phone")} +371 63399867
+          <a className="oo-phone-selector-label" href={!isUSA ? "tel:+37163399867" : "tel:+19723018440"}>
+            {t("Phone")} {!isUSA ? "+371 63399867" : "+1 (972) 301-8440"}
           </a>
           <Link
             className="oo-phone-selector-link"

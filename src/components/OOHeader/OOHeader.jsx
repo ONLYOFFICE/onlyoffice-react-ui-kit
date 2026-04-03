@@ -26,6 +26,7 @@ import { LanguageSelector } from "./sub-components/LanguageSelector/index.jsx";
 import { PhoneSelector } from "./sub-components/PhoneSelector/index.jsx";
 import { getUrl } from "../../utils/getUrl.jsx";
 import { SearchSelector } from "./sub-components/SearchSelector/index.jsx";
+import { getUserCountry } from "../../utils/getUserCountry.jsx"
 
 const OOHeader = ({
   locale,
@@ -51,6 +52,8 @@ const OOHeader = ({
   const [isMobile, setIsMobile] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
+  const [isUSA, setIsUSA] = useState(false);
+
   const getBaseUrl = (path) =>
     getUrl(locale, path, base?.url, base?.withAspx, base?.localePathMap);
 
@@ -89,6 +92,12 @@ const OOHeader = ({
       router.events.off("hashChangeComplete", closeAllMenus);
     };
   }, [router]);
+
+  useEffect(() => {
+    getUserCountry().then((country) => {
+      setIsUSA(country === "US");
+    });
+  }, []);
 
   const onOverlayhHandleClick = () => {
     setShowOverlay(false);
@@ -239,9 +248,9 @@ const OOHeader = ({
 
             <a
               className={clsx("oo-header-menu-phone-mobile", locale)}
-              href="tel:+37163399867"
+              href={!isUSA ? "tel:+37163399867" : "tel:+19723018440"}
             >
-              +371 633 998 67
+              {!isUSA ? "+371 633 998 67" : "+1 (972) 301-8440"}
             </a>
           </div>
         )}
