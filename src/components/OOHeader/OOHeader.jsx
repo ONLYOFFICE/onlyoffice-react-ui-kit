@@ -34,7 +34,7 @@ const OOHeader = ({
   borderColor,
   backgroundColor,
   search,
-  hasPhone,
+  phone,
   languages,
   highlight,
 }) => {
@@ -53,6 +53,8 @@ const OOHeader = ({
   const [showOverlay, setShowOverlay] = useState(false);
   const getBaseUrl = (path) =>
     getUrl(locale, path, base?.url, base?.withAspx, base?.localePathMap);
+  const isHasPhone = phone.show;
+  const isUSA = isHasPhone ? phone.country === "US" : false;
 
   useEffect(() => {
     const closeAllMenus = () => {
@@ -125,7 +127,7 @@ const OOHeader = ({
         "oo-header",
         locale,
         openMobileMenu && "oo-header--active",
-        search && hasPhone && "oo-header--space-between",
+        search && isHasPhone && "oo-header--space-between",
       )}
       style={{ borderColor: borderColor, backgroundColor: backgroundColor }}
     >
@@ -216,7 +218,7 @@ const OOHeader = ({
                 getBaseUrl={getBaseUrl}
                 theme={theme}
                 hasSearch={search?.show}
-                hasPhone={hasPhone}
+                hasPhone={isHasPhone}
                 highlight={highlight}
                 registerCloseMenu={registerCloseMenu}
                 handleCloseAllMenus={handleCloseAllMenus}
@@ -239,9 +241,9 @@ const OOHeader = ({
 
             <a
               className={clsx("oo-header-menu-phone-mobile", locale)}
-              href="tel:+37163399867"
+              href={!isUSA ? "tel:+37163399867" : "tel:+19723018440"}
             >
-              +371 633 998 67
+              {!isUSA ? "+371 633 998 67" : "+1 (972) 301-8440"}
             </a>
           </div>
         )}
@@ -267,7 +269,7 @@ const OOHeader = ({
               onSubmit={search.onSubmit}
             />
           )}
-          {hasPhone && (
+          {isHasPhone && (
             <PhoneSelector
               t={t}
               locale={locale}
@@ -275,6 +277,7 @@ const OOHeader = ({
               theme={theme}
               registerCloseMenu={registerCloseMenu}
               handleCloseAllMenus={handleCloseAllMenus}
+              isUSA={isUSA}
             />
           )}
           <LanguageSelector

@@ -81,7 +81,10 @@ function MyApp() {
           onSubmit: () => {},
           onChange: () => {},
         }}
-        hasPhone={true}
+        phone={{
+          show: true,
+          country: "US",
+        }}
         highlight={{
           buttonId: "oo-menu-item-btn-resources",
           linkId: "oo-menu-link-blog",
@@ -99,7 +102,7 @@ function MyApp() {
 | `locale` | Locale that should be used. Supported values: `"en"`, `"fr"`, `"de"`, `"es"`, `"pt"`, `"pt-br"`, `"it"`, `"cs"`, `"ja"`, `"zh"`, `"zh-hans"`, `"el"`, `"hi"`, `"ar"`, `"sr"`, `"hy"`, `"ru"`, `"nl"`. | `string` | `"en"` |
 | `languages` | Controls the visibility and content of the language selector. Should contain { languages: [ [key: string, shortKey: string, name: string, href: string], ... ] }. | `object` | `undefined` |
 | `search` | Enables and configures a search input in the header. Should be an object like { show: boolean, variant: "main" | "blog", value: string, onChange: () => void;, onSubmit: () => void; }. | `object` | `undefined` |
-| `hasPhone` | Whether to display a phone selector block. | `boolean` | `false` |
+| `phone` | Enables and configures a phone selector in the header. Should be an object like { show: boolean, country: string }. | `object` | `undefined` |
 | `highlight` | Highlights specific menu elements. Should be an object like { buttonId: string, linkId: string }, where values are DOM element IDs to apply highlight styles to. | `object` | `undefined` |
 | `borderColor` | Sets the bottom border color of the header. | `string` | `transparent` |
 | `backgroundColor` | Sets the background color of the header. | `string` | `transparent` |

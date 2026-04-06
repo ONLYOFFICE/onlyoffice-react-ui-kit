@@ -1,5 +1,7 @@
 # Changelog
 
+- header -> Phone: display US phone number if IP is from USA
+
 ## 1.29.0
 
 - advent-announce
