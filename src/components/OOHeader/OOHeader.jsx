@@ -53,8 +53,8 @@ const OOHeader = ({
   const [showOverlay, setShowOverlay] = useState(false);
   const getBaseUrl = (path) =>
     getUrl(locale, path, base?.url, base?.withAspx, base?.localePathMap);
-  const isHasPhone = phone.show;
-  const isUSA = isHasPhone ? phone.country === "US" : false;
+  const isHasPhone = phone?.show ? true : false;
+  const isUSA = phone?.country === "US" ? true : false;
 
   useEffect(() => {
     const closeAllMenus = () => {
