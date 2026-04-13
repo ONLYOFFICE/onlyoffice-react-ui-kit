@@ -27,6 +27,7 @@ const PhoneSelector = ({
   theme,
   registerCloseMenu,
   handleCloseAllMenus,
+  isUSA
 }) => {
   const buttonRef = useRef(null);
   const dropdownRef = useRef(null);
@@ -119,8 +120,8 @@ const PhoneSelector = ({
           )}
         >
           <div className="oo-phone-selector-text">{t("AscensioSystemSIA")}</div>
-          <a className="oo-phone-selector-label" href="tel:+37163399867">
-            {t("Phone")} +371 63399867
+          <a className="oo-phone-selector-label" href={!isUSA ? "tel:+37163399867" : "tel:+19723018440"}>
+            {t("Phone")} {!isUSA ? "+371 63399867" : "+1 (972) 301-8440"}
           </a>
           <Link
             className="oo-phone-selector-link"
