@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.30.1
+
+- header
+  - Fix search styles
+
 ## 1.30.0
 
 - header -> Phone: display US phone number if IP is from USA
