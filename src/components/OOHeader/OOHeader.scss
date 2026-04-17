@@ -62,6 +62,17 @@
       }
     }
 
+    .oo-menu-label[href] {
+      span {
+        margin-right: initial;
+        margin-left: 4px;
+      }
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
     .oo-menu-item-btn {
       &::after {
         @media screen and (max-width: 1024px) {
