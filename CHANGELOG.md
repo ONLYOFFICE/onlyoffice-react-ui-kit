@@ -3,7 +3,7 @@
 ## 1.30.1
 
 - header
-  - Fix search styles
+  - Fix styles
 
 ## 1.30.0
 
