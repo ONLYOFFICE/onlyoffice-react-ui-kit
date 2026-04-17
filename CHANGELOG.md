@@ -3,6 +3,7 @@
 ## 1.30.1
 
 - header
+  - Fix phone display for RTL
   - Fix styles
 
 ## 1.30.0
