@@ -243,7 +243,9 @@ const OOHeader = ({
               className={clsx("oo-header-menu-phone-mobile", locale)}
               href={!isUSA ? "tel:+37163399867" : "tel:+19723018440"}
             >
-              {!isUSA ? "+371 633 998 67" : "+1 (972) 301-8440"}
+              <span dir="ltr">
+                {!isUSA ? "+371 633 998 67" : "+1 (972) 301-8440"}
+              </span>
             </a>
           </div>
         )}
