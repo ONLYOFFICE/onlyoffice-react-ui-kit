@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.30.2
+
+- footer
+  - Fix link of forum
+
 ## 1.30.1
 
 - header
