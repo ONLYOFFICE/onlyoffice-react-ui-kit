@@ -226,7 +226,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                 className="oo-footer-link"
                 href="https://community.onlyoffice.com"
               >
-                {t("Forum")}
+                {t("Community")}
               </Link>
               <Link
                 className="oo-footer-link"
