@@ -178,7 +178,7 @@ const Resources = ({
           <MenuLink
             id="oo-menu-link-forum"
             className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href="https://forum.onlyoffice.com/"
+            href="https://community.onlyoffice.com"
             target="_blank"
             icon="forum"
             active={highlight?.linkId}

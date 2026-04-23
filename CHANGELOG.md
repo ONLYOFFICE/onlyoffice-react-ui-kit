@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.30.2
+
+- Update forum link
+
 ## 1.30.1
 
 - header

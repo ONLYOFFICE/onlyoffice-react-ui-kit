@@ -178,4 +178,4 @@ In case you have any issues, questions, or suggestions for the onlyoffice-react-
 
 Official project website: [www.onlyoffice.com](https://www.onlyoffice.com/).
 
-Support forum: [forum.onlyoffice.com](https://forum.onlyoffice.com/).
+Support forum: [community.onlyoffice.com](https://community.onlyoffice.com).
