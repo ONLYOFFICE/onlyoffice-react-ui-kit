@@ -224,7 +224,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
             <FooterItem locale={locale} heading={t("GetHelp")}>
               <Link
                 className="oo-footer-link"
-                href="https://forum.onlyoffice.com"
+                href="https://community.onlyoffice.com"
               >
                 {t("Forum")}
               </Link>
