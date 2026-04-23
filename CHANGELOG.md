@@ -2,12 +2,7 @@
 
 ## 1.30.2
 
-- header
-  - Fix link of forum
-- footer
-  - Fix link of forum
-- readme
-  - Fix link of forum
+- Update forum link
 
 ## 1.30.1
 
