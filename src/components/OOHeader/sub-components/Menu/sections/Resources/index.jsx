@@ -183,7 +183,7 @@ const Resources = ({
             icon="forum"
             active={highlight?.linkId}
           >
-            {t("Forum")}
+            {t("Community")}
           </MenuLink>
           <MenuLink
             id="oo-menu-link-help-center"

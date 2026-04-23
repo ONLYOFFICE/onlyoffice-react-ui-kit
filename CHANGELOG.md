@@ -3,6 +3,7 @@
 ## 1.30.2
 
 - Update forum link
+- Rename "Forum" to "Community" in header and footer
 
 ## 1.30.1
 
