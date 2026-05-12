@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.31.0
+
+- advent-announce: ONLYOFFICE Docs 9.4 released
+- header → Menu:
+  - Products: Update "Accessibility" link
+  - Resources → Blog: ONLYOFFICE Docs 9.4 released
+
 ## 1.30.2
 
 - Update forum link
