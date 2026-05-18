@@ -35,10 +35,10 @@ const OOAdventAnnounce = ({ locale }) => {
         href={t("AdventAnnounceLink")}
       >
         <div className="oo-advent-announce-text">
-          <div className="oo-advent-announce-text-desktop">
+          <div className={clsx("oo-advent-announce-text-desktop", locale)}>
             {parse(t("AdventAnnounceDesktop"))}
           </div>
-          <div className={clsx("oo-advent-announce-text-mobile", locale)}>
+          <div className="oo-advent-announce-text-mobile">
             {parse(t("AdventAnnounceMobile"))}
           </div>
         </div>

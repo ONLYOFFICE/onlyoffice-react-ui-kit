@@ -655,7 +655,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-accessibility"
               className="oo-header-menu-mr-16 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/accessibility")}
+              href={t("AccessibilityLink")}
               icon="for-desktop"
               variant="small"
               active={highlight?.linkId}
