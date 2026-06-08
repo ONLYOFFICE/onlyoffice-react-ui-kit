@@ -34,8 +34,8 @@ const OOAdventAnnounce = ({ locale }) => {
         className={clsx("oo-advent-announce-wrapper", locale)}
         href={t("AdventAnnounceLink")}
       >
-        <div className="oo-advent-announce-text">
-          <div className={clsx("oo-advent-announce-text-desktop", locale)}>
+        <div className={clsx("oo-advent-announce-text", locale)}>
+          <div className="oo-advent-announce-text-desktop">
             {parse(t("AdventAnnounceDesktop"))}
           </div>
           <div className="oo-advent-announce-text-mobile">

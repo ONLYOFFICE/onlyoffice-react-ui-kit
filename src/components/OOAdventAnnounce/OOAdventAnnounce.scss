@@ -61,10 +61,10 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #0a0441;
+  background-color: #000122;
   background-image: url("./images/bg.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center -25px;
 
   &.ar {
     direction: initial;
@@ -74,7 +74,7 @@
   @media screen and (max-width: 1024px) {
     height: 48px;
     background-image: url("./images/bg-mobile.svg");
-    background-position: calc(50% + 63px) -162px;
+    background-position: calc(50% + 31px) -162px;
   }
 }
 
@@ -87,7 +87,7 @@
   font-size: 14px;
   line-height: 19px;
   text-align: center;
-  max-width: 928px;
+  max-width: 857px;
   height: 100%;
   color: #ffffff;
   text-decoration: none;
@@ -102,10 +102,9 @@
   }
 
   &:before {
-    margin-right: 20px;
-    width: 68px;
-    min-width: 68px;
-    height: 48px;
+    width: 73px;
+    min-width: 73px;
+    height: 50px;
     background-image: url("./images/icon.svg");
 
     @media screen and (max-width: 1024px) {
@@ -114,8 +113,7 @@
   }
 
   &:after {
-    margin-left: 20px;
-    margin-right: 64px;
+    margin-left: 12px;
     width: 24px;
     min-width: 24px;
     height: 24px;
@@ -126,33 +124,40 @@
       margin-right: initial;
     }
   }
-}
 
-.oo-advent-announce-text-desktop {
-  max-width: 732px;
-
-  &.de,
-  &.fr,
-  &.ru {
-    max-width: 712px;
+  &.de {
+    max-width: 946px;
   }
 
-  &.it {
-    max-width: 676px;
-  }
-
-  &.ja {
-    max-width: 664px;
+  &.es,
+  &.fr {
+    max-width: 876px;
   }
 
   &.pt,
   &.pt-br {
-    max-width: 700px;
+    max-width: 810px;
   }
 
   &.sr {
-    max-width: 694px;
+    max-width: 914px;
   }
+
+  &.ru {
+    max-width: 804px;
+  }
+
+  &.it {
+    max-width: 864px;
+  }
+
+  &.ja {
+    max-width: 890px;
+  }
+}
+
+.oo-advent-announce-text-desktop {
+  padding: 0 30px;
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -161,7 +166,6 @@
 
 .oo-advent-announce-text-mobile {
   display: none;
-  padding: 0 5px;
 
   @media screen and (max-width: 1024px) {
     display: block;
