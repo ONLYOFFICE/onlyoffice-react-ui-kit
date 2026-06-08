@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.32.0
+
+- advent-announce: ONLYOFFICE DocSpace 3.7 released
+
 ## 1.31.0
 
 - advent-announce: ONLYOFFICE Docs 9.4 released
