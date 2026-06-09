@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.32.1
+
+- advent-announce: Update links for Arabic and Portuguese
+
 ## 1.32.0
 
 - advent-announce: ONLYOFFICE DocSpace 3.7 released
