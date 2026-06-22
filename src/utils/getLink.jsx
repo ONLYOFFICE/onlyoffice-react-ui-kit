@@ -10,7 +10,7 @@ const links = {
     },
   },
   marketplace: {
-    base: `https://www.onlyoffice.com/app-directory`,
+    base: `https://www.onlyoffice.com/marketplace`,
     paths: {
       en: "",
       pt: "",

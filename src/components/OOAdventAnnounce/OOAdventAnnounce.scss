@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap");
 
 .oo-advent-announce {
   &.oo-advent-announce--active {
@@ -61,24 +63,29 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #000122;
-  background-image: url("./images/bg.svg");
+  background-color: #ffffff;
+  background-image: url("./images/bg.png");
   background-repeat: no-repeat;
   background-position: center -25px;
 
   &.ar {
-    direction: initial;
+    direction: rtl;
     unicode-bidi: initial;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 880px) {
     height: 48px;
-    background-image: url("./images/bg-mobile.svg");
-    background-position: calc(50% + 31px) -162px;
+    background-image: url("./images/bg-mobile.png");
+    background-position: center 0;
+  }
+
+  @media screen and (max-width: 425px) {
+    background-position: calc(50% + 80px) 0;
   }
 }
 
 .oo-advent-announce-text {
+  font-family: "Sora", sans-serif;
   position: relative;
   display: flex;
   align-items: center;
@@ -89,7 +96,7 @@
   text-align: center;
   max-width: 857px;
   height: 100%;
-  color: #ffffff;
+  color: #000122;
   text-decoration: none;
   z-index: 10;
 
@@ -99,30 +106,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-  }
-
-  &:before {
-    width: 73px;
-    min-width: 73px;
-    height: 50px;
-    background-image: url("./images/icon.svg");
-
-    @media screen and (max-width: 1024px) {
-      display: none;
-    }
-  }
-
-  &:after {
-    margin-left: 12px;
-    width: 24px;
-    min-width: 24px;
-    height: 24px;
-    background-image: url("./images/arrow.svg");
-
-    @media screen and (max-width: 1024px) {
-      margin-left: 2px;
-      margin-right: initial;
-    }
   }
 
   &.de {
@@ -144,22 +127,19 @@
   }
 
   &.ru {
-    max-width: 804px;
+    max-width: 780px;
+    font-family: "Inter", sans-serif;
   }
 
   &.it {
-    max-width: 864px;
-  }
-
-  &.ja {
-    max-width: 890px;
+    max-width: 760px;
   }
 }
 
 .oo-advent-announce-text-desktop {
   padding: 0 30px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 880px) {
     display: none;
   }
 }
@@ -167,7 +147,7 @@
 .oo-advent-announce-text-mobile {
   display: none;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 880px) {
     display: block;
   }
 }
