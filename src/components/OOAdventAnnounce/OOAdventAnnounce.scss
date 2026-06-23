@@ -66,7 +66,7 @@
   background-color: #ffffff;
   background-image: url("./images/bg.png");
   background-repeat: no-repeat;
-  background-position: center -25px;
+  background-position: center -12px;
 
   &.ar {
     direction: rtl;
@@ -91,10 +91,10 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
-  max-width: 857px;
+  max-width: 637px;
   height: 100%;
   color: #000122;
   text-decoration: none;
@@ -117,22 +117,16 @@
     max-width: 876px;
   }
 
-  &.pt,
-  &.pt-br {
-    max-width: 810px;
-  }
-
   &.sr {
     max-width: 914px;
   }
 
   &.ru {
-    max-width: 780px;
     font-family: "Inter", sans-serif;
   }
 
-  &.it {
-    max-width: 760px;
+  &.ja {
+    max-width: 590px;
   }
 }
 
@@ -149,5 +143,9 @@
 
   @media screen and (max-width: 880px) {
     display: block;
+
+    > b {
+      font-weight: 600;
+    }
   }
 }
