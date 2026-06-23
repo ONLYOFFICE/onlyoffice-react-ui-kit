@@ -114,7 +114,7 @@
 
   &.es,
   &.fr {
-    max-width: 876px;
+    max-width: 637px;
   }
 
   &.sr {
@@ -123,6 +123,11 @@
 
   &.ru {
     font-family: "Inter", sans-serif;
+
+    .oo-advent-announce-text-mobile {
+      line-height: 20px;
+      max-width: 288px;
+    }
   }
 
   &.ja {
