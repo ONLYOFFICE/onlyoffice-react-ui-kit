@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.33.0
+
+- advent-announce: ONLYOFFICE turns 16!
+- header: Update link https://www.onlyoffice.com/app-directory to https://www.onlyoffice.com/marketplace
+
 ## 1.32.1
 
 - advent-announce: Update links for Arabic and Portuguese
