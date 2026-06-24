@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.33.1
+
+- Fix font import
+
 ## 1.33.0
 
 - advent-announce: ONLYOFFICE turns 16!
