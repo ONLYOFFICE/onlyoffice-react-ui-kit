@@ -47,9 +47,7 @@ export default components.map((component) => ({
         }),
       ],
       extract: true,
-      minimize: {
-        preset: ["default", { normalizeUrl: false }],
-      },
+      minimize: true,
       use: [
         [
           "sass",
