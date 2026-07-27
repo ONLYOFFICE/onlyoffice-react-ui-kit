@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.33.2
+
+- Add missing arabic translation
+
 ## 1.33.1
 
 - Fix font import
