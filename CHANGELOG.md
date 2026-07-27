@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.34.0
+
+- header -> Menu -> Resources -> Blog: ONLYOFFICE DocSpace 3.6 released => ONLYOFFICE DocSpace 3.7 released
+
 ## 1.33.1
 
 - Fix font import
