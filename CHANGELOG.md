@@ -4,6 +4,10 @@
 
 - header -> Menu -> Resources -> Blog: ONLYOFFICE DocSpace 3.6 released => ONLYOFFICE DocSpace 3.7 released
 
+## 1.33.2
+
+- Add missing arabic translation
+
 ## 1.33.1
 
 - Fix font import
