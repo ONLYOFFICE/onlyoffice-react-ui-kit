@@ -1,5 +1,9 @@
 # Changelog
 
+- footer
+  - Fix "Blog" link locale duplication (404 for all languages except EN)
+  - Remove `target="_blank"` from "Follow us on:" → Blog icon (internal link, opens in same tab)
+
 ## 1.33.1
 
 - Fix font import
