@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.34.0
+
+- advent-announce: Back to school with ONLYOFFICE!
+
 ## 1.33.2
 
 - footer
