@@ -1,5 +1,7 @@
 # Changelog
 
+## 1.35.0
+
 - header -> Menu -> Resources -> Blog: ONLYOFFICE DocSpace 3.6 released => ONLYOFFICE DocSpace 3.7 released
 - Add missing arabic translation
 
