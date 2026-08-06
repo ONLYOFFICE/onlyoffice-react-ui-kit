@@ -51,8 +51,7 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
           className="oo-footer-social-link"
           href={getLink("blog", locale)}
           title={t("ReadOurBlog")}
-          target="_blank"
-          rel="noreferrer noopener"
+          locale={false}
         >
           <span
             className="oo-footer-social-link-icon oo-footer-social-link-icon--blog"

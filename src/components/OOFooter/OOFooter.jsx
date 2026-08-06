@@ -138,7 +138,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
               </Link>
             </FooterItem>
             <FooterItem locale={locale} heading={t("GetNews")}>
-              <Link className="oo-footer-link" href={getLink("blog", locale)}>
+              <Link className="oo-footer-link" href={getLink("blog", locale)} locale={false}>
                 {t("Blog")}
               </Link>
             </FooterItem>

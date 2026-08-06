@@ -1,12 +1,16 @@
 # Changelog
 
+- Add missing arabic translation
+
 ## 1.34.0
 
 - header -> Menu -> Resources -> Blog: ONLYOFFICE DocSpace 3.6 released => ONLYOFFICE DocSpace 3.7 released
 
 ## 1.33.2
 
-- Add missing arabic translation
+- footer
+  - Fix "Blog" link locale duplication (404 for all languages except EN)
+  - Remove `target="_blank"` from "Follow us on:" → Blog icon (internal link, opens in same tab)
 
 ## 1.33.1
 
