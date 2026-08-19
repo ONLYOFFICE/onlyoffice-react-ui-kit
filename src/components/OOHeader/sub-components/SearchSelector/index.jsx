@@ -168,10 +168,8 @@ const SearchSelector = ({
           className={clsx(
             "oo-header-search-btn",
             locale,
-            (theme === "white" ||
-              theme === "white-secondary" ||
-              theme === "white-tertiary") &&
-              "oo-header-search-btn--theme-white",
+            theme === "white" && "oo-header-search-btn--theme-white",
+            theme === "dark" && "oo-header-search-btn--theme-dark",
           )}
           aria-label={t("OpenSearch")}
           aria-haspopup="true"

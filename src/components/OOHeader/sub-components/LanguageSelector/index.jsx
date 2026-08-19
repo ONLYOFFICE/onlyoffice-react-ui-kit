@@ -77,7 +77,7 @@ const LanguageSelector = ({
   return (
     <div
       onMouseEnter={() => {
-        if (window.innerWidth > 1024) {
+        if (window.innerWidth > 1023) {
           handleCloseAllMenus();
           setIsOpen(true);
         }
@@ -94,10 +94,7 @@ const LanguageSelector = ({
         className={clsx(
           "oo-language-selector-btn",
           isOpen && "oo-language-selector-btn--open",
-          (theme === "white" ||
-            theme === "white-secondary" ||
-            theme === "white-tertiary") &&
-            "oo-language-selector-btn--theme-white",
+          theme === "dark" && "oo-language-selector-btn--theme-dark",
         )}
         aria-label={t("SelectLanguage")}
         aria-haspopup="true"

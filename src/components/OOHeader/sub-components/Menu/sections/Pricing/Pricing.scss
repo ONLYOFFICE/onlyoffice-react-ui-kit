@@ -14,49 +14,40 @@
  * limitations under the License.
  */
 
-.oo-menu-item--pricing {
-  &.zh,
-  &.zh-hans {
-    .oo-header-menu-item {
-      &:last-child {
-        width: max-content;
-        min-width: 264px;
-        max-width: 272px;
+.oo-menu-item-btn--link {
+  align-items: center;
+  text-decoration: none;
 
-        @media screen and (max-width: 1024px) {
-          width: 100%;
-          min-width: 100%;
-          max-width: 100%;
-        }
-      }
+  &:hover {
+    color: #3541f5;
+  }
+
+  &.oo-menu-item-btn--theme-dark:hover {
+    color: #ccdbfb;
+  }
+
+  &::after {
+    content: none;
+  }
+
+  @media screen and (max-width: 1023px) {
+    display: block;
+    width: auto;
+    &.oo-menu-item-btn--theme-dark:hover {
+      color: #585a6d;
     }
-  }
-
-  &.ru {
-    .oo-header-menu-item {
-      &:first-child {
-        width: max-content;
-        min-width: 264px;
-        max-width: 272px;
-
-        @media screen and (max-width: 1024px) {
-          width: 100%;
-          min-width: 100%;
-          max-width: 100%;
-        }
-      }
-    }
-  }
-
-  .oo-header-menu-d-flex {
-    flex: 1 1 auto;
-  }
-
-  .oo-header-menu-img--pricing {
-    background-image: url("../../../../images/menu-reseller.svg");
-
-    &.fr {
-      background-image: url("../../../../images/menu-reseller-fr.svg");
+    &::after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url(http://localhost:6006/static/media/src/components/OOHeader/images/arrow-gray.svg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
     }
   }
 }

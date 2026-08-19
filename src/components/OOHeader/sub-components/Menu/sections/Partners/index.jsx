@@ -44,15 +44,6 @@ const Partners = ({
       <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column oo-header-menu-mob-height-without-header">
         <div className="oo-header-menu-item">
           <MenuLink
-            id="oo-menu-link-resellers"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/resellers")}
-            icon="resellers"
-            active={highlight?.linkId}
-          >
-            {t("Resellers")}
-          </MenuLink>
-          <MenuLink
             id="oo-menu-link-affiliates"
             className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
             href={getBaseUrl("/affiliates")}
@@ -62,13 +53,13 @@ const Partners = ({
             {t("Affiliates")}
           </MenuLink>
           <MenuLink
-            id="oo-menu-link-hosting-providers"
+            id="oo-menu-link-resellers"
             className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/hosting-providers")}
-            icon="hosting-providers"
+            href={getBaseUrl("/resellers")}
+            icon="resellers"
             active={highlight?.linkId}
           >
-            {t("HostingProviders")}
+            {t("Resellers")}
           </MenuLink>
           <MenuLink
             id="oo-menu-link-technology-partners"

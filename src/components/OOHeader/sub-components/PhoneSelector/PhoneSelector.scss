@@ -28,7 +28,7 @@
     position: initial;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     display: none;
   }
 }
@@ -44,13 +44,24 @@
 
   &.oo-phone-selector-btn--theme-white {
     svg path {
-      fill: #ffffff;
+      fill: #585a6d;
+    }
+  }
+  &.oo-phone-selector-btn--theme-dark {
+    svg path {
+      fill: #ccdbfb;
+    }
+
+    &.oo-phone-selector-btn--open {
+      svg path {
+        fill: #ccdbfb;
+      }
     }
   }
 
   &.oo-phone-selector-btn--open {
     svg path {
-      fill: #ff6f3d;
+      fill: #3541f5;
     }
   }
 }
@@ -62,7 +73,7 @@
   left: 0;
   display: grid;
   row-gap: 16px;
-  border-radius: 0 0 9px 9px;
+  border-radius: 0 0 12px 12px;
   margin: 0;
   padding: 32px;
   width: 255px;
@@ -75,12 +86,12 @@
     position: absolute;
     left: 50%;
     top: 0;
-    border-top: 1px solid #ff6f3d;
+    border-top: 1px solid #3541f5;
     width: 0;
     transition: width 0.2s ease-in-out;
     z-index: 1;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       content: none;
     }
   }
@@ -92,11 +103,11 @@
     top: 0;
     left: 50%;
     width: 0;
-    border-top: 1px solid #ff6f3d;
+    border-top: 1px solid #3541f5;
     transition: width 0.2s ease-in-out;
     z-index: 1;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       content: none;
     }
   }
@@ -151,7 +162,7 @@
   font-size: 14px;
   line-height: 19px;
   letter-spacing: 0.02em;
-  color: #ff6f3d;
+  color: #3541f5;
   text-decoration: underline;
 
   &:hover {

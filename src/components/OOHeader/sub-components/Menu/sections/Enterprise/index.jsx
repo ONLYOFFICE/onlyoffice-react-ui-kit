@@ -42,12 +42,9 @@ const Enterprise = ({
     >
       <div className="oo-header-menu-mob-height">
         <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column">
-          <div className="oo-header-menu-item oo-header-menu-item--with-border">
-            <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
-              {t("DocsEnterprise")}
-            </MenuLabel>
+          <div className="oo-header-menu-item">
             <MenuLink
-              id="oo-menu-link-why-docs-enterprise"
+              id="oo-menu-link-why-enterprise"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
               href={getBaseUrl("/docs-enterprise")}
               icon="docs-enterprise"
@@ -56,78 +53,34 @@ const Enterprise = ({
               {t("WhyDocsEnterprise")}
             </MenuLink>
             <MenuLink
-              id="oo-menu-link-enterprise-docs-pricing"
+              id="oo-menu-link-enterprise-pricing"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/docs-enterprise-prices")}
+              href={getBaseUrl("/pricing")}
               icon="pricing"
               active={highlight?.linkId}
             >
               {t("Pricing")}
             </MenuLink>
             <MenuLink
-              id="oo-menu-link-enterprise-docs-get-it-now"
-              href={getBaseUrl("/download#docs-enterprise")}
-              icon="get-in-now"
+              id="oo-menu-link-enterprise-request-demo"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/demo-order")}
+              icon="request-demo"
               active={highlight?.linkId}
             >
-              {t("GetItNow")}
+              {t("RequestDemo")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-enterprise-contact"
+              href={`mailto:sales@onlyoffice.com?subject=${t(
+                "ONLYOFFICE%20Enterprise%20request",
+              )}`}
+              icon="contact-sales"
+              active={highlight?.linkId}
+            >
+              {t("ContactSales")}
             </MenuLink>
           </div>
-          <div className="oo-header-menu-item">
-            <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
-              {t("DocSpaceEnterprise")}
-            </MenuLabel>
-            <MenuLink
-              id="oo-menu-link-why-docspace-enterprise"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/docspace-enterprise")}
-              icon="docspace"
-              active={highlight?.linkId}
-            >
-              {t("WhyDocSpaceEnterprise")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-enterprise-docspace-pricing"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/docspace-prices")}
-              icon="pricing"
-              active={highlight?.linkId}
-            >
-              {t("Pricing")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-linkk-enterprise-docspace-get-in-now"
-              href={getBaseUrl("/download#docspace-enterprise")}
-              icon="get-in-now"
-              active={highlight?.linkId}
-            >
-              {t("GetItNow")}
-            </MenuLink>
-          </div>
-        </div>
-
-        <div className="oo-header-menu-bottom oo-header-menu-bottom--end">
-          <MenuLink
-            id="oo-menu-link-enterprise-contact"
-            className="oo-header-menu-mr-24 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
-            href={`mailto:sales@onlyoffice.com?subject=${t(
-              "ONLYOFFICE%20Enterprise%20request",
-            )}`}
-            icon="contact-sales"
-            variant="small"
-            active={highlight?.linkId}
-          >
-            {t("ContactSales")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-request-demo"
-            href={getBaseUrl("/demo-order")}
-            icon="request-demo"
-            variant="small"
-            active={highlight?.linkId}
-          >
-            {t("RequestDemo")}
-          </MenuLink>
         </div>
       </div>
     </MenuItem>

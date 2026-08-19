@@ -14,13 +14,19 @@
  * limitations under the License.
  */
 
+.oo-menu-item.oo-menu-item--download {
+  @media screen and (max-width: 1023px) {
+    width: auto;
+  }
+}
+
 .oo-menu-item--download {
   position: relative;
-  margin-right: 8px;
+  margin-left: 8px;
 
   &.ar {
-    margin-right: initial;
-    margin-left: 8px;
+    margin-left: initial;
+    margin-right: 8px;
 
     .oo-menu-item-wrapper {
       left: initial;
@@ -29,14 +35,14 @@
 
     .oo-menu-item-btn {
       &::before {
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           left: initial;
           right: 24px;
         }
       }
 
       &::after {
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           content: "";
           right: initial;
           left: 24px;
@@ -45,13 +51,14 @@
         }
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 592px) {
         padding: 16px 56px 16px 48px;
       }
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 592px) {
       margin-left: initial;
+      margin-right: initial;
     }
   }
 
@@ -65,28 +72,10 @@
       min-width: 304px;
       max-width: 372px;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 592px) {
         width: 100%;
         min-width: 100%;
         max-width: 100%;
-      }
-    }
-  }
-
-  &.oo-menu-item--download-theme-white-tertiary {
-    .oo-menu-item-btn {
-      background-color: #444444;
-
-      &:hover {
-        background-color: #555555;
-
-        @media screen and (max-width: 1024px) {
-          background-color: #ff865c;
-        }
-      }
-
-      @media screen and (max-width: 1024px) {
-        background-color: #ff6f3d;
       }
     }
   }
@@ -103,7 +92,7 @@
           right: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           top: 0;
           left: 0;
           right: initial;
@@ -123,7 +112,7 @@
           right: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           top: 0;
           left: 0;
           right: initial;
@@ -144,7 +133,7 @@
           right: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           top: 0;
           left: 0;
           right: initial;
@@ -164,7 +153,7 @@
           right: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           top: 0;
           left: 0;
           right: initial;
@@ -185,7 +174,7 @@
           right: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           top: 0;
           left: 0;
           right: initial;
@@ -205,7 +194,7 @@
           left: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           top: 0;
         }
       }
@@ -226,7 +215,7 @@
           right: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           top: 0;
           left: 0;
           right: initial;
@@ -248,7 +237,7 @@
           right: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           top: 0;
           left: 0;
           right: initial;
@@ -269,7 +258,7 @@
           right: 0;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 592px) {
           top: 0;
           left: 0;
           right: initial;
@@ -283,29 +272,70 @@
   }
 
   .oo-header-menu-item {
-    min-width: 304px;
-    max-width: 304px;
+    min-width: 124px;
+    max-width: 160px;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
+      box-sizing: content-box;
+    }
+
+    @media screen and (max-width: 592px) {
+      box-sizing: border-box;
       min-width: 100%;
       max-width: 100%;
     }
   }
 
+  .oo-menu-item-btn-heading {
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 592px) {
+      display: flex;
+    }
+  }
+
   .oo-menu-item-wrapper {
     top: calc(100% + 16px);
-    left: 0;
-    transform: none;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
+      position: absolute;
+      left: 50%;
+      display: flex;
+      width: auto;
+      height: auto;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 20px 50px rgba(85, 85, 85, 0.15);
+      transform: translateX(-50%);
+      overflow: hidden;
+      top: 45px;
+      .oo-menu-link {
+        padding: 0px 0 0px 36px;
+      }
+    }
+
+    @media screen and (max-width: 592px) {
       top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: initial;
+      box-shadow: initial;
+      transform: initial;
+      overflow-y: auto;
+      .oo-menu-link {
+        padding: 4px 0 4px 36px;
+      }
     }
   }
 
   .oo-header-menu-item:not(:first-child):not([class*="--bg-gray"]):not(
       [class*="active"]
     ) {
-    @media screen and (max-width: 1024px) {
+    padding: 24px;
+    @media screen and (max-width: 592px) {
       padding: 24px;
     }
   }
@@ -313,22 +343,26 @@
   .oo-menu-item-btn {
     display: inline-flex;
     align-items: center;
+    width: auto;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 10px 12px;
     font-size: 14px;
     font-weight: 600;
-    line-height: 19px;
+    line-height: 20px;
     color: #ffffff;
     text-align: center;
     text-transform: capitalize;
     text-decoration: none;
-    background-color: #ff6f3d;
-    transition: background-color 0.2s;
+    background: linear-gradient(to top, #eb3300 0%, #ff5938 40%);
+    box-shadow:
+      0px 8px 16px -3px rgba(244, 89, 12, 0.4),
+      0px 4px 6px -4px rgba(244, 89, 12, 0.5);
+    transition: filter 0.2s;
     cursor: pointer;
 
     &::before {
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 592px) {
         content: "";
         position: absolute;
         left: 24px;
@@ -342,8 +376,12 @@
     }
 
     &::after {
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+      @media screen and (max-width: 592px) {
         content: "";
+        display: block;
         position: absolute;
         right: 24px;
         top: 12px;
@@ -360,10 +398,10 @@
     }
 
     &:hover {
-      background-color: #ff865c;
+      filter: brightness(1.08);
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 592px) {
       position: relative;
       margin: 0 16px 16px;
       padding: 12px 48px 12px 56px;
@@ -378,8 +416,12 @@
       font-size: 16px;
     }
   }
+  @media screen and (max-width: 592px) {
+    width: initial;
+  }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 592px) {
     position: initial;
+    margin-left: unset;
   }
 }

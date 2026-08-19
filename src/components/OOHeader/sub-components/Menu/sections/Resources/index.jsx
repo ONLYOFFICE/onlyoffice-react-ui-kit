@@ -43,235 +43,281 @@ const Resources = ({
       registerCloseMenu={registerCloseMenu}
       handleCloseAllMenus={handleCloseAllMenus}
     >
-      <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column oo-header-menu-mob-height-without-header">
-        <div className="oo-header-menu-item oo-header-menu-item--with-border">
-          <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
-            {t("AboutUs")}
-          </MenuLabel>
-          <MenuLink
-            id="oo-menu-link-company"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/about")}
-            icon="company"
-            active={highlight?.linkId}
-          >
-            {t("Company")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-customers"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/customers")}
-            icon="customers"
-            active={highlight?.linkId}
-          >
-            {t("Customers")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-success-stories"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/customers#stories")}
-            icon="success-stories"
-            active={highlight?.linkId}
-          >
-            {t("SuccessStories")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-awards"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/awards")}
-            icon="awards"
-            active={highlight?.linkId}
-          >
-            {t("Awards")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-certificates"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/certificates")}
-            icon="certificates"
-            active={highlight?.linkId}
-          >
-            {t("Certificates")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-resources-events"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/events")}
-            icon="events"
-            active={highlight?.linkId}
-          >
-            {t("Events")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-press-downloads"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/press-downloads")}
-            icon="press-downloads"
-            active={highlight?.linkId}
-          >
-            {t("PressDownloads")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-gift-shop"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href="https://onlyoffice.myspreadshop.com/all"
-            target="_blank"
-            icon="gift-shop"
-            active={highlight?.linkId}
-          >
-            {t("GiftShop")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-contacts"
-            href={getBaseUrl("/contacts")}
-            icon="contacts"
-            active={highlight?.linkId}
-          >
-            {t("Contacts")}
-          </MenuLink>
+      <div className="oo-header-menu-mob-height">
+        <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column">
+          <div className="oo-header-menu-item oo-header-menu-item--with-border">
+            <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
+              {t("AboutUs")}
+            </MenuLabel>
+            <MenuLink
+              id="oo-menu-link-company"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/about")}
+              icon="company"
+              active={highlight?.linkId}
+            >
+              {t("Company")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-customers"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/customers")}
+              icon="customers"
+              active={highlight?.linkId}
+            >
+              {t("Customers")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-success-stories"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/customers#stories")}
+              icon="success-stories"
+              active={highlight?.linkId}
+            >
+              {t("SuccessStories")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-awards"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/awards")}
+              icon="awards"
+              active={highlight?.linkId}
+            >
+              {t("Awards")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-certificates"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/certificates")}
+              icon="certificates"
+              active={highlight?.linkId}
+            >
+              {t("Certificates")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-resources-events"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/events")}
+              icon="events"
+              active={highlight?.linkId}
+            >
+              {t("Events")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-press-downloads"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/press-downloads")}
+              icon="press-downloads"
+              active={highlight?.linkId}
+            >
+              {t("PressDownloads")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-gift-shop"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href="https://onlyoffice.myspreadshop.com/all"
+              target="_blank"
+              icon="gift-shop"
+              active={highlight?.linkId}
+            >
+              {t("GiftShop")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-contacts"
+              href={getBaseUrl("/contacts")}
+              icon="contacts"
+              active={highlight?.linkId}
+            >
+              {t("Contacts")}
+            </MenuLink>
+          </div>
+
+          <div className="oo-header-menu-item">
+            <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
+              {t("Collaborate")}
+            </MenuLabel>
+            <MenuLink
+              id="oo-menu-link-for-contributers"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/contribute")}
+              icon="for-contributers"
+              active={highlight?.linkId}
+            >
+              {t("ForContributors")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-vacancies"
+              className="oo-header-menu-mb-16 oo-header-menu-mob-mb-24"
+              href={getBaseUrl("/vacancies")}
+              icon="vacancies"
+              active={highlight?.linkId}
+            >
+              {t("Vacancies")}
+            </MenuLink>
+
+            <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
+              {t("GetHelp")}
+            </MenuLabel>
+            <MenuLink
+              id="oo-menu-link-forum"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href="https://community.onlyoffice.com"
+              target="_blank"
+              icon="forum"
+              active={highlight?.linkId}
+            >
+              {t("Community")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-help-center"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href="https://helpcenter.onlyoffice.com/index.aspx"
+              target="_blank"
+              icon="help-center"
+              active={highlight?.linkId}
+            >
+              {t("HelpCenter")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-academy"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/academy")}
+              icon="academy"
+              active={highlight?.linkId}
+            >
+              {t("Academy")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-webinars"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/webinars")}
+              icon="webinars"
+              active={highlight?.linkId}
+            >
+              {t("Webinars")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-white-papers"
+              href={getBaseUrl("/whitepapers")}
+              icon="white-papers"
+              active={highlight?.linkId}
+            >
+              {t("WhitePapers")}
+            </MenuLink>
+          </div>
+
+          <div className="oo-header-menu-item oo-header-menu-item--bg-gray">
+            <MenuLink
+              id="oo-menu-link-blog"
+              className="oo-header-menu-mb-16"
+              href={getLink("blog", locale)}
+              variant="text"
+              active={highlight?.linkId}
+              locale={false}
+            >
+              {t("Blog")}
+            </MenuLink>
+
+            <Link
+              className="oo-header-menu-block oo-header-menu-mb-16"
+              href={t("blogLink1")}
+              locale={false}
+            >
+              <div
+                className={clsx(
+                  "oo-header-menu-img oo-header-menu-img--blog-1 oo-header-menu-mb-12",
+                  locale,
+                )}
+              ></div>
+              <MenuText className="oo-header-menu-mb-4">
+                {t("blogText1")}
+              </MenuText>
+              <MenuText className="oo-header-menu-block-date">
+                {t("blogDate1")}
+              </MenuText>
+            </Link>
+
+            <Link
+              className="oo-header-menu-block"
+              href={t("blogLink2")}
+              locale={false}
+            >
+              <div
+                className={clsx(
+                  "oo-header-menu-img oo-header-menu-img--blog-2 oo-header-menu-mb-12",
+                  locale,
+                )}
+              ></div>
+              <MenuText className="oo-header-menu-mb-4">
+                {t("blogText2")}
+              </MenuText>
+              <MenuText className="oo-header-menu-block-date">
+                {t("blogDate2")}
+              </MenuText>
+            </Link>
+          </div>
         </div>
 
-        <div className="oo-header-menu-item">
-          <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
-            {t("Collaborate")}
-          </MenuLabel>
-          <MenuLink
-            id="oo-menu-link-for-contributers"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/contribute")}
-            icon="for-contributers"
-            active={highlight?.linkId}
-          >
-            {t("ForContributors")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-for-translators"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href="https://helpcenter.onlyoffice.com/guides/become-translator.aspx"
-            icon="for-translators"
-            active={highlight?.linkId}
-          >
-            {t("ForTranslators")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-for-influencers"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/influencer-program")}
-            icon="for-influencers"
-            active={highlight?.linkId}
-          >
-            {t("ForInfluencers")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-vacancies"
-            className="oo-header-menu-mb-16 oo-header-menu-mob-mb-24"
-            href={getBaseUrl("/vacancies")}
-            icon="vacancies"
-            active={highlight?.linkId}
-          >
-            {t("Vacancies")}
-          </MenuLink>
-
-          <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
-            {t("GetHelp")}
-          </MenuLabel>
-          <MenuLink
-            id="oo-menu-link-forum"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href="https://community.onlyoffice.com"
-            target="_blank"
-            icon="forum"
-            active={highlight?.linkId}
-          >
-            {t("Community")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-help-center"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href="https://helpcenter.onlyoffice.com/index.aspx"
-            target="_blank"
-            icon="help-center"
-            active={highlight?.linkId}
-          >
-            {t("HelpCenter")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-academy"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/academy")}
-            icon="academy"
-            active={highlight?.linkId}
-          >
-            {t("Academy")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-webinars"
-            className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-            href={getBaseUrl("/webinars")}
-            icon="webinars"
-            active={highlight?.linkId}
-          >
-            {t("Webinars")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-white-papers"
-            href={getBaseUrl("/whitepapers")}
-            icon="white-papers"
-            active={highlight?.linkId}
-          >
-            {t("WhitePapers")}
-          </MenuLink>
-        </div>
-
-        <div className="oo-header-menu-item oo-header-menu-item--bg-gray">
-          <MenuLink
-            id="oo-menu-link-blog"
-            className="oo-header-menu-mb-16"
-            href={getLink("blog", locale)}
-            variant="text"
-            active={highlight?.linkId}
-            locale={false}
-          >
-            {t("Blog")}
-          </MenuLink>
-
-          <Link
-            className="oo-header-menu-block oo-header-menu-mb-16"
-            href={t("blogLink1")}
-            locale={false}
-          >
-            <div
-              className={clsx(
-                "oo-header-menu-img oo-header-menu-img--blog-1 oo-header-menu-mb-12",
-                locale,
-              )}
-            ></div>
-            <MenuText className="oo-header-menu-mb-4">
-              {t("blogText1")}
-            </MenuText>
-            <MenuText className="oo-header-menu-block-date">
-              {t("blogDate1")}
-            </MenuText>
-          </Link>
-
-          <Link
-            className="oo-header-menu-block"
-            href={t("blogLink2")}
-            locale={false}
-          >
-            <div
-              className={clsx(
-                "oo-header-menu-img oo-header-menu-img--blog-2 oo-header-menu-mb-12",
-                locale,
-              )}
-            ></div>
-            <MenuText className="oo-header-menu-mb-4">
-              {t("blogText2")}
-            </MenuText>
-            <MenuText className="oo-header-menu-block-date">
-              {t("blogDate2")}
-            </MenuText>
-          </Link>
+        <div className="oo-header-menu-bottom oo-header-menu-bottom--start">
+          <MenuLink className="">{t("Comparison")}:</MenuLink>
+          <div className="oo-header-menu-d-flex">
+            <MenuLink
+              id="oo-menu-link-resources-ms-office"
+              className="oo-header-menu-mr-8"
+              href={getBaseUrl("/best-microsoft-office-alternative")}
+              icon="ms-office"
+              variant="icon"
+              tooltip={t("MSOfficeOnline")}
+            />
+            <MenuLink
+              id="oo-menu-link-resources-google-docs"
+              className="oo-header-menu-mr-8"
+              href={getBaseUrl("/best-google-docs-alternative")}
+              icon="google-docs"
+              variant="icon"
+              tooltip={t("GoogleDocsTooltip")}
+            />
+            <MenuLink
+              id="oo-menu-link-resources-zoho-docs"
+              className="oo-header-menu-mr-8"
+              href={getBaseUrl("/best-zoho-docs-alternative")}
+              icon="zoho"
+              variant="icon"
+              tooltip={t("ZohoDocsTooltip")}
+            />
+            <MenuLink
+              id="oo-menu-link-resources-libreoffice"
+              className="oo-header-menu-mr-8"
+              href={getBaseUrl("/best-libreoffice-alternative")}
+              icon="libreoffice"
+              variant="icon"
+              tooltip={t("LibreOfficeTooltip")}
+            />
+            <MenuLink
+              id="oo-menu-link-resources-wps"
+              className="oo-header-menu-mr-8"
+              href={getBaseUrl("/best-wps-alternative")}
+              icon="wps"
+              variant="icon"
+              tooltip={t("WPSTooltip")}
+            />
+            <MenuLink
+              id="oo-menu-link-resources-adobe-acrobat"
+              className="oo-header-menu-mr-8"
+              href={getBaseUrl("/best-adobe-alternative")}
+              icon="adobe-acrobat"
+              variant="icon"
+              tooltip={t("AdobeAcrobatTooltip")}
+            />
+            <MenuLink
+              id="oo-menu-link-resources-hancom"
+              className="oo-header-menu-mr-8"
+              href={getBaseUrl("/best-hancom-alternative")}
+              icon="hancom"
+              variant="icon"
+              tooltip={t("HancomTooltip")}
+            />
+          </div>
         </div>
       </div>
     </MenuItem>

@@ -20,28 +20,36 @@
   padding-left: 36px;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 700;
-  color: #444444;
+  font-weight: 600;
+  color: #585a6d;
   text-decoration: none;
   transition: color 0.2s;
 
   &:not([class*="--variant-"]) {
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       padding: 4px 0 4px 36px;
     }
   }
 
   &[href]:hover {
-    color: #ff6f3d;
+    color: #3541f5;
   }
 
   &.oo-menu-link--active {
-    color: #ff6f3d;
+    color: #3541f5;
   }
 
   &.oo-menu-link--icon {
     position: relative;
     line-height: 24px;
+
+    &:hover,
+    &:focus-visible {
+      .oo-menu-link-tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
 
     &::before {
       content: "";
@@ -57,8 +65,28 @@
       transform: translateY(-50%);
     }
 
-    &-docspace::before {
+    &-rooms::before {
       background-position-y: -1170px;
+    }
+
+    &-forms::before {
+      background-position-y: -3226px;
+    }
+
+    &-sign::before {
+      background-position-y: -3226px;
+    }
+
+    &-ai-agents::before {
+      background-position-y: -3250px;
+    }
+
+    &-vault::before {
+      background-position-y: -3328px;
+    }
+
+    &-files::before {
+      background-position-y: -3276px;
     }
 
     &-document-editor::before {
@@ -117,6 +145,10 @@
       background-position-y: -1846px;
     }
 
+    &-alfresco::before {
+      background-position-y: -3068px;
+    }
+
     &-box::before {
       background-position-y: -2236px;
     }
@@ -143,6 +175,10 @@
 
     &-owncloud::before {
       background-position-y: -2210px;
+    }
+
+    &-sharepoint::before {
+      background-position-y: -3536px;
     }
 
     &-telegram::before {
@@ -413,6 +449,46 @@
     &-desktop-mobile-apps::before {
       background-position-y: -156px;
     }
+
+    &-ms-office::before {
+      background-position-y: -3354px;
+    }
+
+    &-google-docs::before {
+      background-position-y: -3380px;
+    }
+
+    &-zoho::before {
+      background-position-y: -3406px;
+    }
+
+    &-libreoffice::before {
+      background-position-y: -3432px;
+    }
+
+    &-wps::before {
+      background-position-y: -3458px;
+    }
+
+    &-adobe-acrobat::before {
+      background-position-y: -3484px;
+    }
+
+    &-hancom::before {
+      background-position-y: -3510px;
+    }
+
+    &-download-server::before {
+      background-position-y: -3198px;
+    }
+
+    &-desktop-apps::before {
+      background-position-y: -2834px;
+    }
+
+    &-mobile-apps::before {
+      background-position-y: -2860px;
+    }
   }
 
   &.oo-menu-link--variant {
@@ -438,7 +514,33 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     position: relative;
+  }
+}
+
+.oo-menu-link-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: rgba(0, 1, 34, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  z-index: 20;
+
+  @media screen and (max-width: 1023px) {
+    display: none;
   }
 }

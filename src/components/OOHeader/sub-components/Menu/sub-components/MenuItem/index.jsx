@@ -35,7 +35,7 @@ const MenuItem = ({
 
   useEffect(() => {
     const resizeWindow = () => {
-      if (window.innerWidth <= 1024) {
+      if (window.innerWidth <= 1023) {
         setShowMenu(false);
       }
     };
@@ -115,7 +115,7 @@ const MenuItem = ({
     <div className={clsx("oo-menu-item", className)}>
       <button
         onMouseEnter={() => {
-          if (window.innerWidth > 1024) {
+          if (window.innerWidth > 1023) {
             handleCloseAllMenus();
             setShowMenu(true);
           }
@@ -129,11 +129,7 @@ const MenuItem = ({
           "oo-menu-item-btn",
           active === id && "oo-menu-item-btn--active",
           showMenu && "oo-menu-item-btn--open",
-          theme === "white"
-            ? "oo-menu-item-btn--theme-white"
-            : theme === "white-secondary" || theme === "white-tertiary"
-              ? "oo-menu-item-btn--theme-white-secondary"
-              : "",
+          theme === "dark" ? "oo-menu-item-btn--theme-dark" : "",
         )}
       >
         {heading}

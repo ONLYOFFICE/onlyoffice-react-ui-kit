@@ -42,15 +42,7 @@ const Developers = ({
     >
       <div className="oo-header-menu-mob-height">
         <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column">
-          <div className="oo-header-menu-item oo-header-menu-item--with-border">
-            <MenuLabel
-              id="oo-menu-link-for-developers"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16"
-              href={getBaseUrl("/for-developers")}
-              active={highlight?.linkId}
-            >
-              {t("AllSolutions")}
-            </MenuLabel>
+          <div className="oo-header-menu-item">
             <MenuLink
               id="oo-menu-link-why-docs-developer"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
@@ -89,13 +81,14 @@ const Developers = ({
             </MenuLink>
 
             <MenuLink
-              id="oo-menu-link-developer-docs-pricing"
+              id="oo-menu-link-developer-api-docs"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/developer-edition-prices")}
+              href="https://api.onlyoffice.com/"
+              target="_blank"
               icon="pricing"
               active={highlight?.linkId}
             >
-              {t("Pricing")}
+              {t("APIDocs")}
             </MenuLink>
             <MenuLink
               id="oo-menu-link-launch-demo"
@@ -108,6 +101,7 @@ const Developers = ({
             </MenuLink>
             <MenuLink
               id="oo-menu-link-developer-docs-get-it-now"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
               href={getBaseUrl(
                 "/download-developer?from=downloadintegrationmenu#docs-developer",
               )}
@@ -116,63 +110,17 @@ const Developers = ({
             >
               {t("GetItNow")}
             </MenuLink>
-          </div>
-          <div className="oo-header-menu-item">
-            <MenuLabel className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
-              {t("DocSpaceDeveloper")}
-            </MenuLabel>
             <MenuLink
-              id="oo-menu-link-why-docspace-developer"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/docspace-developer")}
-              icon="why-docspace-developer"
+              id="oo-menu-link-developer-contact"
+              href={`mailto:sales@onlyoffice.com?subject=${t(
+                "ONLYOFFICE%20Developer%20request",
+              )}`}
+              icon="contact-sales"
               active={highlight?.linkId}
             >
-              {t("WhyDocSpaceDeveloper")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-developer-docspace-pricing"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/docspace-developer-prices")}
-              icon="pricing"
-              active={highlight?.linkId}
-            >
-              {t("Pricing")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-developer-docspace-get-in-now"
-              href={getBaseUrl("/download-developer#docspace-developer")}
-              icon="get-in-now"
-              active={highlight?.linkId}
-            >
-              {t("GetItNow")}
+              {t("ContactSales")}
             </MenuLink>
           </div>
-        </div>
-
-        <div className="oo-header-menu-bottom oo-header-menu-bottom--end">
-          <MenuLink
-            id="oo-menu-link-api-docs"
-            className="oo-header-menu-mr-24 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
-            href="https://api.onlyoffice.com/"
-            target="_blank"
-            icon="api-documentation"
-            variant="small"
-            active={highlight?.linkId}
-          >
-            {t("APIDocs")}
-          </MenuLink>
-          <MenuLink
-            id="oo-menu-link-developer-contact"
-            href={`mailto:sales@onlyoffice.com?subject=${t(
-              "ONLYOFFICE%20Developer%20request",
-            )}`}
-            icon="contact-sales"
-            variant="small"
-            active={highlight?.linkId}
-          >
-            {t("ContactSales")}
-          </MenuLink>
         </div>
       </div>
     </MenuItem>

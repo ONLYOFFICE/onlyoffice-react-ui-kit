@@ -45,6 +45,16 @@ export default {
       ],
       control: { type: "select" },
     },
+    theme: {
+      options: ["white", "dark"],
+      control: { type: "select" },
+    },
+    search: {
+      control: { type: "object" },
+    },
+    phone: {
+      control: { type: "object" },
+    },
   },
 };
 
@@ -64,10 +74,31 @@ const Template = (args) => {
     { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
   ];
 
-  return <OOHeader languages={languages} {...args} />;
+  const [searchValue, setSearchValue] = useState("");
+
+  const search = args.search?.show
+    ? {
+        ...args.search,
+        value: searchValue,
+        onChange: (e) => setSearchValue(e.target.value),
+        onSubmit: (e) => e.preventDefault(),
+      }
+    : undefined;
+
+  return (
+    <OOHeader
+      languages={languages}
+      {...args}
+      search={search}
+      phone={args.phone}
+    />
+  );
 };
 
 export const Default = Template.bind({});
 Default.args = {
   locale: "en",
+  theme: "white",
+  search: { show: true, variant: "main" },
+  phone: { show: true, country: "row" },
 };
