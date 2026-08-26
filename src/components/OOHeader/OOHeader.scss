@@ -503,16 +503,6 @@
     margin: auto 0 16px;
     width: 100%;
     gap: 12px;
-
-    > .oo-header-btn.oo-header-btn--theme-dark,
-    .oo-header-btn {
-      background-color: #333333;
-      color: #ffffff;
-
-      &:hover {
-        color: #ffffff;
-      }
-    }
   }
 }
 
@@ -600,7 +590,7 @@
     }
 
     @media screen and (max-width: 592px) {
-      color: #585a6d;
+      color: #000122;
       span {
         background-color: transparent;
       }
@@ -627,6 +617,7 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
+    color: #000122;
   }
 
   @media screen and (max-width: 430px) {

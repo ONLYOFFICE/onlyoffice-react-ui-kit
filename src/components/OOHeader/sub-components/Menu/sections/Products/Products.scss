@@ -387,6 +387,13 @@
     }
   }
 
+  .oo-header-menu-d-flex:has(> .oo-header-menu-item-box-item.active)
+    + .oo-header-menu-bottom-with-button {
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: 1084px) {
     position: initial;
   }
@@ -402,15 +409,14 @@
   margin: 0;
   padding: 4px 32px;
   font-family: inherit;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 27px;
+  line-height: 26px;
   text-align: center;
-  text-transform: uppercase;
   width: 100%;
-  height: 60px;
-  min-height: 60px;
-  color: #3541f5;
+  height: 50px;
+  min-height: 50px;
+  color: #21222B;
   background-color: #fff;
   z-index: 10;
   cursor: pointer;
@@ -423,7 +429,7 @@
     display: block;
     width: 10px;
     height: 10px;
-    background-image: url("../../../../images/arrow-red.svg");
+    background-image: url("../../../../images/arrow-blue.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -479,7 +485,6 @@
   color: #444;
   width: 100%;
   text-align: initial;
-  text-transform: uppercase;
   background-color: transparent;
   cursor: pointer;
 

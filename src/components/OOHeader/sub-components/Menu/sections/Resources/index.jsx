@@ -257,68 +257,69 @@ const Resources = ({
             </Link>
           </div>
         </div>
-
-        <div className="oo-header-menu-bottom oo-header-menu-bottom--start">
-          <MenuLink className="">{t("Comparison")}:</MenuLink>
-          <div className="oo-header-menu-d-flex">
-            <MenuLink
-              id="oo-menu-link-resources-ms-office"
-              className="oo-header-menu-mr-8"
-              href={getBaseUrl("/best-microsoft-office-alternative")}
-              icon="ms-office"
-              variant="icon"
-              tooltip={t("MSOfficeOnline")}
-            />
-            <MenuLink
-              id="oo-menu-link-resources-google-docs"
-              className="oo-header-menu-mr-8"
-              href={getBaseUrl("/best-google-docs-alternative")}
-              icon="google-docs"
-              variant="icon"
-              tooltip={t("GoogleDocsTooltip")}
-            />
-            <MenuLink
-              id="oo-menu-link-resources-zoho-docs"
-              className="oo-header-menu-mr-8"
-              href={getBaseUrl("/best-zoho-docs-alternative")}
-              icon="zoho"
-              variant="icon"
-              tooltip={t("ZohoDocsTooltip")}
-            />
-            <MenuLink
-              id="oo-menu-link-resources-libreoffice"
-              className="oo-header-menu-mr-8"
-              href={getBaseUrl("/best-libreoffice-alternative")}
-              icon="libreoffice"
-              variant="icon"
-              tooltip={t("LibreOfficeTooltip")}
-            />
-            <MenuLink
-              id="oo-menu-link-resources-wps"
-              className="oo-header-menu-mr-8"
-              href={getBaseUrl("/best-wps-alternative")}
-              icon="wps"
-              variant="icon"
-              tooltip={t("WPSTooltip")}
-            />
-            <MenuLink
-              id="oo-menu-link-resources-adobe-acrobat"
-              className="oo-header-menu-mr-8"
-              href={getBaseUrl("/best-adobe-alternative")}
-              icon="adobe-acrobat"
-              variant="icon"
-              tooltip={t("AdobeAcrobatTooltip")}
-            />
-            <MenuLink
-              id="oo-menu-link-resources-hancom"
-              className="oo-header-menu-mr-8"
-              href={getBaseUrl("/best-hancom-alternative")}
-              icon="hancom"
-              variant="icon"
-              tooltip={t("HancomTooltip")}
-            />
+        {locale !== "zh" && locale !== "zh-hans" && (
+          <div className="oo-header-menu-bottom oo-header-menu-bottom--start">
+            <MenuLink className="">{t("Comparison")}:</MenuLink>
+            <div className="oo-header-menu-d-flex">
+              <MenuLink
+                id="oo-menu-link-resources-ms-office"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-microsoft-office-alternative")}
+                icon="ms-office"
+                variant="icon"
+                tooltip={t("MSOfficeOnline")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-google-docs"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-google-docs-alternative")}
+                icon="google-docs"
+                variant="icon"
+                tooltip={t("GoogleDocsTooltip")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-zoho-docs"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-zoho-docs-alternative")}
+                icon="zoho"
+                variant="icon"
+                tooltip={t("ZohoDocsTooltip")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-libreoffice"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-libreoffice-alternative")}
+                icon="libreoffice"
+                variant="icon"
+                tooltip={t("LibreOfficeTooltip")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-wps"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-wps-alternative")}
+                icon="wps"
+                variant="icon"
+                tooltip={t("WPSTooltip")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-adobe-acrobat"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-adobe-alternative")}
+                icon="adobe-acrobat"
+                variant="icon"
+                tooltip={t("AdobeAcrobatTooltip")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-hancom"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-hancom-alternative")}
+                icon="hancom"
+                variant="icon"
+                tooltip={t("HancomTooltip")}
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </MenuItem>
   );

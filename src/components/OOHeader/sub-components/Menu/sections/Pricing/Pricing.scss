@@ -17,6 +17,7 @@
 .oo-menu-item-btn--link {
   align-items: center;
   text-decoration: none;
+  padding: 27px 12px 28px;
 
   &:hover {
     color: #3541f5;
@@ -33,6 +34,7 @@
   @media screen and (max-width: 1023px) {
     display: block;
     width: auto;
+    padding: 16px 40px 16px 24px;
     &.oo-menu-item-btn--theme-dark:hover {
       color: #585a6d;
     }

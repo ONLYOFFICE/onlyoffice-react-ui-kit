@@ -165,5 +165,6 @@
   "BookDemo": "Book a demo",
   "ForServer": "For server",
   "ForPC": "For PC",
-  "ForMobile": "For mobile"
+  "ForMobile": "For mobile",
+  "WhiteLabel": "White label"
 }

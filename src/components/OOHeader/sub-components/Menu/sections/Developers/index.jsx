@@ -53,6 +53,15 @@ const Developers = ({
               {t("WhyDocsDeveloper")}
             </MenuLink>
             <MenuLink
+              id="oo-menu-link-white-label"
+              className="oo-header-menu-mb-4"
+              href={getBaseUrl("/white-label")}
+              variant="small"
+              active={highlight?.linkId}
+            >
+              {t("WhiteLabel")}
+            </MenuLink>
+            <MenuLink
               id="oo-menu-link-automation-api"
               className="oo-header-menu-mb-4"
               href={getBaseUrl("/automation-api")}
