@@ -659,6 +659,7 @@ const Products = ({
               icon="for-desktop"
               variant="small"
               active={highlight?.linkId}
+              locale={false}
             >
               {t("Accessibility")}
             </MenuLink>
@@ -668,6 +669,7 @@ const Products = ({
               icon="sustainability"
               variant="small"
               active={highlight?.linkId}
+              locale={false}
             >
               {t("Sustainability")}
             </MenuLink>
