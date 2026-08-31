@@ -247,7 +247,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-sing"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("#")}
+              href={getBaseUrl("/sign-documents")}
               icon="sign"
               variant="small"
               active={highlight?.linkId}
@@ -275,6 +275,16 @@ const Products = ({
               {t("Apps")}
             </MenuLabel>
             <MenuLink
+              id="oo-menu-link-apps-ai-agents"
+              className="oo-header-menu-mb-8"
+              href={getBaseUrl("/ai-assistants")}
+              icon="ai-agents"
+              active={highlight?.linkId}
+            >
+              {t("AIAgents")}
+            </MenuLink>
+            <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">{t("AIAgentsDesc")}</MenuText>
+            <MenuLink
               id="oo-menu-link-apps-rooms"
               className="oo-header-menu-mb-8"
               href={getBaseUrl("/rooms")}
@@ -301,15 +311,16 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-apps-forms"
               className="oo-header-menu-mb-8"
-              href={getBaseUrl("#")}
+              href={getBaseUrl("/forms")}
               icon="forms"
               active={highlight?.linkId}
             >
               {t("Forms")}
             </MenuLink>
-            <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
+            <MenuText>
               {t("FormsDesc")}
             </MenuText>
+            {/* Saved for next version
             <MenuLink
               id="oo-menu-link-apps-vault"
               className="oo-header-menu-mb-8"
@@ -318,23 +329,10 @@ const Products = ({
               active={highlight?.linkId}
             >
               {t("Vault")}
-            </MenuLink>
+            </MenuLink> 
             <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
               {t("VaultDesc")}
-            </MenuText>
-            <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
-              {t("SingDesc")}
-            </MenuText>
-            <MenuLink
-              id="oo-menu-link-apps-ai-agents"
-              className="oo-header-menu-mb-8"
-              href={getBaseUrl("#")}
-              icon="ai-agents"
-              active={highlight?.linkId}
-            >
-              {t("AIAgents")}
-            </MenuLink>
-            <MenuText>{t("AIAgentsDesc")}</MenuText>
+            </MenuText>*/}
           </div>
           <div
             className={clsx(
@@ -368,16 +366,29 @@ const Products = ({
             <MenuText className="oo-header-menu-mb-12">
               {t("FreeMobileAppsForAndroidAndIOS")}
             </MenuText>
+            <div className="oo-header-menu-d-flex oo-header-menu-mb-16">
+              <Link
+                className="oo-header-menu-app-link oo-header-menu-app-link--android oo-header-menu-mr-12"
+                href={getBaseUrl("/office-for-android")}
+              />
+              <Link
+                className="oo-header-menu-app-link oo-header-menu-app-link--ios"
+                href={getBaseUrl("/office-for-ios")}
+              />
+            </div>
 
             <MenuLink
               id="oo-menu-link-other-editors-all-connectors"
-              className="oo-header-menu-mb-8"
+              className="oo-header-menu-mb-4"
               href={getBaseUrl("/all-connectors")}
               icon="connectors"
               active={highlight?.linkId}
             >
               {t("OOConnectors")}
             </MenuLink>
+            <MenuText className="oo-header-menu-mb-12">
+              {t("ConnectorsText")}
+            </MenuText>
 
             <div className="oo-header-menu-d-flex oo-header-menu-mb-12">
               <MenuLink

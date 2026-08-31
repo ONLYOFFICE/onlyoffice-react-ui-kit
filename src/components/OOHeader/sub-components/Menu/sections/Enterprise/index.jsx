@@ -16,10 +16,9 @@
 
 import React from "react";
 import clsx from "clsx";
-import "./Enterprise.scss";
-import { MenuItem } from "../../sub-components/MenuItem/index.jsx";
-import { MenuLink } from "../../sub-components/MenuLink/index.jsx";
-import { MenuLabel } from "../../sub-components/MenuLabel/index.jsx";
+import "../../sub-components/MenuItem/MenuItem.scss";
+import "../Pricing/Pricing.scss";
+import { Link } from "../../../../../../sub-components/Link/index.jsx";
 
 const Enterprise = ({
   t,
@@ -27,63 +26,25 @@ const Enterprise = ({
   getBaseUrl,
   theme,
   highlight,
-  registerCloseMenu,
   handleCloseAllMenus,
 }) => {
   return (
-    <MenuItem
-      id="oo-menu-item-btn-enterprise"
-      className={clsx("oo-menu-item--enterprise", locale)}
-      heading={t("Enterprise")}
-      theme={theme}
-      active={highlight?.buttonId}
-      registerCloseMenu={registerCloseMenu}
-      handleCloseAllMenus={handleCloseAllMenus}
-    >
-      <div className="oo-header-menu-mob-height">
-        <div className="oo-header-menu-d-flex oo-header-menu-mob-flex-column">
-          <div className="oo-header-menu-item">
-            <MenuLink
-              id="oo-menu-link-why-enterprise"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/docs-enterprise")}
-              icon="docs-enterprise"
-              active={highlight?.linkId}
-            >
-              {t("WhyDocsEnterprise")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-enterprise-pricing"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/pricing")}
-              icon="pricing"
-              active={highlight?.linkId}
-            >
-              {t("Pricing")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-enterprise-request-demo"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/demo-order")}
-              icon="request-demo"
-              active={highlight?.linkId}
-            >
-              {t("RequestDemo")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-enterprise-contact"
-              href={`mailto:sales@onlyoffice.com?subject=${t(
-                "ONLYOFFICE%20Enterprise%20request",
-              )}`}
-              icon="contact-sales"
-              active={highlight?.linkId}
-            >
-              {t("ContactSales")}
-            </MenuLink>
-          </div>
-        </div>
-      </div>
-    </MenuItem>
+    <div className={clsx("oo-menu-item", "oo-menu-item--enterprise", locale)}>
+      <Link
+        id="oo-menu-item-btn-enterprise"
+        onMouseEnter={handleCloseAllMenus}
+        className={clsx(
+          "oo-menu-item-btn",
+          "oo-menu-item-btn--link",
+          highlight?.buttonId === "oo-menu-item-btn-enterprise" &&
+            "oo-menu-item-btn--active",
+          theme === "dark" && "oo-menu-item-btn--theme-dark",
+        )}
+        href={getBaseUrl("/docs-enterprise")}
+      >
+        {t("Enterprise")}
+      </Link>
+    </div>
   );
 };
 

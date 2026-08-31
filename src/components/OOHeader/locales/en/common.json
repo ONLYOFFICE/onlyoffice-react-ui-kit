@@ -8,9 +8,9 @@
   "Overview": "Overview",
   "DocsDesc": "Enterprise-grade document editing engine ready for integration",
   "Rooms": "Rooms",
-  "RoomsDesc": "Everything in its place — organized by purpose, built for collaboration and teamwork",
+  "RoomsDesc": "Everything in its place organized by purpose, built for collaboration and teamwork",
   "Files": "Files",
-  "FilesDesc": "Everything in one space — simple and centralized. Perfect for individual work",
+  "FilesDesc": "Everything in one space simple and centralized. Perfect for individual work",
   "Forms": "Forms",
   "FormsDesc": "Build intelligent forms, collect structured data, analyze and get insights",
   "Vault": "Vault",
@@ -26,7 +26,7 @@
   "Signature": "Signature",
   "SecurityCompliance": "Security & compliance",
   "AIAgents": "AI Agents",
-  "AIAgentsDesc": "Get help with content, insights, and task automation — all in one place",
+  "AIAgentsDesc": "Get help with content, insights, and task automation all in one place",
   "OOConnectors": "ONLYOFFICE connectors",
   "DocumentEditors": "Document editors",
   "CollaborationRooms": "Collaboration rooms",
@@ -166,5 +166,6 @@
   "ForServer": "For server",
   "ForPC": "For PC",
   "ForMobile": "For mobile",
-  "WhiteLabel": "White label"
+  "WhiteLabel": "White label",
+  "ConnectorsText": "Ready-to-use integrations"
 }
