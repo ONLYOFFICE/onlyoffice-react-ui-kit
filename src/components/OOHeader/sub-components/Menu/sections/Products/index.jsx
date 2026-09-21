@@ -159,11 +159,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-document-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl(
-                locale === "en"
-                  ? "/word-processor?docs=download"
-                  : "/document-editor?docs=download",
-              )}
+              href={getBaseUrl("/word-processor?docs=download")}
               icon="document-editor"
               variant="small"
               active={highlight?.linkId}
@@ -173,11 +169,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-spreadsheet-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl(
-                locale === "en"
-                  ? "/sheets?docs=download"
-                  : "/spreadsheet-editor?docs=download",
-              )}
+              href={getBaseUrl("/sheets?docs=download")}
               icon="spreadsheet-editor"
               variant="small"
               active={highlight?.linkId}
@@ -187,7 +179,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-presentation-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/presentation-editor?docs=download")}
+              href={getBaseUrl("/slides?docs=download")}
               icon="presentation-editor"
               variant="small"
               active={highlight?.linkId}

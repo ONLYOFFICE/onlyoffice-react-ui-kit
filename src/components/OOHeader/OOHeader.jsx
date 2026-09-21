@@ -213,7 +213,7 @@ const OOHeader = ({
                   locale,
                   theme === "dark" && "oo-header-btn--theme-dark",
                 )}
-                href={getBaseUrl("/docspace-registration")}
+                href={getBaseUrl("/signup")}
               >
                 {t("Login")} <span>/</span> {t("SignUp")}
               </Link>
@@ -250,7 +250,7 @@ const OOHeader = ({
                 locale,
                 theme === "dark" && "oo-header-btn--theme-dark",
               )}
-              href={getBaseUrl("/docspace-registration")}
+              href={getBaseUrl("/signup")}
             >
               {t("Login")} <span>/</span> {t("SignUp")}
             </Link>

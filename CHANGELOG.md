@@ -1,5 +1,11 @@
 # Changelog
 
+- header → Menu → Products → ONLYOFFICE Docs: Unify editor links across all locales (previously only /en had new paths)
+  - /document-editor => /word-processor
+  - /spreadsheet-editor => /sheets
+  - /presentation-editor => /slides
+- header: Login/SignUp button: /docspace-registration => /signup
+
 ## 1.35.0
 
 - header -> Menu -> Resources -> Blog: ONLYOFFICE DocSpace 3.6 released => ONLYOFFICE DocSpace 3.7 released
