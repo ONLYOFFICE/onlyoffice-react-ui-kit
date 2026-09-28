@@ -165,14 +165,27 @@
   width: 28px;
   min-width: 28px;
   height: 28px;
-  background-image: url("../../images/platforms.svg");
+  background-image: url("../../images/menu-icons.svg");
+  background-repeat: no-repeat;
 
   &.oo-header-menu-app-link--android {
-    background-position: -121px;
+    background-position-y: -102px;
   }
 
   &.oo-header-menu-app-link--ios {
-    background-position: -161px;
+    background-position-y: -76px;
+  }
+
+  &.oo-header-menu-app-link--windows {
+    background-position-y: -3612px;
+  }
+
+  &.oo-header-menu-app-link--linux {
+    background-position-y: -3638px;
+  }
+
+  &.oo-header-menu-app-link--macos {
+    background-position-y: -76px;
   }
 }
 

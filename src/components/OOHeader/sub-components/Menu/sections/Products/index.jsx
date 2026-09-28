@@ -344,9 +344,23 @@ const Products = ({
             >
               {t("OODesktopEditors")}
             </MenuLink>
-            <MenuText className="oo-header-menu-mb-12">
+            <MenuText className="oo-header-menu-mb-4">
               {t("FreeDesktopAppsForWindowsLinuxmacOS")}
             </MenuText>
+            <div className="oo-header-menu-d-flex oo-header-menu-mb-12">
+              <Link
+                className="oo-header-menu-app-link oo-header-menu-app-link--windows oo-header-menu-mr-8"
+                href={getBaseUrl("/desktop")}
+              />
+              <Link
+                className="oo-header-menu-app-link oo-header-menu-app-link--linux oo-header-menu-mr-8"
+                href={getBaseUrl("/desktop")}
+              />
+              <Link
+                className="oo-header-menu-app-link oo-header-menu-app-link--macos"
+                href={getBaseUrl("/desktop")}
+              />
+            </div>
             <MenuLink
               id="oo-menu-link-other-editors-documents"
               className="oo-header-menu-mb-4"
@@ -355,17 +369,17 @@ const Products = ({
             >
               {t("OODocuments")}
             </MenuLink>
-            <MenuText className="oo-header-menu-mb-12">
+            <MenuText className="oo-header-menu-mb-4">
               {t("FreeMobileAppsForAndroidAndIOS")}
             </MenuText>
-            <div className="oo-header-menu-d-flex oo-header-menu-mb-16">
+            <div className="oo-header-menu-d-flex oo-header-menu-mb-12">
               <Link
-                className="oo-header-menu-app-link oo-header-menu-app-link--android oo-header-menu-mr-12"
-                href={getBaseUrl("/office-for-android")}
+                className="oo-header-menu-app-link oo-header-menu-app-link--ios oo-header-menu-mr-8"
+                href={getBaseUrl("/office-for-ios")}
               />
               <Link
-                className="oo-header-menu-app-link oo-header-menu-app-link--ios"
-                href={getBaseUrl("/office-for-ios")}
+                className="oo-header-menu-app-link oo-header-menu-app-link--android"
+                href={getBaseUrl("/office-for-android")}
               />
             </div>
 
