@@ -104,6 +104,15 @@ const Resources = ({
               {t("Events")}
             </MenuLink>
             <MenuLink
+              id="oo-menu-link-resources-opensource"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
+              href={getBaseUrl("/open-source")}
+              icon="opensource"
+              active={highlight?.linkId}
+            >
+              {t("OpenSource")}
+            </MenuLink>
+            <MenuLink
               id="oo-menu-link-press-downloads"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
               href={getBaseUrl("/press-downloads")}
@@ -236,25 +245,6 @@ const Resources = ({
                 {t("blogDate1")}
               </MenuText>
             </Link>
-
-            <Link
-              className="oo-header-menu-block"
-              href={t("blogLink2")}
-              locale={false}
-            >
-              <div
-                className={clsx(
-                  "oo-header-menu-img oo-header-menu-img--blog-2 oo-header-menu-mb-12",
-                  locale,
-                )}
-              ></div>
-              <MenuText className="oo-header-menu-mb-4">
-                {t("blogText2")}
-              </MenuText>
-              <MenuText className="oo-header-menu-block-date">
-                {t("blogDate2")}
-              </MenuText>
-            </Link>
           </div>
         </div>
         {locale !== "zh" && locale !== "zh-hans" && (
@@ -316,6 +306,38 @@ const Resources = ({
                 icon="hancom"
                 variant="icon"
                 tooltip={t("HancomTooltip")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-hancom"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-foxit-alternative")}
+                icon="foxit"
+                variant="icon"
+                tooltip={t("FoxitTooltip")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-hancom"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-quip-alternative")}
+                icon="quip"
+                variant="icon"
+                tooltip={t("QuipTooltip")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-hancom"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-zoho-office-integrator-alternative")}
+                icon="zoho-office-integrator"
+                variant="icon"
+                tooltip={t("ZohoOfficeIntegratorTooltip")}
+              />
+              <MenuLink
+                id="oo-menu-link-resources-hancom"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/best-openoffice-alternative")}
+                icon="openoffice"
+                variant="icon"
+                tooltip={t("OpenOfficeTooltip")}
               />
             </div>
           </div>

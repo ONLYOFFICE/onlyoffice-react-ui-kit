@@ -46,20 +46,11 @@ const Developers = ({
             <MenuLink
               id="oo-menu-link-why-docs-developer"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/developer-edition")}
+              href={getBaseUrl("/for-developers")}
               icon="docs-developer"
               active={highlight?.linkId}
             >
               {t("WhyDocsDeveloper")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-white-label"
-              className="oo-header-menu-mb-4"
-              href={getBaseUrl("/white-label")}
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("WhiteLabel")}
             </MenuLink>
             <MenuLink
               id="oo-menu-link-automation-api"
@@ -81,14 +72,22 @@ const Developers = ({
             </MenuLink>
             <MenuLink
               id="oo-menu-link-document-builder"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16"
+              className="oo-header-menu-mb-4"
               href={getBaseUrl("/document-builder")}
               variant="small"
               active={highlight?.linkId}
             >
               {t("DocumentBuilder")}
             </MenuLink>
-
+            <MenuLink
+              id="oo-menu-link-white-label"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16"
+              href={getBaseUrl("/white-label")}
+              variant="small"
+              active={highlight?.linkId}
+            >
+              {t("WhiteLabel")}
+            </MenuLink>
             <MenuLink
               id="oo-menu-link-developer-api-docs"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
@@ -101,33 +100,11 @@ const Developers = ({
             </MenuLink>
             <MenuLink
               id="oo-menu-link-launch-demo"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
               href={getBaseUrl("/see-it-in-action?developer=edition")}
               icon="launch-demo"
               active={highlight?.linkId}
             >
               {t("LaunchDemo")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-developer-docs-get-it-now"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl(
-                "/download-developer?from=downloadintegrationmenu#docs-developer",
-              )}
-              icon="get-in-now"
-              active={highlight?.linkId}
-            >
-              {t("GetItNow")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-developer-contact"
-              href={`mailto:sales@onlyoffice.com?subject=${t(
-                "ONLYOFFICE%20Developer%20request",
-              )}`}
-              icon="contact-sales"
-              active={highlight?.linkId}
-            >
-              {t("ContactSales")}
             </MenuLink>
           </div>
         </div>
