@@ -21,6 +21,32 @@
     padding: 0;
     border-bottom: 1px solid #e5e5e5;
   }
+
+  &.oo-footer-item--theme-dark {
+    @media screen and (max-width: 600px) {
+      border-bottom: 1px solid #44437e;
+    }
+
+    .oo-footer-item-heading {
+      color: #f0f0ff;
+
+      @media screen and (max-width: 600px) {
+        color: #acadd4;
+        &::after {
+          background: #c4c4c4;
+          mask-image: url("../../images/chevron-down.svg");
+          mask-repeat: no-repeat;
+          mask-size: 24px 24px;
+        }
+      }
+
+      a[href] {
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
 }
 
 .oo-footer-items-group {
@@ -56,7 +82,7 @@
   font-weight: 600;
   line-height: 18px;
   letter-spacing: 0.04em;
-  color: #333333;
+  color: #000122;
   text-transform: uppercase;
   overflow: initial;
   text-decoration: none;
@@ -68,8 +94,8 @@
       position: absolute;
       top: 14px;
       right: 0;
-      z-index: -1;
       width: 24px;
+      pointer-events: none;
       height: 24px;
       background-image: url("../../images/chevron-down.svg");
       background-repeat: no-repeat;
@@ -85,7 +111,7 @@
 
     &[href] {
       &:hover {
-        color: #ff6f3d;
+        color: #3541f5;
       }
     }
 

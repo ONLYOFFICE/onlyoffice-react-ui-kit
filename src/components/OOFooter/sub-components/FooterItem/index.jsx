@@ -19,16 +19,19 @@ import clsx from "clsx";
 import "./FooterItem.scss";
 import { Link } from "../../../../sub-components/Link/index.jsx";
 
-const FooterItem = ({ locale, children, heading, href }) => {
+const FooterItem = ({ locale, children, heading, href, theme }) => {
   const content = useRef();
   const [isOpen, setIsOpen] = useState(false);
+  const isDark = theme === "dark";
 
   const onHandleClick = () => {
     window.innerWidth <= 600 && setIsOpen(!isOpen);
   };
 
   return (
-    <div className="oo-footer-item">
+    <div
+      className={clsx("oo-footer-item", isDark && "oo-footer-item--theme-dark")}
+    >
       {href ? (
         <div
           onClick={onHandleClick}

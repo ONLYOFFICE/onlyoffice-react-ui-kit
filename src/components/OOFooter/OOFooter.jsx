@@ -26,7 +26,14 @@ import { LanguageSelector } from "./sub-components/LanguageSelector/index.jsx";
 import { HippaIcon, GdprIcon } from "../../icons/index.js";
 import { getLink } from "../../utils/getLink.jsx";
 
-const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
+const OOFooter = ({
+  locale,
+  languages,
+  base,
+  mailApiUrl,
+  mailApiType,
+  theme,
+}) => {
   const t = (key) =>
     locales[locale === "zh-hans" ? "zh" : locale === "pt-br" ? "pt" : locale][
       key
@@ -37,38 +44,62 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
   const getBaseUrl = (path) =>
     getUrl(locale, path, base?.url, base?.withAspx, base?.localePathMap);
 
+  const isDark = theme === "dark";
+
   return (
-    <footer className="oo-footer">
+    <footer
+      className={clsx("oo-footer", isDark && "oo-footer--theme-dark")}
+    >
       <div className={clsx("oo-footer-wrapper", locale)}>
-        <div className="oo-footer-apps">
+        <div
+          className={clsx(
+            "oo-footer-apps",
+            isDark && "oo-footer-apps--theme-dark",
+          )}
+        >
           <div className="oo-footer-apps-title">{t("GetFreeApps")}</div>
           <div className={clsx("oo-footer-apps-items", locale)}>
             <Link
-              className="oo-footer-apps-item oo-footer-apps-item--windows"
+              className={clsx(
+                "oo-footer-apps-item oo-footer-apps-item--windows",
+                isDark && "oo-footer-apps-item--theme-dark",
+              )}
               href={getBaseUrl("/download-desktop")}
             >
               {t("ForWindows")}
             </Link>
             <Link
-              className="oo-footer-apps-item oo-footer-apps-item--linux"
+              className={clsx(
+                "oo-footer-apps-item oo-footer-apps-item--linux",
+                isDark && "oo-footer-apps-item--theme-dark",
+              )}
               href={getBaseUrl("/download-desktop")}
             >
               {t("ForLinux")}
             </Link>
             <Link
-              className="oo-footer-apps-item oo-footer-apps-item--macos"
+              className={clsx(
+                "oo-footer-apps-item oo-footer-apps-item--macos",
+                isDark && "oo-footer-apps-item--theme-dark",
+              )}
               href={getBaseUrl("/download-desktop")}
             >
               {t("ForMacOS")}
             </Link>
             <Link
-              className="oo-footer-apps-item oo-footer-apps-item--android"
+              className={clsx(
+                "oo-footer-apps-item oo-footer-apps-item--android",
+                isDark && "oo-footer-apps-item--theme-dark",
+              )}
               href={getBaseUrl("/download-desktop#mobile")}
             >
               {t("ForAndroid")}
             </Link>
             <Link
-              className="oo-footer-apps-item oo-footer-apps-item--ios"
+              className={clsx(
+                "oo-footer-apps-item oo-footer-apps-item--ios",
+                isDark && "oo-footer-apps-item--theme-dark",
+              )}
               href={getBaseUrl("/download-desktop#mobile")}
             >
               {t("ForIOS")}
@@ -79,6 +110,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
           <div className="oo-footer-item-group">
             <FooterItem
               locale={locale}
+              theme={theme}
               heading={t("Templates")}
               href={getLink("templates", locale)}
             >
@@ -110,6 +142,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
             <FooterItem
               locale={locale}
               heading={t("Converters")}
+              theme={theme}
               href={getBaseUrl("/online-document-converter")}
             >
               <Link
@@ -137,8 +170,12 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                 {t("ConvertPDFs")}
               </Link>
             </FooterItem>
-            <FooterItem locale={locale} heading={t("GetNews")}>
-              <Link className="oo-footer-link" href={getLink("blog", locale)} locale={false}>
+            <FooterItem theme={theme} locale={locale} heading={t("GetNews")}>
+              <Link
+                className="oo-footer-link"
+                href={getLink("blog", locale)}
+                locale={false}
+              >
                 {t("Blog")}
               </Link>
             </FooterItem>
@@ -148,6 +185,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
               locale={locale}
               heading={t("ForEducation")}
               href={getBaseUrl("/education")}
+              theme={theme}
             >
               <Link
                 className="oo-footer-link"
@@ -162,7 +200,11 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                 {t("ForEducators")}
               </Link>
             </FooterItem>
-            <FooterItem locale={locale} heading={t("ForNonProfits")}>
+            <FooterItem
+              theme={theme}
+              locale={locale}
+              heading={t("ForNonProfits")}
+            >
               <Link
                 className="oo-footer-link"
                 href={getBaseUrl("/nonprofit-organizations")}
@@ -173,7 +215,11 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                 {t("RequestFreeAccount")}
               </Link>
             </FooterItem>
-            <FooterItem locale={locale} heading={t("Collaborate")}>
+            <FooterItem
+              theme={theme}
+              locale={locale}
+              heading={t("Collaborate")}
+            >
               <Link className="oo-footer-link" href={getBaseUrl("/contribute")}>
                 {t("ForContributors")}
               </Link>
@@ -196,6 +242,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
           </div>
           <div className="oo-footer-item-group">
             <FooterItem
+              theme={theme}
               locale={locale}
               heading={t("Security")}
               href={getBaseUrl("/security")}
@@ -204,7 +251,12 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                 {t("FeaturesAndTools")}
               </Link>
 
-              <div className="oo-footer-item-icons">
+              <div
+                className={clsx(
+                  "oo-footer-item-icons",
+                  isDark && "oo-footer-item-icons--theme-dark",
+                )}
+              >
                 <Link
                   href={t("HIPAAComplianceLink")}
                   locale={false}
@@ -221,7 +273,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                 </Link>
               </div>
             </FooterItem>
-            <FooterItem locale={locale} heading={t("GetHelp")}>
+            <FooterItem theme={theme} locale={locale} heading={t("GetHelp")}>
               <Link
                 className="oo-footer-link"
                 href="https://community.onlyoffice.com"
@@ -263,6 +315,7 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
           {locale !== "zh" && locale !== "zh-hans" && (
             <div className="oo-footer-item-group">
               <FooterItem
+                theme={theme}
                 locale={locale}
                 heading={t("Comparison")}
                 href={getBaseUrl("/document-editor-comparison")}
@@ -313,8 +366,13 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
             </div>
           )}
           <div className="oo-footer-item-group">
-            <FooterItem locale={locale} heading={t("ContactUs")}>
-              <div className="oo-footer-link-text">
+            <FooterItem theme={theme} locale={locale} heading={t("ContactUs")}>
+              <div
+                className={clsx(
+                  "oo-footer-link-text",
+                  isDark && "oo-footer-link-text--theme-dark",
+                )}
+              >
                 {t("SalesQuestions")}
                 {["zh", "zh-hans", "ja"].includes(locale) ? "" : " "}
                 <Link
@@ -324,7 +382,12 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                   sales@onlyoffice.com
                 </Link>
               </div>
-              <div className="oo-footer-link-text">
+              <div
+                className={clsx(
+                  "oo-footer-link-text",
+                  isDark && "oo-footer-link-text--theme-dark",
+                )}
+              >
                 {t("PartnerInquiries")}
                 {["zh", "zh-hans", "ja"].includes(locale) ? "" : " "}
                 <Link
@@ -334,7 +397,12 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                   partners@onlyoffice.com
                 </Link>
               </div>
-              <div className="oo-footer-link-text">
+              <div
+                className={clsx(
+                  "oo-footer-link-text",
+                  isDark && "oo-footer-link-text--theme-dark",
+                )}
+              >
                 {t("PressInquiries")}
                 {["zh", "zh-hans", "ja"].includes(locale) ? "" : " "}
                 <Link
@@ -345,7 +413,10 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
                 </Link>
               </div>
               <Link
-                className="oo-footer-link"
+                className={clsx(
+                  "oo-footer-link oo-footer-link--call",
+                  isDark && "oo-footer-link--theme-dark",
+                )}
                 href={getBaseUrl("/call-back-form")}
               >
                 {t("RequestACall")}
@@ -353,10 +424,21 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
             </FooterItem>
           </div>
         </div>
-        <div className="oo-footer-bottom">
-          <div className="oo-footer-follow">
+        <div
+          className={clsx(
+            "oo-footer-bottom",
+            isDark && "oo-footer-bottom--theme-dark",
+          )}
+        >
+          <div
+            className={clsx(
+              "oo-footer-follow",
+              isDark && "oo-footer-follow--theme-dark",
+            )}
+          >
             <div className="oo-footer-follow-heading">{t("FollowUsOn")}</div>
             <SocialLinks
+              theme={theme}
               t={t}
               locale={locale}
               mailApiUrl={mailApiUrl}
@@ -364,7 +446,11 @@ const OOFooter = ({ locale, languages, base, mailApiUrl, mailApiType }) => {
             />
           </div>
           <div className="oo-footer-copyright">
-            <LanguageSelector locale={locale} languages={languages} />
+            <LanguageSelector
+              theme={theme}
+              locale={locale}
+              languages={languages}
+            />
             <div className={clsx("oo-footer-copyright-block", locale)}>
               <span>
                 © Ascensio System SIA 2009-{new Date().getFullYear()}

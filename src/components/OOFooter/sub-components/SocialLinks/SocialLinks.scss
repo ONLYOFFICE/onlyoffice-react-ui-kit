@@ -69,10 +69,10 @@
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   width: 40px;
   height: 40px;
-  background-color: #f9f9f9;
+  background-color: #f3f4f7;
   list-style-type: none;
   cursor: pointer;
   filter: grayscale(1);
@@ -80,6 +80,43 @@
 
   &:hover {
     filter: grayscale(0);
+  }
+
+  &.oo-footer-social-link--theme-dark {
+    background-color: #3a3c4980;
+    filter: none;
+  }
+
+  &.oo-footer-social-link--theme-dark .oo-footer-social-link-icon {
+    background: #bcbeca;
+    mask-image: url("../../images/social-icons.svg");
+    mask-repeat: no-repeat;
+    mask-position: var(--oo-social-icon-x, 0) 0;
+
+    &.oo-footer-social-link-icon--note {
+      mask-image: url("../../images/note.svg");
+      mask-position: center;
+      mask-size: contain;
+    }
+
+    &.oo-footer-social-link-icon--qiita {
+      mask-image: url("../../images/qiita.svg");
+      mask-position: center;
+      mask-size: contain;
+    }
+
+    &.oo-footer-social-link-icon--tiktok {
+      mask-image: url("../../images/tiktok.svg");
+      mask-position: center;
+    }
+
+    &.oo-footer-social-link-icon--weibo {
+      mask-image: url("../../images/weibo-mask.svg");
+      mask-position: center;
+    }
+  }
+  &.oo-footer-social-link--theme-dark:hover .oo-footer-social-link-icon {
+    background-color: #ffffff;
   }
 }
 
@@ -89,17 +126,18 @@
   height: 24px;
   background-image: url("../../images/social-icons.svg");
   background-repeat: no-repeat;
+  background-position-x: var(--oo-social-icon-x, 0);
 
   &.oo-footer-social-link-icon--subscribe-mail {
-    background-position-x: -440px;
+    --oo-social-icon-x: -440px;
   }
 
   &.oo-footer-social-link-icon--blog {
-    background-position-x: -200px;
+    --oo-social-icon-x: -200px;
   }
 
   &.oo-footer-social-link-icon--x {
-    background-position-x: -40px;
+    --oo-social-icon-x: -40px;
   }
 
   &.oo-footer-social-link-icon--note {
@@ -116,11 +154,11 @@
   }
 
   &.oo-footer-social-link-icon--discord {
-    background-position-x: -840px;
+    --oo-social-icon-x: -840px;
   }
 
   &.oo-footer-social-link-icon--youtube {
-    background-position-x: -120px;
+    --oo-social-icon-x: -120px;
   }
 
   &.oo-footer-social-link-icon--tiktok {
@@ -129,51 +167,51 @@
   }
 
   &.oo-footer-social-link-icon--github {
-    background-position-x: -320px;
+    --oo-social-icon-x: -320px;
   }
 
   &.oo-footer-social-link-icon--linkedin {
-    background-position-x: -80px;
+    --oo-social-icon-x: -80px;
   }
 
   &.oo-footer-social-link-icon--facebook {
-    background-position-x: 0;
+    --oo-social-icon-x: 0;
   }
 
   &.oo-footer-social-link-icon--medium {
-    background-position-x: -240px;
+    --oo-social-icon-x: -240px;
   }
 
   &.oo-footer-social-link-icon--fosstodon {
-    background-position-x: -400px;
+    --oo-social-icon-x: -400px;
   }
 
   &.oo-footer-social-link-icon--telegram {
-    background-position-x: -800px;
+    --oo-social-icon-x: -800px;
   }
 
   &.oo-footer-social-link-icon--vk {
-    background-position-x: -160px;
+    --oo-social-icon-x: -160px;
   }
 
   &.oo-footer-social-link-icon--instagram {
-    background-position-x: -280px;
+    --oo-social-icon-x: -280px;
   }
 
   &.oo-footer-social-link-icon--kuaishou {
-    background-position-x: -560px;
+    --oo-social-icon-x: -560px;
   }
 
   &.oo-footer-social-link-icon--weibo {
-    background-position-x: -760px;
+    --oo-social-icon-x: -760px;
   }
 
   &.oo-footer-social-link-icon--csdn {
-    background-position-x: -680px;
+    --oo-social-icon-x: -680px;
   }
 
   &.oo-footer-social-link-icon--bilibili {
-    background-position-x: -720px;
+    --oo-social-icon-x: -720px;
   }
 }
 
@@ -204,6 +242,10 @@
 
   &:hover {
     filter: grayscale(0);
+  }
+
+  &.oo-footer-wdgt--theme-dark {
+    background-color: #3a3c4980;
   }
 }
 

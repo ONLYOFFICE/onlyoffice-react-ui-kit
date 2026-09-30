@@ -21,15 +21,19 @@ import { Link } from "../../../../sub-components/Link/index.jsx";
 import { MailPopup } from "../../sub-components/MailPopup/index.jsx";
 import { getLink } from "../../../../utils/getLink.jsx";
 
-const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
+const SocialLinks = ({ t, locale, mailApiUrl, mailApiType, theme }) => {
   const [popupIsOpen, setPopupIsOpen] = useState(false);
+  const isDark = theme === "dark";
 
   return (
     <ul className={clsx("oo-footer-social-links", locale)}>
       <li>
         <button
           onClick={() => setPopupIsOpen(true)}
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           title={t("SubscribeToOurNewsletters")}
         >
           <span
@@ -48,7 +52,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       </li>
       <li>
         <Link
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           href={getLink("blog", locale)}
           title={t("ReadOurBlog")}
           locale={false}
@@ -61,7 +68,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       </li>
       <li>
         <Link
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           href={t("XSocialLink")}
           title={t("FollowUsOnX")}
           target="_blank"
@@ -77,7 +87,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
         <>
           <li>
             <Link
-              className="oo-footer-social-link"
+              className={clsx(
+                "oo-footer-social-link",
+                isDark && "oo-footer-social-link--theme-dark",
+              )}
               href="https://note.com/onlyoffice/"
               title="Note でフォロー"
               target="_blank"
@@ -91,7 +104,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
           </li>
           <li>
             <Link
-              className="oo-footer-social-link"
+              className={clsx(
+                "oo-footer-social-link",
+                isDark && "oo-footer-social-link--theme-dark",
+              )}
               href="https://qiita.com/ONLYOFFICE"
               title="Qiita でフォロー"
               target="_blank"
@@ -107,7 +123,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       )}
       <li>
         <Link
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           href="https://discord.gg/Hcgtf5n4uF"
           title={t("FollowUsOnDiscord")}
           target="_blank"
@@ -121,7 +140,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       </li>
       <li>
         <Link
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           href="https://www.youtube.com/user/onlyofficeTV"
           title={t("FollowUsOnYouTube")}
           target="_blank"
@@ -135,7 +157,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       </li>
       <li>
         <Link
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           href={t("TikTokSocialLink")}
           title={t("FollowUsOnTikTok")}
           target="_blank"
@@ -149,7 +174,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       </li>
       <li>
         <Link
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           href="https://github.com/ONLYOFFICE/"
           title={t("FollowUsOnGitHub")}
           target="_blank"
@@ -163,7 +191,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       </li>
       <li>
         <Link
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           href={t("LinkedInSocialLink")}
           title={t("FollowUsOnLinkedIn")}
           target="_blank"
@@ -178,7 +209,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       {locale !== "zh" && locale !== "zh-hans" && (
         <li>
           <Link
-            className="oo-footer-social-link"
+            className={clsx(
+              "oo-footer-social-link",
+              isDark && "oo-footer-social-link--theme-dark",
+            )}
             href="https://www.facebook.com/pages/OnlyOffice/833032526736775"
             title={t("FollowUsOnFacebook")}
             target="_blank"
@@ -193,7 +227,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       )}
       <li>
         <Link
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           href="https://medium.com/onlyoffice"
           title={t("FollowUsOnMedium")}
           target="_blank"
@@ -207,7 +244,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       </li>
       <li>
         <Link
-          className="oo-footer-social-link"
+          className={clsx(
+            "oo-footer-social-link",
+            isDark && "oo-footer-social-link--theme-dark",
+          )}
           href="https://fosstodon.org/@ONLYOFFICE"
           title={t("FollowUsOnFosstodon")}
           target="_blank"
@@ -221,7 +261,13 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       </li>
       {(locale === "zh" || locale === "zh-hans") && (
         <div className="oo-footer-icon-item">
-          <span className="oo-footer-wdgt-wechat" title="WeChat"></span>
+          <span
+            className={clsx(
+              "oo-footer-wdgt-wechat",
+              isDark && "oo-footer-wdgt--theme-dark",
+            )}
+            title="WeChat"
+          ></span>
           <div className="oo-footer-popup-qr-code oo-footer-popup-qr-code--wechat">
             <p>关注我们</p>
             <p>了解ONLYOFFICE最新信息</p>
@@ -230,14 +276,23 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       )}
       {(locale === "zh" || locale === "zh-hans") && (
         <div className="oo-footer-icon-item">
-          <span className="oo-footer-wdgt-wechat-video" title="WeChat"></span>
+          <span
+            className={clsx(
+              "oo-footer-wdgt-wechat-video",
+              isDark && "oo-footer-wdgt--theme-dark",
+            )}
+            title="WeChat"
+          ></span>
           <div className="oo-footer-popup-qr-code oo-footer-popup-qr-code--wechat-video"></div>
         </div>
       )}
       {locale !== "zh" && locale !== "zh-hans" && (
         <li>
           <Link
-            className="oo-footer-social-link"
+            className={clsx(
+              "oo-footer-social-link",
+              isDark && "oo-footer-social-link--theme-dark",
+            )}
             href={t("TelegramSocialLink")}
             title={t("FollowUsOnTelegram")}
             target="_blank"
@@ -253,7 +308,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       {locale === "ru" && (
         <li>
           <Link
-            className="oo-footer-social-link"
+            className={clsx(
+              "oo-footer-social-link",
+              isDark && "oo-footer-social-link--theme-dark",
+            )}
             href="https://vk.com/onlyoffice"
             title="Следите за нашими новостями Вконтакте"
             target="_blank"
@@ -269,7 +327,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
       {locale !== "zh" && locale !== "zh-hans" && (
         <li>
           <Link
-            className="oo-footer-social-link"
+            className={clsx(
+              "oo-footer-social-link",
+              isDark && "oo-footer-social-link--theme-dark",
+            )}
             href="https://www.instagram.com/the_onlyoffice/"
             title={t("FollowUsOnInstagram")}
             target="_blank"
@@ -286,7 +347,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
         <>
           <li>
             <Link
-              className="oo-footer-social-link"
+              className={clsx(
+                "oo-footer-social-link",
+                isDark && "oo-footer-social-link--theme-dark",
+              )}
               href="https://v.kuaishou.com/GeXfVT"
               title="在Kuaishou上关注我们"
               target="_blank"
@@ -300,7 +364,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
           </li>
           <li>
             <Link
-              className="oo-footer-social-link"
+              className={clsx(
+                "oo-footer-social-link",
+                isDark && "oo-footer-social-link--theme-dark",
+              )}
               href="https://weibo.com/u/7989605631"
               title="在Weibo上关注我们"
               target="_blank"
@@ -314,7 +381,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
           </li>
           <li>
             <Link
-              className="oo-footer-social-link"
+              className={clsx(
+                "oo-footer-social-link",
+                isDark && "oo-footer-social-link--theme-dark",
+              )}
               href="https://blog.csdn.net/m0_68274698"
               title="在CSDN上关注我们"
               target="_blank"
@@ -328,7 +398,10 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType }) => {
           </li>
           <li>
             <Link
-              className="oo-footer-social-link"
+              className={clsx(
+                "oo-footer-social-link",
+                isDark && "oo-footer-social-link--theme-dark",
+              )}
               href="https://space.bilibili.com/1870911731"
               title="在Bilibili上关注我们"
               target="_blank"
