@@ -49,8 +49,18 @@ export default {
       options: ["white", "dark"],
       control: { type: "select" },
     },
+    showSearch: {
+      name: "search.show",
+      control: { type: "boolean" },
+    },
+    searchVariant: {
+      name: "search.variant",
+      options: ["main", "blog"],
+      control: { type: "select" },
+      if: { arg: "showSearch" },
+    },
     search: {
-      control: { type: "object" },
+      table: { disable: true },
     },
     phone: {
       control: { type: "object" },
@@ -76,9 +86,12 @@ const Template = (args) => {
 
   const [searchValue, setSearchValue] = useState("");
 
-  const search = args.search?.show
+  const { showSearch, searchVariant, ...headerArgs } = args;
+
+  const search = showSearch
     ? {
-        ...args.search,
+        show: true,
+        variant: searchVariant,
         value: searchValue,
         onChange: (e) => setSearchValue(e.target.value),
         onSubmit: (e) => e.preventDefault(),
@@ -88,7 +101,7 @@ const Template = (args) => {
   return (
     <OOHeader
       languages={languages}
-      {...args}
+      {...headerArgs}
       search={search}
       phone={args.phone}
     />
@@ -99,6 +112,7 @@ export const Default = Template.bind({});
 Default.args = {
   locale: "en",
   theme: "white",
-  search: { show: true, variant: "main" },
+  showSearch: true,
+  searchVariant: "main",
   phone: { show: true, country: "row" },
 };

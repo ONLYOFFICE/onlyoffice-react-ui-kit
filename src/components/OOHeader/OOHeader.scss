@@ -39,6 +39,7 @@
     &.oo-header--active {
       .oo-header-hamburger,
       .oo-header-logo,
+      .oo-header-actions,
       .oo-header-icons {
         @media screen and (max-width: 1023px) {
           transform: translate3d(-429px, 0, 0);
@@ -124,6 +125,7 @@
 
     .oo-header-hamburger,
     .oo-header-logo,
+    .oo-header-actions,
     .oo-header-icons {
       @media screen and (max-width: 1023px) {
         transform: translate3d(429px, 0, 0);
@@ -291,6 +293,10 @@
   }
 
   @media screen and (max-width: 1023px) {
+    height: 64px;
+  }
+
+  @media screen and (max-width: 592px) {
     height: 48px;
   }
 }
@@ -305,11 +311,12 @@
   max-width: 1312px;
 
   @media screen and (max-width: 1023px) {
-    height: 48px;
+    height: 64px;
   }
 
   @media screen and (max-width: 592px) {
     padding: 0px 16px;
+    height: 48px;
   }
 }
 
@@ -358,16 +365,20 @@
 
   &.oo-header-logo--mobile-center {
     &.ar {
-      @media screen and (max-width: 1023px) {
+      @media screen and (max-width: 592px) {
         right: initial;
         left: 50%;
-        transform: translateX(-50%);
       }
     }
 
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 592px) {
       left: 50%;
-      transform: translateX(-50%);
+    }
+
+    .oo-header:not(.oo-header--active) & {
+      @media screen and (max-width: 592px) {
+        transform: translateX(-50%);
+      }
     }
   }
 

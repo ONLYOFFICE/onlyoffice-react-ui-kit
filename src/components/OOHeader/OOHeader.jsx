@@ -128,7 +128,7 @@ const OOHeader = ({
         locale,
         theme === "dark" && "oo-header--theme-dark",
         openMobileMenu && "oo-header--active",
-        search && isHasPhone && "oo-header--space-between",
+        search?.show && isHasPhone && "oo-header--space-between",
       )}
       style={{ borderColor: borderColor, backgroundColor: backgroundColor }}
     >
