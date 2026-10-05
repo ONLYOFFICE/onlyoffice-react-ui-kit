@@ -1,10 +1,21 @@
 # Changelog
 
-- header → Menu → Products → ONLYOFFICE Docs: Unify editor links across all locales (previously only /en had new paths)
-  - /document-editor => /word-processor
-  - /spreadsheet-editor => /sheets
-  - /presentation-editor => /slides
+## 1.36.0
+
+- header → Menu
+  - Update menu styles and icons
+  - Products
+    - New submenu structure (DocSpace / Docs tabs, rooms, connectors, security link)
+    - ONLYOFFICE Docs: Unify editor links across all locales (previously only /en had new paths)
+      - /document-editor => /word-processor
+      - /spreadsheet-editor => /sheets
+      - /presentation-editor => /slides
+  - Remove the old Enterprise section
+  - Rework Developers and Resources sections
 - header: Login/SignUp button: /docspace-registration => /signup
+- footer: redesign social links block and language selector, update footer item styles and icons
+- Header, Footer, AdventAnnounce: font-family uses the site variable `--new-design-font-family` (fallback "Sora"; "Inter" for the ru announce)
+- Search block fixes
 
 ## 1.35.1
 
