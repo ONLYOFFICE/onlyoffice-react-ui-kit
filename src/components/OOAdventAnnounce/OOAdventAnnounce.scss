@@ -85,7 +85,7 @@
 }
 
 .oo-advent-announce-text {
-  font-family: "Sora", sans-serif;
+  font-family: var(--new-design-font-family, "Sora"), sans-serif;
   position: relative;
   display: flex;
   align-items: center;
@@ -161,7 +161,7 @@
   }
 
   &.ru {
-    font-family: "Inter", sans-serif;
+    font-family: var(--new-design-font-family, "Inter"), sans-serif;
     max-width: 742px;
   }
 

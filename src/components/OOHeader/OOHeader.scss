@@ -15,7 +15,7 @@
  */
 
 .oo-header {
-  font-family: "Sora", sans-serif;
+  font-family: var(--new-design-font-family, "Sora"), sans-serif;
   box-sizing: border-box;
   position: sticky;
   top: 0;

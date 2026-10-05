@@ -577,7 +577,7 @@
   box-sizing: border-box;
   border-radius: 8px;
   padding: 10px 12px;
-  font-family: "Sora", sans-serif;
+  font-family: var(--new-design-font-family, "Sora"), sans-serif;
   font-size: 13px;
   font-weight: 600;
   line-height: 20px;

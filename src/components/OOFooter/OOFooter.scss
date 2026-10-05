@@ -16,7 +16,7 @@
 
 .oo-footer {
   border-top: 1px solid #dcdde6;
-  font-family: "Sora", sans-serif;
+  font-family: var(--new-design-font-family, "Sora"), sans-serif;
 
   &.oo-footer--theme-dark {
     background-color: #000122;
