@@ -6,6 +6,10 @@
   - /presentation-editor => /slides
 - header: Login/SignUp button: /docspace-registration => /signup
 
+## 1.35.1
+
+- header -> Menu -> Products: fix Accessibility/Sustainability links locale duplication (404 for all languages except EN) 
+
 ## 1.35.0
 
 - header -> Menu -> Resources -> Blog: ONLYOFFICE DocSpace 3.6 released => ONLYOFFICE DocSpace 3.7 released
