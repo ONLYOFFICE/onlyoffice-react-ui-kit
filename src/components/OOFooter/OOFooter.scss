@@ -316,8 +316,9 @@
   transition: color 0.2s;
 
   &.oo-footer-link--call {
-    background-color: #f3f4f7;
-    color: #585a6d;
+    background-color: #f9f9f9;
+    color: #444444;
+    transition: background-color 0.2s;
     border-radius: 8px;
     padding: 11px 12px;
     width: fit-content;
@@ -340,8 +341,18 @@
       mask-size: 24px 24px;
     }
 
+    &:hover {
+      color: #444444;
+      background-color: #dcdde6;
+    }
+
     &.oo-footer-link--theme-dark {
-      background-color: #3a3c4980;
+      background-color: #21222b;
+      color: #f3f4f7;
+
+      &:hover {
+        background-color: #3a3c49cc;
+      }
     }
   }
 

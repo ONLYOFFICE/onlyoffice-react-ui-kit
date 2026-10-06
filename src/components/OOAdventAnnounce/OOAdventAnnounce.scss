@@ -61,26 +61,24 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #4f9dc8;
+  background-color: #ffffff;
   background-repeat: no-repeat;
+
+  &.oo-advent-announce-wrapper--theme-dark {
+    background-color: #000122;
+
+    .oo-advent-announce-text {
+      color: #e7e8ee;
+    }
+  }
 
   &.ar {
     direction: initial;
     unicode-bidi: initial;
   }
 
-  &.pt,
-  &.pt-br,
-  &.sr {
-    @media screen and (max-width: 1024px) {
-      background-position: calc(50% - 32px) -2.8px;
-    }
-  }
-
   @media screen and (max-width: 1024px) {
     height: 48px;
-    background-image: url("./images/decor-mobile.svg");
-    background-position: calc(50% - 27px) -2.8px;
   }
 }
 
@@ -94,9 +92,9 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
-  max-width: 737px;
+  max-width: 921px;
   height: 100%;
-  color: #ffffff;
+  color: #585a6d;
   text-decoration: none;
   z-index: 10;
 
@@ -116,53 +114,31 @@
     }
   }
 
-  &::before {
-    left: -290px;
-    width: 508px;
-    min-width: 508px;
-    background-image: url("./images/decor-left.svg");
-  }
-
   &::after {
-    right: -372px;
-    width: 513px;
-    min-width: 513px;
-    background-image: url("./images/decor-right.svg");
+    position: static;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    background-color: currentColor;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6 4l4 4-4 4' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 16px;
   }
 
-  &.fr {
-    max-width: 790px;
-  }
 
-  &.de {
-    max-width: 862px;
-  }
-
-  &.it {
-    max-width: 778px;
-  }
-
-  &.es {
-    max-width: 826px;
-  }
-
-  &.pt,
-  &.pt-br {
-    max-width: 816px;
-  }
-
-  &.sr {
-    max-width: 754px;
+  &.fr, &.pt, &.pt-br, &.ru {
+    max-width: 981px;
   }
 
   &.zh,
   &.zh-hans {
-    max-width: 440px;
+    max-width: 480px;
   }
 
   &.ru {
     font-family: var(--new-design-font-family, "Inter"), sans-serif;
-    max-width: 742px;
   }
 
   @media screen and (max-width: 1024px) {
@@ -174,6 +150,18 @@
 .oo-advent-announce-text-desktop {
   span {
     font-weight: 600;
+    background-color: #e7dcfd;
+    border-radius: 16px;
+    box-shadow: 0px 0px 4px 0px #7474ff33 inset;
+    color: #21222b;
+    padding: 5px 8px;
+    margin-right: 4px;
+
+    .oo-advent-announce-wrapper--theme-dark & {
+      background-color: #2e2f7a;
+      box-shadow: 0px 0px 0px 1px #5c5fb8 inset;
+      color: #e7e8ee;
+    }
   }
 
   @media screen and (max-width: 1024px) {
@@ -183,6 +171,18 @@
 
 .oo-advent-announce-text-mobile {
   display: none;
+  font-weight: 600;
+  background-color: #e7dcfd;
+  border-radius: 16px;
+  box-shadow: 0px 0px 4px 0px #7474ff33 inset;
+  color: #21222b;
+  padding: 5px 8px;
+
+  .oo-advent-announce-wrapper--theme-dark & {
+    background-color: #2e2f7a;
+    box-shadow: 0px 0px 0px 1px #5c5fb8 inset;
+    color: #e7e8ee;
+  }
 
   @media screen and (max-width: 1024px) {
     display: block;
