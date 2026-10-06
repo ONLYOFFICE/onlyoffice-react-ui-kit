@@ -2,6 +2,7 @@
 
 ## 1.36.0
 
+- advent-announce: Meet ONLYOFFICE Docs 10.0
 - header → Menu
   - Update menu styles and icons
   - Products
