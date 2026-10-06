@@ -1,5 +1,6 @@
 # Changelog
 
+- advent-announce: Meet ONLYOFFICE Docs 10.0
 - header → Menu → Products → ONLYOFFICE Docs: Unify editor links across all locales (previously only /en had new paths)
   - /document-editor => /word-processor
   - /spreadsheet-editor => /sheets
