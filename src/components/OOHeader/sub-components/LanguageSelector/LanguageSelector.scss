@@ -149,7 +149,9 @@
   line-height: 19px;
   color: #666666;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 
   span {
     margin-right: 8px;
@@ -159,7 +161,12 @@
   }
 
   &:hover {
-    background-color: #f5f5f5;
+    background-color: #EEF3FF;
+    color: #3541f5;
+
+    span {
+      color: #3541f5;
+    }
   }
 
   &.oo-language-selector-list-link--active {

@@ -159,7 +159,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-document-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/word-processor?docs=download")}
+              href={getBaseUrl("/word-processor")}
               icon="document-editor"
               variant="small"
               active={highlight?.linkId}
@@ -169,7 +169,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-spreadsheet-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/sheets?docs=download")}
+              href={getBaseUrl("/sheets")}
               icon="spreadsheet-editor"
               variant="small"
               active={highlight?.linkId}
@@ -179,7 +179,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-presentation-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/slides?docs=download")}
+              href={getBaseUrl("/slides")}
               icon="presentation-editor"
               variant="small"
               active={highlight?.linkId}
@@ -189,7 +189,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-form-creator"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/form-creator?docs=download")}
+              href={getBaseUrl("/form-creator")}
               icon="form-creator"
               variant="small"
               active={highlight?.linkId}
@@ -199,7 +199,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-pdf-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/pdf-editor?docs=download")}
+              href={getBaseUrl("/pdf-editor")}
               icon="pdf-editor"
               variant="small"
               active={highlight?.linkId}
@@ -209,7 +209,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-docs-e-book-creator"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/e-book?docs=download")}
+              href={getBaseUrl("/e-book")}
               icon="e-book-creator"
               variant="small"
               active={highlight?.linkId}
