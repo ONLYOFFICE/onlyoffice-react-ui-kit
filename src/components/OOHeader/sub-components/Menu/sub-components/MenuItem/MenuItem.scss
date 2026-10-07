@@ -122,6 +122,20 @@
   }
 
   &:hover {
+    @media screen and (min-width: 1024px) {
+      color: #3541f5;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        border-bottom: 1px solid #3541f5;
+        width: calc(100% - 24px);
+        transform: translateX(-50%);
+      }
+    }
+
     @media screen and (max-width: 1023px) {
       background-color: #EEF3FF;
       color: #3541f5;

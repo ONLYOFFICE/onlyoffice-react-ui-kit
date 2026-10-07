@@ -338,6 +338,28 @@
     @media screen and (max-width: 592px) {
       padding: 24px;
     }
+
+    .oo-menu-link {
+      @media screen and (min-width: 593px) {
+        margin: -6px -24px 6px;
+        padding: 6px 24px 6px 60px;
+        transition:
+          color 0.2s,
+          background-color 0.2s;
+
+        &:last-child {
+          margin-bottom: -6px;
+        }
+
+        &::before {
+          left: 24px;
+        }
+
+        &:hover {
+          background-color: #eef3ff;
+        }
+      }
+    }
   }
 
   .oo-menu-item-btn {
@@ -398,7 +420,17 @@
     }
 
     &:hover {
-      filter: brightness(1.08);
+      color: #ffffff;
+      background: linear-gradient(to top, #f68c57 0%, #ff5938 100%);
+      box-shadow:
+        0px 8px 16px -3px rgba(244, 89, 12, 0.6),
+        0px 4px 6px -4px rgba(244, 89, 12, 0.5);
+
+      @media screen and (min-width: 1024px) {
+        &::before {
+          content: none;
+        }
+      }
     }
 
     @media screen and (max-width: 592px) {
