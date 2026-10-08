@@ -13,6 +13,7 @@
       - /presentation-editor => /slides
   - Remove the old Enterprise section
   - Rework Developers and Resources sections
+  - Resources → Blog: ONLYOFFICE Docs 9.4 released => Meet ONLYOFFICE Docs 10.0
 - header: Login/SignUp button: /docspace-registration => /signup
 - footer: redesign social links block and language selector, update footer item styles and icons
 - Header, Footer, AdventAnnounce: font-family uses the site variable `--new-design-font-family` (fallback "Sora"; "Inter" for the ru announce)
