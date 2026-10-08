@@ -386,7 +386,7 @@ const Products = ({
             <MenuLink
               id="oo-menu-link-other-editors-all-connectors"
               className="oo-header-menu-mb-4"
-              href={getBaseUrl("/marketplace?type=connectors", locale)}
+              href={getBaseUrl("/all-connectors")}
               icon="connectors"
               active={highlight?.linkId}
             >
@@ -400,55 +400,55 @@ const Products = ({
               <MenuLink
                 id="oo-menu-link-other-editors-owncloud"
                 className="oo-header-menu-mr-8"
-                href={getBaseUrl("/marketplace/office-for-owncloud", locale)}
+                href={getBaseUrl("/office-for-owncloud", locale)}
                 icon="owncloud"
                 variant="icon"
               />
               <MenuLink
                 id="oo-menu-link-other-editors-odoo"
                 className="oo-header-menu-mr-8"
-                href={getBaseUrl("/marketplace/office-for-odoo", locale)}
+                href={getBaseUrl("/office-for-odoo", locale)}
                 icon="odoo"
                 variant="icon"
               />
               <MenuLink
                 id="oo-menu-link-other-editors-alfresco"
                 className="oo-header-menu-mr-8"
-                href={getBaseUrl("/marketplace/office-for-alfresco", locale)}
+                href={getBaseUrl("/office-for-alfresco", locale)}
                 icon="alfresco"
                 variant="icon"
               />
               <MenuLink
                 id="oo-menu-link-other-editors-sharepoint"
                 className="oo-header-menu-mr-8"
-                href={getBaseUrl("/marketplace/office-for-sharepoint", locale)}
+                href={getBaseUrl("/office-for-sharepoint", locale)}
                 icon="sharepoint"
                 variant="icon"
               />
               <MenuLink
                 id="oo-menu-link-other-editors-moodle"
                 className="oo-header-menu-mr-8"
-                href={getBaseUrl("/marketplace/office-for-moodle", locale)}
+                href={getBaseUrl("/office-for-moodle", locale)}
                 icon="moodle"
                 variant="icon"
               />
               <MenuLink
                 id="oo-menu-link-other-editors-dropbox"
                 className="oo-header-menu-mr-8"
-                href={getBaseUrl("/marketplace/office-for-dropbox", locale)}
+                href={getBaseUrl("/office-for-dropbox", locale)}
                 icon="dropbox"
                 variant="icon"
               />
               <MenuLink
                 id="oo-menu-link-other-editors-box"
                 className="oo-header-menu-mr-8"
-                href={getBaseUrl("/marketplace/office-for-box", locale)}
+                href={getBaseUrl("/office-for-box", locale)}
                 icon="box"
                 variant="icon"
               />
               <MenuLink
                 id="oo-menu-link-other-editors-see-more"
-                href={getBaseUrl("/marketplace?type=connectors", locale)}
+                href={getBaseUrl("/all-connectors", locale)}
                 icon="see-more"
                 variant="icon"
               />

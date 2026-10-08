@@ -127,14 +127,8 @@
     mask-size: 16px 16px;
   }
 
-
   &.fr, &.pt, &.pt-br, &.ru, &.de {
     max-width: 981px;
-  }
-
-  &.zh,
-  &.zh-hans {
-    max-width: 480px;
   }
 
   &.ru {
