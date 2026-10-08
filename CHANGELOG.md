@@ -5,6 +5,7 @@
   - /document-editor => /word-processor
   - /spreadsheet-editor => /sheets
   - /presentation-editor => /slides
+  - Resources → Blog: ONLYOFFICE Docs 9.4 released => Meet ONLYOFFICE Docs 10.0
 - header: Login/SignUp button: /docspace-registration => /signup
 
 ## 1.35.1
