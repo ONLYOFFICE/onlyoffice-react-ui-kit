@@ -23,6 +23,7 @@ const FooterItem = ({ locale, children, heading, href, theme }) => {
   const content = useRef();
   const [isOpen, setIsOpen] = useState(false);
   const isDark = theme === "dark";
+  const isEmpty = React.Children.count(children) === 0;
 
   const onHandleClick = () => {
     window.innerWidth <= 600 && setIsOpen(!isOpen);
@@ -39,6 +40,7 @@ const FooterItem = ({ locale, children, heading, href, theme }) => {
             "oo-footer-item-heading",
             locale,
             isOpen && "oo-footer-item-heading--active",
+            isEmpty && "oo-footer-item-heading--empty",
           )}
         >
           <Link href={href}>{heading}</Link>
@@ -55,15 +57,17 @@ const FooterItem = ({ locale, children, heading, href, theme }) => {
           {heading}
         </div>
       )}
-      <div
-        ref={content}
-        className={clsx(
-          "oo-footer-items-group",
-          isOpen && "oo-footer-items-group--active",
-        )}
-      >
-        {children}
-      </div>
+      {!isEmpty && (
+        <div
+          ref={content}
+          className={clsx(
+            "oo-footer-items-group",
+            isOpen && "oo-footer-items-group--active",
+          )}
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 };

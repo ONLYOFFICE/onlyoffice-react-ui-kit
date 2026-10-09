@@ -29,8 +29,18 @@
     margin-right: 8px;
 
     .oo-menu-item-wrapper {
-      left: initial;
-      right: 0;
+      @media screen and (min-width: 1024px) {
+        left: 0;
+        right: initial;
+        transform: none;
+      }
+    }
+
+    .oo-header-menu-item {
+      @media screen and (min-width: 593px) {
+        width: max-content;
+        max-width: 240px;
+      }
     }
 
     .oo-menu-item-btn {
@@ -186,23 +196,6 @@
       }
     }
 
-    &.ar {
-      .oo-menu-item-wrapper {
-        @media screen and (max-width: 1328px) {
-          top: 100%;
-          right: initial;
-          left: 0;
-        }
-
-        @media screen and (max-width: 592px) {
-          top: 0;
-        }
-      }
-
-      @media screen and (max-width: 1328px) {
-        position: initial;
-      }
-    }
   }
 
   &.oo-menu-item--position-2 {
@@ -455,5 +448,41 @@
   @media screen and (max-width: 592px) {
     position: initial;
     margin-left: unset;
+  }
+}
+
+.oo-menu-item--download.ar {
+  .oo-menu-link {
+    padding-left: 0;
+    padding-right: 36px;
+
+    &::before {
+      left: initial;
+      right: 0;
+    }
+  }
+
+  .oo-menu-item-wrapper .oo-menu-link {
+    @media screen and (max-width: 1023px) {
+      padding: 0 36px 0 0;
+    }
+
+    @media screen and (max-width: 592px) {
+      padding: 4px 36px 4px 0;
+    }
+  }
+
+  .oo-header-menu-item:not(:first-child):not([class*="--bg-gray"]):not(
+      [class*="active"]
+    )
+    .oo-menu-link {
+    @media screen and (min-width: 593px) {
+      padding: 6px 60px 6px 24px;
+
+      &::before {
+        left: initial;
+        right: 24px;
+      }
+    }
   }
 }

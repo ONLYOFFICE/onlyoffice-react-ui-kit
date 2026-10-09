@@ -15,7 +15,13 @@
   - Rework Developers and Resources sections
   - Resources → Blog: ONLYOFFICE Docs 9.4 released => Meet ONLYOFFICE Docs 10.0
 - header: Login/SignUp button: /docspace-registration => /signup
-- footer: redesign social links block and language selector, update footer item styles and icons
+- footer
+  - Redesign social links block and language selector, update footer item styles and icons
+  - New column layout: Features, Templates / Collaborate / Convert, Comparison, Get help / Security, Get news / Contact us
+  - Add Features section (word processor, sheets, slides, forms, PDF, eBook, diagrams, collaboration, signature, security)
+  - Comparison: add Collabora Online, Foxit PDF Editor, Zoho Office, Quip; Hancom => Hancom Office
+  - Remove For education, For non-profits, template subitems, For translators / For influencers, Legal notice
+  - Converters => Convert, Community => Forum, ONLYOFFICE Academy => Training courses
 - Header, Footer, AdventAnnounce: font-family uses the site variable `--new-design-font-family` (fallback "Sora"; "Inter" for the ru announce)
 - Search block fixes
 
