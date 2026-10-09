@@ -47,9 +47,7 @@ const OOFooter = ({
   const isDark = theme === "dark";
 
   return (
-    <footer
-      className={clsx("oo-footer", isDark && "oo-footer--theme-dark")}
-    >
+    <footer className={clsx("oo-footer", isDark && "oo-footer--theme-dark")}>
       <div className={clsx("oo-footer-wrapper", locale)}>
         <div
           className={clsx(
@@ -107,42 +105,83 @@ const OOFooter = ({
           </div>
         </div>
         <div className={clsx("oo-footer-items", locale)}>
-          <div className="oo-footer-item-group">
+          <div className="oo-footer-item-group oo-footer-item-group--features">
             <FooterItem
-              locale={locale}
               theme={theme}
-              heading={t("Templates")}
-              href={getLink("templates", locale)}
+              locale={locale}
+              heading={t("Features")}
+              href={getBaseUrl("/docs")}
             >
               <Link
                 className="oo-footer-link"
-                href={`${getLink("templates", locale)}/pdf-form-templates`}
+                href={getBaseUrl("/word-processor")}
               >
-                {t("PDFFormTemplates")}
+                {t("WordProcessing")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/sheets")}>
+                {t("SpreadsheetEditing")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/slides")}>
+                {t("PresentationCreation")}
               </Link>
               <Link
                 className="oo-footer-link"
-                href={`${getLink("templates", locale)}/document-templates`}
+                href={getBaseUrl("/form-creator")}
               >
-                {t("TextDocumentTemplates")}
+                {t("FormBuildingFilling")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/pdf-editor")}>
+                {t("PDFEditing")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/e-book")}>
+                {t("EbookCreation")}
               </Link>
               <Link
                 className="oo-footer-link"
-                href={`${getLink("templates", locale)}/spreadsheet-templates`}
+                href={getBaseUrl("/diagram-viewer")}
               >
-                {t("SpreadsheetTemplates")}
+                {t("DiagramViewing")}
               </Link>
               <Link
                 className="oo-footer-link"
-                href={`${getLink("templates", locale)}/presentation-templates`}
+                href={getBaseUrl("/seamless-collaboration")}
               >
-                {t("PresentationTemplates")}
+                {t("Collaboration")}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/sign-documents")}
+              >
+                {t("Signature")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/security")}>
+                {t("SecurityCompliance")}
+              </Link>
+            </FooterItem>
+          </div>
+          <div className="oo-footer-item-group oo-footer-item-group--resources">
+            <FooterItem
+              theme={theme}
+              locale={locale}
+              heading={t("Templates")}
+              href={getLink("templates", locale)}
+            ></FooterItem>
+            <FooterItem
+              theme={theme}
+              locale={locale}
+              heading={t("Collaborate")}
+            >
+              <Link className="oo-footer-link" href={getBaseUrl("/contribute")}>
+                {t("ForContributors")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/vacancies")}>
+                {t("Vacancies")}
               </Link>
             </FooterItem>
             <FooterItem
+              theme={theme}
               locale={locale}
               heading={t("Converters")}
-              theme={theme}
               href={getBaseUrl("/online-document-converter")}
             >
               <Link
@@ -170,150 +209,9 @@ const OOFooter = ({
                 {t("ConvertPDFs")}
               </Link>
             </FooterItem>
-            <FooterItem theme={theme} locale={locale} heading={t("GetNews")}>
-              <Link
-                className="oo-footer-link"
-                href={getLink("blog", locale)}
-                locale={false}
-              >
-                {t("Blog")}
-              </Link>
-            </FooterItem>
-          </div>
-          <div className="oo-footer-item-group">
-            <FooterItem
-              locale={locale}
-              heading={t("ForEducation")}
-              href={getBaseUrl("/education")}
-              theme={theme}
-            >
-              <Link
-                className="oo-footer-link"
-                href={getBaseUrl("/office-for-students")}
-              >
-                {t("ForStudents")}
-              </Link>
-              <Link
-                className="oo-footer-link"
-                href={getBaseUrl("/office-for-educators")}
-              >
-                {t("ForEducators")}
-              </Link>
-            </FooterItem>
-            <FooterItem
-              theme={theme}
-              locale={locale}
-              heading={t("ForNonProfits")}
-            >
-              <Link
-                className="oo-footer-link"
-                href={getBaseUrl("/nonprofit-organizations")}
-              >
-                {t("FeaturesAndTools")}
-              </Link>
-              <Link className="oo-footer-link" href={getBaseUrl("/free-cloud")}>
-                {t("RequestFreeAccount")}
-              </Link>
-            </FooterItem>
-            <FooterItem
-              theme={theme}
-              locale={locale}
-              heading={t("Collaborate")}
-            >
-              <Link className="oo-footer-link" href={getBaseUrl("/contribute")}>
-                {t("ForContributors")}
-              </Link>
-              <Link
-                className="oo-footer-link"
-                href="https://helpcenter.onlyoffice.com/guides/become-translator.aspx"
-              >
-                {t("ForTranslators")}
-              </Link>
-              <Link
-                className="oo-footer-link"
-                href={getBaseUrl("/influencer-program")}
-              >
-                {t("ForInfluencers")}
-              </Link>
-              <Link className="oo-footer-link" href={getBaseUrl("/vacancies")}>
-                {t("Vacancies")}
-              </Link>
-            </FooterItem>
-          </div>
-          <div className="oo-footer-item-group">
-            <FooterItem
-              theme={theme}
-              locale={locale}
-              heading={t("Security")}
-              href={getBaseUrl("/security")}
-            >
-              <Link className="oo-footer-link" href={getBaseUrl("/security")}>
-                {t("FeaturesAndTools")}
-              </Link>
-
-              <div
-                className={clsx(
-                  "oo-footer-item-icons",
-                  isDark && "oo-footer-item-icons--theme-dark",
-                )}
-              >
-                <Link
-                  href={t("HIPAAComplianceLink")}
-                  locale={false}
-                  aria-label="HIPAA"
-                >
-                  <HippaIcon />
-                </Link>
-                <Link
-                  href={t("GDPRComplianceLink")}
-                  locale={false}
-                  aria-label="GDPR"
-                >
-                  <GdprIcon />
-                </Link>
-              </div>
-            </FooterItem>
-            <FooterItem theme={theme} locale={locale} heading={t("GetHelp")}>
-              <Link
-                className="oo-footer-link"
-                href="https://community.onlyoffice.com"
-              >
-                {t("Community")}
-              </Link>
-              <Link
-                className="oo-footer-link"
-                href="https://helpcenter.onlyoffice.com/index.aspx"
-              >
-                {t("HelpCenter")}
-              </Link>
-              <Link className="oo-footer-link" href={getBaseUrl("/academy")}>
-                {t("ONLYOFFICEAcademy")}
-              </Link>
-              <Link className="oo-footer-link" href={getBaseUrl("/webinars")}>
-                {t("Webinars")}
-              </Link>
-              <Link
-                className="oo-footer-link"
-                href={getBaseUrl("/whitepapers")}
-              >
-                {t("WhitePapers")}
-              </Link>
-              <Link
-                className="oo-footer-link"
-                href={getBaseUrl("/support-contact-form")}
-              >
-                {t("SupportContactForm")}
-              </Link>
-              <Link className="oo-footer-link" href={getBaseUrl("/demo-order")}>
-                {t("OrderDemo")}
-              </Link>
-              <Link className="oo-footer-link" href={getBaseUrl("/legalterms")}>
-                {t("LegalNotice")}
-              </Link>
-            </FooterItem>
           </div>
           {locale !== "zh" && locale !== "zh-hans" && (
-            <div className="oo-footer-item-group">
+            <div className="oo-footer-item-group oo-footer-item-group--comparison">
               <FooterItem
                 theme={theme}
                 locale={locale}
@@ -340,6 +238,12 @@ const OOFooter = ({
                 </Link>
                 <Link
                   className="oo-footer-link"
+                  href={getBaseUrl("/best-collabora-alternative")}
+                >
+                  {t("OODocsVsCollabora")}
+                </Link>
+                <Link
+                  className="oo-footer-link"
                   href={getBaseUrl("/best-libreoffice-alternative")}
                 >
                   {t("OODocsVsLibreOffice")}
@@ -362,56 +266,124 @@ const OOFooter = ({
                 >
                   {t("OODocsVsHancom")}
                 </Link>
+                <Link
+                  className="oo-footer-link"
+                  href={getBaseUrl("/best-foxit-alternative")}
+                >
+                  {t("OODocsVsFoxit")}
+                </Link>
+                <Link
+                  className="oo-footer-link"
+                  href={getBaseUrl("/best-zoho-office-integrator-alternative")}
+                >
+                  {t("OODocsVsZohoOffice")}
+                </Link>
+                <Link
+                  className="oo-footer-link"
+                  href={getBaseUrl("/best-quip-alternative")}
+                >
+                  {t("OODocsVsQuip")}
+                </Link>
               </FooterItem>
             </div>
           )}
-          <div className="oo-footer-item-group">
-            <FooterItem theme={theme} locale={locale} heading={t("ContactUs")}>
+          <div className="oo-footer-item-group oo-footer-item-group--help">
+            <FooterItem theme={theme} locale={locale} heading={t("GetHelp")}>
+              <Link
+                className="oo-footer-link"
+                href={"https://community.onlyoffice.com"}
+              >
+                {t("Community")}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={"https://helpcenter.onlyoffice.com/index.aspx"}
+              >
+                {t("HelpCenter")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/academy")}>
+                {t("ONLYOFFICEAcademy")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/webinars")}>
+                {t("Webinars")}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/whitepapers")}
+              >
+                {t("WhitePapers")}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/support-contact-form")}
+              >
+                {t("SupportContactForm")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/demo-order")}>
+                {t("OrderDemo")}
+              </Link>
+            </FooterItem>
+            <FooterItem
+              theme={theme}
+              locale={locale}
+              heading={t("Security")}
+              href={getBaseUrl("/security")}
+            >
+              <Link className="oo-footer-link" href={getBaseUrl("/security")}>
+                {t("FeaturesAndTools")}
+              </Link>
               <div
                 className={clsx(
-                  "oo-footer-link-text",
-                  isDark && "oo-footer-link-text--theme-dark",
+                  "oo-footer-item-icons",
+                  isDark && "oo-footer-item-icons--theme-dark",
                 )}
+              >
+                <Link
+                  href={t("HIPAAComplianceLink")}
+                  locale={false}
+                  aria-label="HIPAA"
+                >
+                  <HippaIcon />
+                </Link>
+                <Link
+                  href={t("GDPRComplianceLink")}
+                  locale={false}
+                  aria-label="GDPR"
+                >
+                  <GdprIcon />
+                </Link>
+              </div>
+            </FooterItem>
+          </div>
+          <div className="oo-footer-item-group oo-footer-item-group--contacts">
+            <FooterItem theme={theme} locale={locale} heading={t("GetNews")}>
+              <Link
+                className="oo-footer-link"
+                href={getLink("blog", locale)}
+                locale={false}
+              >
+                {t("Blog")}
+              </Link>
+            </FooterItem>
+            <FooterItem theme={theme} locale={locale} heading={t("ContactUs")}>
+              <Link
+                className="oo-footer-link"
+                href={"mailto:sales@onlyoffice.com"}
               >
                 {t("SalesQuestions")}
-                {["zh", "zh-hans", "ja"].includes(locale) ? "" : " "}
-                <Link
-                  className="oo-footer-link oo-footer-link--contact"
-                  href="mailto:sales@onlyoffice.com"
-                >
-                  sales@onlyoffice.com
-                </Link>
-              </div>
-              <div
-                className={clsx(
-                  "oo-footer-link-text",
-                  isDark && "oo-footer-link-text--theme-dark",
-                )}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={"mailto:partners@onlyoffice.com"}
               >
                 {t("PartnerInquiries")}
-                {["zh", "zh-hans", "ja"].includes(locale) ? "" : " "}
-                <Link
-                  className="oo-footer-link oo-footer-link--contact"
-                  href="mailto:partners@onlyoffice.com"
-                >
-                  partners@onlyoffice.com
-                </Link>
-              </div>
-              <div
-                className={clsx(
-                  "oo-footer-link-text",
-                  isDark && "oo-footer-link-text--theme-dark",
-                )}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={"mailto:press@onlyoffice.com"}
               >
                 {t("PressInquiries")}
-                {["zh", "zh-hans", "ja"].includes(locale) ? "" : " "}
-                <Link
-                  className="oo-footer-link oo-footer-link--contact"
-                  href="mailto:press@onlyoffice.com"
-                >
-                  press@onlyoffice.com
-                </Link>
-              </div>
+              </Link>
               <Link
                 className={clsx(
                   "oo-footer-link oo-footer-link--call",

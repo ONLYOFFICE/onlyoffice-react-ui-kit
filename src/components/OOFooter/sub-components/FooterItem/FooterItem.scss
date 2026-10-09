@@ -15,7 +15,7 @@
  */
 
 .oo-footer-item {
-  padding: 0 0 32px;
+  padding: 0 0 24px;
 
   @media screen and (max-width: 600px) {
     padding: 0;
@@ -124,6 +124,20 @@
     &::after {
       @media screen and (max-width: 600px) {
         transform: rotate(180deg);
+      }
+    }
+  }
+
+  &.oo-footer-item-heading--empty {
+    margin-bottom: 0;
+
+    @media screen and (max-width: 600px) {
+      &::after {
+        content: none;
+      }
+
+      a {
+        pointer-events: auto;
       }
     }
   }
