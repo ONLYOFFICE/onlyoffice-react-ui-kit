@@ -62,7 +62,7 @@ const SearchSelector = ({
         setShowSearch(false);
         variant === "main" && setShowOverlay(false);
 
-        if (window.innerWidth < 1024) {
+        if (window.innerWidth < 593) {
           document.documentElement.style.overflow = "";
         }
       }
@@ -81,7 +81,7 @@ const SearchSelector = ({
       searchRef.current.focus();
     }, 0);
 
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < 593) {
       variant === "main" && setShowOverlay(true);
       document.documentElement.style.overflow = "hidden";
     }
@@ -127,7 +127,7 @@ const SearchSelector = ({
             )}
             placeholder={
               variant === "main"
-                ? t("Download")
+                ? t("SearchOnSite")
                 : variant === "blog"
                   ? t("SearchBlog")
                   : null
@@ -139,12 +139,18 @@ const SearchSelector = ({
             }
           />
           {variant === "main" && (
-            <label
-              htmlFor="oo-header-search"
-              className={clsx("oo-header-search-label", locale)}
+            <svg
+              className={clsx("oo-header-search-icon", locale)}
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden={true}
             >
-              {t("SearchOnSite")}
-            </label>
+              <circle cx="10.5" cy="10.5" r="6.75" strokeWidth="1.5" />
+              <path d="M15.5 15.5L20.5 20.5" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
           )}
           <button
             onClick={() => {

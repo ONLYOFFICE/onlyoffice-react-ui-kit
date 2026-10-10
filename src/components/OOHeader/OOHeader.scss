@@ -343,6 +343,12 @@
     margin-left: 16px;
   }
 
+  &.oo-header-hamburger--search-open {
+    @media screen and (min-width: 593px) {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: 1023px) {
     display: inline-flex;
   }
@@ -435,12 +441,45 @@
     overflow: initial;
     left: 52px;
   }
+
+  &.oo-header-logo--search-open {
+    @media screen and (min-width: 593px) {
+      position: static;
+      flex-shrink: 0;
+      margin: 0 24px 0 0;
+      width: 128px;
+      min-width: 128px;
+      overflow: initial;
+      background-size: contain;
+    }
+
+    &.ar {
+      @media screen and (min-width: 593px) {
+        margin: 0 0 0 24px;
+      }
+    }
+  }
 }
 
 .oo-header-nav {
   display: flex;
   align-items: center;
   width: 100%;
+
+  &.oo-header-nav--search-open {
+    flex-shrink: 0;
+    margin-right: 24px;
+    width: auto;
+
+    &.ar {
+      margin-right: initial;
+      margin-left: 24px;
+    }
+
+    @media screen and (max-width: 1439px) {
+      display: none;
+    }
+  }
 
   &.ar {
     &.oo-header-nav--active {
@@ -644,6 +683,10 @@
 
   &.oo-header-icons--full-width {
     width: 100%;
+
+    @media screen and (max-width: 592px) {
+      width: auto;
+    }
   }
 
   &.ar {

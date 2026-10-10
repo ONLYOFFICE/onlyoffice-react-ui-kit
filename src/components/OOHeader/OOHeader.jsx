@@ -146,6 +146,7 @@ const OOHeader = ({
             "oo-header-hamburger",
             locale,
             theme === "dark" && "oo-header-hamburger--theme-dark",
+            showSearch && "oo-header-hamburger--search-open",
           )}
         >
           <svg
@@ -167,6 +168,7 @@ const OOHeader = ({
             locale,
             theme === "dark" ? "oo-header-logo--theme-dark" : undefined,
             !search?.show && "oo-header-logo--mobile-center",
+            showSearch && "oo-header-logo--search-open",
           )}
           href={
             base?.url
@@ -186,13 +188,14 @@ const OOHeader = ({
           aria-label={t("GoToHomepage")}
         ></Link>
 
-        {!showSearch && (
+        {(!showSearch || search?.variant === "main") && (
           <div
             className={clsx(
               "oo-header-nav",
               locale,
               openMobileMenu && "oo-header-nav--active",
               isMobile && "oo-header-nav--is-mobile",
+              showSearch && "oo-header-nav--search-open",
             )}
           >
             <Menu
