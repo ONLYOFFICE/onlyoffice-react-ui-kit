@@ -238,12 +238,6 @@ const OOFooter = ({
                 </Link>
                 <Link
                   className="oo-footer-link"
-                  href={getBaseUrl("/best-collabora-alternative")}
-                >
-                  {t("OODocsVsCollabora")}
-                </Link>
-                <Link
-                  className="oo-footer-link"
                   href={getBaseUrl("/best-libreoffice-alternative")}
                 >
                   {t("OODocsVsLibreOffice")}

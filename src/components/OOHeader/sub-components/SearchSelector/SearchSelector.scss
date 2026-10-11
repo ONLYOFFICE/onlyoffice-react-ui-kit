@@ -25,7 +25,7 @@
     margin-left: 8px;
 
     &.oo-header-search--variant-main {
-      @media screen and (max-width: 1023px) {
+      @media screen and (max-width: 592px) {
         margin-left: initial;
       }
     }
@@ -36,9 +36,9 @@
   }
 
   &.oo-header-search--variant-main {
-    @media screen and (max-width: 1023px) {
-      position: absolute;
-      top: 12px;
+    @media screen and (max-width: 592px) {
+      position: fixed;
+      top: 115px;
       left: 50%;
       margin-right: 16px;
       width: calc(100% - 32px);
@@ -57,28 +57,30 @@
   outline: none;
 
   &.oo-header-search-input--variant-main {
-    border: 1px solid #666666;
-    border-radius: 3px;
-    padding: 19px 50px 7px 16px;
+    border: 2px solid #3541f5;
+    border-radius: 6px;
+    padding: 0 48px 0 52px;
+    height: 48px;
     font-size: 16px;
-    line-height: 20px;
-    background-color: #f9f9f9;
+    line-height: 24px;
+    color: #000122;
+    background-color: #ffffff;
 
     &::placeholder {
-      color: #cccccc;
+      color: #ccdbfb;
     }
 
     &.ar {
-      padding: 19px 16px 7px 50px;
+      padding: 0 52px 0 48px;
 
       @media screen and (max-width: 1023px) {
-        padding: 21.5px 12px 6.5px 48px;
+        padding: 0 44px 0 40px;
       }
     }
 
     @media screen and (max-width: 1023px) {
-      padding: 21.5px 48px 6.5px 12px;
-      height: 48px;
+      padding: 0 40px 0 44px;
+      height: 40px;
       font-size: 14px;
     }
   }
@@ -112,13 +114,12 @@
   }
 }
 
-.oo-header-search-label {
+.oo-header-search-icon {
   position: absolute;
+  top: 50%;
   left: 18px;
-  top: 7px;
-  font-size: 12px;
-  line-height: 12px;
-  color: #666666;
+  stroke: #585a6d;
+  transform: translateY(-50%);
   pointer-events: none;
 
   &.ar {
@@ -132,10 +133,9 @@
   }
 
   @media screen and (max-width: 1023px) {
-    top: 6.5px;
     left: 12px;
-    font-size: 11px;
-    line-height: 11px;
+    width: 22px;
+    height: 22px;
   }
 }
 
@@ -153,6 +153,17 @@
   background-size: contain;
   transform: translateY(-50%);
   cursor: pointer;
+
+  &.oo-header-search-clear-btn--variant-main {
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+
+    @media screen and (max-width: 1023px) {
+      right: 12px;
+    }
+  }
 
   &.oo-header-search-clear-btn--variant-blog {
     @media screen and (max-width: 1023px) {
