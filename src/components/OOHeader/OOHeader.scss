@@ -162,10 +162,17 @@
     }
 
     &.fr,
-    &.es {
+    &.es,
+    &.nl,
+    &.sr,
+    &.pt, &.pt-br, &.it, &.hy, &.de {
       .oo-header-menu .oo-menu-item-btn {
-        @media screen and (max-width: 1060px) {
+        @media screen and (max-width: 1200px) {
           padding: 25px 5px;
+        }
+
+        @media screen and (max-width: 1060px) {
+          padding: 25px 4px;
         }
 
         @media screen and (max-width: 1023px) {
@@ -174,6 +181,29 @@
 
         @media screen and (max-width: 430px) {
           padding: 14px 40px 14px 24px;
+        }
+      }
+
+      .oo-header-actions {
+        @media screen and (max-width: 1060px) {
+          margin: 0 6px 0 8px;
+        }
+
+        @media screen and (max-width: 1023px) {
+          margin-left: auto;
+        }
+      }
+
+      .oo-header-search-btn,
+      .oo-phone-selector {
+        @media screen and (max-width: 1060px) {
+          margin-right: 8px;
+        }
+      }
+
+      .oo-menu-item--download {
+        @media screen and (max-width: 1060px) {
+          margin-right: 6px;
         }
       }
     }
