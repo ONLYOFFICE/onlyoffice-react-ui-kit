@@ -1,5 +1,7 @@
 # Changelog
 
+## 1.36.1
+
 - footer
   - Remove Security column (with HIPAA / GDPR icons)
   - ONLYOFFICE Academy => Academy (all locales)
