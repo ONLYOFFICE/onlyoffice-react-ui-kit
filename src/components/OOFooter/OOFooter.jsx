@@ -23,7 +23,6 @@ import { Link } from "../../sub-components/Link/index.jsx";
 import { FooterItem } from "./sub-components/FooterItem/index.jsx";
 import { SocialLinks } from "./sub-components/SocialLinks/index.jsx";
 import { LanguageSelector } from "./sub-components/LanguageSelector/index.jsx";
-import { HippaIcon, GdprIcon } from "../../icons/index.js";
 import { getLink } from "../../utils/getLink.jsx";
 
 const OOFooter = ({

@@ -1,5 +1,10 @@
 # Changelog
 
+- footer
+  - Remove Security column (with HIPAA / GDPR icons)
+  - ONLYOFFICE Academy => Academy (all locales)
+  - Footer background: #f9f9f9 => #f3f4f7
+
 ## 1.36.0
 
 - advent-announce: Meet ONLYOFFICE Docs 10.0

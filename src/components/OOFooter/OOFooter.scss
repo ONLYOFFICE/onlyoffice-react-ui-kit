@@ -313,46 +313,6 @@
   }
 }
 
-.oo-footer-item-icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 32px);
-  gap: 16px;
-  margin-top: 4px;
-
-  svg {
-    path {
-      transition: fill 0.2s;
-    }
-  }
-
-  a {
-    &:hover {
-      svg {
-        path {
-          fill: #3541f5;
-        }
-      }
-    }
-  }
-
-  &.oo-footer-item-icons--theme-dark {
-    svg {
-      path {
-        fill: #acadd4;
-      }
-    }
-    a {
-      &:hover {
-        svg {
-          path {
-            fill: #ffffff;
-          }
-        }
-      }
-    }
-  }
-}
-
 .oo-footer-bottom {
   display: grid;
   grid-template-columns: 1fr auto;
