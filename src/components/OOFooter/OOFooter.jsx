@@ -317,37 +317,6 @@ const OOFooter = ({
                 {t("OrderDemo")}
               </Link>
             </FooterItem>
-            <FooterItem
-              theme={theme}
-              locale={locale}
-              heading={t("Security")}
-              href={getBaseUrl("/security")}
-            >
-              <Link className="oo-footer-link" href={getBaseUrl("/security")}>
-                {t("FeaturesAndTools")}
-              </Link>
-              <div
-                className={clsx(
-                  "oo-footer-item-icons",
-                  isDark && "oo-footer-item-icons--theme-dark",
-                )}
-              >
-                <Link
-                  href={t("HIPAAComplianceLink")}
-                  locale={false}
-                  aria-label="HIPAA"
-                >
-                  <HippaIcon />
-                </Link>
-                <Link
-                  href={t("GDPRComplianceLink")}
-                  locale={false}
-                  aria-label="GDPR"
-                >
-                  <GdprIcon />
-                </Link>
-              </div>
-            </FooterItem>
           </div>
           <div className="oo-footer-item-group oo-footer-item-group--contacts">
             <FooterItem theme={theme} locale={locale} heading={t("GetNews")}>
