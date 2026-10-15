@@ -316,6 +316,9 @@ const OOFooter = ({
               <Link className="oo-footer-link" href={getBaseUrl("/demo-order")}>
                 {t("OrderDemo")}
               </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/legalterms")}>
+                {t("LegalNotice")}
+              </Link>
             </FooterItem>
           </div>
           <div className="oo-footer-item-group oo-footer-item-group--contacts">
