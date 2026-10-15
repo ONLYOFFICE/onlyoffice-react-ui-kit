@@ -1,5 +1,13 @@
 # Changelog
 
+- advent-announce
+  - ar: right-to-left text order, mirrored arrow
+  - Desktop: per-locale text width so lines break before numbers (de, es, fr, it, pt, ru, sr)
+  - es: increase line height so the second line doesn't touch the badge
+  - Fix de, fr, pt, ru text width on screens ≤ 1024px
+  - Align with design: dark theme badge, 24px arrow with theme colors, mobile badge size
+  - Remove unused decor images and styles
+
 ## 1.36.1
 
 - footer
