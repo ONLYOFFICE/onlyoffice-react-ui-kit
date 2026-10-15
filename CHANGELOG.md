@@ -1,5 +1,7 @@
 # Changelog
 
+- footer → Get help: add Legal notice link (/legalterms)
+
 ## 1.36.0
 
 - advent-announce: Meet ONLYOFFICE Docs 10.0
