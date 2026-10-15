@@ -1,5 +1,7 @@
 # Changelog
 
+- footer → Get help: add Legal notice link (/legalterms)
+
 - advent-announce
   - ar: right-to-left text order, mirrored arrow
   - Desktop: per-locale text width so lines break before numbers (de, es, fr, it, pt, ru, sr)
