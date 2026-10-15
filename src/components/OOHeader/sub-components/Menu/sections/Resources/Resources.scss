@@ -21,7 +21,7 @@
       min-width: 264px;
       max-width: 272px;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1023px) {
         width: 100%;
         min-width: 100%;
         max-width: 100%;
@@ -29,16 +29,13 @@
     }
   }
 
-  .oo-header-menu-img--blog-1 {
-    background-image: url("../../../../images/menu-blog-1.jpg");
+  .oo-header-menu-bottom .oo-menu-link {
+    font-size: 13px;
+    line-height: 1.5em;
+    padding-left: 0;
   }
 
-  .oo-header-menu-img--blog-2 {
-    background-image: url("../../../../images/menu-blog-2-docspace-3-7.png");
-
-    &.zh,
-    &.zh-hans {
-      background-image: url("../../../../images/menu-blog-2-docspace-3-7-zh.png");
-    }
+  .oo-header-menu-img--blog-1 {
+    background-image: url("../../../../images/menu-blog-1.png");
   }
 }

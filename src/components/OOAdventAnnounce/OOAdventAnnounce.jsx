@@ -20,7 +20,7 @@ import clsx from "clsx";
 import locales from "./locales/index.jsx";
 import "./OOAdventAnnounce.scss";
 
-const OOAdventAnnounce = ({ locale }) => {
+const OOAdventAnnounce = ({ locale, theme }) => {
   const t = (key) =>
     locales[locale === "zh-hans" ? "zh" : locale === "pt-br" ? "pt" : locale][
       key
@@ -31,7 +31,7 @@ const OOAdventAnnounce = ({ locale }) => {
   return (
     <div className={clsx("oo-advent-announce", locale)}>
       <a
-        className={clsx("oo-advent-announce-wrapper", locale)}
+        className={clsx("oo-advent-announce-wrapper", locale, theme === "dark" && "oo-advent-announce-wrapper--theme-dark")}
         href={t("AdventAnnounceLink")}
       >
         <div className={clsx("oo-advent-announce-text", locale)}>

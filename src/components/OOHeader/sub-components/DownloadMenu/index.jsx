@@ -26,20 +26,18 @@ const DownloadMenu = ({
   t,
   locale,
   getBaseUrl,
-  theme,
   hasSearch,
   hasPhone,
   highlight,
   registerCloseMenu,
   handleCloseAllMenus,
+  idSuffix = "",
 }) => {
   return (
     <MenuItem
-      id="oo-menu-item-btn-download"
+      id={`oo-menu-item-btn-download${idSuffix}`}
       className={clsx(
         "oo-menu-item--download",
-        theme === "white-tertiary" &&
-          "oo-menu-item--download-theme-white-tertiary",
         locale,
         !hasSearch && !hasPhone
           ? "oo-menu-item--position-1"
@@ -54,43 +52,32 @@ const DownloadMenu = ({
       handleCloseAllMenus={handleCloseAllMenus}
     >
       <div className="oo-header-menu-item">
-        <MenuLabel className="oo-header-menu-mb-16">{t("Download")}</MenuLabel>
         <MenuLink
-          id="oo-menu-link-enterprise-prices"
-          className="oo-header-menu-mb-8"
+          id={`oo-menu-link-download-server${idSuffix}`}
+          className="oo-header-menu-mb-12"
           href={getBaseUrl("/download")}
-          icon="enterprise-servers"
+          icon="download-server"
           active={highlight?.linkId}
         >
-          {t("EnterpriseServers")}
+          {t("ForServer")}
         </MenuLink>
-        <MenuText className="oo-header-menu-mb-16">
-          {t("DocsAndDocSpaceForBusinessesInternalUse")}
-        </MenuText>
-
         <MenuLink
-          id="oo-menu-link-developer-servers"
-          className="oo-header-menu-mb-8"
-          href={getBaseUrl("/download-developer")}
-          icon="developer-servers"
-          active={highlight?.linkId}
-        >
-          {t("DeveloperServers")}
-        </MenuLink>
-        <MenuText className="oo-header-menu-mb-16">
-          {t("DocsAndDocSpaceForSaleToCustomersUnderYourBrand")}
-        </MenuText>
-
-        <MenuLink
-          id="oo-menu-link-desktop-mobile-apps"
-          className="oo-header-menu-mb-8"
+          id={`oo-menu-link-download-desktop-apps${idSuffix}`}
+          className="oo-header-menu-mb-12"
           href={getBaseUrl("/download-desktop")}
-          icon="desktop-mobile-apps"
+          icon="desktop-apps"
           active={highlight?.linkId}
         >
-          {t("DesktopAndMobilesApps")}
+          {t("ForPC")}
         </MenuLink>
-        <MenuText>{t("LinuxWindowsMacOSAndroidIOS")}</MenuText>
+        <MenuLink
+          id={`oo-menu-link-download-mobile-apps${idSuffix}`}
+          href={getBaseUrl("/download-desktop#mobile")}
+          icon="mobile-apps"
+          active={highlight?.linkId}
+        >
+          {t("ForMobile")}
+        </MenuLink>
       </div>
     </MenuItem>
   );

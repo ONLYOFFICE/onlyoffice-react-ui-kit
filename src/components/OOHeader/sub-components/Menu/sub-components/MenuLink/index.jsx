@@ -29,6 +29,7 @@ const MenuLink = ({
   target,
   active,
   locale,
+  tooltip,
 }) => {
   const classNames = clsx(
     "oo-menu-link",
@@ -47,10 +48,12 @@ const MenuLink = ({
       locale={locale}
     >
       {children}
+      {tooltip && <span className="oo-menu-link-tooltip">{tooltip}</span>}
     </Link>
   ) : (
     <div id={id} className={classNames}>
       {children}
+      {tooltip && <span className="oo-menu-link-tooltip">{tooltip}</span>}
     </div>
   );
 };

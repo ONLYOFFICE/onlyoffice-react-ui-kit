@@ -20,10 +20,11 @@ import "./LanguageSelector.scss";
 import { Link } from "../../../../sub-components/Link/index.jsx";
 import { ChevronDownIcon } from "../../../../icons/index.js";
 
-const LanguageSelector = ({ locale, languages }) => {
+const LanguageSelector = ({ locale, languages, theme }) => {
   const buttonRef = useRef(null);
   const listRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+  const isDark = theme === "dark";
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -86,6 +87,7 @@ const LanguageSelector = ({ locale, languages }) => {
           "oo-footer-language-selector-btn",
           locale,
           isOpen && "oo-footer-language-selector-btn--active",
+          isDark && "oo-footer-language-selector-btn--theme-dark",
         )}
       >
         <span>{languages.find((lang) => lang.shortKey === locale)?.name}</span>

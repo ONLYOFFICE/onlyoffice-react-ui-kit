@@ -22,19 +22,20 @@
         right: -56px;
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1023px) {
         right: 0;
       }
     }
   }
 
   .oo-menu-item-wrapper {
+    left: calc(50% - 220px);
     @media screen and (max-width: 1300px) {
       left: -56px;
       transform: initial;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       left: 0;
     }
   }
@@ -44,7 +45,7 @@
     max-width: 312px;
     min-width: 264px;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       width: 100%;
       min-width: 100%;
       max-width: 100%;
@@ -55,7 +56,7 @@
     position: relative;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     position: initial;
   }
 }

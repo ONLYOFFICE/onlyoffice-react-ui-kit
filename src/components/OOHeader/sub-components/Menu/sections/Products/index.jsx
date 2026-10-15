@@ -37,7 +37,7 @@ const Products = ({
 
   useEffect(() => {
     const resizeWindow = () => {
-      if (window.innerWidth <= 1024) {
+      if (window.innerWidth <= 1023) {
         setActiveTab(null);
       }
     };
@@ -78,9 +78,9 @@ const Products = ({
         )}
       >
         {activeTab === 0
-          ? t("OODocSpace")
+          ? t("OODocs")
           : activeTab === 1
-            ? t("OODocs")
+            ? t("Apps")
             : activeTab === 2
               ? t("OtherProducts")
               : ""}
@@ -100,11 +100,11 @@ const Products = ({
             className={clsx(
               "oo-header-menu-item-box-button",
               locale,
-              highlight?.linkId?.match(/^oo-menu-link-docspace($|[-])/) &&
+              highlight?.linkId?.match(/^oo-menu-link-docs($|[-])/) &&
                 "oo-header-menu-item-box-button--mobile-active",
             )}
           >
-            {t("OODocSpace")}
+            {t("OODocs")}
           </button>
           <button
             onClick={() => {
@@ -113,11 +113,11 @@ const Products = ({
             className={clsx(
               "oo-header-menu-item-box-button",
               locale,
-              highlight?.linkId?.match(/^oo-menu-link-docs($|[-])/) &&
+              highlight?.linkId?.match(/^oo-menu-link-apps($|[-])/) &&
                 "oo-header-menu-item-box-button--mobile-active",
             )}
           >
-            {t("OODocs")}
+            {t("Apps")}
           </button>
           <button
             onClick={() => {
@@ -142,238 +142,79 @@ const Products = ({
             )}
           >
             <MenuLabel className="oo-header-menu-mb-16 oo-menu-item-box-label">
-              {t("OODocSpace")}
-            </MenuLabel>
-            <MenuLink
-              id="oo-menu-link-docspace-what-is"
-              className="oo-header-menu-mb-8"
-              href={getBaseUrl("/docspace")}
-              icon="docspace"
-              active={highlight?.linkId}
-            >
-              {t("WhatIsOODocSpace")}
-            </MenuLink>
-            <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
-              {t("DocumentEditorsIntegratedIntoSecureRoomBasedDMS")}
-            </MenuText>
-            <MenuLink
-              id="oo-menu-link-docspace-document-editors"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-24"
-              href={getBaseUrl(
-                locale === "en"
-                  ? "/docs?docspace=registration"
-                  : "/office-suite?docspace=registration",
-              )}
-              icon="docs"
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("DocumentEditors")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-docspace-collaboration-rooms"
-              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/collaboration-rooms")}
-              icon="collaboration-rooms"
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("CollaborationRooms")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-docspace-meeting-rooms"
-              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/office-for-zoom")}
-              icon="meeting-rooms"
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("MeetingRooms")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-docspace-public-rooms"
-              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/public-rooms")}
-              icon="public-rooms"
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("PublicRooms")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-docspace-custom-rooms"
-              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/custom-rooms")}
-              icon="custom-rooms"
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("CustomRooms")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-docspace-form-filling-rooms"
-              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/form-filling-rooms")}
-              icon="form-filling-rooms"
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("FormFillingRooms")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-docspace-virtual-data-rooms"
-              className="oo-header-menu-mb-16"
-              href={getBaseUrl("/virtual-data-rooms")}
-              icon="virtual-data-rooms"
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("VirtualDataRooms")}
-            </MenuLink>
-
-            <MenuLink
-              id="oo-menu-link-docspace-all-connectors"
-              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href={getBaseUrl("/all-connectors")}
-              icon="connectors"
-              active={highlight?.linkId}
-            >
-              {t("DocSpaceConnectors")}
-            </MenuLink>
-
-            <div className="oo-menu-item-icons">
-              <MenuLink
-                id="oo-menu-link-docspace-zapier"
-                href={getBaseUrl("/office-for-zapier")}
-                icon="zapier"
-                variant="icon"
-              />
-              <MenuLink
-                id="oo-menu-link-docspace-zoom"
-                href={getBaseUrl("/office-for-zoom")}
-                icon="zoom"
-                variant="icon"
-              />
-              <MenuLink
-                id="oo-menu-link-docspace-wordpress"
-                href={getBaseUrl("/office-for-wordpress")}
-                icon="wordpress"
-                variant="icon"
-              />
-              <MenuLink
-                id="oo-menu-link-docspace-drupal"
-                href={getBaseUrl("/office-for-drupal")}
-                icon="drupal"
-                variant="icon"
-              />
-              <MenuLink
-                id="oo-menu-link-docspace-pipedrive"
-                href={getBaseUrl("/office-for-pipedrive")}
-                icon="pipedrive"
-                variant="icon"
-              />
-              <MenuLink
-                id="oo-menu-link-docspace-moodle"
-                href={getBaseUrl("/office-for-moodle")}
-                icon="moodle"
-                variant="icon"
-              />
-              <MenuLink
-                id="oo-menu-link-docspace-see-more"
-                href={getBaseUrl("/all-connectors")}
-                icon="see-more"
-                variant="icon"
-              />
-            </div>
-          </div>
-          <div
-            className={clsx(
-              "oo-header-menu-item-box-item oo-header-menu-item",
-              activeTab === 1 && "active",
-            )}
-          >
-            <MenuLabel className="oo-header-menu-mb-16 oo-menu-item-box-label">
               {t("OODocs")}
             </MenuLabel>
             <MenuLink
               id="oo-menu-link-docs-what-is"
               className="oo-header-menu-mb-8"
-              href={getBaseUrl(locale === "en" ? "/docs" : "/office-suite")}
+              href={getBaseUrl("/docs")}
               icon="docs"
               active={highlight?.linkId}
             >
-              {t("WhatIsOODocs")}
+              {t("Overview")}
             </MenuLink>
             <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
-              {t("DocumentEditorsToIntegrateIntoYourBusinessPlatform")}
+              {t("DocsDesc")}
             </MenuText>
             <MenuLink
               id="oo-menu-link-docs-document-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl(
-                locale === "en"
-                  ? "/word-processor?docs=download"
-                  : "/document-editor?docs=download",
-              )}
+              href={getBaseUrl("/word-processor")}
               icon="document-editor"
               variant="small"
               active={highlight?.linkId}
             >
-              {t("DocumentEditor")}
+              {t("WordProcessing")}
             </MenuLink>
             <MenuLink
               id="oo-menu-link-docs-spreadsheet-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl(
-                locale === "en"
-                  ? "/sheets?docs=download"
-                  : "/spreadsheet-editor?docs=download",
-              )}
+              href={getBaseUrl("/sheets")}
               icon="spreadsheet-editor"
               variant="small"
               active={highlight?.linkId}
             >
-              {t("SpreadsheetEditor")}
+              {t("SpreadsheetEditing")}
             </MenuLink>
             <MenuLink
               id="oo-menu-link-docs-presentation-editor"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/presentation-editor?docs=download")}
+              href={getBaseUrl("/slides")}
               icon="presentation-editor"
               variant="small"
               active={highlight?.linkId}
             >
-              {t("PresentationEditor")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-docs-pdf-editor"
-              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/pdf-editor?docs=download")}
-              icon="pdf-editor"
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("PDFEditor")}
+              {t("PresentationCreation")}
             </MenuLink>
             <MenuLink
               id="oo-menu-link-docs-form-creator"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/form-creator?docs=download")}
+              href={getBaseUrl("/form-creator")}
               icon="form-creator"
               variant="small"
               active={highlight?.linkId}
             >
-              {t("FormCreator")}
+              {t("FormBuildingFilling")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-docs-pdf-editor"
+              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
+              href={getBaseUrl("/pdf-editor")}
+              icon="pdf-editor"
+              variant="small"
+              active={highlight?.linkId}
+            >
+              {t("PDFEditing")}
             </MenuLink>
             <MenuLink
               id="oo-menu-link-docs-e-book-creator"
               className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/e-book?docs=download")}
+              href={getBaseUrl("/e-book")}
               icon="e-book-creator"
               variant="small"
               active={highlight?.linkId}
             >
-              {t("EbookCreator")}
+              {t("EbookCreation")}
             </MenuLink>
             <MenuLink
               id="oo-menu-link-docs-diagram-viewer"
@@ -383,146 +224,107 @@ const Products = ({
               variant="small"
               active={highlight?.linkId}
             >
-              {t("DiagramViewer")}
+              {t("DiagramViewing")}
             </MenuLink>
             <MenuLink
               id="oo-menu-link-docs-seamless-collaboration"
-              className="oo-header-menu-mb-16 oo-header-menu-mob-mb-24"
-              href={getBaseUrl("/seamless-collaboration?docs=download")}
+              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
+              href={getBaseUrl("/seamless-collaboration")}
               icon="collaboration-features"
               variant="small"
               active={highlight?.linkId}
             >
-              {t("CollaborationFeatures")}
+              {t("Collaboration")}
             </MenuLink>
-
             <MenuLink
-              id="oo-menu-link-docs-all-connectors"
-              className="oo-header-menu-mb-12"
-              href={getBaseUrl("/all-connectors")}
-              icon="connectors"
+              id="oo-menu-link-docs-sing"
+              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
+              href={getBaseUrl("/sign-documents")}
+              icon="sign"
+              variant="small"
               active={highlight?.linkId}
             >
-              {t("DocsConnectors")}
+              {t("Signature")}
             </MenuLink>
-
-            <div className="oo-menu-item-icons">
-              {locale === "zh" || locale === "zh-hans" ? (
-                <>
-                  <MenuLink
-                    id="oo-menu-link-docs-alfresco"
-                    href={getBaseUrl("/office-for-alfresco")}
-                    icon="alfresco"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-confluence"
-                    href={getBaseUrl("/office-for-confluence")}
-                    icon="confluence"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-moodle"
-                    href={getBaseUrl("/office-for-moodle")}
-                    icon="moodle"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-nextcloud"
-                    href={getBaseUrl("/office-for-nextcloud")}
-                    icon="nextcloud"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-odoo"
-                    href={getBaseUrl("/office-for-odoo")}
-                    icon="odoo"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-seafile"
-                    href={getBaseUrl("/all-connectors#seafile")}
-                    icon="seafile"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-wordpress"
-                    href={getBaseUrl("/office-for-wordpress")}
-                    icon="wordpress"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-telegram"
-                    href={getBaseUrl("/office-for-telegram")}
-                    icon="telegram"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-see"
-                    href={getBaseUrl("/all-connectors")}
-                    icon="see-more"
-                    variant="icon"
-                  />
-                </>
-              ) : (
-                <>
-                  <MenuLink
-                    id="oo-menu-link-docs-box"
-                    href={getBaseUrl("/office-for-box")}
-                    icon="box"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-confluence"
-                    href={getBaseUrl("/office-for-confluence")}
-                    icon="confluence"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-dropbox"
-                    href={getBaseUrl("/office-for-dropbox")}
-                    icon="dropbox"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-moodle"
-                    href={getBaseUrl("/office-for-moodle")}
-                    icon="moodle"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-nextcloud"
-                    href={getBaseUrl("/office-for-nextcloud")}
-                    icon="nextcloud"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-odoo"
-                    href={getBaseUrl("/office-for-odoo")}
-                    icon="odoo"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-owncloud"
-                    href={getBaseUrl("/office-for-owncloud")}
-                    icon="owncloud"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-telegram"
-                    href={getBaseUrl("/office-for-telegram")}
-                    icon="telegram"
-                    variant="icon"
-                  />
-                  <MenuLink
-                    id="oo-menu-link-docs-see-more"
-                    href={getBaseUrl("/all-connectors")}
-                    icon="see-more"
-                    variant="icon"
-                  />
-                </>
-              )}
-            </div>
+            <MenuLink
+              id="oo-menu-link-docs-security"
+              className="oo-header-menu-mb-4 oo-header-menu-mob-mb-12"
+              href={getBaseUrl("/security")}
+              icon="security"
+              variant="small"
+              active={highlight?.linkId}
+            >
+              {t("SecurityCompliance")}
+            </MenuLink>
+          </div>
+          <div
+            className={clsx(
+              "oo-header-menu-item-box-item oo-header-menu-item",
+              activeTab === 1 && "active",
+            )}
+          >
+            <MenuLabel className="oo-header-menu-mb-16 oo-menu-item-box-label">
+              {t("Apps")}
+            </MenuLabel>
+            <MenuLink
+              id="oo-menu-link-apps-ai-agents"
+              className="oo-header-menu-mb-8"
+              href={getBaseUrl("/ai-assistants")}
+              icon="ai-agents"
+              active={highlight?.linkId}
+            >
+              {t("AIAgents")}
+            </MenuLink>
+            <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">{t("AIAgentsDesc")}</MenuText>
+            <MenuLink
+              id="oo-menu-link-apps-rooms"
+              className="oo-header-menu-mb-8"
+              href={getBaseUrl("/rooms")}
+              icon="rooms"
+              active={highlight?.linkId}
+            >
+              {t("Rooms")}
+            </MenuLink>
+            <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
+              {t("RoomsDesc")}
+            </MenuText>
+            <MenuLink
+              id="oo-menu-link-apps-files"
+              className="oo-header-menu-mb-8"
+              href={getBaseUrl("/files")}
+              icon="files"
+              active={highlight?.linkId}
+            >
+              {t("Files")}
+            </MenuLink>
+            <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
+              {t("FilesDesc")}
+            </MenuText>
+            <MenuLink
+              id="oo-menu-link-apps-forms"
+              className="oo-header-menu-mb-8"
+              href={getBaseUrl("/forms")}
+              icon="forms"
+              active={highlight?.linkId}
+            >
+              {t("Forms")}
+            </MenuLink>
+            <MenuText>
+              {t("FormsDesc")}
+            </MenuText>
+            {/* Saved for next version
+            <MenuLink
+              id="oo-menu-link-apps-vault"
+              className="oo-header-menu-mb-8"
+              href={getBaseUrl("#")}
+              icon="vault"
+              active={highlight?.linkId}
+            >
+              {t("Vault")}
+            </MenuLink> 
+            <MenuText className="oo-header-menu-mb-12 oo-header-menu-mob-mb-16">
+              {t("VaultDesc")}
+            </MenuText>*/}
           </div>
           <div
             className={clsx(
@@ -533,71 +335,128 @@ const Products = ({
             <MenuLabel className="oo-header-menu-mb-16 oo-menu-item-box-label">
               {t("OtherProducts")}
             </MenuLabel>
-            <div className="oo-header-menu-color-highlight">
-              <MenuLink
-                id="oo-menu-link-ai-assistant"
-                className="oo-header-menu-mb-8"
-                href={getBaseUrl("/ai-assistants")}
-                icon="ai-assistant"
-                active={highlight?.linkId}
-              >
-                {t("AIInONLYOFFICE")}
-              </MenuLink>
-              <MenuText>
-                {t("WorkSmarterOnYourDocsWithAIAssistantsAndAgents")}
-              </MenuText>
-            </div>
-            <MenuLink
-              id="oo-menu-link-other-editors-mcp-server"
-              className="oo-header-menu-mb-8"
-              href={getBaseUrl("/mcp-server")}
-              icon="mcp-server"
-              active={highlight?.linkId}
-            >
-              {t("OOMcpServer")}
-            </MenuLink>
-            <MenuText className="oo-header-menu-mb-16">
-              {t("ConnectAiAgentsAndTools")}
-            </MenuText>
             <MenuLink
               id="oo-menu-link-other-editors-desktop-editors"
-              className="oo-header-menu-mb-8"
+              className="oo-header-menu-mb-4"
               href={getBaseUrl("/desktop")}
               icon="desktop"
               active={highlight?.linkId}
             >
               {t("OODesktopEditors")}
             </MenuLink>
-            <MenuText className="oo-header-menu-mb-16">
+            <MenuText className="oo-header-menu-mb-4">
               {t("FreeDesktopAppsForWindowsLinuxmacOS")}
             </MenuText>
-
+            <div className="oo-header-menu-d-flex oo-header-menu-mb-12">
+              <Link
+                className="oo-header-menu-app-link oo-header-menu-app-link--windows oo-header-menu-mr-8"
+                href={getBaseUrl("/download-desktop#windows")}
+              />
+              <Link
+                className="oo-header-menu-app-link oo-header-menu-app-link--linux oo-header-menu-mr-8"
+                href={getBaseUrl("/download-desktop#linux")}
+              />
+              <Link
+                className="oo-header-menu-app-link oo-header-menu-app-link--macos"
+                href={getBaseUrl("/download-desktop#macos")}
+              />
+            </div>
             <MenuLink
               id="oo-menu-link-other-editors-documents"
-              className="oo-header-menu-mb-8"
+              className="oo-header-menu-mb-4"
               icon="mobile"
               active={highlight?.linkId}
             >
               {t("OODocuments")}
             </MenuLink>
-            <MenuText className="oo-header-menu-mb-8">
+            <MenuText className="oo-header-menu-mb-4">
               {t("FreeMobileAppsForAndroidAndIOS")}
             </MenuText>
-
-            <div className="oo-header-menu-d-flex oo-header-menu-mb-16">
+            <div className="oo-header-menu-d-flex oo-header-menu-mb-12">
               <Link
-                className="oo-header-menu-app-link oo-header-menu-app-link--android oo-header-menu-mr-12"
-                href={getBaseUrl("/office-for-android")}
+                className="oo-header-menu-app-link oo-header-menu-app-link--ios oo-header-menu-mr-8"
+                href={getBaseUrl("/office-for-ios")}
               />
               <Link
-                className="oo-header-menu-app-link oo-header-menu-app-link--ios"
-                href={getBaseUrl("/office-for-ios")}
+                className="oo-header-menu-app-link oo-header-menu-app-link--android"
+                href={getBaseUrl("/office-for-android")}
+              />
+            </div>
+
+            <MenuLink
+              id="oo-menu-link-other-editors-all-connectors"
+              className="oo-header-menu-mb-4"
+              href={getBaseUrl("/all-connectors")}
+              icon="connectors"
+              active={highlight?.linkId}
+            >
+              {t("OOConnectors")}
+            </MenuLink>
+            <MenuText className="oo-header-menu-mb-12">
+              {t("ConnectorsText")}
+            </MenuText>
+
+            <div className="oo-header-menu-d-flex oo-header-menu-mb-12">
+              <MenuLink
+                id="oo-menu-link-other-editors-owncloud"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/office-for-owncloud", locale)}
+                icon="owncloud"
+                variant="icon"
+              />
+              <MenuLink
+                id="oo-menu-link-other-editors-odoo"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/office-for-odoo", locale)}
+                icon="odoo"
+                variant="icon"
+              />
+              <MenuLink
+                id="oo-menu-link-other-editors-alfresco"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/office-for-alfresco", locale)}
+                icon="alfresco"
+                variant="icon"
+              />
+              <MenuLink
+                id="oo-menu-link-other-editors-sharepoint"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/office-for-sharepoint", locale)}
+                icon="sharepoint"
+                variant="icon"
+              />
+              <MenuLink
+                id="oo-menu-link-other-editors-moodle"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/office-for-moodle", locale)}
+                icon="moodle"
+                variant="icon"
+              />
+              <MenuLink
+                id="oo-menu-link-other-editors-dropbox"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/office-for-dropbox", locale)}
+                icon="dropbox"
+                variant="icon"
+              />
+              <MenuLink
+                id="oo-menu-link-other-editors-box"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/office-for-box", locale)}
+                icon="box"
+                variant="icon"
+              />
+              <MenuLink
+                id="oo-menu-link-other-editors-see-more"
+                href={getBaseUrl("/all-connectors", locale)}
+                icon="see-more"
+                variant="icon"
               />
             </div>
 
             <MenuLink
               id="oo-menu-link-other-editors-workspace"
-              className="oo-header-menu-mb-8"
+              className="oo-header-menu-mb-4"
               href={getBaseUrl("/workspace")}
               icon="workspace"
               active={highlight?.linkId}
@@ -631,16 +490,6 @@ const Products = ({
               locale={false}
             >
               {t("Marketplace")}
-            </MenuLink>
-            <MenuLink
-              id="oo-menu-link-security"
-              className="oo-header-menu-mr-16 oo-header-menu-mob-mr-0 oo-header-menu-mob-mb-12"
-              href={getBaseUrl("/security")}
-              icon="security"
-              variant="small"
-              active={highlight?.linkId}
-            >
-              {t("Security")}
             </MenuLink>
             <MenuLink
               id="oo-menu-link-other-editors-online-converters"

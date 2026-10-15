@@ -67,7 +67,7 @@ const OOHeader = ({
     };
 
     const handleResize = () => {
-      if (window.innerWidth < 1024) {
+      if (window.innerWidth < 592) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
@@ -114,7 +114,7 @@ const OOHeader = ({
   };
 
   const handleCloseAllMenus = () => {
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1023) {
       closeMenusRef.current.forEach((closeMenu) => closeMenu());
       closeMenusRef.current = [];
     }
@@ -126,8 +126,9 @@ const OOHeader = ({
       className={clsx(
         "oo-header",
         locale,
+        theme === "dark" && "oo-header--theme-dark",
         openMobileMenu && "oo-header--active",
-        search && isHasPhone && "oo-header--space-between",
+        search?.show && isHasPhone && "oo-header--space-between",
       )}
       style={{ borderColor: borderColor, backgroundColor: backgroundColor }}
     >
@@ -144,10 +145,8 @@ const OOHeader = ({
           className={clsx(
             "oo-header-hamburger",
             locale,
-            (theme === "white" ||
-              theme === "white-secondary" ||
-              theme === "white-tertiary") &&
-              "oo-header-hamburger--theme-white",
+            theme === "dark" && "oo-header-hamburger--theme-dark",
+            showSearch && "oo-header-hamburger--search-open",
           )}
         >
           <svg
@@ -167,12 +166,9 @@ const OOHeader = ({
           className={clsx(
             "oo-header-logo",
             locale,
-            theme === "white"
-              ? "oo-header-logo--theme-white"
-              : theme === "white-secondary" || theme === "white-tertiary"
-                ? "oo-header-logo--theme-white-secondary"
-                : undefined,
+            theme === "dark" ? "oo-header-logo--theme-dark" : undefined,
             !search?.show && "oo-header-logo--mobile-center",
+            showSearch && "oo-header-logo--search-open",
           )}
           href={
             base?.url
@@ -192,13 +188,14 @@ const OOHeader = ({
           aria-label={t("GoToHomepage")}
         ></Link>
 
-        {!showSearch && (
+        {(!showSearch || search?.variant === "main") && (
           <div
             className={clsx(
               "oo-header-nav",
               locale,
               openMobileMenu && "oo-header-nav--active",
               isMobile && "oo-header-nav--is-mobile",
+              showSearch && "oo-header-nav--search-open",
             )}
           >
             <Menu
@@ -212,31 +209,28 @@ const OOHeader = ({
             />
 
             <div className={clsx("oo-header-btns", locale)}>
-              <DownloadMenu
-                t={t}
-                locale={locale}
-                getBaseUrl={getBaseUrl}
-                theme={theme}
-                hasSearch={search?.show}
-                hasPhone={isHasPhone}
-                highlight={highlight}
-                registerCloseMenu={registerCloseMenu}
-                handleCloseAllMenus={handleCloseAllMenus}
-              />
               <Link
                 onMouseEnter={handleCloseAllMenus}
                 className={clsx(
                   "oo-header-btn",
                   locale,
-                  (theme === "white" ||
-                    theme === "white-secondary" ||
-                    theme === "white-tertiary") &&
-                    "oo-header-btn--theme-white",
+                  theme === "dark" && "oo-header-btn--theme-dark",
                 )}
-                href={getBaseUrl("/docspace-registration")}
+                href={getBaseUrl("/signup")}
               >
                 {t("Login")} <span>/</span> {t("SignUp")}
               </Link>
+              <DownloadMenu
+                t={t}
+                locale={locale}
+                getBaseUrl={getBaseUrl}
+                hasSearch={search?.show}
+                hasPhone={isHasPhone}
+                highlight={highlight}
+                registerCloseMenu={registerCloseMenu}
+                handleCloseAllMenus={handleCloseAllMenus}
+                idSuffix="-mobile"
+              />
             </div>
 
             <a
@@ -247,6 +241,32 @@ const OOHeader = ({
                 {!isUSA ? "+371 633 998 67" : "+1 (972) 301-8440"}
               </span>
             </a>
+          </div>
+        )}
+
+        {!showSearch && (
+          <div className={clsx("oo-header-actions", locale)}>
+            <Link
+              onMouseEnter={handleCloseAllMenus}
+              className={clsx(
+                "oo-header-btn",
+                locale,
+                theme === "dark" && "oo-header-btn--theme-dark",
+              )}
+              href={getBaseUrl("/signup")}
+            >
+              {t("Login")} <span>/</span> {t("SignUp")}
+            </Link>
+            <DownloadMenu
+              t={t}
+              locale={locale}
+              getBaseUrl={getBaseUrl}
+              hasSearch={search?.show}
+              hasPhone={isHasPhone}
+              highlight={highlight}
+              registerCloseMenu={registerCloseMenu}
+              handleCloseAllMenus={handleCloseAllMenus}
+            />
           </div>
         )}
 

@@ -84,7 +84,7 @@ const PhoneSelector = ({
       <button
         ref={buttonRef}
         onMouseEnter={() => {
-          if (window.innerWidth > 1024) {
+          if (window.innerWidth > 1023) {
             handleCloseAllMenus();
             setIsOpen(true);
           }
@@ -96,10 +96,8 @@ const PhoneSelector = ({
         className={clsx(
           "oo-phone-selector-btn",
           isOpen && "oo-phone-selector-btn--open",
-          (theme === "white" ||
-            theme === "white-secondary" ||
-            theme === "white-tertiary") &&
-            "oo-phone-selector-btn--theme-white",
+          theme === "white" && "oo-phone-selector-btn--theme-white",
+          theme === "dark" && "oo-phone-selector-btn--theme-dark",
         )}
         aria-label={t("OpenPhoneMenu")}
         aria-haspopup="true"

@@ -45,6 +45,26 @@ export default {
       ],
       control: { type: "select" },
     },
+    theme: {
+      options: ["white", "dark"],
+      control: { type: "select" },
+    },
+    showSearch: {
+      name: "search.show",
+      control: { type: "boolean" },
+    },
+    searchVariant: {
+      name: "search.variant",
+      options: ["main", "blog"],
+      control: { type: "select" },
+      if: { arg: "showSearch" },
+    },
+    search: {
+      table: { disable: true },
+    },
+    phone: {
+      control: { type: "object" },
+    },
   },
 };
 
@@ -64,10 +84,35 @@ const Template = (args) => {
     { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
   ];
 
-  return <OOHeader languages={languages} {...args} />;
+  const [searchValue, setSearchValue] = useState("");
+
+  const { showSearch, searchVariant, ...headerArgs } = args;
+
+  const search = showSearch
+    ? {
+        show: true,
+        variant: searchVariant,
+        value: searchValue,
+        onChange: (e) => setSearchValue(e.target.value),
+        onSubmit: (e) => e.preventDefault(),
+      }
+    : undefined;
+
+  return (
+    <OOHeader
+      languages={languages}
+      {...headerArgs}
+      search={search}
+      phone={args.phone}
+    />
+  );
 };
 
 export const Default = Template.bind({});
 Default.args = {
   locale: "en",
+  theme: "white",
+  showSearch: true,
+  searchVariant: "main",
+  phone: { show: true, country: "row" },
 };

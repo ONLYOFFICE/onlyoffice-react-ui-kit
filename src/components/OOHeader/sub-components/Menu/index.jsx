@@ -68,7 +68,6 @@ const Menu = ({
         getBaseUrl={getBaseUrl}
         theme={theme}
         highlight={highlight}
-        registerCloseMenu={registerCloseMenu}
         handleCloseAllMenus={handleCloseAllMenus}
       />
       <Partners

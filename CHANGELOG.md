@@ -1,5 +1,33 @@
 # Changelog
 
+## 1.36.0
+
+- advent-announce: Meet ONLYOFFICE Docs 10.0
+- header → Menu
+  - Update menu styles and icons
+  - Products
+    - New submenu structure (DocSpace / Docs tabs, rooms, connectors, security link)
+    - ONLYOFFICE Docs: Unify editor links across all locales (previously only /en had new paths)
+      - /document-editor => /word-processor
+      - /spreadsheet-editor => /sheets
+      - /presentation-editor => /slides
+  - Remove the old Enterprise section
+  - Rework Developers and Resources sections
+  - Resources → Blog: ONLYOFFICE Docs 9.4 released => Meet ONLYOFFICE Docs 10.0
+- header: Login/SignUp button: /docspace-registration => /signup
+- header → Search
+  - New input style: search icon instead of label
+  - Keep the navigation visible while search is open (≥ 1440px)
+- footer
+  - Redesign social links block and language selector, update footer item styles and icons
+  - New column layout: Features, Templates / Collaborate / Convert, Comparison, Get help / Security, Get news / Contact us
+  - Add Features section (word processor, sheets, slides, forms, PDF, eBook, diagrams, collaboration, signature, security)
+  - Comparison: add Foxit PDF Editor, Zoho Office, Quip; Hancom => Hancom Office
+  - Remove For education, For non-profits, template subitems, For translators / For influencers, Legal notice
+  - Converters => Convert, Community => Forum, ONLYOFFICE Academy => Training courses, Convert text files => Convert text documents (all locales)
+- Header, Footer, AdventAnnounce: font-family uses the site variable `--new-design-font-family` (fallback "Sora"; "Inter" for the ru announce)
+- Search block fixes
+
 ## 1.35.1
 
 - header -> Menu -> Products: fix Accessibility/Sustainability links locale duplication (404 for all languages except EN) 

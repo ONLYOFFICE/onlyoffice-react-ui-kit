@@ -45,6 +45,10 @@ export default {
       ],
       control: { type: "select" },
     },
+    theme: {
+      options: ["white", "dark"],
+      control: { type: "select" },
+    },
   },
 };
 
@@ -70,4 +74,5 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   locale: "en",
+  theme: "white",
 };
