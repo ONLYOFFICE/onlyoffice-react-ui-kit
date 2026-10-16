@@ -92,43 +92,69 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
-  max-width: 921px;
+  max-width: 925px;
   height: 100%;
   color: #585a6d;
   text-decoration: none;
   z-index: 10;
 
-  &::after,
-  &::before {
+  &::after {
     content: "";
-    position: absolute;
-    top: 0;
-    height: 56px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #7a7d94;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M10 7l5 5-5 5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 24px 24px;
     pointer-events: none;
+
+    .oo-advent-announce-wrapper--theme-dark & {
+      background-color: #bcbeca;
+    }
 
     @media screen and (max-width: 1024px) {
       display: none;
     }
   }
 
-  &::after {
-    position: static;
-    flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-    margin-left: 4px;
-    background-color: currentColor;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6 4l4 4-4 4' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 16px 16px;
+  &.ar {
+    direction: rtl;
+
+    &::after {
+      transform: scaleX(-1);
+    }
   }
 
-  &.fr, &.pt, &.pt-br, &.ru, &.de {
-    max-width: 981px;
+  @media screen and (min-width: 1025px) {
+    &.de {
+      max-width: 991px;
+    }
+
+    &.es {
+      max-width: 876px;
+    }
+
+    &.fr {
+      max-width: 1014px;
+    }
+
+    &.it {
+      max-width: 792px;
+    }
+
+    &.pt, &.pt-br {
+      max-width: 980px;
+    }
+
+    &.ru {
+      max-width: 970px;
+    }
+
+    &.sr {
+      max-width: 856px;
+    }
   }
 
   &.ru {
@@ -141,21 +167,28 @@
   }
 }
 
-.oo-advent-announce-text-desktop {
-  span {
-    font-weight: 600;
-    background-color: #e7dcfd;
-    border-radius: 16px;
-    box-shadow: 0px 0px 4px 0px #7474ff33 inset;
-    color: #21222b;
-    padding: 5px 8px;
-    margin-right: 4px;
+@mixin advent-announce-badge($border-radius: 16px) {
+  font-weight: 600;
+  background-color: #e7dcfd;
+  border-radius: $border-radius;
+  box-shadow: 0px 0px 4px 0px #7474ff33 inset;
+  color: #21222b;
+  padding: 5px 8px;
 
-    .oo-advent-announce-wrapper--theme-dark & {
-      background-color: #2e2f7a;
-      box-shadow: 0px 0px 0px 1px #5c5fb8 inset;
-      color: #e7e8ee;
-    }
+  .oo-advent-announce-wrapper--theme-dark & {
+    background-color: rgba(117, 114, 222, 0.4);
+    color: #e7e8ee;
+  }
+}
+
+.oo-advent-announce-text-desktop {
+  .oo-advent-announce-text.es & {
+    line-height: 22px;
+  }
+
+  span {
+    margin-inline-end: 4px;
+    @include advent-announce-badge;
   }
 
   @media screen and (max-width: 1024px) {
@@ -165,18 +198,9 @@
 
 .oo-advent-announce-text-mobile {
   display: none;
-  font-weight: 600;
-  background-color: #e7dcfd;
-  border-radius: 16px;
-  box-shadow: 0px 0px 4px 0px #7474ff33 inset;
-  color: #21222b;
-  padding: 5px 8px;
-
-  .oo-advent-announce-wrapper--theme-dark & {
-    background-color: #2e2f7a;
-    box-shadow: 0px 0px 0px 1px #5c5fb8 inset;
-    color: #e7e8ee;
-  }
+  font-size: 13px;
+  line-height: 18px;
+  @include advent-announce-badge(12px);
 
   @media screen and (max-width: 1024px) {
     display: block;

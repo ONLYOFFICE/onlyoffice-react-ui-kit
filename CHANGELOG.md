@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.36.2
+
+- footer
+  - Get help: add Legal notice link (/legalterms)
+  - ru: fix Academy link label (ONLYOFFICE => Академия)
+- advent-announce
+  - ar: right-to-left text order, mirrored arrow
+  - Desktop: per-locale text width so lines break before numbers (de, es, fr, it, pt, ru, sr)
+  - es: increase line height so the second line doesn't touch the badge
+  - Align with design: dark theme badge, 24px arrow with theme colors, mobile badge size
+  - Remove unused decor images and styles
+
 ## 1.36.1
 
 - footer
