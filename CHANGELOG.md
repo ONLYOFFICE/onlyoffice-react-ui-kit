@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.36.1
+
+- footer
+  - Remove Security column (with HIPAA / GDPR icons)
+  - ONLYOFFICE Academy => Academy (all locales)
+  - Default gray buttons (Free Apps, Request call, social links): #f9f9f9 => #f3f4f7
+
 ## 1.36.0
 
 - advent-announce: Meet ONLYOFFICE Docs 10.0

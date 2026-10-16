@@ -23,7 +23,6 @@ import { Link } from "../../sub-components/Link/index.jsx";
 import { FooterItem } from "./sub-components/FooterItem/index.jsx";
 import { SocialLinks } from "./sub-components/SocialLinks/index.jsx";
 import { LanguageSelector } from "./sub-components/LanguageSelector/index.jsx";
-import { HippaIcon, GdprIcon } from "../../icons/index.js";
 import { getLink } from "../../utils/getLink.jsx";
 
 const OOFooter = ({
@@ -316,37 +315,6 @@ const OOFooter = ({
               <Link className="oo-footer-link" href={getBaseUrl("/demo-order")}>
                 {t("OrderDemo")}
               </Link>
-            </FooterItem>
-            <FooterItem
-              theme={theme}
-              locale={locale}
-              heading={t("Security")}
-              href={getBaseUrl("/security")}
-            >
-              <Link className="oo-footer-link" href={getBaseUrl("/security")}>
-                {t("FeaturesAndTools")}
-              </Link>
-              <div
-                className={clsx(
-                  "oo-footer-item-icons",
-                  isDark && "oo-footer-item-icons--theme-dark",
-                )}
-              >
-                <Link
-                  href={t("HIPAAComplianceLink")}
-                  locale={false}
-                  aria-label="HIPAA"
-                >
-                  <HippaIcon />
-                </Link>
-                <Link
-                  href={t("GDPRComplianceLink")}
-                  locale={false}
-                  aria-label="GDPR"
-                >
-                  <GdprIcon />
-                </Link>
-              </div>
             </FooterItem>
           </div>
           <div className="oo-footer-item-group oo-footer-item-group--contacts">
