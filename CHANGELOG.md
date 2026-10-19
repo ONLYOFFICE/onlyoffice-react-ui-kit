@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.36.3
+
+- header → Menu → Pricing: fix mobile arrow image path
+
 ## 1.36.2
 
 - footer
