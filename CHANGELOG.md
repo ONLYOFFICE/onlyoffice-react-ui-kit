@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.37.0
+
+- header, footer, advent-announce: add vi locale
+- header → Menu: dark theme, mobile: keep gray text for open/active items (was white)
+
 ## 1.36.3
 
 - header → Menu → Pricing: fix mobile arrow image path
