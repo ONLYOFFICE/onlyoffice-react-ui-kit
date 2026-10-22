@@ -7,6 +7,7 @@ const links = {
       zh: "/zh-hans",
       pt: "/pt-br",
       nl: "",
+      vi: "",
     },
   },
   marketplace: {
@@ -23,6 +24,7 @@ const links = {
       ar: "",
       sr: "",
       hy: "",
+      vi: "",
       "pt-br": "",
       "zh-hans": "/zh",
     },
@@ -38,6 +40,7 @@ const links = {
       cs: "",
       ru: "",
       nl: "",
+      vi: "",
       "zh-hans": "/zh",
       "pt-br": "/pt",
     },

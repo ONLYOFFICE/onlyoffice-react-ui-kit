@@ -30,7 +30,8 @@ import ru from "./ru/common.json";
 import sr from "./sr/common.json";
 import zh from "./zh/common.json";
 import nl from "./nl/common.json";
+import vi from "./vi/common.json";
 
-const locales = { ar, cs, de, el, en, es, fr, hi, hy, it, ja, pt, ru, sr, zh, nl };
+const locales = { ar, cs, de, el, en, es, fr, hi, hy, it, ja, pt, ru, sr, zh, nl, vi };
 
 export default locales;

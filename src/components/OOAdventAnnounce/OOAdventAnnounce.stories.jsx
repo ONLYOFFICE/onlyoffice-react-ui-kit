@@ -38,6 +38,7 @@ export default {
         "pt",
         "pt-br",
         "ru",
+        "vi",
         "sr",
         "zh",
         "zh-hans",
