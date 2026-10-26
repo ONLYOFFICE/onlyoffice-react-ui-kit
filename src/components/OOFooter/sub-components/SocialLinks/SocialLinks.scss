@@ -120,6 +120,11 @@
       mask-image: url("../../images/weibo-mask.svg");
       mask-position: center;
     }
+
+    &.oo-footer-social-link-icon--bluesky {
+      mask-image: url("../../images/bluesky.svg");
+      mask-position: center;
+    }
   }
   &.oo-footer-social-link--theme-dark:hover .oo-footer-social-link-icon {
     background-color: transparent;
@@ -142,6 +147,11 @@
     }
 
     &.oo-footer-social-link-icon--weibo {
+      mask-image: none;
+    }
+
+    &.oo-footer-social-link-icon--bluesky {
+      background-image: url("../../images/bluesky.svg");
       mask-image: none;
     }
   }
@@ -211,6 +221,11 @@
 
   &.oo-footer-social-link-icon--fosstodon {
     --oo-social-icon-x: -400px;
+  }
+
+  &.oo-footer-social-link-icon--bluesky {
+    background-image: url("../../images/bluesky.svg");
+    background-position: center;
   }
 
   &.oo-footer-social-link-icon--telegram {
