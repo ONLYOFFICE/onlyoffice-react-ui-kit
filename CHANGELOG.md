@@ -3,7 +3,12 @@
 ## 1.37.0
 
 - header, footer, advent-announce: add vi locale
-- header → Menu: dark theme, mobile: keep gray text for open/active items (was white)
+- header
+  - Menu: dark theme, mobile: keep gray text for open/active items (was white)
+  - Language selector: update list styles (rounded hover highlight, colors)
+- footer
+  - Add Bluesky link (all locales except zh)
+  - Language selector: update styles to match the new design
 
 ## 1.36.3
 
