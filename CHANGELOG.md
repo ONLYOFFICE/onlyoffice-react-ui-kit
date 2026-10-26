@@ -1,6 +1,9 @@
 # Changelog
 
-- footer → language selector: update styles to match the new design
+- footer
+  - Add Bluesky link (all locales except zh)
+  - Language selector: update styles to match the new design
+- header → language selector: update list styles (rounded hover highlight, colors)
 
 ## 1.36.3
 
