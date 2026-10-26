@@ -1,5 +1,7 @@
 # Changelog
 
+- footer → language selector: update styles to match the new design
+
 ## 1.36.3
 
 - header → Menu → Pricing: fix mobile arrow image path
