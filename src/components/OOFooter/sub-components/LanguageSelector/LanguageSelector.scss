@@ -25,7 +25,7 @@
   left: 0;
   border: 1px solid transparent;
   border-radius: 9px;
-  padding: 16px 0;
+  padding: 8px 0;
   margin: 0;
   background-color: #ffffff;
   list-style-type: none;
@@ -37,6 +37,7 @@
 
     @media screen and (max-width: 1024px) {
       left: 50%;
+      right: initial;
     }
   }
 
@@ -53,22 +54,22 @@
 
 .oo-footer-language-selector-link {
   display: block;
-  border-radius: 6px;
-  padding: 6px 8px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #444444;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #585a6d;
   text-decoration: none;
   transition: background-color 0.2s;
 
   &.oo-footer-language-selector-link--active {
-    font-weight: 700;
+    font-weight: 600;
     color: #3541f5;
   }
 
   &:hover {
     background-color: #aec5f740;
-    color: #001bd2;
+    color: #3541f5;
   }
 }
 
@@ -101,7 +102,7 @@
   &.oo-footer-language-selector-btn--active {
     position: relative;
     border-color: #3541f5;
-    color: #444444;
+    color: #585a6d;
 
     &::after {
       content: "";
@@ -122,7 +123,7 @@
 
     svg {
       path {
-        fill: #444444;
+        fill: #585a6d;
       }
     }
   }
@@ -153,6 +154,6 @@
 
   &:hover {
     border-color: #3541f5;
-    color: #444444;
+    color: #585a6d;
   }
 }

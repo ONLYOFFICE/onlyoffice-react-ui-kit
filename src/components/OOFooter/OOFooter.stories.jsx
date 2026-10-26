@@ -66,6 +66,7 @@ const Template = (args) => {
     { key: "zh", shortKey: "zh", name: "中文", href: "/" },
     { key: "ru", shortKey: "ru", name: "Русский", href: "/" },
     { key: "sr", shortKey: "sr", name: "Srpski", href: "/" },
+    { key: "ar", shortKey: "ar", name: "العربية", href: "/" },
   ];
 
   return <OOFooter languages={languages} {...args} />;
