@@ -1,5 +1,7 @@
 # Changelog
 
+- header → Menu → Resources, footer: Help Center link → https://helpcenter.onlyoffice.com (drop /index.aspx)
+
 ## 1.37.0
 
 - header, footer, advent-announce: add vi locale
