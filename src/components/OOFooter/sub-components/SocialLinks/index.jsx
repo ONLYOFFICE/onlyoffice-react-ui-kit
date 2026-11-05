@@ -259,6 +259,25 @@ const SocialLinks = ({ t, locale, mailApiUrl, mailApiType, theme }) => {
           ></span>
         </Link>
       </li>
+      {locale !== "zh" && locale !== "zh-hans" && (
+        <li>
+          <Link
+            className={clsx(
+              "oo-footer-social-link",
+              isDark && "oo-footer-social-link--theme-dark",
+            )}
+            href="https://bsky.app/profile/onlyoffice.bsky.social"
+            title={t("FollowUsOnBluesky")}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <span
+              className="oo-footer-social-link-icon oo-footer-social-link-icon--bluesky"
+              title={t("Bluesky")}
+            ></span>
+          </Link>
+        </li>
+      )}
       {(locale === "zh" || locale === "zh-hans") && (
         <div className="oo-footer-icon-item">
           <span
