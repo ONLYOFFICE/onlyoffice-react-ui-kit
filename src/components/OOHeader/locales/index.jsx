@@ -30,6 +30,7 @@ import ru from "./ru/common.json";
 import sr from "./sr/common.json";
 import zh from "./zh/common.json";
 import nl from "./nl/common.json";
+import vi from "./vi/common.json";
 
 const locales = {
   ar,
@@ -48,6 +49,7 @@ const locales = {
   sr,
   zh,
   nl,
+  vi,
 };
 
 export default locales;
