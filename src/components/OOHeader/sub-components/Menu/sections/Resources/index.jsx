@@ -180,7 +180,7 @@ const Resources = ({
             <MenuLink
               id="oo-menu-link-help-center"
               className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
-              href="https://helpcenter.onlyoffice.com/index.aspx"
+              href="https://helpcenter.onlyoffice.com"
               target="_blank"
               icon="help-center"
               active={highlight?.linkId}
