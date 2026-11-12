@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.38.0
+
+- header
+  - Enterprise: dropdown (Why Docs Enterprise, Get it now, Book a demo)
+  - Developers: add Get it now
+  - Download: new items with descriptions (Docs Enterprise, Docs Developer, Desktop apps, Mobile apps)
+
 ## 1.37.1
 
 - header → Menu → Resources, footer: Help Center link → https://helpcenter.onlyoffice.com (drop /index.aspx)
@@ -67,7 +74,7 @@
 
 ## 1.35.1
 
-- header -> Menu -> Products: fix Accessibility/Sustainability links locale duplication (404 for all languages except EN) 
+- header -> Menu -> Products: fix Accessibility/Sustainability links locale duplication (404 for all languages except EN)
 
 ## 1.35.0
 
