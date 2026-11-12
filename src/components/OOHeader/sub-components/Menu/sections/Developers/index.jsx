@@ -100,11 +100,20 @@ const Developers = ({
             </MenuLink>
             <MenuLink
               id="oo-menu-link-launch-demo"
+              className="oo-header-menu-mb-12 oo-header-menu-mob-mb-8"
               href={getBaseUrl("/see-it-in-action?developer=edition")}
               icon="launch-demo"
               active={highlight?.linkId}
             >
               {t("LaunchDemo")}
+            </MenuLink>
+            <MenuLink
+              id="oo-menu-link-developer-get-it-now"
+              href={getBaseUrl("/download#for-developers")}
+              icon="get-in-now"
+              active={highlight?.linkId}
+            >
+              {t("GetItNow")}
             </MenuLink>
           </div>
         </div>

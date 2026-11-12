@@ -173,5 +173,11 @@
   "OpenSource": "Open source",
   "blogLink2": "https://www.onlyoffice.com/blog/fr/2026/06/onlyoffice-docspace-3-7",
   "blogText2": "ONLYOFFICE DocSpace 3.7 disponible : génération de fichiers, nouveaux fournisseurs pour les agents IA, formulaires plus intelligents, éditeurs et licence mis à jour",
-  "blogDate2": "8 juin 2026"
+  "blogDate2": "8 juin 2026",
+  "DownloadDocsEnterpriseDesc": "Pour votre organisation · Essai gratuit",
+  "DownloadDocsDeveloperDesc": "Pour votre produit · Essai gratuit",
+  "DownloadDesktopApps": "Applications de bureau",
+  "DownloadDesktopAppsDesc": "Windows, macOS et Linux · Gratuit",
+  "DownloadMobileApps": "Applications mobiles",
+  "DownloadMobileAppsDesc": "iOS et Android · Gratuit"
 }

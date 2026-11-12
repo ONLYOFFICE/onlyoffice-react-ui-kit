@@ -170,5 +170,11 @@
   "ForMobile": "For mobile",
   "WhiteLabel": "White label",
   "ConnectorsText": "Ready-to-use integrations",
-  "OpenSource": "Open source"
+  "OpenSource": "Open source",
+  "DownloadDocsEnterpriseDesc": "For your organization · Free trial",
+  "DownloadDocsDeveloperDesc": "For your product · Free trial",
+  "DownloadDesktopApps": "Desktop apps",
+  "DownloadDesktopAppsDesc": "Windows, macOS and Linux · Free",
+  "DownloadMobileApps": "Mobile apps",
+  "DownloadMobileAppsDesc": "iOS and Android · Free"
 }

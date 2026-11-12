@@ -170,5 +170,11 @@
   "ForMobile": "Cho di động",
   "WhiteLabel": "White label",
   "ConnectorsText": "Tích hợp sẵn sàng sử dụng",
-  "OpenSource": "Mã nguồn mở"
+  "OpenSource": "Mã nguồn mở",
+  "DownloadDocsEnterpriseDesc": "Dành cho tổ chức của bạn · Dùng thử miễn phí",
+  "DownloadDocsDeveloperDesc": "Dành cho sản phẩm của bạn · Dùng thử miễn phí",
+  "DownloadDesktopApps": "Ứng dụng máy tính",
+  "DownloadDesktopAppsDesc": "Windows, macOS và Linux · Miễn phí",
+  "DownloadMobileApps": "Ứng dụng di động",
+  "DownloadMobileAppsDesc": "iOS và Android · Miễn phí"
 }

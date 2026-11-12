@@ -20,7 +20,6 @@ import "./DownloadMenu.scss";
 import { MenuItem } from "../Menu/sub-components/MenuItem/index.jsx";
 import { MenuLabel } from "../Menu/sub-components/MenuLabel/index.jsx";
 import { MenuLink } from "../Menu/sub-components/MenuLink/index.jsx";
-import { MenuText } from "../Menu/sub-components/MenuText/index.jsx";
 
 const DownloadMenu = ({
   t,
@@ -53,30 +52,52 @@ const DownloadMenu = ({
     >
       <div className="oo-header-menu-item">
         <MenuLink
-          id={`oo-menu-link-download-server${idSuffix}`}
-          className="oo-header-menu-mb-12"
-          href={getBaseUrl("/download")}
-          icon="download-server"
+          id={`oo-menu-link-download-docs-enterprise${idSuffix}`}
+          className="oo-menu-link--download oo-header-menu-mb-12"
+          href={getBaseUrl("/download#for-enterprises")}
+          icon="docs-enterprise"
           active={highlight?.linkId}
         >
-          {t("ForServer")}
+          <span>{t("DocsEnterprise")}</span>
+          <span className="oo-menu-link-desc">
+            {t("DownloadDocsEnterpriseDesc")}
+          </span>
+        </MenuLink>
+        <MenuLink
+          id={`oo-menu-link-download-docs-developer${idSuffix}`}
+          className="oo-menu-link--download oo-header-menu-mb-12"
+          href={getBaseUrl("/download#for-developers")}
+          icon="docs-developer"
+          active={highlight?.linkId}
+        >
+          <span>{t("DocsDeveloper")}</span>
+          <span className="oo-menu-link-desc">
+            {t("DownloadDocsDeveloperDesc")}
+          </span>
         </MenuLink>
         <MenuLink
           id={`oo-menu-link-download-desktop-apps${idSuffix}`}
-          className="oo-header-menu-mb-12"
+          className="oo-menu-link--download oo-header-menu-mb-12"
           href={getBaseUrl("/download-desktop")}
           icon="desktop-apps"
           active={highlight?.linkId}
         >
-          {t("ForPC")}
+          <span>{t("DownloadDesktopApps")}</span>
+          <span className="oo-menu-link-desc">
+            {t("DownloadDesktopAppsDesc")}
+          </span>
         </MenuLink>
         <MenuLink
           id={`oo-menu-link-download-mobile-apps${idSuffix}`}
+          className="oo-menu-link--download"
           href={getBaseUrl("/download-desktop#mobile")}
           icon="mobile-apps"
           active={highlight?.linkId}
         >
-          {t("ForMobile")}
+          <span>{t("DownloadMobileApps")}</span>
+          <span className="oo-menu-link-desc">
+            {t("DownloadMobileAppsDesc")}
+          </span>
         </MenuLink>
       </div>
     </MenuItem>

@@ -173,5 +173,11 @@
   "OpenSource": "Открытый исходный код",
   "blogLink2": "https://www.onlyoffice.com/blog/2026/06/onlyoffice-docspace-3-7",
   "blogText2": "Выпуск ONLYOFFICE DocSpace 3.7! Генерация файлов и новые провайдеры в ИИ-агентах, еще более интеллектуальные формы, обновленные редакторы и лицензия, и многое другое.",
-  "blogDate2": "8 июня 2026"
+  "blogDate2": "8 июня 2026",
+  "DownloadDocsEnterpriseDesc": "Для вашей организации · Бесплатная пробная версия",
+  "DownloadDocsDeveloperDesc": "Для вашего продукта · Бесплатная пробная версия",
+  "DownloadDesktopApps": "Десктопные приложения",
+  "DownloadDesktopAppsDesc": "Windows, macOS и Linux · Бесплатно",
+  "DownloadMobileApps": "Мобильные приложения",
+  "DownloadMobileAppsDesc": "iOS и Android · Бесплатно"
 }

@@ -173,5 +173,11 @@
   "OpenSource": "オープンソース",
   "blogLink2": "https://www.onlyoffice.com/blog/ja/2026/06/onlyoffice-docspace-3-7",
   "blogText2": "ONLYOFFICE DocSpace v3.7がリリース：AIエージェントでのファイル生成・新プロバイダー対応、フォーム機能の強化、エディターのアップデートなど",
-  "blogDate2": "2026年6月8日"
+  "blogDate2": "2026年6月8日",
+  "DownloadDocsEnterpriseDesc": "組織向け · 無料トライアル",
+  "DownloadDocsDeveloperDesc": "製品組み込み向け · 無料トライアル",
+  "DownloadDesktopApps": "デスクトップアプリ",
+  "DownloadDesktopAppsDesc": "Windows、macOS、Linux · 無料",
+  "DownloadMobileApps": "モバイルアプリ",
+  "DownloadMobileAppsDesc": "iOS、Android · 無料"
 }

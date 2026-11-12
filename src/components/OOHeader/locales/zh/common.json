@@ -173,5 +173,11 @@
   "OpenSource": "开源",
   "blogLink2": "https://www.onlyoffice.com/blog/zh-hans/2026/06/onlyoffice-docspace-3-7",
   "blogText2": "ONLYOFFICE 协作空间3.7发布：支持文件生成&新增 AI 智能体提供商、更智能的表单、房间分组等",
-  "blogDate2": "2026年6月8日"
+  "blogDate2": "2026年6月8日",
+  "DownloadDocsEnterpriseDesc": "适用于您的组织 · 免费试用",
+  "DownloadDocsDeveloperDesc": "适用于您的产品 · 免费试用",
+  "DownloadDesktopApps": "桌面应用",
+  "DownloadDesktopAppsDesc": "Windows、macOS 和 Linux · 免费",
+  "DownloadMobileApps": "移动应用",
+  "DownloadMobileAppsDesc": "iOS 和 Android · 免费"
 }

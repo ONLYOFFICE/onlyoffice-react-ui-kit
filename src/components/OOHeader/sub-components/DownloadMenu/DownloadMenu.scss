@@ -29,7 +29,7 @@
     margin-right: 8px;
 
     .oo-menu-item-wrapper {
-      @media screen and (min-width: 1024px) {
+      @media screen and (max-width: 1300px) {
         left: 0;
         right: initial;
         transform: none;
@@ -174,51 +174,6 @@
         position: initial;
       }
     }
-
-    &.zh,
-    &.zh-hans {
-      .oo-menu-item-wrapper {
-        @media screen and (max-width: 1480px) {
-          top: 100%;
-          left: initial;
-          right: 0;
-        }
-
-        @media screen and (max-width: 592px) {
-          top: 0;
-          left: 0;
-          right: initial;
-        }
-      }
-
-      @media screen and (max-width: 1480px) {
-        position: initial;
-      }
-    }
-
-  }
-
-  &.oo-menu-item--position-2 {
-    &.zh,
-    &.zh-hans {
-      .oo-menu-item-wrapper {
-        @media screen and (max-width: 1322px) {
-          top: 100%;
-          left: initial;
-          right: 0;
-        }
-
-        @media screen and (max-width: 592px) {
-          top: 0;
-          left: 0;
-          right: initial;
-        }
-      }
-
-      @media screen and (max-width: 1322px) {
-        position: initial;
-      }
-    }
   }
 
   &.oo-menu-item--position-3 {
@@ -241,32 +196,12 @@
         position: initial;
       }
     }
-
-    &.zh,
-    &.zh-hans {
-      .oo-menu-item-wrapper {
-        @media screen and (max-width: 1400px) {
-          top: 100%;
-          left: initial;
-          right: 0;
-        }
-
-        @media screen and (max-width: 592px) {
-          top: 0;
-          left: 0;
-          right: initial;
-        }
-      }
-
-      @media screen and (max-width: 1400px) {
-        position: initial;
-      }
-    }
   }
 
   .oo-header-menu-item {
-    min-width: 124px;
-    max-width: 160px;
+    width: max-content;
+    min-width: 264px;
+    max-width: 312px;
 
     @media screen and (max-width: 1023px) {
       box-sizing: content-box;
@@ -274,6 +209,7 @@
 
     @media screen and (max-width: 592px) {
       box-sizing: border-box;
+      width: 100%;
       min-width: 100%;
       max-width: 100%;
     }
@@ -348,9 +284,39 @@
           left: 24px;
         }
 
+        &.oo-menu-link--download::before {
+          top: 6px;
+        }
+
         &:hover {
           background-color: #eef3ff;
         }
+      }
+    }
+  }
+
+  .oo-menu-link.oo-menu-link--download {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &::before {
+      top: 0;
+      transform: none;
+
+      @media screen and (max-width: 592px) {
+        top: 4px;
+      }
+    }
+
+    .oo-menu-link-desc {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: #a6a8b8;
+
+      @media screen and (max-width: 1023px) {
+        color: #9092a6;
+        line-height: 20px;
       }
     }
   }

@@ -176,5 +176,11 @@
   "blogDate2": "٨ يونيو ٢٠٢٦",
   "TooManyRequestsPleaseTryAgainLater": "طلبات كثيرة جدًا. يُرجى المحاولة مرة أخرى لاحقًا.",
   "FailedToSendEmail": "فشل إرسال البريد الإلكتروني. يُرجى التحقق من صحة عنوان البريد الإلكتروني الذي أدخلتموه.",
-  "WeAreSorryButAnErrorOccurredTryAgainLater": "نأسف، حدث خطأ ما، يُرجى المحاولة مرة أخرى لاحقًا"
+  "WeAreSorryButAnErrorOccurredTryAgainLater": "نأسف، حدث خطأ ما، يُرجى المحاولة مرة أخرى لاحقًا",
+  "DownloadDocsEnterpriseDesc": "لمؤسستك · نسخة تجريبية مجانية",
+  "DownloadDocsDeveloperDesc": "لمنتجك · نسخة تجريبية مجانية",
+  "DownloadDesktopApps": "تطبيقات سطح المكتب",
+  "DownloadDesktopAppsDesc": "Windows وmacOS وLinux · مجانًا",
+  "DownloadMobileApps": "تطبيقات الجوال",
+  "DownloadMobileAppsDesc": "iOS وAndroid · مجانًا"
 }
