@@ -290,7 +290,7 @@ const OOFooter = ({
               </Link>
               <Link
                 className="oo-footer-link"
-                href={"https://helpcenter.onlyoffice.com/index.aspx"}
+                href={"https://helpcenter.onlyoffice.com"}
               >
                 {t("HelpCenter")}
               </Link>
