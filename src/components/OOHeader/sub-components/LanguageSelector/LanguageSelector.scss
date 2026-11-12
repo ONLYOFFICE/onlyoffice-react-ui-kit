@@ -138,6 +138,10 @@
   }
 
   @media screen and (max-width: 1023px) {
+    top: calc(100% + 20px);
+  }
+
+  @media screen and (max-width: 592px) {
     top: calc(100% + 12px);
   }
 
