@@ -256,6 +256,14 @@
         @media screen and (max-width: 1120px) {
           padding: 25px 6px;
         }
+
+        @media screen and (max-width: 1023px) {
+          padding: 16px 40px 16px 24px;
+        }
+
+        @media screen and (max-width: 430px) {
+          padding: 14px 40px 14px 24px;
+        }
       }
 
       .oo-header-actions {

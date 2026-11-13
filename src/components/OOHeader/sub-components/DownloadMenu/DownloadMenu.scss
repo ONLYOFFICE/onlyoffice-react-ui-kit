@@ -454,7 +454,7 @@
     @media screen and (max-width: 1023px) {
       top: calc(100% + 1px);
       left: initial;
-      right: 0;
+      right: 24px;
       transform: none;
     }
 
@@ -474,7 +474,7 @@
   .oo-menu-item-wrapper {
     @media screen and (max-width: 1023px) {
       top: calc(100% + 1px);
-      left: 0;
+      left: 24px;
       right: initial;
       transform: none;
     }
