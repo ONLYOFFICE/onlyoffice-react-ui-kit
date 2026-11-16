@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.38.1
+
+- header: update translations
+
 ## 1.38.0
 
 - header
