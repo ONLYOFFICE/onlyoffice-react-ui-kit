@@ -260,6 +260,14 @@ const Resources = ({
                 tooltip={t("MSOfficeOnline")}
               />
               <MenuLink
+                id="oo-menu-link-resources-office-online-server"
+                className="oo-header-menu-mr-8"
+                href={getBaseUrl("/office-online-server-alternative")}
+                icon="sharepoint"
+                variant="icon"
+                tooltip={t("OfficeOnlineServerTooltip")}
+              />
+              <MenuLink
                 id="oo-menu-link-resources-google-docs"
                 className="oo-header-menu-mr-8"
                 href={getBaseUrl("/best-google-docs-alternative")}

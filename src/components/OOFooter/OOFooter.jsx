@@ -225,6 +225,12 @@ const OOFooter = ({
                 </Link>
                 <Link
                   className="oo-footer-link"
+                  href={getBaseUrl("/office-online-server-alternative")}
+                >
+                  {t("OODocsVsOfficeOnlineServer")}
+                </Link>
+                <Link
+                  className="oo-footer-link"
                   href={getBaseUrl("/best-google-docs-alternative")}
                 >
                   {t("OODocsVsGoogleDocs")}
