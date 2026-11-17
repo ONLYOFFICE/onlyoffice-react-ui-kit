@@ -25,6 +25,26 @@ import { SocialLinks } from "./sub-components/SocialLinks/index.jsx";
 import { LanguageSelector } from "./sub-components/LanguageSelector/index.jsx";
 import { getLink } from "../../utils/getLink.jsx";
 
+const pushFooterCtaClick = (locale, params) => {
+  if (typeof window === "undefined") return;
+
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "cta_click",
+      topic: undefined,
+      request_type: undefined,
+      product: undefined,
+      ...params,
+      page: "footer",
+      page_language: locale || "en",
+      position: "footer",
+    });
+  } catch (error) {
+    return;
+  }
+};
+
 const OOFooter = ({
   locale,
   languages,
@@ -249,6 +269,12 @@ const OOFooter = ({
                 </Link>
                 <Link
                   className="oo-footer-link"
+                  href={getBaseUrl("/best-openoffice-alternative")}
+                >
+                  {t("OODocsVsOpenOffice")}
+                </Link>
+                <Link
+                  className="oo-footer-link"
                   href={getBaseUrl("/best-wps-alternative")}
                 >
                   {t("OODocsVsWPS")}
@@ -339,13 +365,25 @@ const OOFooter = ({
             <FooterItem theme={theme} locale={locale} heading={t("ContactUs")}>
               <Link
                 className="oo-footer-link"
-                href={"mailto:sales@onlyoffice.com"}
+                href={getBaseUrl("/contact-sales?topic=general&from=footer")}
+                onClick={() =>
+                  pushFooterCtaClick(locale, {
+                    cta_type: "contact_sales",
+                    topic: "general",
+                  })
+                }
               >
                 {t("SalesQuestions")}
               </Link>
               <Link
                 className="oo-footer-link"
-                href={"mailto:partners@onlyoffice.com"}
+                href={getBaseUrl("/partnership-request?from=footer")}
+                onClick={() =>
+                  pushFooterCtaClick(locale, {
+                    cta_type: "partner",
+                    request_type: "general",
+                  })
+                }
               >
                 {t("PartnerInquiries")}
               </Link>
