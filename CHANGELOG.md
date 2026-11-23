@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.39.0
+
+- header → Menu → Resources, footer: add Office Online Server comparison
+- footer
+  - Comparison: add OpenOffice
+  - Contact us: Sales Questions, Partner Inquiries → contact forms (was mailto), with cta_click analytics
+
 ## 1.38.1
 
 - header: update translations
