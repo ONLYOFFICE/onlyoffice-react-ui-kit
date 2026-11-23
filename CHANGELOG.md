@@ -1,5 +1,7 @@
 # Changelog
 
+- footer → Get help → Order demo: link with from=footer, with cta_click analytics
+
 ## 1.39.0
 
 - header → Menu → Resources, footer: add Office Online Server comparison

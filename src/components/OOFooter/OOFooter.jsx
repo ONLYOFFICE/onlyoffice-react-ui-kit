@@ -344,7 +344,15 @@ const OOFooter = ({
               >
                 {t("SupportContactForm")}
               </Link>
-              <Link className="oo-footer-link" href={getBaseUrl("/demo-order")}>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/demo-order?from=footer")}
+                onClick={() =>
+                  pushFooterCtaClick(locale, {
+                    cta_type: "demo",
+                  })
+                }
+              >
                 {t("OrderDemo")}
               </Link>
               <Link className="oo-footer-link" href={getBaseUrl("/legalterms")}>
