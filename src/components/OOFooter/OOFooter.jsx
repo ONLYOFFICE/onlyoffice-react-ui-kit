@@ -178,6 +178,49 @@ const OOFooter = ({
               </Link>
             </FooterItem>
           </div>
+          <div className="oo-footer-item-group oo-footer-item-group--solutions">
+            <FooterItem theme={theme} locale={locale} heading={t("Solutions")}>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/docs-enterprise")}
+              >
+                {t("SolutionsEnterprise")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/education")}>
+                {t("SolutionsEducation")}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/for-research")}
+              >
+                {t("SolutionsResearch")}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/for-government")}
+              >
+                {t("SolutionsGovernment")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/healthcare")}>
+                {t("SolutionsHealthcare")}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/for-small-business")}
+              >
+                {t("SolutionsSmallBusiness")}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/nonprofit-organizations")}
+              >
+                {t("SolutionsNonprofits")}
+              </Link>
+              <Link className="oo-footer-link" href={getBaseUrl("/home-use")}>
+                {t("SolutionsHomeUse")}
+              </Link>
+            </FooterItem>
+          </div>
           <div className="oo-footer-item-group oo-footer-item-group--resources">
             <FooterItem
               theme={theme}
@@ -316,6 +359,12 @@ const OOFooter = ({
             <FooterItem theme={theme} locale={locale} heading={t("GetHelp")}>
               <Link
                 className="oo-footer-link"
+                href={getBaseUrl("/compare-editions")}
+              >
+                {t("CompareEditions")}
+              </Link>
+              <Link
+                className="oo-footer-link"
                 href={"https://community.onlyoffice.com"}
               >
                 {t("Community")}
@@ -337,12 +386,6 @@ const OOFooter = ({
                 href={getBaseUrl("/whitepapers")}
               >
                 {t("WhitePapers")}
-              </Link>
-              <Link
-                className="oo-footer-link"
-                href={getBaseUrl("/support-contact-form")}
-              >
-                {t("SupportContactForm")}
               </Link>
               <Link
                 className="oo-footer-link"
@@ -394,6 +437,12 @@ const OOFooter = ({
                 }
               >
                 {t("PartnerInquiries")}
+              </Link>
+              <Link
+                className="oo-footer-link"
+                href={getBaseUrl("/support-contact-form")}
+              >
+                {t("SupportRequests")}
               </Link>
               <Link
                 className="oo-footer-link"
