@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.40.0
+
+- footer
+  - Add 'Solutions' column
+  - Comparison: shorten link names to 'vs <product>'
+  - Get help: add 'Compare editions'
+  - 'Support contact form' moved from Get help to Contact us and renamed to 'Support requests'
+  - Get help → Order demo: link with from=footer, with cta_click analytics
+
 ## 1.39.0
 
 - header → Menu → Resources, footer: add Office Online Server comparison
