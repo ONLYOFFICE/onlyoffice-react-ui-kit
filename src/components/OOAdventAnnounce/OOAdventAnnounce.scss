@@ -61,16 +61,13 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #ffffff;
+  background-color: #000000;
+  background-image: url("./images/bf-bg.png");
   background-repeat: no-repeat;
-
-  &.oo-advent-announce-wrapper--theme-dark {
-    background-color: #000122;
-
-    .oo-advent-announce-text {
-      color: #e7e8ee;
-    }
-  }
+  background-position: center top;
+  background-size: 1920px 56px;
+  border-bottom: 1px solid #30305e;
+  box-sizing: border-box;
 
   &.ar {
     direction: initial;
@@ -79,6 +76,7 @@
 
   @media screen and (max-width: 1024px) {
     height: 48px;
+    background-image: none;
   }
 }
 
@@ -94,7 +92,7 @@
   text-align: center;
   max-width: 925px;
   height: 100%;
-  color: #585a6d;
+  color: #bcbeca;
   text-decoration: none;
   z-index: 10;
 
@@ -103,16 +101,12 @@
     flex-shrink: 0;
     width: 24px;
     height: 24px;
-    background-color: #7a7d94;
+    background-color: #bcbeca;
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M10 7l5 5-5 5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 24px 24px;
     pointer-events: none;
-
-    .oo-advent-announce-wrapper--theme-dark & {
-      background-color: #bcbeca;
-    }
 
     @media screen and (max-width: 1024px) {
       display: none;
@@ -167,17 +161,33 @@
   }
 }
 
-@mixin advent-announce-badge($border-radius: 16px) {
+@mixin advent-announce-badge($border-radius: 8px) {
   font-weight: 600;
-  background-color: #e7dcfd;
   border-radius: $border-radius;
   box-shadow: 0px 0px 4px 0px #7474ff33 inset;
-  color: #21222b;
   padding: 5px 8px;
+  background-image: linear-gradient(
+    152.84deg,
+    rgba(242, 217, 112, 0.3) 0.83%,
+    rgba(170, 82, 0, 0.3) 38.83%,
+    rgba(242, 217, 112, 0.3) 77.4%,
+    rgba(170, 82, 0, 0.3) 118.81%
+  );
 
-  .oo-advent-announce-wrapper--theme-dark & {
-    background-color: rgba(117, 114, 222, 0.4);
-    color: #e7e8ee;
+  > b {
+    font-weight: inherit;
+    color: #f9d360;
+    background-image: linear-gradient(
+      118.93deg,
+      #fffdf6 11.08%,
+      #ff9500 30.13%,
+      #fff3c2 46.17%,
+      #e8c78d 84.04%,
+      #aa5200 101.33%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -200,7 +210,7 @@
   display: none;
   font-size: 13px;
   line-height: 18px;
-  @include advent-announce-badge(12px);
+  @include advent-announce-badge;
 
   @media screen and (max-width: 1024px) {
     display: block;
