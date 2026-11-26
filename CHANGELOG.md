@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.41.0
+
+- advent-announce: Black Friday
+
 ## 1.40.0
 
 - footer

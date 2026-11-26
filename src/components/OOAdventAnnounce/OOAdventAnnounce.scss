@@ -123,31 +123,35 @@
 
   @media screen and (min-width: 1025px) {
     &.de {
-      max-width: 991px;
+      max-width: 882px;
     }
 
     &.es {
-      max-width: 876px;
+      max-width: 794px;
     }
 
     &.fr {
-      max-width: 1014px;
+      max-width: 924px;
     }
 
     &.it {
-      max-width: 792px;
+      max-width: 750px;
     }
 
     &.pt, &.pt-br {
-      max-width: 980px;
+      max-width: 896px;
     }
 
     &.ru {
-      max-width: 970px;
+      max-width: 935px;
     }
 
     &.sr {
-      max-width: 856px;
+      max-width: 770px;
+    }
+
+    &.vi {
+      max-width: 756px;
     }
   }
 
