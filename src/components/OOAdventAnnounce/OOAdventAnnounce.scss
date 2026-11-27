@@ -61,16 +61,13 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  background-color: #ffffff;
+  background-color: #000000;
+  background-image: url("./images/bf-bg.png");
   background-repeat: no-repeat;
-
-  &.oo-advent-announce-wrapper--theme-dark {
-    background-color: #000122;
-
-    .oo-advent-announce-text {
-      color: #e7e8ee;
-    }
-  }
+  background-position: center top;
+  background-size: 1920px 56px;
+  border-bottom: 1px solid #30305e;
+  box-sizing: border-box;
 
   &.ar {
     direction: initial;
@@ -79,6 +76,8 @@
 
   @media screen and (max-width: 1024px) {
     height: 48px;
+    background-image: none;
+    border-bottom: none;
   }
 }
 
@@ -90,11 +89,11 @@
   justify-content: center;
   margin: 0 auto;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 18px;
   text-align: center;
-  max-width: 925px;
+  max-width: 950px;
   height: 100%;
-  color: #585a6d;
+  color: #bcbeca;
   text-decoration: none;
   z-index: 10;
 
@@ -103,16 +102,13 @@
     flex-shrink: 0;
     width: 24px;
     height: 24px;
-    background-color: #7a7d94;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M10 7l5 5-5 5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    margin-top: -4px;
+    background-color: #bcbeca;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12.1734 12L9.00008 15.1733L10.4134 16.5866L15.0001 12L10.4134 7.41329L9.00008 8.82663L12.1734 12Z' fill='black'/%3E%3C/svg%3E");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 24px 24px;
     pointer-events: none;
-
-    .oo-advent-announce-wrapper--theme-dark & {
-      background-color: #bcbeca;
-    }
 
     @media screen and (max-width: 1024px) {
       display: none;
@@ -129,31 +125,35 @@
 
   @media screen and (min-width: 1025px) {
     &.de {
-      max-width: 991px;
+      max-width: 974px;
     }
 
     &.es {
-      max-width: 876px;
+      max-width: 974px;
     }
 
     &.fr {
-      max-width: 1014px;
+      max-width: 924px;
     }
 
     &.it {
-      max-width: 792px;
+      max-width: 903px;
+    }
+
+    &.nl {
+      max-width: 954px;
     }
 
     &.pt, &.pt-br {
-      max-width: 980px;
+      max-width: 1024px;
     }
 
     &.ru {
-      max-width: 970px;
+      max-width: 912px;
     }
 
     &.sr {
-      max-width: 856px;
+      max-width: 885px;
     }
   }
 
@@ -167,28 +167,60 @@
   }
 }
 
-@mixin advent-announce-badge($border-radius: 16px) {
+@mixin advent-announce-badge($border-radius: 8px) {
   font-weight: 600;
-  background-color: #e7dcfd;
   border-radius: $border-radius;
-  box-shadow: 0px 0px 4px 0px #7474ff33 inset;
-  color: #21222b;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.14),
+    0px 0px 4px 0px #7474ff33 inset;
   padding: 5px 8px;
+  background-image: linear-gradient(
+    152.84deg,
+    rgba(242, 217, 112, 0.3) 0.83%,
+    rgba(170, 82, 0, 0.3) 38.83%,
+    rgba(242, 217, 112, 0.3) 77.4%,
+    rgba(170, 82, 0, 0.3) 118.81%
+  );
 
-  .oo-advent-announce-wrapper--theme-dark & {
-    background-color: rgba(117, 114, 222, 0.4);
-    color: #e7e8ee;
+  > b {
+    font-weight: inherit;
+    color: #f9d360;
+    background-image: linear-gradient(
+      118.93deg,
+      #fffdf6 11.08%,
+      #ff9500 30.13%,
+      #fff3c2 46.17%,
+      #e8c78d 84.04%,
+      #aa5200 101.33%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
 .oo-advent-announce-text-desktop {
-  .oo-advent-announce-text.es & {
-    line-height: 22px;
-  }
-
   span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
     margin-inline-end: 4px;
     @include advent-announce-badge;
+
+    // Two-line languages: the badge must not push the second line down
+    @media screen and (min-width: 1025px) {
+      .oo-advent-announce-text.de &,
+      .oo-advent-announce-text.es &,
+      .oo-advent-announce-text.fr &,
+      .oo-advent-announce-text.it &,
+      .oo-advent-announce-text.nl &,
+      .oo-advent-announce-text.pt &,
+      .oo-advent-announce-text.pt-br &,
+      .oo-advent-announce-text.ru &,
+      .oo-advent-announce-text.sr & {
+        margin-block: -6px;
+      }
+    }
   }
 
   @media screen and (max-width: 1024px) {
@@ -200,7 +232,7 @@
   display: none;
   font-size: 13px;
   line-height: 18px;
-  @include advent-announce-badge(12px);
+  @include advent-announce-badge;
 
   @media screen and (max-width: 1024px) {
     display: block;
