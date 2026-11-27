@@ -77,6 +77,7 @@
   @media screen and (max-width: 1024px) {
     height: 48px;
     background-image: none;
+    border-bottom: none;
   }
 }
 
@@ -101,8 +102,9 @@
     flex-shrink: 0;
     width: 24px;
     height: 24px;
+    margin-top: -4px;
     background-color: #bcbeca;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M10 7l5 5-5 5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12.1734 12L9.00008 15.1733L10.4134 16.5866L15.0001 12L10.4134 7.41329L9.00008 8.82663L12.1734 12Z' fill='black'/%3E%3C/svg%3E");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 24px 24px;
@@ -123,35 +125,35 @@
 
   @media screen and (min-width: 1025px) {
     &.de {
-      max-width: 641px;
+      max-width: 974px;
     }
 
     &.es {
-      max-width: 602px;
+      max-width: 974px;
     }
 
     &.fr {
-      max-width: 570px;
+      max-width: 924px;
     }
 
     &.it {
-      max-width: 606px;
+      max-width: 903px;
     }
 
     &.nl {
-      max-width: 585px;
+      max-width: 954px;
     }
 
     &.pt, &.pt-br {
-      max-width: 650px;
+      max-width: 1024px;
     }
 
     &.ru {
-      max-width: 622px;
+      max-width: 915px;
     }
 
     &.sr {
-      max-width: 573px;
+      max-width: 885px;
     }
   }
 
@@ -200,9 +202,25 @@
 .oo-advent-announce-text-desktop {
   span {
     display: inline-block;
-    line-height: 18px;
+    vertical-align: middle;
+    line-height: 20px;
     margin-inline-end: 4px;
     @include advent-announce-badge;
+
+    // Two-line languages: the badge must not push the second line down
+    @media screen and (min-width: 1025px) {
+      .oo-advent-announce-text.de &,
+      .oo-advent-announce-text.es &,
+      .oo-advent-announce-text.fr &,
+      .oo-advent-announce-text.it &,
+      .oo-advent-announce-text.nl &,
+      .oo-advent-announce-text.pt &,
+      .oo-advent-announce-text.pt-br &,
+      .oo-advent-announce-text.ru &,
+      .oo-advent-announce-text.sr & {
+        margin-block: -6px;
+      }
+    }
   }
 
   @media screen and (max-width: 1024px) {
